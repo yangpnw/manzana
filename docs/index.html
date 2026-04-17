@@ -11,13 +11,45 @@
         .fact-headline { font-weight: bold; font-size: 1.2em; display: block; margin-bottom: 10px; color: #2c3e50; }
         .fact-narrative { line-height: 1.6; color: #555; }
         .fact-image { max-width: 100%; height: auto; border-radius: 4px; margin-top: 10px; }
-        #loading { text-align: center; font-style: italic; color: #888; }
+        #loading { text-align: center; font-style: italic; color: #888; margin-top: 50px; font-size: 1.5em; position: relative; z-index: 10; }
         #error { color: red; text-align: center; display: none; }
+        .spinner-container {
+            margin-bottom: 20px;
+        }
+        .emoji-spinner {
+            font-size: 4em;
+            display: inline-block;
+            animation: spin 2s infinite linear;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .falling-emoji {
+            position: fixed;
+            top: -50px;
+            font-size: 2.5rem;
+            animation: fall linear forwards;
+            z-index: 999;
+            pointer-events: none;
+            user-select: none;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0.7; }
+        }
     </style>
 </head>
 <body>
     <h1>Top 10 Daily Fun Facts</h1>
-    <div id="loading">Loading amazing facts...</div>
+    <div id="loading">
+        <div class="spinner-container">
+            <div class="emoji-spinner">✨</div>
+        </div>
+        <div id="loading-phrase" style="font-size: 1.2em; font-weight: bold; color: #2c3e50; min-height: 1.5em;">Initializing fact-finding mission...</div>
+        <div style="font-size: 0.8em; color: #aaa; margin-top: 10px;">(Watch out for the falling fruit!)</div>
+    </div>
+    <div id="emoji-container"></div>
     <div id="error">Failed to load facts. Please try again later.</div>
     <div id="facts-container"></div>
 

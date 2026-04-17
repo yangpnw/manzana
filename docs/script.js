@@ -2,16 +2,77 @@
 // Updated on 16-Apr
 const BACKEND_URL = 'https://get-fun-facts-342362459405.us-east1.run.app';
 
+let rainInterval;
+let phraseInterval;
+let spinnerInterval;
+
+function startLoadingAnimations() {
+    const rainEmojis = ['🍌', '🌮', '🍍', '🍕', '🍉', '🍔'];
+    const spinnerEmojis = ['🌟', '✨', '🔥', '💫', '🌈', '🛸'];
+    const phrases = [
+        "Herding stray electrons...",
+        "Bribing the algorithm with tacos...",
+        "Peeling digital bananas...",
+        "Consulting the ancient scrolls...",
+        "Brewing hot fresh facts...",
+        "Untangling the space-time continuum...",
+        "Asking the neighbors for Wi-Fi...",
+        "Polishing the crystal ball...",
+        "Calibrating the curiosity sensors...",
+        "Wait, is this thing on?..."
+    ];
+    
+    const emojiContainer = document.getElementById('emoji-container');
+    const phraseElement = document.getElementById('loading-phrase');
+    const spinnerElement = document.querySelector('.emoji-spinner');
+    
+    // 1. Start Emoji Rain
+    rainInterval = setInterval(() => {
+        const emoji = document.createElement('div');
+        emoji.className = 'falling-emoji';
+        emoji.textContent = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        emojiContainer.appendChild(emoji);
+        setTimeout(() => emoji.remove(), 4000);
+    }, 150);
+
+    // 2. Start Phrase Cycle
+    let phraseIndex = 0;
+    phraseInterval = setInterval(() => {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        phraseElement.textContent = phrases[phraseIndex];
+    }, 1500);
+
+    // 3. Update Spinner Emoji
+    spinnerInterval = setInterval(() => {
+        spinnerElement.textContent = spinnerEmojis[Math.floor(Math.random() * spinnerEmojis.length)];
+    }, 1000);
+}
+
+function stopLoadingAnimations() {
+    clearInterval(rainInterval);
+    clearInterval(phraseInterval);
+    clearInterval(spinnerInterval);
+    const container = document.getElementById('emoji-container');
+    setTimeout(() => {
+        container.innerHTML = '';
+    }, 2000);
+}
+
 async function fetchFacts() {
     const container = document.getElementById('facts-container');
     const loading = document.getElementById('loading');
     const errorMsg = document.getElementById('error');
+
+    startLoadingAnimations();
 
     try {
         // Use a dummy response if URL is not set to show it works locally
         let data;
         if (BACKEND_URL === 'YOUR_CLOUD_FUNCTION_URL_HERE') {
             console.warn('Backend URL not set. Using local dummy data for demonstration.');
+            await new Promise(r => setTimeout(r, 2000)); // Simulate delay
             data = [
                 {
                     headline: "Placeholder Fact",
@@ -25,6 +86,7 @@ async function fetchFacts() {
             data = await response.json();
         }
 
+        stopLoadingAnimations();
         loading.style.display = 'none';
         container.innerHTML = '';
 
@@ -55,6 +117,7 @@ async function fetchFacts() {
         });
     } catch (error) {
         console.error('Fetch error:', error);
+        stopLoadingAnimations();
         loading.style.display = 'none';
         errorMsg.style.display = 'block';
     }
