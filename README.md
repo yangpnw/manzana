@@ -3,7 +3,7 @@
 A simple web application that displays 10 random fun facts daily.
 
 ## Structure
-- `frontend/`: Static HTML/JS website.
+- `docs/`: Static HTML/JS website.
 - `backend/`: Python Cloud Function (GCP).
 
 ## Setup & Deployment
@@ -38,3 +38,4 @@ A simple web application that displays 10 random fun facts daily.
 To test the frontend locally:
 1.  Open `frontend/index.html` in your browser.
 2.  By default, it uses placeholder data if the URL is not set.
+if the URL is not set.
