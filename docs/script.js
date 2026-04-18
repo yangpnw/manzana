@@ -106,11 +106,16 @@ async function fetchFacts() {
             card.appendChild(narrative);
 
             if (fact.image) {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'fact-image-container';
+                
                 const img = document.createElement('img');
                 img.className = 'fact-image';
                 img.src = fact.image;
                 img.alt = fact.headline;
-                card.appendChild(img);
+                
+                imgContainer.appendChild(img);
+                card.appendChild(imgContainer);
             }
 
             container.appendChild(card);
