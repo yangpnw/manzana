@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <!-- Big Apple Pixel Art -->
+  <!-- Stem -->
+  <rect x="7" y="0" width="2" height="1" fill="#4B2C20" />
+  <rect x="8" y="1" width="1" height="1" fill="#4B2C20" />
+  
+  <!-- Leaf -->
+  <rect x="9" y="0" width="2" height="1" fill="#4CAF50" />
+  <rect x="10" y="1" width="1" height="1" fill="#4CAF50" />
+  
+  <!-- Apple Body Outline -->
+  <rect x="5" y="2" width="6" height="1" fill="#B71C1C" />
+  <rect x="3" y="3" width="10" height="1" fill="#B71C1C" />
+  <rect x="2" y="4" width="12" height="8" fill="#B71C1C" />
+  <rect x="3" y="12" width="10" height="1" fill="#B71C1C" />
+  <rect x="4" y="13" width="3" height="1" fill="#B71C1C" />
+  <rect x="9" y="13" width="3" height="1" fill="#B71C1C" />
+  
+  <!-- Apple Body Main (Red) -->
+  <rect x="5" y="3" width="6" height="1" fill="#F44336" />
+  <rect x="3" y="4" width="10" height="8" fill="#F44336" />
+  <rect x="4" y="12" width="8" height="1" fill="#F44336" />
+  
+  <!-- Highlight -->
+  <rect x="4" y="4" width="2" height="1" fill="#FFCDD2" />
+  <rect x="4" y="5" width="1" height="1" fill="#FFCDD2" />
+</svg>
