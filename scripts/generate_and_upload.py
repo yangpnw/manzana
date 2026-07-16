@@ -5,20 +5,22 @@ import json
 import subprocess
 import datetime
 import re
+import urllib.request
+import urllib.parse
 
 BUCKET_NAME = "manzana-facts-493603"
 WORKSPACE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FACTS_DIR = os.path.join(WORKSPACE_DIR, "docs", "facts")
+IMAGES_DIR = os.path.join(FACTS_DIR, "images")
 
 PROMPT = (
     "Act as a master storyteller for curious school-age kids. Find today's news and identify 10 "
     "kid-friendly topic themes (e.g., Space Robotics, Weird Nature, Tech Toys, Ancient Mysteries). "
     "For each of these 10 themes, generate a factual, super obscure, and little-known fun fact. "
     "Avoid all common knowledge (e.g., do NOT mention that octopuses have three hearts, or that "
-    "honey never spoils). For each selected fact, perform a web search to find a real-world, "
-    "high-quality Wikipedia or Unsplash image URL. Do not generate or save any local images. "
-    "Format exactly these 10 facts into a JSON array, where each fact has these exact keys: "
-    "'headline', 'narrative', and 'image'. Output ONLY the raw JSON array. Do not wrap it in markdown "
+    "honey never spoils). Format exactly these 10 facts into a JSON array, where each fact has these "
+    "exact keys: 'headline', 'narrative', and 'search_query'. The 'search_query' should be 1-3 keywords "
+    "suitable for a Wikipedia image search. Output ONLY the raw JSON array. Do not wrap it in markdown "
     "code blocks. Do not output any other text or explanation."
 )
 
@@ -43,6 +45,82 @@ def extract_json_array(text):
         
     json_str = text[start_idx:end_idx + 1]
     return json.loads(json_str)
+
+def get_real_image_url(query):
+    if not query:
+        return None
+    headers = {
+        "User-Agent": "FunFactsBot/1.0 (https://github.com/yangpnw/manzana; yangpnw@gmail.com)"
+    }
+    try:
+        # 1. Search for the Wikipedia page title
+        search_params = {
+            "action": "query",
+            "list": "search",
+            "srsearch": query,
+            "format": "json",
+            "srlimit": 1
+        }
+        search_url = "https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode(search_params)
+        req1 = urllib.request.Request(search_url, headers=headers)
+        with urllib.request.urlopen(req1, timeout=5) as response:
+            data = json.loads(response.read().decode("utf-8"))
+            
+        search_results = data.get("query", {}).get("search", [])
+        if not search_results:
+            return None
+        page_title = search_results[0]["title"]
+        
+        # 2. Query page image (thumbnail)
+        img_params = {
+            "action": "query",
+            "titles": page_title,
+            "prop": "pageimages",
+            "format": "json",
+            "pithumbsize": 800
+        }
+        img_url = "https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode(img_params)
+        req2 = urllib.request.Request(img_url, headers=headers)
+        with urllib.request.urlopen(req2, timeout=5) as response:
+            img_data = json.loads(response.read().decode("utf-8"))
+            
+        pages = img_data.get("query", {}).get("pages", {})
+        for page_id in pages:
+            thumbnail = pages[page_id].get("thumbnail", {}).get("source")
+            if thumbnail:
+                return thumbnail
+    except Exception as e:
+        print(f"⚠️ Image search error for '{query}': {e}", file=sys.stderr)
+    return None
+
+def download_and_save_image(url, output_dir, filename_prefix):
+    if not url:
+        return None
+    
+    headers = {
+        "User-Agent": "FunFactsBot/1.0 (https://github.com/yangpnw/manzana; yangpnw@gmail.com)"
+    }
+    
+    try:
+        # Determine extension from url
+        parsed_url = urllib.parse.urlparse(url)
+        path = parsed_url.path
+        ext = os.path.splitext(path)[1]
+        if not ext or len(ext) > 5:
+            ext = ".jpg"  # Default fallback
+            
+        safe_prefix = re.sub(r'[^a-zA-Z0-9_-]', '_', filename_prefix).lower()
+        filename = f"{safe_prefix}{ext}"
+        filepath = os.path.join(output_dir, filename)
+        
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=5) as response:
+            with open(filepath, "wb") as f:
+                f.write(response.read())
+        return filename
+    except Exception as e:
+        print(f"⚠️ Failed to download image from {url}: {e}", file=sys.stderr)
+    return None
 
 def main():
     # Ensure common installation paths (like ~/.local/bin and /usr/local/bin) are in PATH for cron execution
@@ -89,6 +167,34 @@ def main():
         print("❌ Error: Output is not a non-empty list.", file=sys.stderr)
         sys.exit(1)
         
+    # Ensure images directory exists
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+        
+    # Fetch real image URLs for each fact using Wikipedia API
+    print("📸 Querying Wikipedia and downloading images...")
+    for idx, fact in enumerate(facts):
+        query = fact.get("search_query", "")
+        # Set default empty string
+        fact["image"] = ""
+        if query:
+            image_url = get_real_image_url(query)
+            if image_url:
+                print(f"   [{idx + 1}/10] Found external image for '{query}': {image_url}")
+                # Download image locally
+                local_filename = download_and_save_image(image_url, IMAGES_DIR, query)
+                if local_filename:
+                    # Point to GCS path
+                    fact["image"] = f"https://storage.googleapis.com/{BUCKET_NAME}/images/{local_filename}"
+                    print(f"   [{idx + 1}/10] Downloaded and mapped to GCS: {fact['image']}")
+                else:
+                    # Fallback to direct external URL if download fails
+                    fact["image"] = image_url
+            else:
+                print(f"   [{idx + 1}/10] No image found for '{query}'")
+            # Clean up key
+            if "search_query" in fact:
+                del fact["search_query"]
+        
     # Validate structure
     for idx, fact in enumerate(facts):
         for key in ["headline", "narrative", "image"]:
@@ -117,6 +223,11 @@ def main():
     # Upload to GCS
     print(f"☁️ Uploading to GCS bucket: gs://{BUCKET_NAME}...")
     try:
+        # Upload images directory
+        subprocess.run(
+            ["gcloud", "storage", "cp", "-r", IMAGES_DIR, f"gs://{BUCKET_NAME}/"],
+            check=True
+        )
         # Upload dated file
         subprocess.run(
             ["gcloud", "storage", "cp", dated_path, f"gs://{BUCKET_NAME}/{dated_filename}"],
@@ -127,7 +238,7 @@ def main():
             ["gcloud", "storage", "cp", latest_path, f"gs://{BUCKET_NAME}/latest.json"],
             check=True
         )
-        print("🎉 Successfully uploaded all files to GCS!")
+        print("🎉 Successfully uploaded all files and images to GCS!")
     except subprocess.CalledProcessError as e:
         print(f"❌ Error uploading to GCS: {e}", file=sys.stderr)
         sys.exit(1)
