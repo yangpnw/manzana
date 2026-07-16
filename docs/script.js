@@ -1,5 +1,12 @@
 const GCS_BUCKET_URL = 'https://storage.googleapis.com/manzana-facts-493603';
 
+function getDatedUrl(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${GCS_BUCKET_URL}/facts_${year}-${month}-${day}.json`;
+}
+
 let rainInterval;
 let phraseInterval;
 let spinnerInterval;
@@ -66,11 +73,32 @@ async function fetchFacts() {
     startLoadingAnimations();
 
     try {
-        const response = await fetch(`${GCS_BUCKET_URL}/latest.json?_=${new Date().getTime()}`);
+        let data;
+        const today = new Date();
+        const todayUrl = getDatedUrl(today);
+        let response;
+        
+        console.log(`Attempting to fetch today's facts from GCS: ${todayUrl}`);
+        response = await fetch(todayUrl);
+        
+        if (!response.ok) {
+            console.warn(`Today's facts not found (status ${response.status}). Falling back to yesterday...`);
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayUrl = getDatedUrl(yesterday);
+            response = await fetch(yesterdayUrl);
+        }
+        
+        if (!response.ok) {
+            console.warn(`Yesterday's facts not found. Falling back to latest.json...`);
+            response = await fetch(`${GCS_BUCKET_URL}/latest.json`);
+        }
+        
         if (!response.ok) {
             throw new Error(`Failed to fetch facts from GCS (status ${response.status})`);
         }
-        const data = await response.json();
+        
+        data = await response.json();
 
         stopLoadingAnimations();
         loading.style.display = 'none';
