@@ -59,6 +59,54 @@
             0% { transform: translateY(0) rotate(0deg); opacity: 1; }
             100% { transform: translateY(110vh) rotate(720deg); opacity: 0.7; }
         }
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+                margin: 0;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+            h1 {
+                margin-top: 0;
+                font-size: 1.8rem;
+                color: #000;
+            }
+            .fact-card {
+                background: white;
+                border: 1px solid #ddd;
+                box-shadow: none;
+                margin-bottom: 0.25in;
+                padding: 15px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            .fact-headline {
+                color: #000;
+                font-size: 1.1em;
+            }
+            .fact-narrative {
+                color: #222;
+                font-size: 0.95em;
+            }
+            .fact-image-container {
+                height: 2.2in;
+                margin-top: 10px;
+                background-color: transparent;
+                border: 1px solid #eee;
+            }
+            .fact-image {
+                max-height: 100%;
+                object-fit: contain;
+            }
+            #loading, #error, #emoji-container, .falling-emoji {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
