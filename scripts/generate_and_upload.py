@@ -230,12 +230,12 @@ def main():
         )
         # Upload dated file
         subprocess.run(
-            ["gcloud", "storage", "cp", dated_path, f"gs://{BUCKET_NAME}/{dated_filename}"],
+            ["gcloud", "storage", "cp", "--cache-control=no-cache, no-store, must-revalidate", dated_path, f"gs://{BUCKET_NAME}/{dated_filename}"],
             check=True
         )
         # Upload latest file
         subprocess.run(
-            ["gcloud", "storage", "cp", latest_path, f"gs://{BUCKET_NAME}/latest.json"],
+            ["gcloud", "storage", "cp", "--cache-control=no-cache, no-store, must-revalidate", latest_path, f"gs://{BUCKET_NAME}/latest.json"],
             check=True
         )
         print("🎉 Successfully uploaded all files and images to GCS!")

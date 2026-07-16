@@ -66,7 +66,7 @@ async function fetchFacts() {
     startLoadingAnimations();
 
     try {
-        const response = await fetch(`${GCS_BUCKET_URL}/latest.json`);
+        const response = await fetch(`${GCS_BUCKET_URL}/latest.json?_=${new Date().getTime()}`);
         if (!response.ok) {
             throw new Error(`Failed to fetch facts from GCS (status ${response.status})`);
         }
