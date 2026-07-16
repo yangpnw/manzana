@@ -7,12 +7,44 @@ function getDatedUrl(date) {
     return `${GCS_BUCKET_URL}/facts_${year}-${month}-${day}.json`;
 }
 
-let rainInterval;
 let phraseInterval;
 let spinnerInterval;
 
+function startEmojiRain() {
+    const rainEmojis = ['🍌', '🌮', '🍍', '🍕', '🍉', '🍔', '🍇', '🍓', '🍩', '🥑', '🍿', '🎈'];
+    const emojiContainer = document.getElementById('emoji-container');
+    
+    setInterval(() => {
+        const emoji = document.createElement('div');
+        emoji.className = 'falling-emoji';
+        emoji.textContent = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
+        
+        const contentWidth = 800;
+        const padding = 20;
+        const windowWidth = window.innerWidth;
+        let leftPosition;
+        
+        if (windowWidth > contentWidth + padding * 2) {
+            const marginWidth = (windowWidth - contentWidth) / 2;
+            if (Math.random() < 0.5) {
+                leftPosition = Math.random() * (marginWidth - 40);
+            } else {
+                leftPosition = (windowWidth - marginWidth) + Math.random() * (marginWidth - 40);
+            }
+        } else {
+            leftPosition = Math.random() * (windowWidth - 40);
+            emoji.style.opacity = '0.12';
+            emoji.style.zIndex = '-1';
+        }
+        
+        emoji.style.left = leftPosition + 'px';
+        emoji.style.animationDuration = (Math.random() * 2 + 3) + 's';
+        emojiContainer.appendChild(emoji);
+        setTimeout(() => emoji.remove(), 5000);
+    }, 200);
+}
+
 function startLoadingAnimations() {
-    const rainEmojis = ['🍌', '🌮', '🍍', '🍕', '🍉', '🍔'];
     const spinnerEmojis = ['🌟', '✨', '🔥', '💫', '🌈', '🛸'];
     const phrases = [
         "Herding stray electrons...",
@@ -27,42 +59,23 @@ function startLoadingAnimations() {
         "Wait, is this thing on?..."
     ];
     
-    const emojiContainer = document.getElementById('emoji-container');
     const phraseElement = document.getElementById('loading-phrase');
     const spinnerElement = document.querySelector('.emoji-spinner');
     
-    // 1. Start Emoji Rain
-    rainInterval = setInterval(() => {
-        const emoji = document.createElement('div');
-        emoji.className = 'falling-emoji';
-        emoji.textContent = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
-        emoji.style.left = Math.random() * 100 + 'vw';
-        emoji.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        emojiContainer.appendChild(emoji);
-        setTimeout(() => emoji.remove(), 4000);
-    }, 150);
-
-    // 2. Start Phrase Cycle
     let phraseIndex = 0;
     phraseInterval = setInterval(() => {
         phraseIndex = (phraseIndex + 1) % phrases.length;
         phraseElement.textContent = phrases[phraseIndex];
     }, 1500);
 
-    // 3. Update Spinner Emoji
     spinnerInterval = setInterval(() => {
         spinnerElement.textContent = spinnerEmojis[Math.floor(Math.random() * spinnerEmojis.length)];
     }, 1000);
 }
 
 function stopLoadingAnimations() {
-    clearInterval(rainInterval);
     clearInterval(phraseInterval);
     clearInterval(spinnerInterval);
-    const container = document.getElementById('emoji-container');
-    setTimeout(() => {
-        container.innerHTML = '';
-    }, 2000);
 }
 
 async function fetchFacts() {
@@ -104,13 +117,13 @@ async function fetchFacts() {
         loading.style.display = 'none';
         container.innerHTML = '';
 
-        data.forEach(fact => {
+        data.forEach((fact, idx) => {
             const card = document.createElement('div');
             card.className = 'fact-card';
 
             const headline = document.createElement('span');
             headline.className = 'fact-headline';
-            headline.textContent = fact.headline;
+            headline.textContent = `${idx + 1}. ${fact.headline}`;
 
             const narrative = document.createElement('p');
             narrative.className = 'fact-narrative';
@@ -142,4 +155,7 @@ async function fetchFacts() {
     }
 }
 
-window.onload = fetchFacts;
+window.onload = () => {
+    startEmojiRain();
+    fetchFacts();
+};
