@@ -1,6 +1,4 @@
-// Update this URL after deploying your GCP Cloud Function
-// Updated on 16-Apr
-const BACKEND_URL = 'https://get-fun-facts-342362459405.us-east1.run.app';
+const GCS_BUCKET_URL = 'https://storage.googleapis.com/manzana-facts-493603';
 
 let rainInterval;
 let phraseInterval;
@@ -68,23 +66,11 @@ async function fetchFacts() {
     startLoadingAnimations();
 
     try {
-        // Use a dummy response if URL is not set to show it works locally
-        let data;
-        if (BACKEND_URL === 'YOUR_CLOUD_FUNCTION_URL_HERE') {
-            console.warn('Backend URL not set. Using local dummy data for demonstration.');
-            await new Promise(r => setTimeout(r, 2000)); // Simulate delay
-            data = [
-                {
-                    headline: "Placeholder Fact",
-                    narrative: "This is a placeholder fact because the BACKEND_URL in script.js has not been set yet. Once you deploy your GCP Cloud Function, paste the URL into script.js.",
-                    image: "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?w=400"
-                }
-            ];
-        } else {
-            const response = await fetch(BACKEND_URL);
-            if (!response.ok) throw new Error('Network response was not ok');
-            data = await response.json();
+        const response = await fetch(`${GCS_BUCKET_URL}/latest.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch facts from GCS (status ${response.status})`);
         }
+        const data = await response.json();
 
         stopLoadingAnimations();
         loading.style.display = 'none';
