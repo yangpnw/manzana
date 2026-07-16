@@ -10,39 +10,6 @@ function getDatedUrl(date) {
 let phraseInterval;
 let spinnerInterval;
 
-function startEmojiRain() {
-    const rainEmojis = ['🍌', '🌮', '🍍', '🍕', '🍉', '🍔', '🍇', '🍓', '🍩', '🥑', '🍿', '🎈'];
-    const emojiContainer = document.getElementById('emoji-container');
-    
-    setInterval(() => {
-        const emoji = document.createElement('div');
-        emoji.className = 'falling-emoji';
-        emoji.textContent = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
-        
-        const contentWidth = 800;
-        const padding = 20;
-        const windowWidth = window.innerWidth;
-        let leftPosition;
-        
-        if (windowWidth > contentWidth + padding * 2) {
-            const marginWidth = (windowWidth - contentWidth) / 2;
-            if (Math.random() < 0.5) {
-                leftPosition = Math.random() * (marginWidth - 40);
-            } else {
-                leftPosition = (windowWidth - marginWidth) + Math.random() * (marginWidth - 40);
-            }
-        } else {
-            leftPosition = Math.random() * (windowWidth - 40);
-            emoji.style.opacity = '0.12';
-            emoji.style.zIndex = '-1';
-        }
-        
-        emoji.style.left = leftPosition + 'px';
-        emoji.style.animationDuration = (Math.random() * 2 + 3) + 's';
-        emojiContainer.appendChild(emoji);
-        setTimeout(() => emoji.remove(), 5000);
-    }, 200);
-}
 
 function startLoadingAnimations() {
     const spinnerEmojis = ['🌟', '✨', '🔥', '💫', '🌈', '🛸'];
@@ -155,7 +122,4 @@ async function fetchFacts() {
     }
 }
 
-window.onload = () => {
-    startEmojiRain();
-    fetchFacts();
-};
+window.onload = fetchFacts;
