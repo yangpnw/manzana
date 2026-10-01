@@ -1,6 +1,6 @@
 ---
 name: daily-fun-facts
-description: Make a printable "Top 10" fun-facts sheet on an obscure theme as a local Markdown + styled HTML report, with 10 illustrated entries (real Wikimedia Commons photos) and a closing fun fact. Use when the user asks for today's fun facts, a daily fact sheet, a Top 10 printable, or runs /daily-fun-facts (optionally with a theme).
+description: Make a printable "Top 10" fun-facts sheet on an obscure theme as a local Markdown + styled HTML report, with 10 illustrated entries (real, freely licensed photos) and a closing fun fact. Use when the user asks for today's fun facts, a daily fact sheet, a Top 10 printable, or runs /daily-fun-facts (optionally with a theme).
 ---
 
 # Daily Top 10 Fun Facts
@@ -78,7 +78,7 @@ output/
     <base>.pdf                   printable copy, printed from the HTML
     credits.json                 author, license and Commons link for every photo
     images/01.jpg … 10.jpg       the 3-photo strips shown in the sheet
-    images/originals/NN-a.jpg    the source photos (a, b, c per entry), about 1600–2000px wide
+    images/originals/NN-a.jpg    the source photos (a, b, c per entry), up to 1280px wide
 ```
 
 All files and folders are lowercase with no spaces, so the folder can be uploaded to a website exactly as it is. Nothing in it links back to Wikimedia, so it keeps working if the Commons files change. Most Commons photos are CC BY or CC BY-SA: a public page must show the credits from `credits.json`. `render.py --credits` adds them as a small collapsible footer in the HTML; the Markdown and the PDF stay credit-free. Never rename or overwrite an existing `<base>` folder.
@@ -92,11 +92,17 @@ Run `curl -s -o /dev/null -w "%{http_code}" "https://commons.wikimedia.org/w/api
 Everything is local: no Claude Docs or online artifacts. Let `O` = `<home>/output/<base>`.
 
 1. **Facts**: pull each item's Wikipedia extract (see *Content rules*) and note the numbers and details you'll use.
-2. **Photos** (work in the session scratchpad dir):
-   - `python3 <skill>/scripts/photos.py search "<query>" "<query>" ...` lists candidates; search all 10 items in one call. Use specific queries (species or event + place). If results are thin, try local-language names.
-   - Choose 3 real photos per item that show the thing itself (not a logo, map, diagram or unrelated file), and write `plan.json` as `{"1": ["File:…", "File:…", "File:…"], …}`.
-   - `python3 <skill>/scripts/photos.py build <builddir> plan.json` writes `images/`, `credits.json` and `sheet.jpg`. Downloads are cached in `<builddir>/.cache`, so after swapping photos just rerun it on the same `<builddir>`; only new photos are fetched.
-   - **Read `sheet.jpg` and look at it.** Replace dark, blurry, badly cropped, off-topic or inappropriate photos, then rerun.
+2. **Photos** (work in the session scratchpad dir; run every `photos.py` command from there so `candidates.json` stays next to `plan.json`):
+   - `python3 <skill>/scripts/photos.py search --source all "<query>" "<query>" ...` searches all 10 items across every source at once, in parallel:
+     - `commons` (Wikimedia Commons, ids `File:…`)
+     - `openverse` (Creative Commons photos from Flickr, museums and more, `ov:…`)
+     - `met` and `aic` (public-domain museum objects, `met:…`, `aic:…`)
+     - `inat` (research-grade CC photos of species, `inat:…`; query by species name)
+     Use specific queries (species or object + place); if results are thin, try local-language names. Use `--source commons,openverse` and so on to narrow it.
+   - **Only freely licensed photos**: the site is public, so use only what these sources return. Never use Getty, stock sites, or images found through general web search: they're copyrighted.
+   - Choose photos that show the thing itself (not a logo, map, diagram or unrelated file). Write `plan.json` as `{"1": ["File:…", "ov:…", "met:…", "inat:…", "File:…"], …}` with **4–5 candidates per entry**, best first. Each strip uses the first 3 that download, so a blocked photo is skipped automatically.
+   - `python3 <skill>/scripts/photos.py build <builddir> plan.json` writes `images/`, `credits.json` and `sheet.jpg`. It never waits long: a failed download is skipped and the next candidate used. Downloads are cached in `<builddir>/.cache`, so reruns take seconds. Exit code 2 means an entry ran out of candidates: add more and rerun.
+   - **Read `sheet.jpg` and look at it.** Reorder or replace dark, blurry, badly cropped, off-topic or inappropriate photos, then rerun.
 3. **Write the report**: create `O`, copy `<builddir>/images/` and `<builddir>/credits.json` into it (not `.cache` or `sheet.jpg`), and write `O/<base>.md` in the frozen format. Reread it against the voice rules and the sources before moving on.
 4. **Render**: `python3 <skill>/scripts/render.py O --credits` writes `O/<base>.html`. Leave out `--credits` only if the user says the page won't be public.
 5. **PDF** (if Google Chrome is installed): `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=5000 --print-to-pdf=O/<base>.pdf "file://O/<base>.html"`. Without Chrome, skip it and tell the user to print the HTML from a browser.
