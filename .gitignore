@@ -2,5 +2,9 @@
 __pycache__/
 *.pyc
 .venv/
-docs/facts/
+test_venv/
 .DS_Store
+docs/facts/
+scripts/cron.log
+# full-size working files (originals, PDF, photo cache); the site gets web-sized copies in docs/
+skills/daily-fun-facts/output/
