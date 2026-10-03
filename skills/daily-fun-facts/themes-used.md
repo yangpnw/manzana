@@ -7,3 +7,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-09-30 · Chinese Characters · 2026-09-30-02-top-10-chinese-characters
 - 2026-10-01 · Forts · 2026-10-01-01-top-10-forts
 - 2026-10-02 · American Game Fish and Bass Fishing Stories · 2026-10-02-01-top-10-american-game-fish-and-bass-fishing-stories
+- 2026-10-03 · Bug Bites · 2026-10-03-01-top-10-bug-bites
