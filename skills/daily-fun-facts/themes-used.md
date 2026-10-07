@@ -11,3 +11,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-04 · Throw Up and Vomiting · 2026-10-04-01-top-10-throw-up-and-vomiting
 - 2026-10-05 · Surprising Facts About Everyday Things · 2026-10-05-01-top-10-surprising-facts-about-everyday-things
 - 2026-10-06 · Natural Wrappers and Peels · 2026-10-06-01-top-10-natural-wrappers-and-peels
+- 2026-10-07 · Household Bait and Makeshift Fishing Hacks · 2026-10-07-01-top-10-household-bait-and-makeshift-fishing-hacks
