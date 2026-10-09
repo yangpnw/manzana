@@ -13,3 +13,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-06 · Natural Wrappers and Peels · 2026-10-06-01-top-10-natural-wrappers-and-peels
 - 2026-10-07 · Household Bait and Makeshift Fishing Hacks · 2026-10-07-01-top-10-household-bait-and-makeshift-fishing-hacks
 - 2026-10-08 · Blueberry Muffins · 2026-10-08-01-top-10-blueberry-muffins
+- 2026-10-09 · Structural Colors in Nature · 2026-10-09-01-top-10-structural-colors-in-nature
