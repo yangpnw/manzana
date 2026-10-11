@@ -15,3 +15,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-08 · Blueberry Muffins · 2026-10-08-01-top-10-blueberry-muffins
 - 2026-10-09 · Structural Colors in Nature · 2026-10-09-01-top-10-structural-colors-in-nature
 - 2026-10-10 · Chewing Gum and Chewy Candy · 2026-10-10-01-top-10-chewing-gum-and-chewy-candy
+- 2026-10-11 · Weird Video Game Controllers · 2026-10-11-01-top-10-weird-video-game-controllers
