@@ -19,3 +19,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-12 · Pac-Man Secrets, from Arcade to Switch 2 · 2026-10-12-01-top-10-pac-man-secrets-from-arcade-to-switch-2
 - 2026-10-13 · Amazing Things Under the Microscope · 2026-10-13-01-top-10-amazing-things-under-the-microscope
 - 2026-10-14 · Surprising Soups of the World · 2026-10-14-01-top-10-surprising-soups-of-the-world
+- 2026-10-15 · Animal Architects · 2026-10-15-01-top-10-animal-architects
