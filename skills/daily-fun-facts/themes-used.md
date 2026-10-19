@@ -23,3 +23,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-16 · Surprising Uses of Pee · 2026-10-16-01-top-10-surprising-uses-of-pee
 - 2026-10-17 · Minecraft Dungeons II Tips and Tricks · 2026-10-17-01-top-10-minecraft-dungeons-ii-tips-and-tricks
 - 2026-10-18 · Boston Lakes and Ponds · 2026-10-18-01-top-10-boston-lakes-and-ponds
+- 2026-10-19 · Giant Pumpkin Oddities · 2026-10-19-01-top-10-giant-pumpkin-oddities
