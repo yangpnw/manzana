@@ -26,3 +26,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-19 · Giant Pumpkin Oddities · 2026-10-19-01-top-10-giant-pumpkin-oddities
 - 2026-10-20 · How to Be a Game Designer · 2026-10-20-01-top-10-how-to-be-a-game-designer
 - 2026-10-21 · Companies That Started Out Different · 2026-10-21-01-top-10-companies-that-started-out-different
+- 2026-10-22 · Bizarre Seeds and Pods · 2026-10-22-01-top-10-bizarre-seeds-and-pods
