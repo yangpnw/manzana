@@ -1,0 +1,62 @@
+{
+  "_comment": "Languages for every sheet. The first entry is the main language: it is written first, lives at the plain paths (<base>.md, reports/<base>/) and is the site's home page. Every other entry is a translation of the same sheet with the same photo strips, written to <base>.<code>.md and published at reports/<base>/<code>/. To add a language, add an entry here; to pause one, set \"enabled\": false.",
+  "languages": [
+    {
+      "code": "en",
+      "enabled": true,
+      "name": "English",
+      "html_lang": "en",
+      "title_prefix": "Top 10",
+      "fun_fact": "Fun fact",
+      "all_sheets": "All sheets",
+      "latest_sheet": "Latest sheet",
+      "archive_title": "All Top 10 sheets",
+      "photo_credits": "Photo credits (Wikimedia Commons)",
+      "date_format": "{month_abbr} {day}, {year}",
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    {
+      "code": "zh-hans",
+      "enabled": true,
+      "name": "简体中文",
+      "html_lang": "zh-Hans",
+      "title_prefix": "十大",
+      "fun_fact": "趣闻",
+      "all_sheets": "全部",
+      "latest_sheet": "最新一期",
+      "archive_title": "全部十大趣闻",
+      "photo_credits": "图片来源（Wikimedia Commons）",
+      "date_format": "{year}年{month}月{day}日",
+      "translation_notes": "Simplified Chinese for kids and families. Natural, warm spoken Mandarin, not textbook prose. Keep Chinese names already in the English text as they are; give other proper names in their usual Chinese form."
+    },
+    {
+      "code": "es-419",
+      "enabled": true,
+      "name": "Español",
+      "html_lang": "es-419",
+      "title_prefix": "Top 10",
+      "fun_fact": "Dato curioso",
+      "all_sheets": "Todas las fichas",
+      "latest_sheet": "Ficha más reciente",
+      "archive_title": "Todas las fichas Top 10",
+      "photo_credits": "Créditos de las fotos (Wikimedia Commons)",
+      "date_format": "{day} de {month_name} de {year}",
+      "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+      "translation_notes": "Latin American Spanish (neutral, as used across Mexico and South America): ustedes not vosotros, everyday vocabulary, friendly tone."
+    },
+    {
+      "code": "ko",
+      "enabled": true,
+      "name": "한국어",
+      "html_lang": "ko",
+      "title_prefix": "톱 10",
+      "fun_fact": "재미있는 사실",
+      "all_sheets": "전체 보기",
+      "latest_sheet": "최신 호",
+      "archive_title": "톱 10 전체 목록",
+      "photo_credits": "사진 출처 (Wikimedia Commons)",
+      "date_format": "{year}년 {month}월 {day}일",
+      "translation_notes": "Korean in a friendly, conversational 해요체 tone suitable for kids. Keep Chinese characters that the English text shows (with pinyin) and add the Korean reading only if it helps."
+    }
+  ]
+}

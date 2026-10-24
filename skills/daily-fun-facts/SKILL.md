@@ -76,12 +76,23 @@ output/
     <base>.md                    the report; image links are images/NN.jpg
     <base>.html                  styled page (Claude Docs look), from scripts/render.py
     <base>.pdf                   printable copy, printed from the HTML
+    <base>.<code>.md/.html/.pdf  the same three files for each translation in languages.json
+                                 (e.g. <base>.zh-hans.md); they share images/ and credits.json
     credits.json                 author, license and Commons link for every photo
     images/01.jpg … 10.jpg       the 3-photo strips shown in the sheet
     images/originals/NN-a.jpg    the source photos (a, b, c per entry), up to 1280px wide
 ```
 
 All files and folders are lowercase with no spaces, so the folder can be uploaded to a website exactly as it is. Nothing in it links back to Wikimedia, so it keeps working if the Commons files change. Most Commons photos are CC BY or CC BY-SA: a public page must show the credits from `credits.json`. `render.py --credits` adds them as a small collapsible footer in the HTML; the Markdown and the PDF stay credit-free. Never rename or overwrite an existing `<base>` folder.
+
+## Languages
+
+`<home>/languages.json` lists the languages every sheet is made in. The first enabled entry (English) is the main language: research, photo choice and fact-checking all happen in it, and its file is `<base>.md`. Each other enabled entry gets a translation of that finished sheet, `<base>.<code>.md`, using the same `images/NN.jpg` strips. Currently: Simplified Chinese (`zh-hans`), Latin American Spanish (`es-419`) and Korean (`ko`). Translation rules:
+
+- Translate the finished, fact-checked English sheet; never add, drop or change a fact. Keep every number, date, unit and source detail as the English says it.
+- Keep the frozen format line for line: the same `---` rules, the same 10 entries in order, the same flag or emoji, the same `![alt](images/NN.jpg)` line with translated alt text, the same bold phrases. The date line stays `YYYY-MM-DD`. The H1 is `# 🌍 <title_prefix> <translated theme>` and the closing heading is `### <fun_fact>`, both from the language's entry.
+- Match the voice rules in that language: plain words a kid understands, short conversational sentences, the takeaway as its own last line. Vary the takeaway lead-ins naturally; don't translate "Basically," word for word every time.
+- Keep Chinese characters and pinyin that the English shows. Follow the language's `translation_notes`.
 
 ## Network check (do this before anything else)
 
@@ -104,12 +115,13 @@ Everything is local: no Claude Docs or online artifacts. Let `O` = `<home>/outpu
    - `python3 <skill>/scripts/photos.py build <builddir> plan.json` writes `images/`, `credits.json` and `sheet.jpg`. It never waits long: a failed download is skipped and the next candidate used. Downloads are cached in `<builddir>/.cache`, so reruns take seconds. Exit code 2 means an entry ran out of candidates: add more and rerun.
    - **Read `sheet.jpg` and look at it.** Reorder or replace dark, blurry, badly cropped, off-topic or inappropriate photos, then rerun.
 3. **Write the report**: create `O`, copy `<builddir>/images/` and `<builddir>/credits.json` into it (not `.cache` or `sheet.jpg`), and write `O/<base>.md` in the frozen format. Reread it against the voice rules and the sources before moving on.
-4. **Render**: `python3 <skill>/scripts/render.py O --credits` writes `O/<base>.html`. Leave out `--credits` only if the user says the page won't be public.
-5. **PDF** (if Google Chrome is installed): `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=5000 --print-to-pdf=O/<base>.pdf "file://O/<base>.html"`. Without Chrome, skip it and tell the user to print the HTML from a browser.
-6. **Check it**: screenshot the HTML the same way (`--screenshot=<scratchpad>/shot.png --window-size=1100,1500`) and look at it.
-7. Append a line to `<home>/themes-used.md`: `- YYYY-MM-DD · <Theme> · <base>`.
-8. **Publish to the site**: `python3 <skill>/scripts/publish.py O <repo>/docs`. It writes `docs/reports/<base>/` (the page plus strips resized to 1280px; no originals, PDF or Markdown), makes `docs/index.html` a copy of the newest report, and rebuilds `docs/archive.html`. If it prints "publish refused", development is in progress: stop, show the user the message, and don't pass `--force` unless they say so (the local sheet in `O` is still done). Screenshot `docs/index.html` through a local server (`python3 -m http.server` in `docs/`) and look at it.
-9. **Commit and push** from `<repo>`, staging only these paths:
+4. **Translate**: for each non-main language in `languages.json`, write `O/<base>.<code>.md` following *Languages* above. Reread each one against the English, entry by entry, so nothing is missing or changed.
+5. **Render**: `python3 <skill>/scripts/render.py O --credits` writes `O/<base>.html` and one `O/<base>.<code>.html` per translation. Leave out `--credits` only if the user says the page won't be public.
+6. **PDF** (if Google Chrome is installed), once per language: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=5000 --print-to-pdf=O/<base>.pdf "file://O/<base>.html"`, and the same with `<base>.<code>` for each translation. Without Chrome, skip it and tell the user to print the HTML from a browser.
+7. **Check it**: screenshot the HTML the same way (`--screenshot=<scratchpad>/shot.png --window-size=1100,1500`) and look at it; also screenshot one translation to check its fonts and date chip.
+8. Append a line to `<home>/themes-used.md`: `- YYYY-MM-DD · <Theme> · <base>`.
+9. **Publish to the site**: `python3 <skill>/scripts/publish.py O <repo>/docs`. It writes `docs/reports/<base>/` (the page plus strips resized to 1280px; no originals, PDF or Markdown) and `docs/reports/<base>/<code>/` for each translation, with a language switcher at the top of every version, makes `docs/index.html` a copy of the newest report, and rebuilds `docs/archive.html`. If it prints "publish refused", development is in progress: stop, show the user the message, and don't pass `--force` unless they say so (the local sheet in `O` is still done). Screenshot `docs/index.html` through a local server (`python3 -m http.server` in `docs/`) and look at it.
+10. **Commit and push** from `<repo>`, staging only these paths:
    `git add docs/ skills/daily-fun-facts/themes-used.md && git commit -m "Daily fun facts: <date> <Theme>" && git pull --rebase && git push`.
    `output/` is gitignored and stays local. If the push fails, stop and show the error; never force-push.
-10. Hand off in one short line: https://dailyfunfacts.app/ updates about a minute after the push (GitHub Pages caches pages for up to 10 minutes, so a hard refresh may be needed). Mention any swapped items.
+11. Hand off in one short line: https://dailyfunfacts.app/ updates about a minute after the push (GitHub Pages caches pages for up to 10 minutes, so a hard refresh may be needed). Mention any swapped items.

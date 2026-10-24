@@ -7,10 +7,14 @@ A static, printable "Top 10" fun-facts sheet, published daily at https://dailyfu
 - **Site**: GitHub Pages serves [docs/](docs/) from `main` (custom domain in [docs/CNAME](docs/CNAME)). There is no build step and no backend.
   - `docs/index.html`: the latest sheet (the home page)
   - `docs/archive.html`: every sheet, newest first
-  - `docs/reports/<base>/`: one folder per sheet (`index.html` plus web-sized `images/`)
+  - `docs/reports/<base>/`: one folder per sheet (`index.html` plus web-sized `images/`), with one subfolder per translation (`zh-hans/`, `es-419/`, `ko/`) that shares those images
 - **Generator**: the Claude Code skill in [skills/daily-fun-facts/](skills/daily-fun-facts/). It picks a theme, checks facts against Wikipedia, builds photo strips from Wikimedia Commons, writes the sheet as Markdown, renders it to HTML, publishes it into `docs/`, then commits and pushes.
 
 `<base>` is `YYYY-MM-DD-NN-top-10-<theme-slug>`, so folders sort by date.
+
+## Languages
+
+Every sheet is written in English first, then translated into the languages listed in [skills/daily-fun-facts/languages.json](skills/daily-fun-facts/languages.json): currently Simplified Chinese, Latin American Spanish and Korean. Each language has its own page with a switcher at the top, and the archive links to every translation. To add a language, add an entry there (code, name, a few interface words, date format); to pause one, set `"enabled": false`. Sheets published before translations existed stay English-only.
 
 ## Make today's sheet
 
@@ -24,8 +28,9 @@ The skill does the rest, including `git push`. The site updates about a minute l
 | Script | What it does |
 | --- | --- |
 | `photos.py` | Search Commons; build 3-photo strips, originals and `credits.json` (downloads are cached) |
-| `render.py` | Markdown → styled, printable HTML (Claude Docs look; light/dark; `--credits` adds photo credits) |
-| `publish.py` | Copy a rendered sheet into `docs/`, resize images to 1280px, refresh the home page and archive |
+| `render.py` | Markdown → styled, printable HTML for every language in the folder (Claude Docs look; light/dark; `--credits` adds photo credits) |
+| `publish.py` | Copy a rendered sheet and its translations into `docs/`, resize images to 1280px, refresh the home page and archive. Refuses to run from a branch other than `main` or with unfinished edits (`--force` overrides) |
+| `langs.py` | Shared helper that reads `languages.json` |
 
 Full-size working files (original photos, PDF, cache) stay in `skills/daily-fun-facts/output/`, which is gitignored.
 
