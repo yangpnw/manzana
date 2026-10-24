@@ -28,3 +28,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-21 · Companies That Started Out Different · 2026-10-21-01-top-10-companies-that-started-out-different
 - 2026-10-22 · Bizarre Seeds and Pods · 2026-10-22-01-top-10-bizarre-seeds-and-pods
 - 2026-10-23 · Surprisingly Fast Accelerators · 2026-10-23-01-top-10-surprisingly-fast-accelerators
+- 2026-10-24 · Hangzhou Hometown Foods · 2026-10-24-01-top-10-hangzhou-hometown-foods
