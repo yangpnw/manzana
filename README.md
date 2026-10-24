@@ -7,14 +7,14 @@ A static, printable "Top 10" fun-facts sheet, published daily at https://dailyfu
 - **Site**: GitHub Pages serves [docs/](docs/) from `main` (custom domain in [docs/CNAME](docs/CNAME)). There is no build step and no backend.
   - `docs/index.html`: the latest sheet (the home page)
   - `docs/archive.html`: every sheet, newest first
-  - `docs/reports/<base>/`: one folder per sheet (`index.html` plus web-sized `images/`), with one subfolder per translation (`zh-hans/`, `es-419/`, `ko/`) that shares those images
+  - `docs/reports/<base>/`: one folder per sheet (`index.html` plus web-sized `images/`), with one subfolder per translation (`zh-hans/`, `es-419/`, `ko/`, `fr/`) that shares those images
 - **Generator**: the Claude Code skill in [skills/daily-fun-facts/](skills/daily-fun-facts/). It picks a theme, checks facts against Wikipedia, builds photo strips from Wikimedia Commons, writes the sheet as Markdown, renders it to HTML, publishes it into `docs/`, then commits and pushes.
 
 `<base>` is `YYYY-MM-DD-NN-top-10-<theme-slug>`, so folders sort by date.
 
 ## Languages
 
-Every sheet is written in English first, then translated into the languages listed in [skills/daily-fun-facts/languages.json](skills/daily-fun-facts/languages.json): currently Simplified Chinese, Latin American Spanish and Korean. Each language has its own page with a switcher at the top, and the archive links to every translation. To add a language, add an entry there (code, name, a few interface words, date format); to pause one, set `"enabled": false`. Sheets published before translations existed stay English-only.
+Every sheet is written in English first, then translated into the languages listed in [skills/daily-fun-facts/languages.json](skills/daily-fun-facts/languages.json): currently Simplified Chinese, Latin American Spanish, Korean and French. Each language has its own page with a switcher at the top, and the archive links to every translation. To add a language, add an entry there (code, name, a few interface words, date format); to pause one, set `"enabled": false`. Sheets published before translations existed stay English-only.
 
 ## Make today's sheet
 

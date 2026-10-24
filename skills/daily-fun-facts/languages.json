@@ -13,7 +13,20 @@
       "archive_title": "All Top 10 sheets",
       "photo_credits": "Photo credits (Wikimedia Commons)",
       "date_format": "{month_abbr} {day}, {year}",
-      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+      "months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
     },
     {
       "code": "zh-hans",
@@ -41,7 +54,20 @@
       "archive_title": "Todas las fichas Top 10",
       "photo_credits": "Créditos de las fotos (Wikimedia Commons)",
       "date_format": "{day} de {month_name} de {year}",
-      "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+      "months": [
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre"
+      ],
       "translation_notes": "Latin American Spanish (neutral, as used across Mexico and South America): ustedes not vosotros, everyday vocabulary, friendly tone."
     },
     {
@@ -57,6 +83,34 @@
       "photo_credits": "사진 출처 (Wikimedia Commons)",
       "date_format": "{year}년 {month}월 {day}일",
       "translation_notes": "Korean in a friendly, conversational 해요체 tone suitable for kids. Keep Chinese characters that the English text shows (with pinyin) and add the Korean reading only if it helps."
+    },
+    {
+      "code": "fr",
+      "enabled": true,
+      "name": "Français",
+      "html_lang": "fr",
+      "title_prefix": "Top 10",
+      "fun_fact": "Le saviez-vous ?",
+      "all_sheets": "Toutes les fiches",
+      "latest_sheet": "Dernière fiche",
+      "archive_title": "Toutes les fiches Top 10",
+      "photo_credits": "Crédits photo (Wikimedia Commons)",
+      "date_format": "{day} {month_name} {year}",
+      "months": [
+        "janvier",
+        "février",
+        "mars",
+        "avril",
+        "mai",
+        "juin",
+        "juillet",
+        "août",
+        "septembre",
+        "octobre",
+        "novembre",
+        "décembre"
+      ],
+      "translation_notes": "Standard French in a warm, conversational tone for kids, using tu when speaking to the reader. Follow French typography: a space before ; : ! ? and around « guillemets », a comma as the decimal mark, and a space as the thousands separator (3 000)."
     }
   ]
 }

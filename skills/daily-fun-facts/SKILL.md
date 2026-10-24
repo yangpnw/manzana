@@ -87,7 +87,7 @@ All files and folders are lowercase with no spaces, so the folder can be uploade
 
 ## Languages
 
-`<home>/languages.json` lists the languages every sheet is made in. The first enabled entry (English) is the main language: research, photo choice and fact-checking all happen in it, and its file is `<base>.md`. Each other enabled entry gets a translation of that finished sheet, `<base>.<code>.md`, using the same `images/NN.jpg` strips. Currently: Simplified Chinese (`zh-hans`), Latin American Spanish (`es-419`) and Korean (`ko`). Translation rules:
+`<home>/languages.json` lists the languages every sheet is made in. The first enabled entry (English) is the main language: research, photo choice and fact-checking all happen in it, and its file is `<base>.md`. Each other enabled entry gets a translation of that finished sheet, `<base>.<code>.md`, using the same `images/NN.jpg` strips. Currently: Simplified Chinese (`zh-hans`), Latin American Spanish (`es-419`), Korean (`ko`) and French (`fr`). Translation rules:
 
 - Translate the finished, fact-checked English sheet; never add, drop or change a fact. Keep every number, date, unit and source detail as the English says it.
 - Keep the frozen format line for line: the same `---` rules, the same 10 entries in order, the same flag or emoji, the same `![alt](images/NN.jpg)` line with translated alt text, the same bold phrases. The date line stays `YYYY-MM-DD`. The H1 is `# 🌍 <title_prefix> <translated theme>` and the closing heading is `### <fun_fact>`, both from the language's entry.
