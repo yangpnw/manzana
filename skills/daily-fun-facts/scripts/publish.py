@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Publish a rendered report into the GitHub Pages site folder.
 
-  python3 publish.py <report_dir> <site_dir>
+  python3 publish.py [--force] <report_dir> <site_dir>
 
 <report_dir> is output/<base>/ holding <base>.html (from render.py) and images/NN.jpg.
+Safety guard: when <site_dir> is inside a git repo, publishing is refused unless that repo is on
+`main` with no uncommitted changes to tracked files outside docs/ and themes-used.md, so a dev
+branch or half-finished edit never reaches the live site. --force skips the check. A <site_dir>
+outside any repo (a scratch copy for testing) is never blocked.
 Writes, under <site_dir>:
   reports/<base>/index.html   the report page
   reports/<base>/images/NN.jpg  strips resized for the web (no originals)
@@ -11,7 +15,7 @@ Writes, under <site_dir>:
   archive.html                every published report, newest first
 Rerunning for the same <base> replaces that report.
 """
-import glob, os, re, shutil, sys
+import glob, os, re, shutil, subprocess, sys
 
 from PIL import Image
 
@@ -19,6 +23,30 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from render import CSS, PAGE  # noqa: E402
 
 WEB_WIDTH = 1280  # 2x the page's ~630px image column: sharp on retina, small to download
+PUBLISH_BRANCH = "main"
+ALLOWED_DIRTY = ("docs/", "skills/daily-fun-facts/themes-used.md")  # what a daily run itself changes
+
+
+def git(site, *args):
+    r = subprocess.run(["git", "-C", site, *args], capture_output=True, text=True)
+    return r.stdout.rstrip() if r.returncode == 0 else None  # keep leading spaces: porcelain status codes
+
+
+def check_safe_to_publish(site):
+    """Refuse to publish from a dev branch or a working tree with unfinished edits."""
+    if git(site, "rev-parse", "--is-inside-work-tree") != "true":
+        return  # scratch site folder for testing: nothing live to protect
+    problems = []
+    branch = git(site, "branch", "--show-current")
+    if branch != PUBLISH_BRANCH:
+        problems.append(f"on branch '{branch or 'detached HEAD'}', not '{PUBLISH_BRANCH}'")
+    status = git(site, "status", "--porcelain", "--untracked-files=no") or ""
+    dirty = [line[3:] for line in status.splitlines() if not line[3:].startswith(ALLOWED_DIRTY)]
+    if dirty:
+        problems.append("uncommitted changes outside docs/: " + ", ".join(dirty))
+    if problems:
+        raise SystemExit("publish refused (development in progress?):\n  - " + "\n  - ".join(problems)
+                         + "\nFinish or stash the work and switch to main, or rerun with --force.")
 
 
 def nav(prefix):
@@ -36,9 +64,14 @@ def page(report_html, prefix, img_prefix=""):
 
 
 def main():
-    if len(sys.argv) != 3:
+    args = sys.argv[1:]
+    force = "--force" in args
+    args = [a for a in args if a != "--force"]
+    if len(args) != 2:
         raise SystemExit(__doc__)
-    report_dir, site = (os.path.abspath(a) for a in sys.argv[1:])
+    report_dir, site = (os.path.abspath(a) for a in args)
+    if not force:
+        check_safe_to_publish(site)
     base = os.path.basename(report_dir.rstrip("/"))
     src_html = os.path.join(report_dir, base + ".html")
     if not os.path.exists(src_html):
