@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 항저우 고향 음식</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 항저우 고향 음식</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 10월 24일</span></p>
+<hr />
+<h2>1. 🇨🇳 마름은 호수에서 자라는 뿔 달린 열매예요</h2>
+<p><img alt="시장에 수북이 쌓인 마름 열매와 물 위에 떠 있는 마름" src="../images/01.jpg" />
+저장성의 호수와 연못에는 마름모꼴 잎이 동그랗게 펼쳐진 채 물 위에 떠 있는 식물이 자라요. 이 식물은 물속에서 뾰족한 뿔이 두 개에서 네 개 달린 열매를 맺는데, 이것이 바로 菱角(líng jiǎo), 마름이에요.</p>
+<p>어린 마름은 초록색이고 연해요. 이게 바로 嫩菱(nèn líng), "연한 마름"으로, 가을에 껍질을 까서 먹는 거예요. 익을수록 짙은 빨간색으로 변해서, 다 자란 것은 红菱(빨간 마름)이라고 불러요. 저장성 자싱의 유명한 품종인 南湖菱은 다 익어도 계속 초록색이에요.</p>
+<p>중국 사람들은 <strong>적어도 3,000년</strong> 전부터 마름을 길러 왔어요. 옛날 일본에서는 말린 마름을 땅에 뿌려서 가시 함정으로 썼는데, 그 시절 신발을 뚫을 만큼 뾰족했대요. 중국 아이들에게는 마름에 관한 잰말놀이도 있어요: 吃菱角，剥菱壳，菱壳丢在北壁角！</p>
+<p>악마 뿔 한 쌍을 쓴 열매라고 생각하면 돼요.</p>
+<hr />
+<h2>2. 🇨🇳 순채는 천연 젤리 옷을 입고 있어요</h2>
+<p><img alt="연못 위에 떠 있는 순채 잎" src="../images/02.jpg" />
+莼菜(chún cài), 순채는 작은 타원형 잎이 물 위에 떠 있는 연못 식물이에요. 물속에 잠긴 부분은 돌돌 말린 아기 잎부터 줄기까지 전부 두툼하고 <strong>투명하고 미끌미끌한 젤리</strong>로 덮여 있어요.</p>
+<p>항저우 사람들은 이 젤리 덮인 어린싹을 따서 유명한 요리인 서호 순채탕(西湖莼菜汤)을 만들어요. 순채 자체는 맛이 거의 없어요. 사람들이 좋아하는 건 그 식감이에요. 부드럽고 미끌미끌해서 작은 젤리 방울처럼 후루룩 넘어가요.</p>
+<p>순채 꽃에는 재미있는 비밀이 있어요. 첫날에는 "여자 꽃"으로 물 위에 올라왔다가 다시 가라앉아요. 둘째 날에는 "남자 꽃"이 되어 다시 올라와요. 그리고 깜짝 놀랄 사실 하나: 순채는 북아메리카에서도 야생으로 자라고, 비버가 만든 연못에서도 볼 수 있어요.</p>
+<p>자기만의 젤리 외투를 입고 나오는 채소라고 생각해 보세요.</p>
+<hr />
+<h2>3. 🇨🇳 줄풀 줄기 茭白는 착한 곰팡이 덕분에 부풀어요</h2>
+<p><img alt="껍질을 벗긴 것과 안 벗긴 茭白 줄기, 그리고 물에서 자라는 키 큰 줄풀" src="../images/03.jpg" />
+茭白(jiāo bái)는 "물대나무"라고도 불리는데, 키 큰 야생 벼인 줄풀에서 나와요. 줄풀은 원래 가느다래요. 그런데 특별한 곰팡이가 줄기 속에 들어가면 → 줄기 세포가 커지고 많아져서 → 연필만 한 길이의 <strong>즙 많은 하얀 줄기</strong>로 부풀어 올라요.</p>
+<p>맛은 신선한 죽순과 조금 비슷하고, 볶아도 아삭아삭해요. 가장 맛있는 때는 9월부터 11월이에요. 곰팡이가 잘못 자라면 줄기 속이 까만 포자로 가득 차는데, 아주 옛날에는 그 포자로 눈썹을 그렸대요.</p>
+<p>미국 친구들이 아마 한 번도 못 먹어 봤을 이유가 있어요. 미국은 茭白를 들여오는 걸 금지하고 있어요. 그 곰팡이가 미국 토종 야생 벼에 해를 줄 수 있기 때문이에요. 그리고 흔한 중국 성씨인 蒋(Jiǎng, 장)도 바로 이 식물에서 왔대요.</p>
+<p>다시 말해, 식물이 "감기"에 걸려야만 생기는 채소예요.</p>
+<hr />
+<h2>4. 🇨🇳 가시연 열매는 가시투성이 "닭 머리" 속에서 자라요</h2>
+<p><img alt="거대한 가시연 잎, 가시 돋친 꽃, 그리고 열매" src="../images/04.jpg" />
+芡实(qiàn shí), 가시연 씨앗은 거대하고 가시가 많은 수련에서 나와요. 동그란 잎은 보통 1m가 넘고 <strong>2.7m</strong>까지 자라서 어른 키보다도 넓어요. 줄기와 잎은 뾰족한 가시로 덮여 있어요.</p>
+<p>열매는 지름 5~10cm쯤 되는 가시 공인데, 안에 동그란 씨앗이 가득 들어 있어요. 꼭대기에 뾰족한 끝이 솟아 있는 걸 보면, 왜 씨앗에 鸡头米(jī tóu mǐ), "닭 머리 쌀"이라는 별명이 붙었는지 알 수 있어요.</p>
+<p>수천 년 전, 저장성의 옛 마을 허무두를 비롯한 양쯔강 주변 사람들은 이미 가시연 씨앗을 모았어요. 인도에서는 <strong>마카나(makhana)</strong>라고 부르는데 팝콘처럼 볶아 먹는 경우가 많고, 전 세계 가시연 씨앗의 90% 이상이 인도에서 나요.</p>
+<p>한마디로, 가시로 간식을 지키는 수련이에요.</p>
+<hr />
+<h2>5. 🇨🇳 양메이는 저장성 여름의 울퉁불퉁한 빨간 열매예요</h2>
+<p><img alt="접시에 담긴 검붉은 양메이와 나무에 달린 열매" src="../images/05.jpg" />
+杨梅(yáng méi), 소귀나무 열매 양메이는 지름 2cm쯤 되는 동그랗고 울퉁불퉁한 빨간 과일로, 큰 포도알만 해요. 가운데에 큰 씨가 하나 있고, 과육은 즙이 많으면서 달고도 아주 새콤해요.</p>
+<p>제철은 짧아요. 양메이는 5월 하순쯤 익고 <strong>단오절</strong>(端午节)이 지나면 금방 사라져요. 가장 진한 보랏빛 빨간색이 가장 잘 익은 거예요.</p>
+<p>저장성 사람들은 아주 오래전부터 이 과일을 사랑했어요. 위야오에 있는 5,000~7,000년 전 마을 허무두 유적에서 양메이 꽃가루가 발견됐대요. 오늘날 위야오는 스스로를 중국의 "양메이 고향"이라고 부르고, 가장 유명한 품종은 올방개 이름을 딴 荸荠种이에요.</p>
+<p>빨간 방울 모양에 새콤한 사탕 맛이 나는 여름 간식이에요.</p>
+<hr />
+<h2>6. 🇨🇳 죽순은 하루에 1m 넘게 자랄 수 있어요</h2>
+<p><img alt="신선한 죽순, 땅에서 막 올라온 죽순, 그리고 모죽 숲" src="../images/06.jpg" />
+모죽, 毛竹(máo zhú)는 중국에서 온 거대한 대나무이고, 아기 싹인 죽순, 笋(sǔn)은 사람들이 아주 좋아하는 음식이에요. 모죽은 <strong>24시간 동안 119cm</strong>나 자랄 수 있는데, 여섯 살 아이 키쯤 돼요. 그리고 계속 자라서 9층 건물 높이인 28m까지 커져요.</p>
+<p>겨울 죽순, 冬笋은 땅 위로 나오기 전에 캐는데, 가장 맛있다고들 해요. 봄 죽순, 春笋은 더 커요. 저장성과 장쑤성에서는 겨울 죽순을 겨울 절임 채소와 함께 볶는데, 이 요리를 炒二冬, "두 겨울 볶음"이라고 불러요.</p>
+<p>일본에서는 모죽을 맹종죽이라고 하는데, 옛 중국 이야기에 나오는 소년 맹종(孟宗)의 이름을 딴 거예요. 아픈 엄마가 한겨울에 죽순을 먹고 싶어 하자, 맹종이 대나무 숲에서 울었고 죽순이 쑥 솟아났대요.</p>
+<p>다시 말해, 가만히 앉아서 보면 저녁밥이 자라는 게 보일 정도예요.</p>
+<hr />
+<h2>7. 🇨🇳 马兰头는 논두렁에서 따는 봄철 야생 국화예요</h2>
+<p><img alt="상자에 담긴 신선한 马兰头 잎과 작은 국화꽃" src="../images/07.jpg" />
+马兰头(mǎ lán tóu)는 쑥부쟁이 종류인 작은 야생 식물로, 길가와 언덕, 그리고 논 사이의 논두렁에서 자라요. 한 해가 지나면서 연보라색이나 하얀색의 작은 국화꽃이 피어요.</p>
+<p>사람들은 이른 봄, 4월 초 <strong>청명</strong>(清明) 무렵, 꽃이 피기 전에 어린잎을 따요. 양쯔강 남쪽에서 가장 전통적인 먹는 법은 香干拌马兰头예요. 잎을 잘게 썬 말린 두부(香干)와 섞어 차가운 요리로 먹어요. 특별한 맛 덕분에 별미로 여겨져요.</p>
+<p>줄기가 빨간 종류가 가장 좋다고 해요. 이 식물은 캘리포니아와 하와이에도 퍼졌어요.</p>
+<p>길가의 작은 국화가 자라서 봄 샐러드가 된 거예요.</p>
+<hr />
+<h2>8. 🇨🇳 중국 히코리 열매는 미국 피칸의 사촌이에요</h2>
+<p><img alt="껍질을 깐 중국 히코리 열매 더미와 나무의 잎" src="../images/08.jpg" />
+山核桃(shān hé tao), 중국 히코리는 저장성과 그 주변 지역의 산비탈에서 자라는 키 20m쯤의 나무예요. 미국 피칸, 히코리와 같은 식물 무리인 <em>Carya</em>(히코리속)에 속해요.</p>
+<p>사람들은 열매를 볶거나 사탕으로 만들고, 기름을 짜서 요리에 써요. 껍질을 까고 볶은 알맹이는 山核桃仁이라고 하는데, <strong>항저우의 유명한 특산물</strong>이에요.</p>
+<p>약 16,000헥타르의 나무에서 약 5,000톤의 열매가 나요. 축구장 약 22,000개만 한 넓이예요.</p>
+<p>피칸의 작고 산을 좋아하는 사촌이라고 생각하면 돼요.</p>
+<hr />
+<h2>9. 🇨🇳 香榧 열매는 "살아 있는 화석" 나무에서 3년 만에 익어요</h2>
+<p><img alt="커다란 비자나무, 덜 익은 초록 열매, 그리고 볶은 비자 열매" src="../images/09.jpg" />
+香榧(xiāng fěi), 중국 비자나무는 늘 푸른 나무로, 그 가족은 약 <strong>1억 7천만 년</strong> 전 공룡 시대까지 거슬러 올라가요. 저장성의 주지, 둥양, 푸양 같은 곳에서 자라요.</p>
+<p>이 나무는 아주 참을성이 많아요. 첫해에 꽃이 피고, 둘째 해에 열매가 생기고, 셋째 해가 되어서야 열매가 익어요. 나무 한 그루가 천 년 넘게 열매를 맺을 수 있어요.</p>
+<p>열매는 올리브 모양에 껍데기가 단단하고, 볶아서 먹는 경우가 많아요. 송나라 때는 소금과 후추로 맛을 낸 비자 열매(椒盐香榧)를 황제에게 특별한 선물로 바쳤어요. 나무가 아주 고와서 최고급 바둑판을 만드는 데 쓰여요.</p>
+<p>한마디로, 아이가 유치원에 다니는 기간보다 더 오래 걸려 자라는 간식이에요.</p>
+<hr />
+<h2>10. 🇨🇳 금목서는 항저우의 향기로운 시의 꽃이에요</h2>
+<p><img alt="나무에 핀 주황색 금목서 꽃과 하얀 금목서 떡" src="../images/10.jpg" />
+桂花(guì huā), 목서는 항저우의 공식 시화(市花)예요. 늦여름과 가을, 바로 지금쯤이면 나무마다 <strong>길이 1cm 정도의 작은 꽃</strong>이 송이송이 피어나서 공기에서 달콤한 냄새가 나요.</p>
+<p>그 향기는 잘 익은 복숭아나 살구에 자주 비유돼요. 주황색 종류인 丹桂가 디저트에 가장 많이 쓰여요.</p>
+<p>사람들은 꽃을 차, 잼, 떡, 경단, 수프에 넣어요. 특히 인기 있는 건 쌀술 시럽에 금목서를 띄운 달콤한 찹쌀 경단(汤圆)이에요.</p>
+<p>도시 전체를 빵집 냄새로 채우는 나무예요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>약 1,700년 전, 장한(张翰)이라는 관리가 양쯔강 남쪽 오(吴) 땅의 고향에서 멀리 떨어진 곳에서 일하고 있었어요. 어느 가을, 선선한 바람이 불자 그는 고향 음식 세 가지가 그리워졌어요. 菰菜(茭白가 자라는 식물), 순채탕, 그리고 신선한 농어였지요. 그는 인생은 멀리서 벼슬을 좇는 게 아니라 행복하게 사는 것이라며 곧장 고향으로 돌아갔어요. 지금도 중국 사람들은 고향을 그리워하는 마음을 莼鲈之思, "순채와 농어를 그리워함"이라고 말해요. 다음 호: 중국 사자성어와 그 뒤에 숨은 놀라운 이야기.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Water-caltrops.jpg">Water-caltrops.jpg</a> by unknown, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Burrabazar_Market_in_Kolkata_09.jpg">Burrabazar Market in Kolkata 09.jpg</a> by Kritzolina, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Trapa_natans_Kotewka_orzech_wodny_O%C5%82awa_2023-08-11_05.jpg">Trapa natans Kotewka orzech wodny Oława 2023-08-11 05.jpg</a> by Agnieszka Kwiecień, Nova, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Brasenia_schreberi_inat1.jpg">Brasenia schreberi inat1.jpg</a> by Sara Hollerich Giles, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Brasenia_schreberi_28983668.jpg">Brasenia schreberi 28983668.jpg</a> by Laura Costello, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:BraseniaAlt.jpg">BraseniaAlt.jpg</a> by No machine-readable author provided. Dacrycarpus~commonswiki assumed (based on copyright claims)., <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Wild_rice_stems.jpg">Wild rice stems.jpg</a> by Micromesistius, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Water_bamboo.JPG">Water bamboo.JPG</a> by unknown, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Zizania_latifolia_in_cultivation.jpg">Zizania latifolia in cultivation.jpg</a> by Leizhaoyn, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Euryale_ferox,_Jard%C3%ADn_Bot%C3%A1nico,_M%C3%BAnich,_Alemania,_2013-09-08,_DD_02.JPG">Euryale ferox, Jardín Botánico, Múnich, Alemania, 2013-09-08, DD 02.JPG</a> by Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Euryale_ferox_kz05.jpg">Euryale ferox kz05.jpg</a> by Krzysztof Ziarnek, Kenraiz, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://www.inaturalist.org/photos/355476309">Euryale ferox · Hualien, TW-TA, TW</a> by (c) chiuluan, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Myrica_rubra_in_China.jpg">Myrica rubra in China.jpg</a> by Dinkun Chen, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Yumberry_Berries_zoom_in_2008.jpg">Yumberry Berries zoom in 2008.jpg</a> by Carsten Ullrich, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Chinese_Bayberry_(Myrica_rubra)_(19011153788).jpg">Chinese Bayberry (Myrica rubra) (19011153788).jpg</a> by harum.koh from Kobe city, Japan, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Bamboo_shoots.jpg">Bamboo shoots.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Big_Bamboo_Shoot_(Joi_Ito).jpg">Big Bamboo Shoot (Joi Ito).jpg</a> by Joi Ito, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://www.inaturalist.org/photos/9699732">Phyllostachys edulis · Danxiashan Suodao, Renhua, Shaoguan, Guangdong, China</a> by (c) Aaron Liston, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Aster_indicus_(RT-mart).jpg">Aster indicus (RT-mart).jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Aster_indicus-IMG_20180904_111233.jpg">Aster indicus-IMG 20180904 111233.jpg</a> by Sun Jiao (Interaccoonale), <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/166266820">Aster indicus · 中国河南省郑州市金水区</a> by (c) Zinogre, some rights reserved (CC BY-SA), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Carya_cathayensis_nuts.jpg">Carya cathayensis nuts.jpg</a> by King of Hearts, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://www.inaturalist.org/photos/555449525">Carya cathayensis · 中国浙江省杭州市临安区临安区太湖源镇高云村</a> by (c) 王天明, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Juglandaceae_Carya_cathayensis_1.jpg">Juglandaceae Carya cathayensis 1.jpg</a> by NasserHalaweh, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Torreya_grandis.jpg">Torreya grandis.jpg</a> by Farm, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Unripe_torreya_grandis_fruit.jpg">Unripe torreya grandis fruit.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Roasted_Torreya_grandis_fruit_placed_in_the_palm_of_your_hand.jpg">Roasted Torreya grandis fruit placed in the palm of your hand.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Osmanthus_fragrans_(orange_flowers).jpg">Osmanthus fragrans (orange flowers).jpg</a> by Laitr Keiows, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Osmanthus_fragrans_flowers.jpg">Osmanthus fragrans flowers.jpg</a> by Achillu, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Osmanthus_cake.jpg">Osmanthus cake.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li></ol></details>
+</main>
+</body>
+</html>

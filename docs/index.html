@@ -33,6 +33,13 @@ main {
   background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
 }
 h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
 h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
 h2 { font-size: 1.45rem; margin: 0 0 16px; }
 h3 { font-size: 1.2rem; margin: 0 0 10px; }
@@ -46,14 +53,19 @@ img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4p
   background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
 }
 .chip svg { width: 14px; height: 14px; }
-.site-nav { display: flex; justify-content: flex-end; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
 ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
-ul.archive li { border-top: 1px solid var(--rule); }
-ul.archive a { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; }
-ul.archive a:hover { color: var(--accent); }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
 ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
 details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
 details.credits summary { cursor: pointer; font-weight: 500; }
 details.credits ol { padding-left: 1.4em; }
@@ -68,14 +80,14 @@ details.credits a { color: inherit; }
   main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
   hr { margin: 20px 0; }
   h2, img { break-after: avoid; }
-  details.credits, .site-nav { display: none; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
 }
 </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 <main>
-<nav class="site-nav"><a href="archive.html">All sheets</a></nav>
+<nav class="site-nav"><span class="lang-switch"><span aria-current="page">English</span> · <a href="reports/2026-10-24-01-top-10-hangzhou-hometown-foods/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="reports/2026-10-24-01-top-10-hangzhou-hometown-foods/es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="reports/2026-10-24-01-top-10-hangzhou-hometown-foods/ko/" hreflang="ko" lang="ko">한국어</a> · <a href="reports/2026-10-24-01-top-10-hangzhou-hometown-foods/fr/" hreflang="fr" lang="fr">Français</a></span><a href="archive.html">All sheets</a></nav>
 <h1>🌍 Top 10 Hangzhou Hometown Foods</h1>
 <p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>Oct 24, 2026</span></p>
 <hr />
