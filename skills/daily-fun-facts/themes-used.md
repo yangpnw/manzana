@@ -29,3 +29,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-22 · Bizarre Seeds and Pods · 2026-10-22-01-top-10-bizarre-seeds-and-pods
 - 2026-10-23 · Surprisingly Fast Accelerators · 2026-10-23-01-top-10-surprisingly-fast-accelerators
 - 2026-10-24 · Hangzhou Hometown Foods · 2026-10-24-01-top-10-hangzhou-hometown-foods
+- 2026-10-25 · Weird Halloween Candy Trends of 2026 · 2026-10-25-01-top-10-weird-halloween-candy-trends-of-2026
