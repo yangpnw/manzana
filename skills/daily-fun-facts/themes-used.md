@@ -30,3 +30,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-23 · Surprisingly Fast Accelerators · 2026-10-23-01-top-10-surprisingly-fast-accelerators
 - 2026-10-24 · Hangzhou Hometown Foods · 2026-10-24-01-top-10-hangzhou-hometown-foods
 - 2026-10-25 · Weird Halloween Candy Trends of 2026 · 2026-10-25-01-top-10-weird-halloween-candy-trends-of-2026
+- 2026-10-26 · Underrated Ways to Eat or Use Croissants · 2026-10-26-01-top-10-underrated-ways-to-eat-or-use-croissants
