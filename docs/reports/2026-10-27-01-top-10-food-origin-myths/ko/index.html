@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 음식의 기원에 얽힌 잘못된 이야기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 음식의 기원에 얽힌 잘못된 이야기</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 10월 27일</span></p>
+<hr />
+<h2>1. 🇲🇽 시저 샐러드는 율리우스 카이사르의 이름을 딴 게 아니에요</h2>
+<p><img alt="로메인 상추, 크루통, 치즈 가루를 올린 시저 샐러드" src="../images/01.jpg" />
+로마의 황제 율리우스 카이사르(영어로 시저)와 관련 있다는 유명한 이야기가 있어요. 하지만 진짜 '시저'는 <strong>시저 카르디니</strong>(Caesar Cardini)예요. 이탈리아에서 온 이민자로, 멕시코 티후아나에서 '시저스(Caesar's)'라는 식당을 했어요. 그때 미국에서는 술이 금지돼 있어서, 미국 사람들이 국경을 건너 거기까지 먹으러 왔대요.</p>
+<p>그의 딸 로사는 1924년 7월 4일에 생긴 일이라고 했어요. 휴일이라 손님이 몰려서 주방 재료가 거의 다 떨어지자, 카르디니가 남은 재료로 뚝딱 만들고 손님 테이블 바로 옆에서 쇼처럼 버무렸대요.</p>
+<p>처음 버전은 상추 잎을 통째로 써서 손으로 집어 먹었고, 안초비 대신 우스터소스를 넣었어요.</p>
+<p>황제가 아니라 요리사 이름을 딴 거예요.</p>
+<hr />
+<h2>2. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 샌드위치가 카드 테이블에서 생겼다는 이야기는 소문에서 시작됐어요</h2>
+<p><img alt="구운 빵과 롤빵에 넣은 로스트비프 샌드위치" src="../images/02.jpg" />
+이야기는 이래요. 영국 귀족인 샌드위치 백작이 카드 게임을 멈추기 싫어서, 구운 빵 두 장 사이에 로스트비프를 끼워 달라고 했대요. 포크도 필요 없고, 카드에 기름도 안 묻으니까요.</p>
+<p>그런데 이 이야기는 1770년에 프랑스 작가 피에르장 그로슬리(Pierre-Jean Grosley)가 쓴 여행책에 처음 나와요. 그는 런던에서 1년을 지냈던 사람이에요. 백작의 전기를 쓴 작가는 백작이 해군 일, 정치, 예술 일로 너무 바빴으니 책상에서 먹었을 가능성이 더 크다고 봐요.</p>
+<p>게다가 사람들은 그보다 훨씬 전부터 빵 사이에 음식을 넣어 먹었어요. 2,000여 년 전, 힐렐이라는 유대인 스승은 양고기와 쓴 나물을 납작한 빵에 싸서 먹었대요. 요즘 랩처럼요.</p>
+<p>한마디로, 백작은 샌드위치에 이름을 남겼지만 아이디어를 낸 건 아니에요.</p>
+<hr />
+<h2>3. 🇮🇹 마르코 폴로가 중국에서 파스타를 가져온 게 아니에요</h2>
+<p><img alt="여러 가지 소스를 올린 스파게티 접시들" src="../images/03.jpg" />
+많은 역사학자가 이건 잘못된 이야기라고 해요. <strong>1154년</strong>에 시칠리아 왕을 위해 쓴 지리책에, 벌써 그 섬에서 국수를 만들어서 다른 곳에 판다는 내용이 나와요. 마르코 폴로가 중국으로 떠나기 100여 년 전이에요.</p>
+<p>국수는 아마 먼 길을 돌아서 왔을 거예요. 중국에서 실크로드를 따라 페르시아로, 그다음 아랍 상인들을 따라 시칠리아와 스페인으로요.</p>
+<p>그럼 마르코 폴로 이야기는 어디서 나왔을까요? 음식 작가 제인 그릭슨(Jane Grigson)은 1920년대나 1930년대 캐나다의 한 스파게티 회사 광고에서 시작됐다고 봤어요.</p>
+<p>광고 문구가 역사책까지 들어간 거라고 생각하면 돼요.</p>
+<hr />
+<h2>4. 🇺🇸 감자칩은 까다로운 손님을 골탕 먹이려고 만든 게 아니에요</h2>
+<p><img alt="수북이 쌓인 감자칩" src="../images/04.jpg" />
+전설은 이래요. 1853년, 미국 뉴욕주 새러토가스프링스의 한 식당에서 요리사 조지 크럼(George Crum)이 감자튀김이 너무 두껍다며 자꾸 돌려보내는 손님 때문에 화가 났대요. 그래서 감자를 종이처럼 얇게 썰어 바삭하게 튀기고 소금을 듬뿍 뿌렸더니, 손님이 아주 좋아했다는 거예요.</p>
+<p>재미있는 이야기지만, 사실이 아니라는 게 밝혀졌어요. 지금까지 알려진 가장 오래된 감자칩 조리법은 <strong>1817년</strong> 영국 요리책에 나와요. 36년이나 앞선 거죠. 나중에 나온 판에는 감자를 "레몬 껍질 깎듯이 빙글빙글 돌려 깎아서" 그 얇은 조각을 기름에 튀기라고 쓰여 있어요.</p>
+<p>크럼 이야기는 한 포장 회사가 1973년 대규모 광고에서 퍼뜨렸어요.</p>
+<p>다시 말해, 간식이 자기 탄생 이야기보다 더 나이가 많은 셈이에요.</p>
+<hr />
+<h2>5. 🇮🇹 마르게리타 피자는 아마 왕비를 위해 만든 게 아니에요</h2>
+<p><img alt="나폴리식 마르게리타 피자와 브란디 피체리아의 기념판" src="../images/05.jpg" />
+전설에 따르면 1889년 6월 10일, 나폴리의 피자 장인 라파엘레 에스포지토(Raffaele Esposito)가 방문한 마르게리타 왕비를 위해 피자 세 판을 만들었대요. 왕비는 이탈리아 국기 색깔인 빨간 토마토, 하얀 모차렐라, 초록 바질이 올라간 피자를 가장 좋아했고요. 궁에서 보낸 감사 편지가 지금도 그의 옛 가게, 지금의 브란디 피체리아(Pizzeria Brandi)에 걸려 있어요.</p>
+<p>그런데 문제가 있어요. 연구자들은 그 편지가 진짜인지 의심하고, 그때 신문 어디에도 왕비가 왔다는 기사가 없어요. 게다가 이 이야기와 '마르게리타'라는 이름은 1930~1940년대에 와서야 처음 널리 알려졌어요.</p>
+<p>토마토, 바질, 얇게 썬 모차렐라 같은 토핑은 <strong>1849년</strong> 나폴리에서 이미 기록돼 있었어요. 왕비의 그 '저녁 식사'보다 40년이나 앞서요.</p>
+<p>나중에 찍어 준 '왕실 인증 도장'인 셈이에요.</p>
+<hr />
+<h2>6. 🇯🇵 포춘 쿠키는 원래 중국이 아니라 일본 과자였어요</h2>
+<p><img alt="반으로 쪼갠 포춘 쿠키, 1878년 일본 과자 가게 그림, 그리고 포춘 쿠키 공장" src="../images/06.jpg" />
+중국 음식점에서 받는 과자지만, 중국에서 온 게 아니에요. 1800년대에 일본 교토에서 비슷한 과자를 만들었는데, 이름이 쓰지우라 센베이(辻占煎餅)예요. 더 크고 색이 진하고, 참깨와 미소(일본 된장)가 들어갔고, 운세 종이는 안쪽이 아니라 접힌 틈에 끼워 넣었어요.</p>
+<p>아마 캘리포니아의 일본 이민자들이 1900년대 초에 이 아이디어를 미국에 가져왔을 거예요. 그 뒤 제2차 세계대전 때 미국 정부가 <strong>일본계 미국인 10만 명 이상</strong>을 감시가 붙은 수용소에 강제로 가뒀는데, 그 과자를 만들던 사람들도 거기 있었어요. 그래서 중국계 미국인 제빵사들이 이 사업을 넘겨받을 기회가 생겼다는 이론이 있어요.</p>
+<p>요즘은 해마다 포춘 쿠키가 약 30억 개 만들어지고, 대부분 미국에서 먹어요.</p>
+<p>한마디로, 일본 과자가 중국 음식점에 '취직'한 거예요.</p>
+<hr />
+<h2>7. 🇨🇳 찹수이는 중국에서 온 높은 관리를 위해 만든 게 아니에요</h2>
+<p><img alt="찹수이 접시들과 시애틀의 오래된 찹수이 식당" src="../images/07.jpg" />
+1896년 청나라의 대신 리훙장(이홍장)이 미국을 방문했을 때, 한 요리사가 중국인과 미국인 입맛에 모두 맞추려고 찹수이를 만들었다는 이야기가 있어요. 하지만 기록을 꼼꼼히 뒤진 한 학자는 리훙장이 미국에서 찹수이를 먹었다는 증거를 전혀 찾지 못했어요. 리훙장은 심지어 자기 요리사를 세 명이나 데려갔어요.</p>
+<p>이 요리는 <strong>1884년</strong> 브루클린 신문에 이미 나와요. 그의 방문보다 12년 앞서요. 이름은 아마 杂碎(zá suì, 광둥성 타이산 지역에서는 'tsap seui')에서 왔을 텐데, '이것저것 남은 것'이라는 뜻이고, 초기 중국 이민자들이 많이 떠나온 고향의 요리였어요.</p>
+<p>식당 주인들은 그냥 똑똑했던 것 같아요. 유명한 방문을 이용해서 찹수이를 리훙장이 제일 좋아하는 음식이라고 광고한 거죠.</p>
+<p>유명한 손님 이름을 빌려 메뉴를 광고했다고 생각하면 돼요.</p>
+<hr />
+<h2>8. 🇫🇷 동 페리뇽이 거품 나는 샴페인을 발명한 게 아니에요</h2>
+<p><img alt="에페르네의 동 페리뇽 동상과 거품이 오르는 샴페인 잔" src="../images/08.jpg" />
+동 피에르 페리뇽(Dom Pierre Pérignon)은 프랑스 수도사로, 1668년부터 1715년까지 샹파뉴 지역 한 수도원의 와인 저장고를 맡았어요. 그 시절에 거품은 악몽이었어요. 봄이 와서 날이 따뜻해지면 병 속 와인이 다시 거품을 내기 시작했고, 병이 터질 수도 있었어요. 하나가 터지면 옆에 있던 병까지 줄줄이 깨졌죠.</p>
+<p>그래서 페리뇽은 오히려 거품을 <em>막으려고</em> 애썼어요. 거품 나는 샴페인이 대세가 된 건 1800년대 중반으로, 그가 죽고 100년도 더 지난 뒤예요.</p>
+<p>"빨리 와 봐, 나 지금 별을 맛보고 있어!"라는 그의 유명한 말은 1800년대 후반 인쇄 광고에 처음 나와요.</p>
+<p>다시 말해, 거품으로 유명한 수도사가 평생 거품과 싸운 거예요.</p>
+<hr />
+<h2>9. 🇪🇹 커피를 발견한 염소지기는 아마 실제로 없었을 거예요</h2>
+<p><img alt="가지에 달린 빨간 커피 열매와 에티오피아 커피 의식에서 볶는 커피콩" src="../images/09.jpg" />
+전설에 따르면 칼디(Kaldi)라는 염소지기가, 염소들이 어떤 덤불의 빨간 열매를 뜯어 먹고 나서 엄청 흥분하는 걸 봤대요. 자기도 먹어 보고 그 열매를 수도사에게 가져갔는데, 수도사가 그걸 불에 던져 버렸대요. 그런데 냄새가 너무 좋아서, 볶아진 열매로 음료를 만들었다는 거예요.</p>
+<p>이 일은 850년쯤 있었다고 하지만, 이야기가 처음 나오는 건 <strong>1671년</strong> 로마에서 찍은 책이에요. 800년도 더 지난 뒤죠. 그 첫 버전에는 염소지기 이름조차 없어요. '칼디'라는 이름은 1900년대에 붙은 것 같아요.</p>
+<p>그래도 오늘날 에티오피아에서 가장 큰 커피 체인점 이름이 바로 칼디스 커피(Kaldi's Coffee)예요.</p>
+<p>마스코트가 역사 수업이 된 셈이에요.</p>
+<hr />
+<h2>10. 🇺🇸 초코칩 쿠키는 아마 실수로 생긴 게 아니에요</h2>
+<p><img alt="도마 위와 접시에 담긴 초코칩 쿠키" src="../images/10.jpg" />
+유명한 이야기는 이래요. 1930년대에 매사추세츠에서 톨하우스 여관(Toll House Inn)을 운영하던 루스 웨이크필드(Ruth Wakefield)가 견과류가 떨어졌거나, 초콜릿이 오븐에서 녹을 거라고 생각해서 대신 잘게 썬 초콜릿을 넣었대요. 짜잔, 새로운 쿠키 탄생!</p>
+<p>요즘 음식 작가들은 그럴 것 같지 않다고 봐요. 웨이크필드는 가정학을 공부했고, 주방도 아주 잘 정리해서 운영했거든요. 1970년대에 그녀는 손님들에게 그냥 새로운 걸 주고 싶었다며, 네슬레 초콜릿 바를 <strong>얼음송곳</strong>으로 부숴서 반죽에 섞었다고 했어요.</p>
+<p>나중에 네슬레는 그녀의 레시피를 자기네 초콜릿 포장지에 실었어요. 웨이크필드는 그 대가로 겨우 1달러를 약속받았다고 했어요.</p>
+<p>행운의 실수가 아니라, 자기가 뭘 하는지 정확히 아는 요리사였던 거예요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>1983년, 샌프란시스코와 로스앤젤레스는 포춘 쿠키를 누가 발명했는지를 두고 샌프란시스코의 '역사 심사 법정'까지 갔어요. 심리 도중 누군가 증거라며 쿠키 하나를 냈는데, 안에 이런 쪽지가 들어 있었어요. "LA 편을 드는 샌프란시스코 판사는 그다지 똑똑한 쿠키가 아님." 판사는 샌프란시스코의 손을 들어 줬고, 로스앤젤레스는 공식적으로 반발했어요. 법정이 음식을 두고 다툰 일은 많아요. 2006년 매사추세츠의 한 법원은 부리토가 샌드위치가 아니라고 판결하기도 했죠. 그러니 '이상한 음식 재판'도 다음에 탐험해 볼 만한 재미있는 주제가 될 거예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Caesar_salad_(2).jpg">Caesar salad (2).jpg</a> by Geoff Peters from Vancouver, BC, Canada, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Chicken_Caesar_Salad_-_Amo_2026-04-11.jpg">Chicken Caesar Salad - Amo 2026-04-11.jpg</a> by Andy Li, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Caesar_Salad_from_Tony_Roma_Restaurant-_March_2024_02.jpg">Caesar Salad from Tony Roma Restaurant- March 2024 02.jpg</a> by Banej, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Roast_beef_toasted_sandwich_-_photo_1.jpg">Roast beef toasted sandwich - photo 1.jpg</a> by Acabashi, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Homemade_roast_beef_baguette_sandwich.jpg">Liat Portal for Foodie Disorder - Homemade roast beef baguette sandwich.jpg</a> by HaJunkiyada, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:A_roast_beef_sandwich_with_au_jus_sauce_for_dipping,_served_with_a_side_of_fries..jpg">A roast beef sandwich with au jus sauce for dipping, served with a side of fries..jpg</a> by 4chewnahdoe, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Spaghetti_Brighton_-_Napoli_Restaurant_2024-10-31.jpg">Spaghetti Brighton - Napoli Restaurant 2024-10-31.jpg</a> by Andy Li, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Spaghetti_biz-Zalza_tal-Fenek.jpg">Spaghetti biz-Zalza tal-Fenek.jpg</a> by Simon Cutajar, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Maya_Spaghetti_with_Shrimp_-_September_2022_-_Sarah_Stierch.jpg">Maya Spaghetti with Shrimp - September 2022 - Sarah Stierch.jpg</a> by Missvain, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Potato-Chips.jpg">Potato-Chips.jpg</a> by Evan-Amos, Public domain</li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Potato_chips_2.jpg">Potato chips 2.jpg</a> by Gaurav Dhwaj Khadka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Dill_pickle_chips.jpg">Dill pickle chips.jpg</a> by Hannah Clover, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Pizza-napoletana.jpg">Pizza-napoletana.jpg</a> by Fabryx98, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:TargaInvenzionePizzaMargheritaDaBrandi.jpg">TargaInvenzionePizzaMargheritaDaBrandi.jpg</a> by Alessandro57, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg">Eq it-na pizza-margherita sep2005 sml.jpg</a> by Valerio Capello at English Wikipedia, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Fortune_cookie_broken_20040628_223252_1.jpg">Fortune cookie broken 20040628 223252 1.jpg</a> by User Lorax on en.wikipedia, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Fortune_Cookie_1878.jpg">Fortune Cookie 1878.jpg</a> by 孟斉芳虎・画, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Fortune_Cookie_Company_San_Francisco_January_2013_001.jpg">Golden Gate Fortune Cookie Company San Francisco January 2013 001.jpg</a> by King of Hearts, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Chop_suey_made_in_Ankara.jpg">Chop suey made in Ankara.jpg</a> by E4024, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Filipino_chop_suey.jpg">Filipino chop suey.jpg</a> by whologwhy, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Seattle_-_Chop_Suey_02.jpg">Seattle - Chop Suey 02.jpg</a> by Joe Mabel, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Statue_of_Dom_P%C3%A9rignon_at_Mo%C3%ABt_%26_Chandon_(8132642467).jpg">Statue of Dom Pérignon at Moët &amp; Chandon (8132642467).jpg</a> by Michal Osmenda from Brussels, Belgium, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Pouring_two_champagne_glasses.jpg">Pouring two champagne glasses.jpg</a> by Quinn Dombrowski, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Glass_of_champagne_-_bubbles.jpg">Glass of champagne - bubbles.jpg</a> by Remi Mathis, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_Ripe_Berries_Red.jpg">Coffee Ripe Berries Red.jpg</a> by Jyppe Quidores, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg">Coffee ceremony of Ethiopia and Eritrea 3.jpg</a> by ProtoplasmaKid, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_berries_in_Hacienda_Guayabal,_Colombia.jpg">Coffee berries in Hacienda Guayabal, Colombia.jpg</a> by Bernard Gagnon, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookies_on_cutting_board.jpg">Chocolate chip cookies on cutting board.jpg</a> by Mshuang2, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://www.flickr.com/photos/70757891@N00/7133349441">Browned butter chocolate chip cookies (flickr)</a> by grongar, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Plate_of_chocolate_chip_cookies,_ready_to_munch.jpg">Plate of chocolate chip cookies, ready to munch.jpg</a> by The-Wuje, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li></ol></details>
+</main>
+</body>
+</html>

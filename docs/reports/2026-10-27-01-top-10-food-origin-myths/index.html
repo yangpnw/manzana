@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Food Origin Myths</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><span aria-current="page">English</span> · <a href="zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="ko/" hreflang="ko" lang="ko">한국어</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../archive.html">All sheets</a></nav>
+<h1>🌍 Top 10 Food Origin Myths</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>Oct 27, 2026</span></p>
+<hr />
+<h2>1. 🇲🇽 Caesar salad isn't named after Julius Caesar</h2>
+<p><img alt="Caesar salads with romaine, croutons and grated cheese" src="images/01.jpg" />
+A popular myth says the Roman emperor Julius Caesar is behind it. The real Caesar was <strong>Caesar Cardini</strong>, an Italian immigrant who ran a restaurant called Caesar's in Tijuana, Mexico. Americans crossed the border to eat there because alcohol was banned back home.</p>
+<p>His daughter Rosa said it happened on July 4, 1924. A holiday rush used up most of the kitchen's food, so Cardini threw together what was left and tossed it right at the table to put on a show.</p>
+<p>The first version used whole lettuce leaves you picked up with your fingers, and Worcestershire sauce instead of anchovies.</p>
+<p>It's named after the cook, not the emperor.</p>
+<hr />
+<h2>2. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 The sandwich's card-table origin story started as a rumor</h2>
+<p><img alt="Roast beef sandwiches on toasted bread and rolls" src="images/02.jpg" />
+The story goes like this: the Earl of Sandwich, an English lord, didn't want to stop playing cards, so he asked for roast beef between two slices of toast. No fork needed, and no greasy cards.</p>
+<p>But the tale first shows up in a 1770 travel book by a French writer, Pierre-Jean Grosley, who spent a year in London. The Earl's biographer thinks he was more likely eating at his desk, because he was so busy with the navy, politics and the arts.</p>
+<p>And people were putting food in bread long before him. More than 2,000 years ago, a Jewish teacher named Hillel wrapped lamb and bitter herbs in flatbread, like a wrap.</p>
+<p>Basically, the Earl got his name on the sandwich, but not the idea.</p>
+<hr />
+<h2>3. 🇮🇹 Marco Polo didn't bring pasta to Italy from China</h2>
+<p><img alt="Plates of spaghetti with different sauces" src="images/03.jpg" />
+Many historians call this one a myth. In <strong>1154</strong>, a geography book written for the king of Sicily already described noodles being made on the island and shipped abroad. That's over 100 years before Marco Polo set off for China.</p>
+<p>Noodles most likely traveled the long way around: from China along the Silk Road trade routes to Persia, then with Arab traders to Sicily and Spain.</p>
+<p>So where did the Marco Polo story come from? The food writer Jane Grigson believed it began in the 1920s or 1930s, in an ad for a Canadian spaghetti company.</p>
+<p>Think of it as a marketing slogan that ended up in history books.</p>
+<hr />
+<h2>4. 🇺🇸 Potato chips weren't invented to annoy a picky customer</h2>
+<p><img alt="Piles of potato chips" src="images/04.jpg" />
+The legend: in 1853, at a restaurant in Saratoga Springs, New York, a cook named George Crum got fed up with a customer who kept sending back his fries for being too thick. So Crum sliced potatoes paper-thin, fried them crisp and piled on salt, and the customer loved them.</p>
+<p>It's a fun story, but it's known to be untrue. The oldest known chip recipe is in an English cookbook from <strong>1817</strong>, 36 years earlier. A later edition says to peel the potato "round and round, as you would peel a lemon," then fry the shavings in fat.</p>
+<p>A packaging company spread the Crum version in a big 1973 ad campaign.</p>
+<p>In other words, the snack is older than the story about its birth.</p>
+<hr />
+<h2>5. 🇮🇹 Pizza Margherita probably wasn't made for a queen</h2>
+<p><img alt="A Neapolitan pizza Margherita and the plaque at Pizzeria Brandi" src="images/05.jpg" />
+The legend says that on June 10, 1889, a Naples pizza maker named Raffaele Esposito made three pizzas for the visiting Queen Margherita. She loved the one in Italy's flag colors: red tomato, white mozzarella and green basil. A thank-you letter from the palace still hangs in his old shop, now Pizzeria Brandi.</p>
+<p>Here's the problem. Researchers doubt the letter is real, no newspaper from the time mentions the visit, and the story and the name were first pushed in the 1930s and 1940s.</p>
+<p>Pizza toppings like tomato, basil and thin slices of mozzarella were already written about in Naples in <strong>1849</strong>, 40 years before the queen's supposed dinner.</p>
+<p>It's a royal stamp of approval added after the fact.</p>
+<hr />
+<h2>6. 🇯🇵 Fortune cookies started out Japanese, not Chinese</h2>
+<p><img alt="A broken fortune cookie, an 1878 Japanese drawing of a cookie bakery, and a fortune cookie factory" src="images/06.jpg" />
+You get them at Chinese restaurants, but they're not from China. In the 1800s, bakers in Kyoto, Japan, made a similar cookie called tsujiura senbei (辻占煎餅). It was bigger and darker, made with sesame and miso, and the paper fortune was tucked into the fold instead of inside.</p>
+<p>Japanese immigrants in California most likely brought the idea to the US in the early 1900s. Then, during World War II, the US government forced <strong>over 100,000 Japanese Americans</strong> into guarded camps, including the people who made the cookies. One theory is that this gave Chinese American bakers their chance to take over.</p>
+<p>Today about 3 billion fortune cookies are made every year, mostly eaten in the US.</p>
+<p>Basically, a Japanese snack that ended up working at Chinese restaurants.</p>
+<hr />
+<h2>7. 🇨🇳 Chop suey wasn't invented for a visiting Chinese leader</h2>
+<p><img alt="Plates of chop suey and an old chop suey restaurant in Seattle" src="images/07.jpg" />
+One story says that when the Chinese statesman Li Hongzhang visited the US in 1896, a cook made up chop suey to please both Chinese and American tastes. But a scholar who dug into the records found no proof that Li ate chop suey there at all. Li even brought three of his own chefs.</p>
+<p>The dish was already in a Brooklyn newspaper in <strong>1884</strong>, 12 years before his trip. Its name likely comes from 杂碎 (zá suì, "tsap seui" in the Taishan area of Guangdong), meaning "odds and ends," a dish from the home region of many early Chinese immigrants.</p>
+<p>Restaurant owners were probably just smart: they used the famous visit to advertise chop suey as Li's favorite.</p>
+<p>Think of it as a famous guest's name borrowed for a menu.</p>
+<hr />
+<h2>8. 🇫🇷 Dom Pérignon didn't invent bubbly champagne</h2>
+<p><img alt="The Dom Pérignon statue in Épernay and glasses of sparkling champagne" src="images/08.jpg" />
+Dom Pierre Pérignon was a French monk who ran the wine cellar of an abbey in the Champagne region from 1668 until 1715. Back then, bubbles were a nightmare. When the weather warmed up in spring, the wine started fizzing again inside the bottles, and they could explode. One blast could set off the bottles next to it.</p>
+<p>So Pérignon actually tried to <em>stop</em> the bubbles. Bubbly champagne didn't become the main style until the mid-1800s, over 100 years after he died.</p>
+<p>His famous line, "Come quickly, I am tasting the stars!", first shows up in a printed ad in the late 1800s.</p>
+<p>In other words, the monk famous for bubbly spent his career fighting bubbles.</p>
+<hr />
+<h2>9. 🇪🇹 The goatherd who discovered coffee probably never existed</h2>
+<p><img alt="Red coffee cherries on the branch and coffee beans roasting in an Ethiopian coffee ceremony" src="images/09.jpg" />
+The legend says a goat herder named Kaldi noticed his goats getting super hyper after nibbling red berries from a bush. He tried them too, then took them to a monk, who threw them in the fire. The smell was so good that they made a drink from the roasted berries.</p>
+<p>The story supposedly happened around the year 850, but it first appears in a book printed in Rome in <strong>1671</strong>, more than 800 years later. That first version doesn't even give the herder a name. The name "Kaldi" seems to have been added in the 1900s.</p>
+<p>Even so, Ethiopia's biggest coffee chain today is called Kaldi's Coffee.</p>
+<p>It's a mascot that turned into a history lesson.</p>
+<hr />
+<h2>10. 🇺🇸 The chocolate chip cookie probably wasn't an accident</h2>
+<p><img alt="Chocolate chip cookies on a board and on plates" src="images/10.jpg" />
+The famous story: in the 1930s, Ruth Wakefield, who ran the Toll House Inn in Massachusetts, ran out of nuts or hoped the chocolate would melt in the oven, so she tossed in chopped chocolate instead. Surprise, a new cookie!</p>
+<p>Food writers today think that's unlikely. Wakefield had studied home economics and ran a very organized kitchen. In the 1970s she said she simply wanted to give guests something new, so she broke up a Nestlé chocolate bar with an <strong>ice pick</strong> and stirred the pieces into her dough.</p>
+<p>Nestlé later printed her recipe on its chocolate packages. Wakefield said she was promised just one dollar for it.</p>
+<p>Not a happy accident, just a cook who knew exactly what she was doing.</p>
+<hr />
+<h3>Fun fact</h3>
+<p>In 1983, San Francisco and Los Angeles took their fight over who invented the fortune cookie to San Francisco's Court of Historical Review. During the hearing, someone handed in a cookie as evidence with this message inside: "S.F. Judge who rules for L.A. Not Very Smart Cookie." The judge ruled for San Francisco, and Los Angeles officially complained. Courts have argued over food many times, like the Massachusetts court that decided in 2006 that a burrito is not a sandwich, so strange food trials could be a great next rabbit hole.</p>
+<details class="credits"><summary>Photo credits (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Caesar_salad_(2).jpg">Caesar salad (2).jpg</a> by Geoff Peters from Vancouver, BC, Canada, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Chicken_Caesar_Salad_-_Amo_2026-04-11.jpg">Chicken Caesar Salad - Amo 2026-04-11.jpg</a> by Andy Li, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Caesar_Salad_from_Tony_Roma_Restaurant-_March_2024_02.jpg">Caesar Salad from Tony Roma Restaurant- March 2024 02.jpg</a> by Banej, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Roast_beef_toasted_sandwich_-_photo_1.jpg">Roast beef toasted sandwich - photo 1.jpg</a> by Acabashi, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Homemade_roast_beef_baguette_sandwich.jpg">Liat Portal for Foodie Disorder - Homemade roast beef baguette sandwich.jpg</a> by HaJunkiyada, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:A_roast_beef_sandwich_with_au_jus_sauce_for_dipping,_served_with_a_side_of_fries..jpg">A roast beef sandwich with au jus sauce for dipping, served with a side of fries..jpg</a> by 4chewnahdoe, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Spaghetti_Brighton_-_Napoli_Restaurant_2024-10-31.jpg">Spaghetti Brighton - Napoli Restaurant 2024-10-31.jpg</a> by Andy Li, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Spaghetti_biz-Zalza_tal-Fenek.jpg">Spaghetti biz-Zalza tal-Fenek.jpg</a> by Simon Cutajar, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Maya_Spaghetti_with_Shrimp_-_September_2022_-_Sarah_Stierch.jpg">Maya Spaghetti with Shrimp - September 2022 - Sarah Stierch.jpg</a> by Missvain, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Potato-Chips.jpg">Potato-Chips.jpg</a> by Evan-Amos, Public domain</li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Potato_chips_2.jpg">Potato chips 2.jpg</a> by Gaurav Dhwaj Khadka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Dill_pickle_chips.jpg">Dill pickle chips.jpg</a> by Hannah Clover, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Pizza-napoletana.jpg">Pizza-napoletana.jpg</a> by Fabryx98, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:TargaInvenzionePizzaMargheritaDaBrandi.jpg">TargaInvenzionePizzaMargheritaDaBrandi.jpg</a> by Alessandro57, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg">Eq it-na pizza-margherita sep2005 sml.jpg</a> by Valerio Capello at English Wikipedia, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Fortune_cookie_broken_20040628_223252_1.jpg">Fortune cookie broken 20040628 223252 1.jpg</a> by User Lorax on en.wikipedia, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Fortune_Cookie_1878.jpg">Fortune Cookie 1878.jpg</a> by 孟斉芳虎・画, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Fortune_Cookie_Company_San_Francisco_January_2013_001.jpg">Golden Gate Fortune Cookie Company San Francisco January 2013 001.jpg</a> by King of Hearts, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Chop_suey_made_in_Ankara.jpg">Chop suey made in Ankara.jpg</a> by E4024, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Filipino_chop_suey.jpg">Filipino chop suey.jpg</a> by whologwhy, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Seattle_-_Chop_Suey_02.jpg">Seattle - Chop Suey 02.jpg</a> by Joe Mabel, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Statue_of_Dom_P%C3%A9rignon_at_Mo%C3%ABt_%26_Chandon_(8132642467).jpg">Statue of Dom Pérignon at Moët &amp; Chandon (8132642467).jpg</a> by Michal Osmenda from Brussels, Belgium, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Pouring_two_champagne_glasses.jpg">Pouring two champagne glasses.jpg</a> by Quinn Dombrowski, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Glass_of_champagne_-_bubbles.jpg">Glass of champagne - bubbles.jpg</a> by Remi Mathis, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_Ripe_Berries_Red.jpg">Coffee Ripe Berries Red.jpg</a> by Jyppe Quidores, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg">Coffee ceremony of Ethiopia and Eritrea 3.jpg</a> by ProtoplasmaKid, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Coffee_berries_in_Hacienda_Guayabal,_Colombia.jpg">Coffee berries in Hacienda Guayabal, Colombia.jpg</a> by Bernard Gagnon, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookies_on_cutting_board.jpg">Chocolate chip cookies on cutting board.jpg</a> by Mshuang2, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://www.flickr.com/photos/70757891@N00/7133349441">Browned butter chocolate chip cookies (flickr)</a> by grongar, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Plate_of_chocolate_chip_cookies,_ready_to_munch.jpg">Plate of chocolate chip cookies, ready to munch.jpg</a> by The-Wuje, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li></ol></details>
+</main>
+</body>
+</html>
