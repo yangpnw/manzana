@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 특이한 다리</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 특이한 다리</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 10월 28일</span></p>
+<hr />
+<h2>1. 🇮🇳 메갈라야에서는 살아 있는 나무뿌리로 다리를 키워요</h2>
+<p><img alt="인도 메갈라야의 바위 개울 위에 놓인 살아 있는 뿌리 다리" src="../images/01.jpg" />
+인도 메갈라야의 산속에 사는 카시족과 자인티아족은 어떤 다리는 짓지 않아요. 키워요. 고무나무(인도고무나무)에서 늘어진 뿌리를 개울 건너편으로 이끌고, 어린 뿌리들을 묶고 꼬아서 서로 붙어 자라게 만들어요.</p>
+<p>나무가 살아 있으니까 뿌리가 계속 굵어지고, 그래서 다리는 해마다 더 튼튼해져요. 다 자란 뿌리 다리는 한 번에 <strong>50명 넘게</strong> 버틸 수 있고, 수백 년 동안 쓸 수 있어요. 2017년에 연구자들이 75개를 찾아 지도에 표시했어요.</p>
+<p>한마디로, 낡아 가는 게 아니라 나이 들수록 더 튼튼해지는 다리예요.</p>
+<hr />
+<h2>2. 🇵🇪 페루의 케스와차카 풀 다리는 해마다 새로 지어요</h2>
+<p><img alt="강 협곡 위의 케스와차카 풀 밧줄 다리와 풀을 꼬아 밧줄을 만드는 사람들" src="../images/02.jpg" />
+케스와차카(Q'eswachaka)는 지금까지 남아 있는 마지막 잉카 밧줄 다리인데, 풀로 만들었어요. 페루 남부의 아푸리막강 위에 걸려 있어요. 근처에 현대식 다리가 있는데도요.</p>
+<p>해마다 <strong>6월 둘째 주</strong>가 되면 근처 네 마을의 가족들이 각자 풀을 꼬아 밧줄을 만들어요. 강가에서는 그 밧줄을 땋아 굵은 줄로 만들고, 다른 사람들은 바닥에 깔 돗자리를 엮어서, 다 같이 다리를 다시 지어요. 잉카 시대에는 이 일이 일종의 세금이었어요. 지금 사람들은 조상과 파차마마(어머니 대지)를 기리려고 한다고 말해요.</p>
+<p>코로나 때문에 해마다 하던 작업이 멈추자, 2021년 3월에 다리가 무너졌어요. 하지만 몇 주 만에 다시 세워졌어요.</p>
+<p>해마다 생일을 맞는 다리인데, 온 동네가 와서 다시 지어 주는 셈이에요.</p>
+<hr />
+<h2>3. 🇩🇪 독일 마그데부르크 물 다리에서는 배가 강 위로 지나가요</h2>
+<p><img alt="엘베강을 건너는 운하, 마그데부르크 물 다리를 하늘에서 본 모습" src="../images/03.jpg" />
+독일 마그데부르크 근처에서는 운하 두 개가 엘베강에서 만나요. 큰 화물선이 강으로 내려갔다가 다시 올라오게 하는 대신, 기술자들은 물로 가득 찬 거대한 물길을 만들어서 배가 강 <strong>위로</strong> 지나가게 했어요. 이런 종류의 다리로는 유럽에서 가장 커요.</p>
+<p>이 아이디어는 1900년대 초부터 있었지만, 1942년에 제2차 세계대전 때문에 공사가 멈췄고, 그 뒤로 독일은 수십 년 동안 둘로 나뉘어 있었어요. 다시 통일된 뒤 1998년에 공사를 시작해서 6년이 걸렸어요.</p>
+<p>콘크리트가 68,000세제곱미터나 들어갔는데, 올림픽 수영장 약 27개를 채울 만한 양이에요.</p>
+<p>강물이 아래로 흐르는, 배를 위한 고가도로라고 생각하면 돼요.</p>
+<hr />
+<h2>4. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 게이츠헤드 밀레니엄 브리지는 눈을 깜빡이듯 기울어져요</h2>
+<p><img alt="타인강 위에서 열리고 닫힌 게이츠헤드 밀레니엄 브리지" src="../images/04.jpg" />
+잉글랜드의 게이츠헤드와 뉴캐슬 사이, 타인강을 건너는 이 보행자·자전거 다리는 2001년에 <strong>세계 최초로 기울어지는 다리</strong>로 문을 열었어요. 배가 지나가야 할 때면 유압 팔 여섯 개가 다리 전체를 뒤로 젖혀요. 아치는 내려가고 길은 올라가서, 배가 지나갈 25미터 높이의 공간이 생겨요. 8층 건물만큼 높아요.</p>
+<p>850,000kg짜리 다리 전체를, 그러니까 자동차 600대 가까운 무게를 4분쯤 만에 움직여요. 움직이는 모습 때문에 사람들은 '눈 깜빡이는 다리'라고 불러요.</p>
+<p>보너스도 있어요. 기울어질 때마다 다리가 청소도 돼요. 길 위의 쓰레기가 양쪽 끝의 통으로 굴러떨어지거든요.</p>
+<p>다시 말해, 천천히 윙크하면서 스스로 청소하는 다리예요.</p>
+<hr />
+<h2>5. 🇳🇱 모세의 다리에서는 해자 위가 아니라 해자 속을 걸어가요</h2>
+<p><img alt="로베러 요새의 해자를 가르며 지나가는, 물속으로 낮게 놓인 모세의 다리" src="../images/05.jpg" />
+네덜란드의 로베러 요새(Fort de Roovere)는 흙으로 쌓은 오래된 요새예요. 물로 적을 막던 1600년대 방어선의 일부였어요. 2010년에 해자를 다시 깊게 팠을 때, 건축가들은 해자 위에 다리를 놓으면 옛 요새의 모습을 망칠 거라고 생각했어요.</p>
+<p>그래서 <strong>해자 안으로 쑥 들어가 있는</strong> 다리를 만들었어요. 물이 양옆까지 바로 차오르고, 사람은 물 높이에 맞춰 그 가운데를 걸어가요.</p>
+<p>물을 둘로 가르는 것처럼 보여서 '모세의 다리'라는 이름이 붙었어요. 성경 이야기에서 모세가 바다를 가른 것처럼요.</p>
+<p>가운데만 물 채우는 걸 깜빡한 수영장 한가운데를 걷는 느낌이에요.</p>
+<hr />
+<h2>6. 🇨🇳 세계에서 가장 긴 다리는 마라톤 네 번 거리에 가까워요</h2>
+<p><img alt="중국 장쑤성의 평평한 땅을 가로지르는 단양-쿤산 대교" src="../images/06.jpg" />
+단양-쿤산 대교(丹昆特大桥)는 베이징과 상하이를 잇는 고속열차가 달리는 다리예요. 길이가 <strong>164.8킬로미터</strong>예요. 마라톤을 거의 네 번 이어 달리는 거리고, 2011년부터 기네스 세계 기록에 오른 세계에서 가장 긴 다리예요.</p>
+<p>논, 운하, 강, 호수가 가득한 평평한 땅을 지나가는데, 양청호 물 위를 지나는 9킬로미터 구간도 있어요.</p>
+<p>약 1만 명이 4년 동안 지었고, 약 85억 달러가 들었어요.</p>
+<p>다리라기보다는, 끝없이 이어지는 기둥 위의 철도에 가까워요.</p>
+<hr />
+<h2>7. 🇻🇳 베트남의 골든 브리지는 거대한 두 손이 받치고 있어요</h2>
+<p><img alt="바나힐에서 돌처럼 보이는 거대한 두 손 위에 놓인 골든 브리지" src="../images/07.jpg" />
+베트남 다낭 근처 바나힐 높은 곳에, 길이 150미터(축구장 한 개 반쯤)인 산책로가 거의 한 바퀴를 돌듯 휘어져 있어요. 케이블카 역과 정원을 이어 줘서, 방문객들이 가파른 비탈을 오르지 않아도 돼요.</p>
+<p>거대한 손 두 개가 아래에서 금빛 다리를 받치고 있는 것처럼 보여요. 오래된 돌처럼 보이지만, 사실은 <strong>유리섬유와 철망으로 만든</strong> 거예요. 1년도 안 걸려서 다 지었고, 2018년 6월에 문을 열었어요.</p>
+<p>거인의 손바닥 위에 놓인 금빛 리본이라고 생각하면 돼요.</p>
+<hr />
+<h2>8. 🇮🇹 피렌체의 폰테 베키오에는 다리 위에 가게들이 있어요</h2>
+<p><img alt="아르노강 위로 가게들이 늘어선 피렌체의 폰테 베키오" src="../images/08.jpg" />
+이탈리아 피렌체의 폰테 베키오('오래된 다리')는 1345년쯤부터 아르노강 위에 서 있어요. 양쪽에 작은 가게들이 줄지어 있어서, 건너가면 꼭 거리를 걷는 것 같아요. 처음에는 정육점 주인, 가죽 장인, 농부들이 여기서 일했어요.</p>
+<p>1565년에 정육점을 내보내고 <strong>금세공인과 보석상</strong>만 가게를 낼 수 있게 하는 규칙이 생겼는데, 이 규칙은 약 460년이 지난 지금도 그대로예요. 같은 해, 피렌체를 다스리던 메디치 가문은 다리 위쪽으로 지붕 덮인 통로를 만들게 해서, 시청과 강 건너 자기들 궁전을 이었어요.</p>
+<p>제2차 세계대전 때 후퇴하던 독일군이 폭파하지 않은 피렌체의 유일한 다리였어요.</p>
+<p>한마디로, 우연히 강을 건너고 있는 쇼핑 거리예요.</p>
+<hr />
+<h2>9. 🇮🇷 이스파한의 하주 다리는 다리이자 댐이자 모임 장소예요</h2>
+<p><img alt="낮과 밤 조명 속 이스파한 하주 다리의 아치들" src="../images/09.jpg" />
+이란 이스파한의 하주 다리(Khaju Bridge)는 1650년쯤 샤 아바스 2세를 위해 지어졌어요. 이 다리는 '보'이기도 해요. '보'는 강물을 막아 두는 낮은 벽이에요. 그러니까 다리이면서 동시에 댐인 거죠.</p>
+<p><strong>아치가 23개</strong>이고 길이는 133미터예요. 사람들이 모이는 장소로도 만들어졌어요. 가운데에는 정자가 있는데, 샤가 거기 앉아 경치를 즐기곤 했대요. 그가 앉던 돌 의자는 지금 몇 조각만 남아 있어요.</p>
+<p>다시 말해, 다리와 댐과 광장을 하나로 합친 거예요.</p>
+<hr />
+<h2>10. 🇺🇸 '갤로핑 거티'는 문을 연 지 넉 달 만에 흔들리다 부서졌어요</h2>
+<p><img alt="1940년 타코마 내로스 다리의 개통일, 바람에 비틀리는 모습, 그리고 무너진 뒤" src="../images/10.jpg" />
+미국 워싱턴주의 타코마 내로스 다리는 1940년 7월 1일에 개통했어요. 짓는 동안에도 다리 위 도로가 바람에 위아래로 출렁여서, 일꾼들이 '갤로핑 거티(Galloping Gertie, 날뛰는 거티)'라는 별명을 붙였어요.</p>
+<p><strong>1940년 11월 7일</strong>, 시속 64킬로미터(40마일)의 바람이 도로를 비틀기 시작했어요. 왼쪽이 내려가면 오른쪽이 올라가고, 그다음엔 반대로요. 비틀림이 점점 커지다가 결국 도로가 찢어져 물속으로 떨어졌어요. 개통한 지 넉 달 남짓 만이었어요. 죽은 사람은 없었지만, 다리 위 차 안에 갇혀 있던 터비(Tubby)라는 코커스패니얼이 목숨을 잃었어요.</p>
+<p>무너지는 모습은 영상으로 찍혔고, 그 뒤로 만들어진 모든 긴 다리의 설계를 바꿔 놓았어요.</p>
+<p>춤을 추다가 스스로 산산조각 난 다리예요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>1940년에 퓨젓사운드 바다로 떨어진 갤로핑 거티의 조각은 지금도 바닷속에 있는데, 이제는 바다 생물들의 집인 인공 어초가 됐어요. 1950년에는 같은 자리에 새 다리가 열렸는데, 옛 탑의 받침과 케이블을 고정하던 부분까지 다시 썼어요. 일부러든 사고로든 물에 가라앉은 많은 것들이 결국 어초가 되니까, 가라앉은 배와 물고기들의 다른 수중 집도 다음에 풍덩 빠져 볼 만한 주제예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Double_decker_living_root_bridge_02.jpg">Double decker living root bridge 02.jpg</a> by Chiranjeeb Baul, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Living_root_bridge,_Maghalaya,_India1.jpg">Living root bridge, Maghalaya, India1.jpg</a> by Joydeep Chakraborty, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Living_root_bridge,_Meghalaya.jpg">Living root bridge, Meghalaya.jpg</a> by Elbowmacaroni, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Inka_suspension_bridge_Qeswachaka_DSC_2730.jpg">Inka suspension bridge Qeswachaka DSC 2730.jpg</a> by Aga Khan (IT), <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Puente_Qeswachaka.jpg">Puente Qeswachaka.jpg</a> by Ricardo Chirinos Portocarrero, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:2015_Smithsonian_folklife_festival_DC_-Qeswachaka_Bridge_rope_making_-_02.jpg">2015 Smithsonian folklife festival DC -Qeswachaka Bridge rope making - 02.jpg</a> by Jarek Tuszyński, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Magdeburg_Kanalbr%C3%BCcke_aerial_view_13.jpg">Magdeburg Kanalbrücke aerial view 13.jpg</a> by Olivier Cleynen, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Magdeburg_Kanalbr%C3%BCcke_aerial_view_02.jpg">Magdeburg Kanalbrücke aerial view 02.jpg</a> by Olivier Cleynen, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Magdeburg_Kanalbr%C3%BCcke_aerial_view_07.jpg">Magdeburg Kanalbrücke aerial view 07.jpg</a> by Olivier Cleynen, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Gateshead_millennium_bridge_open.jpg">Gateshead millennium bridge open.jpg</a> by Mike1024, Public domain</li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Newcastle_upon_Tyne_-_Gateshead_Millennium_Bridge_-_1.jpg">Newcastle upon Tyne - Gateshead Millennium Bridge - 1.jpg</a> by Benjamin Smith, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Gateshead_Millennium_Bridge_viewed_from_the_Gateshead_bank,_Tyne_and_Wear,_England.jpg">Gateshead Millennium Bridge viewed from the Gateshead bank, Tyne and Wear, England.jpg</a> by Salwa Farwaneh Dameh, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Digital_Eye%E2%80%932015%E2%80%93Moses%27s_Bridge_at_Fort_de_Roovere-7.jpg">Digital Eye–2015–Moses&#x27;s Bridge at Fort de Roovere-7.jpg</a> by Digital Eye, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Loopgraafbrug.JPG">Loopgraafbrug.JPG</a> by Nokah, <a href="https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en">CC BY-SA 3.0 nl</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Digital_Eye%E2%80%932015%E2%80%93Moses%27s_Bridge_at_Fort_de_Roovere-1.jpg">Digital Eye–2015–Moses&#x27;s Bridge at Fort de Roovere-1.jpg</a> by Digital Eye, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:201603_Danyang-Kunshan_grand_bridge_(wuxi).JPG">201603 Danyang-Kunshan grand bridge (wuxi).JPG</a> by MNXANL, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:201604_Danyang-Kunshan_mega-bridge_near_Huaqiao.JPG">201604 Danyang-Kunshan mega-bridge near Huaqiao.JPG</a> by MNXANL, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:201603_Danyang-Kunshan_grand_bridge_(wuxi)_(cropped).JPG">201603 Danyang-Kunshan grand bridge (wuxi) (cropped).JPG</a> by MNXANL, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Ba_Na_Hills_-_BaNa1519.jpg">Ba Na Hills - BaNa1519.jpg</a> by lumoplank, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Golden_Bridge_above_the_clouds_Ba_Na_Hills_Da_Nang_Vietnam.jpg">Golden Bridge above the clouds Ba Na Hills Da Nang Vietnam.jpg</a> by Vivu Vietnam, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Golden_Bridge_at_Ba_Na_Hills_20250718.jpg">Golden Bridge at Ba Na Hills 20250718.jpg</a> by DvTor8303, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_from_Ponte_Santa_Trinita.jpg">Ponte Vecchio from Ponte Santa Trinita.jpg</a> by Ingo Mehling, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_sobre_el_r%C3%ADo_Arno,_Florencia,_Italia,_2022-09-19,_DD_02.jpg">Ponte Vecchio sobre el río Arno, Florencia, Italia, 2022-09-19, DD 02.jpg</a> by Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_dusk_1.JPG">Ponte Vecchio at dusk 1.JPG</a> by Martin Falbisoner, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Khaju_Bridge,_Isfahan_04.jpg">Khaju Bridge, Isfahan 04.jpg</a> by Bernard Gagnon, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Khaju_Bridge_photo2.jpg">Khaju Bridge photo2.jpg</a> by Ali Ahmadzadeh Heravi, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Khaju_Bridje_at_night.jpg">Khaju Bridje at night.jpg</a> by Gire 3pich2005 with special thanks to Hossein Majidi, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Tacoma_narrows_bridge_collapsed.jpg">Tacoma narrows bridge collapsed.jpg</a> by Barney Elliot First Uploader at de-wp: Guety at de.wikipedia, <a href="https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/">Public Domain</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Howard_Clifford_running_off_the_Tacoma_Narrows_Bridge_during_collapse,_Tacoma,_Washington_(4861196144).jpg">Howard Clifford running off the Tacoma Narrows Bridge during collapse, Tacoma, Washington (4861196144).jpg</a> by UW Digital Collections, <a href="https://www.flickr.com/commons/usage/">No restrictions</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Opening_day_of_the_Tacoma_Narrows_Bridge,_Tacoma,_Washington.jpg">Opening day of the Tacoma Narrows Bridge, Tacoma, Washington.jpg</a> by University of Washington Libraries Digital Collections, Public domain</li></ol></details>
+</main>
+</body>
+</html>
