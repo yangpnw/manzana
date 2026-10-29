@@ -33,3 +33,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-26 · Underrated Ways to Eat or Use Croissants · 2026-10-26-01-top-10-underrated-ways-to-eat-or-use-croissants
 - 2026-10-27 · Food Origin Myths · 2026-10-27-01-top-10-food-origin-myths
 - 2026-10-28 · Unusual Bridges · 2026-10-28-01-top-10-unusual-bridges
+- 2026-10-29 · Amazing Bird Nests and How Birds Build Them · 2026-10-29-01-top-10-amazing-bird-nests-and-how-birds-build-them
