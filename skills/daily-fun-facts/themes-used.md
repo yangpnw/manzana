@@ -35,3 +35,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-28 · Unusual Bridges · 2026-10-28-01-top-10-unusual-bridges
 - 2026-10-29 · Amazing Bird Nests and How Birds Build Them · 2026-10-29-01-top-10-amazing-bird-nests-and-how-birds-build-them
 - 2026-10-30 · World's Priciest Foods · 2026-10-30-01-top-10-world-s-priciest-foods
+- 2026-10-31 · Spooky Bioluminescence · 2026-10-31-01-top-10-spooky-bioluminescence

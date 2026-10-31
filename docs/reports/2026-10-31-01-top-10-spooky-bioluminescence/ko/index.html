@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 으스스한 생물 발광</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 으스스한 생물 발광</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 10월 31일</span></p>
+<hr />
+<h2>1. 🎃 잭오랜턴 버섯은 진짜로 빛나요</h2>
+<p><img alt="어둠 속에서 초록빛을 내는 잭오랜턴 버섯" src="../images/01.jpg" /></p>
+<p>동부 잭오랜턴 버섯(eastern jack-o'-lantern mushroom)은 북아메리카 동부의 오래된 그루터기나 땅속에 묻힌 뿌리 위에 밝은 주황색 덩어리로 자라요. 6월부터 11월까지 나오니까, 딱 핼러윈에 맞춰 나타나는 셈이에요.</p>
+<p>불을 끄면 버섯의 주름(갓 아래에 있는 얇은 날개 같은 부분)에서 <strong>희미한 초록빛</strong>이 나요. 루시페레이스라는 효소가 루시페린이라는 물질에 작용하면 빛이 생기는데, 반딧불이가 빛나는 원리와 아주 비슷해요. 이 빛은 버섯을 딴 뒤에도 40~50시간이나 계속될 수 있어요.</p>
+<p>귀여운 이름에 속으면 안 돼요. 사람들이 맛있는 꾀꼬리버섯으로 착각하기도 하는데, 이 버섯은 독이 있어요. 일루딘 S라는 독소 때문에 심한 복통, 구토, 설사가 생겨요.</p>
+<p>스스로 불을 켜는 호박등이지만, 절대 먹으면 안 돼요.</p>
+<hr />
+<h2>2. 🇺🇸 빛나는 나무가 잠수함 계기판을 밝혔어요</h2>
+<p><img alt="나무 위에서 초록빛을 내는 패널루스 스팁티쿠스 버섯" src="../images/02.jpg" /></p>
+<p>"여우불"(foxfire)은 썩은 나무 속에 사는 몇몇 균류가 내는 청록색 빛이에요. 사람들은 아주 오래전부터 이걸 알았어요. 기원전 382년에 아리스토텔레스는 이 빛을 두고, 불과 달리 만져도 차가운 빛이라고 적었어요.</p>
+<p>1775년, 미국 독립 전쟁 때 데이비드 부시넬은 한 사람이 타는 잠수함 '터틀'을 만들었어요. 어둠 속에서 계기를 읽으려고, 나침반 바늘과 기압계라는 압력계의 바늘에 여우불 조각을 조금씩 붙였어요.</p>
+<p>그런데 반전이 있어요. 1775년 11월에 날이 추워지자 여우불이 빛을 잃었어요. 부시넬은 벤저민 프랭클린에게 다른 불빛을 알려 달라고 부탁했지만, 프랭클린도 답을 주지 못했고, 터틀은 겨울 내내 쉬어야 했어요.</p>
+<p>한마디로, 썩은 나무에서 자라는 무드등인데 추우면 꺼져 버리는 거예요.</p>
+<hr />
+<h2>3. 🇳🇿 뉴질랜드 글로웜은 빛나는 끈끈이 줄로 낚시를 해요</h2>
+<p><img alt="동굴 속 뉴질랜드 글로웜과 끈끈한 실" src="../images/03.jpg" /></p>
+<p>이 '벌레'는 사실 버섯파리라는 작은 파리의 애벌레예요. 뉴질랜드에만 살아요. 애벌레 한 마리가 동굴 천장에서 <strong>실을 최대 30가닥</strong>까지 늘어뜨리는데, 실마다 끈끈한 물방울이 목걸이 구슬처럼 달려 있어요.</p>
+<p>그다음 청록색 불을 켜요. 깔따구 같은 작은 날벌레가 빛을 보고 날아오다 실에 착 달라붙으면, 애벌레는 실을 먹어 들이면서 먹잇감을 끌어올려요. 빛은 몸속 노폐물을 거르는 작은 관의 끝에서 나와요. 벌레판 '콩팥'인 셈이에요.</p>
+<p>와이토모 글로웜 동굴에서는 관광객이 배를 타고 글로웜이 가득한 천장 아래를 미끄러지듯 지나가요. 처음 들어간 탐험가는 그 지역 마오리인 타네 티노라우와 측량사 프레드 메이스였는데, 1887년에 촛불을 켜고 뗏목을 타고 들어갔어요.</p>
+<p>밤 조명을 미끼로 쓰는 낚싯줄이라고 생각하면 돼요.</p>
+<hr />
+<h2>4. 🌊 야광충은 부서지는 파도를 파랗게 빛나게 해요</h2>
+<p><img alt="밤에 항구에서 파랗게 빛나는 야광충" src="../images/04.jpg" /></p>
+<p>야광충(Noctiluca scintillans)은 살아 있는 세포 딱 하나로 된 생물이에요. 크기는 0.4~1.5mm로, 모래알 하나쯤 돼요. 헤엄을 잘 못 쳐서 물이 흘러가는 대로 떠다녀요. 라틴어 이름은 "밤의 빛, 번쩍번쩍 빛을 내는"이라는 뜻이에요.</p>
+<p>야광충은 눌릴 때만 빛나요. 파도나 배, 물보라가 세포를 휘게 하면 → 세포 안에 전기 신호가 생기고 → 산이 작은 '빛 주머니'들로 밀려들고 → 그 산이 빛을 내는 화학 물질의 스위치를 켜요. 그래서 파란 불빛이 딱 파도가 부서지는 자리에서 나타나요.</p>
+<p>엄청나게 많은 야광충이 한꺼번에 불어나면, 낮에는 바닷물이 붉게 변하고('적조') 밤에는 파랗게 반짝여요.</p>
+<p>다시 말해, 바다에 '누르면 빛나는' 버튼이 있는 거예요.</p>
+<hr />
+<h2>5. 🇯🇵 반딧불오징어는 해마다 봄이면 도야마만을 밝혀요</h2>
+<p><img alt="물속의 반딧불오징어와 일본에서 파는 반딧불오징어" src="../images/05.jpg" /></p>
+<p>반딧불오징어는 <strong>길이가 7.5cm쯤</strong>밖에 안 돼요. 손가락 하나 길이 정도예요. 배에는 작은 불빛이 800~1,000개나 덮여 있고, 눈 주위마다 5개가 더 있고, 팔 두 개의 끝에는 아주 밝은 불빛이 각각 3개씩 있어요.</p>
+<p>낮에는 300~400m 깊이에 있어요. 에펠탑 높이쯤 되는 깊이예요. 그리고 밤이 되면 올라와서 사냥을 해요. 해마다 봄, 1년 동안의 삶이 끝나 갈 무렵 암컷들이 일본 도야마만으로 떼 지어 몰려와 알을 낳고, 그러면 만 전체가 파랗게 반짝여요.</p>
+<p>이 불빛 덕분에 관광객도, 어부도 몰려와요. 1990년대에 일본은 해마다 이 작은 오징어를 5,000~7,000톤쯤 잡았는데, 일본에서는 '호타루이카'(반딧불오징어)라고 불러요.</p>
+<p>꼬마전구 옷을 입은 오징어 같아요.</p>
+<hr />
+<h2>6. 🇯🇵 군인들은 말린 바다반딧불이 불빛으로 지도를 읽었어요</h2>
+<p><img alt="일본에서 파랗게 빛나는 바다반딧불이" src="../images/06.jpg" /></p>
+<p>바다반딧불이는 아주 작은 갑각류(새우와 게의 사촌)로, 길이가 <strong>3mm</strong>밖에 안 돼요. 참깨 한 알 정도예요. 일본 남쪽 얕은 바다의 모래 속에 살다가 밤에 나와 먹이를 먹어요.</p>
+<p>빛을 낼 때는 윗입술에 있는 샘에서 빛을 내는 화학 물질을 내뿜어요. 그러면 주변 바닷물이 밝은 파란색으로 번쩍여요. 이 반응의 일부는 야광봉 속 화학 반응과 똑같은 방식으로 일어나요.</p>
+<p>제2차 세계 대전 때 일본군은 가끔 <strong>말린 바다반딧불이</strong>를 불빛으로 썼어요. 희미한 빛이 지도를 읽기에 딱 알맞았고, 남의 눈에 잘 띄지도 않았어요.</p>
+<p>한마디로, 말린 꼬마 '새우 사촌'으로 만든 손전등이에요.</p>
+<hr />
+<h2>7. 🇺🇸 스모키산맥의 반딧불이는 다 같이 맞춰서 깜빡여요</h2>
+<p><img alt="스모키산맥 숲에서 함께 깜빡이는 반딧불이" src="../images/07.jpg" /></p>
+<p>반딧불이는 대부분 제각각 깜빡여요. 그런데 해마다 6월에 2주쯤, 미국 테네시주 그레이트스모키산맥의 엘크몬트 근처에서는 한 종의 수컷들이 함께 깜빡여요. 북아메리카에서 이렇게 하는 게 처음 발견된 반딧불이예요.</p>
+<p>수컷은 2~4초 동안 밝은 빛을 4~8번 빠르게 깜빡이고, 그다음 8~12초 동안 꺼져 있어요. 과학자들은 다 같이 꺼지는 시간이 도움이 된다고 생각해요. 수컷들이 그 조용한 순간에 땅에서 암컷이 보내는 더 희미한 대답을 알아볼 수 있으니까요.</p>
+<p>이 불빛 쇼가 워낙 인기라서, 관람객은 방문자 센터에 차를 세우고 셔틀 전차를 타고 들어가요. 2011년 6월 초에는 밤마다 천 명이 넘는 사람이 왔어요.</p>
+<p>경기장 관중이 다 같이 파도타기를 하다가, 다 같이 조용히 귀를 기울이는 모습이라고 생각해 보세요.</p>
+<hr />
+<h2>8. 🪼 빛나는 해파리가 노벨상으로 이어졌어요</h2>
+<p><img alt="수족관에 떠 있는 크리스털 해파리" src="../images/08.jpg" /></p>
+<p>크리스털 해파리는 거의 투명한 해파리로, 북아메리카 서해안에 살아요. 갓 가장자리에서는 한 단백질이 칼슘을 만나면 파란빛을 내고, <strong>GFP(녹색 형광 단백질)</strong>라는 두 번째 단백질이 그 파란빛의 일부를 흡수해서 초록빛을 내요.</p>
+<p>이걸 연구하려고, 과학자 시모무라 오사무는 1961년부터 1988년까지 미국 워싱턴주 프라이데이하버 근처에서 <strong>해파리를 약 100만 마리</strong>나 모았어요.</p>
+<p>나중에 과학자들은 GFP 유전자를 세균, 효모, 물고기, 심지어 사람 세포에도 넣는 법을 알아냈어요. 그러면 그 세포가 초록빛을 내서 현미경으로 따라가 볼 수 있어요. 2008년, 시모무라 오사무, 마틴 챌피, 로저 첸은 이 연구로 노벨 화학상을 받았어요.</p>
+<p>다시 말해, 해파리 한 마리가 과학계에 가장 아끼는 형광펜을 선물한 거예요.</p>
+<hr />
+<h2>9. 🇺🇸 하와이 짧은꼬리오징어는 빛나는 세균으로 그림자를 숨겨요</h2>
+<p><img alt="모래 위의 하와이 짧은꼬리오징어" src="../images/09.jpg" /></p>
+<p>이 오징어는 길이가 3cm쯤밖에 안 되고, 하와이 근처 얕은 바다에 살아요. 혼자서는 빛을 못 내서 도우미를 데려와요. 바로 몸 안의 특별한 발광 기관에 사는 빛나는 세균이에요.</p>
+<p>방법은 이래요. 갓 태어난 오징어가 끈끈한 점액을 만들어 바닷물 속 세균을 붙잡아요 → 그중 딱 한 종류만 오징어의 방어를 뚫고 들어가요 → 10~12시간 안에 발광 기관이 꽉 차요. 오징어는 세균에게 당분과 단백질을 만드는 재료를 먹이고, 세균은 그 대가로 위에서 내려오는 달빛과 똑같이 빛나요. 그래서 아래에서 올려다보는 사냥꾼 눈에는 <strong>오징어 모양 그림자가 안 보여요</strong>.</p>
+<p>날마다 새벽이 되면 오징어는 세균을 최대 95%까지 내보내요. 낮에 숨어 있는 동안 힘을 아끼려는 것일 수도 있어요.</p>
+<p>작은 세입자들이 전기를 대 주는 투명 망토예요.</p>
+<hr />
+<h2>10. 🎣 심해 아귀는 머리에 빛나는 미끼를 달고 낚시해요</h2>
+<p><img alt="머리에 미끼를 단 심해 아귀" src="../images/10.jpg" /></p>
+<p>아귀는 머리에 낚싯대가 자라나 있어요. 등지느러미 맨 앞의 가시인데, 아귀가 직접 움직일 수 있어요. 심해에 사는 아귀는 이 낚싯대 끝이 <strong>빛나는 세균</strong>으로 가득 차 있어서, 새까만 물속에서 밝은 미끼가 돼요.</p>
+<p>아귀는 자기 근육으로 미끼를 흔들어서 작은 동물처럼 보이게 해요. 호기심 많은 먹잇감이 다가오면 한입에 꿀꺽 삼켜요. 턱과 위가 엄청나게 늘어나서 자기 몸의 두 배만 한 먹이도 삼킬 수 있어요.</p>
+<p>그리고 가장 이상한 점이 있어요. 심해 아귀의 수컷은 아주 작아요. 어떤 수컷은 암컷을 물고는 몸이 아예 하나로 붙어 버려요. 어떤 종은 수컷 길이가 7mm쯤밖에 안 돼요.</p>
+<p>끝에 손전등이 달린 낚싯대가 커다란 입에 붙어 있다고 상상해 보세요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>8번 크리스털 해파리의 초록빛 단백질은 나중에 반려동물 가게까지 가게 됐어요. 1999년, 싱가포르의 과학자들이 이 해파리 유전자를 제브라피시에 넣었어요. 물이 오염되면 빛나는 물고기를 만들고 싶었거든요. 이 빛나는 물고기는 2003년 말에 'GloFish'(글로피시)라는 이름으로 미국에서 팔리기 시작했고, 일반 사람에게 팔린 최초의 유전자 변형 동물 가운데 하나가 됐어요. 캘리포니아주는 2015년까지 이 물고기를 금지했어요. 블랙라이트 아래에서 빛나는 동물들은 스스로 빛을 만드는 것과는 다른 재주를 가졌는데, 다음에 탐험해 볼 반짝반짝한 주제가 될 수 있어요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:081224_Jack_O%27_Lantern_NC.jpg">081224 Jack O&#x27; Lantern NC.jpg</a> by Tylerbrunnermyco, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Omphalotus_illudens_78007.jpg">Omphalotus illudens 78007.jpg</a> by This image was created by user walt sturgeon (Mycowalt) at Mushroom Observer, a source for mycological images.You can contact this user here., <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Glowing_Jacks.png">Glowing Jacks.png</a> by KeithMiklas, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:PanellusStipticusAug12_2009.jpg">PanellusStipticusAug12 2009.jpg</a> by Ylem, Public domain</li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:PanellusStipticusJuly5_2010_cropped.jpg">PanellusStipticusJuly5 2010 cropped.jpg</a> by PanellusStipticusJuly5_2010.jpg: Ylem derivative work: Ak ccm (talk), Public domain</li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:PanellusStipticusAug11_2008.jpg">PanellusStipticusAug11 2008.jpg</a> by Ylem, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Nz_glowworm.jpeg">Nz glowworm.jpeg</a> by No machine-readable author provided. Markrosenrosen assumed (based on copyright claims)., <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Arachnocampa_luminosa_larvae.jpg">Arachnocampa luminosa larvae.jpg</a> by Mnolf, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Glowworm_Grotto,_Waitomo_Glowworm_Cave.jpg">Glowworm Grotto, Waitomo Glowworm Cave.jpg</a> by Michael Willison, <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Noctiluca_scintillans.jpg">Noctiluca scintillans.jpg</a> by Hans Hillewaert, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Noctiluque_(Noctiluca_scintillans)_(Ifremer_00689-80077).jpg">Noctiluque (Noctiluca scintillans) (Ifremer 00689-80077).jpg</a> by Nadine Neaud-Masson, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Algal_bloom(akasio)_by_Noctiluca_in_Nagasaki.jpg">Algal bloom(akasio) by Noctiluca in Nagasaki.jpg</a> by Marufish, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Watasenia_scintillans_002.jpg">Watasenia scintillans 002.jpg</a> by iNaturalist user: kamataryo, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Boiled_firefly_squids_(2014.03.19).jpg">Boiled firefly squids (2014.03.19).jpg</a> by Lombroso, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Firefly_squid_for_sale_-_Tokyo_area_-_April_24_2019.jpeg">Firefly squid for sale - Tokyo area - April 24 2019.jpeg</a> by Nesnad, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Vargula_hilgendorfii_glowing.jpg">Vargula hilgendorfii glowing.jpg</a> by User:Almandine, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://www.inaturalist.org/photos/112123302">Vargula hilgendorfii · 因島三庄町九区, 尾道市, 広島県, JP</a> by (c) りなべる, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Vargula_hilgendorfii.jpg">Vargula hilgendorfii.jpg</a> by self, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Photinus_carolinus_Great_Smoky_Mountains.jpg">Photinus carolinus Great Smoky Mountains.jpg</a> by Niemand für Polyphemus, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/520072948">Photinus carolinus · Sevier, Tennessee, United States</a> by (c) Zachary Dankowicz, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#7: <a href="https://www.inaturalist.org/photos/291971182">Photinus carolinus · Creston, Creston, NC, US</a> by (c) Kim H, some rights reserved (CC BY-SA), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Aequorea_victoria.jpg">Aequorea victoria.jpg</a> by Mnolf, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Crystal_Jelly_(%22Aequorea_Victoria%22),_Monterey_Bay_Aquarium,_Monterey,_California,_USA.jpg">Crystal Jelly (&quot;Aequorea Victoria&quot;), Monterey Bay Aquarium, Monterey, California, USA.jpg</a> by Jim G from Silicon Valley, CA, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Hubcap_(26488480025).jpg">Hubcap (26488480025).jpg</a> by incidencematrix, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Euprymna_scolopes_(Bobtail_squid).jpg">Euprymna scolopes (Bobtail squid).jpg</a> by Nhobgood Nick Hobgood, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Euprymna_scolopes_(Bobtail_squid_in_orange_form).jpg">Euprymna scolopes (Bobtail squid in orange form).jpg</a> by Nhobgood Nick Hobgood, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:A_squid_in_the_starry_night.jpg">A squid in the starry night.jpg</a> by Lilasnoow, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Himantolophus_sagamius_(Football_Fish).jpg">Himantolophus sagamius (Football Fish).jpg</a> by mark6mauno, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:MelanocetusJohnsoniiFord.jpg">MelanocetusJohnsoniiFord.jpg</a> by G. H. Ford, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Prickly_anglerfish.jpg">Prickly anglerfish.jpg</a> by Canley, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>
