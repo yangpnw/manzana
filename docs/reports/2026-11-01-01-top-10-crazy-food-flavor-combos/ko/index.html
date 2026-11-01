@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 기상천외한 음식 맛 조합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 기상천외한 음식 맛 조합</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 1일</span></p>
+<hr />
+<h2>1. 🇨🇦 하와이안 피자는 하와이가 아니라 캐나다에서 생겼어요</h2>
+<p><img alt="햄과 파인애플을 올린 하와이안 피자" src="../images/01.jpg" /></p>
+<p>1962년, 그리스에서 태어난 요리사 샘 파노풀로스가 캐나다 온타리오주 채텀켄트에 있는 자기 가게 '새틀라이트 레스토랑'에서 피자에 파인애플과 햄을 올렸어요. 그는 달콤하고 새콤한 맛을 섞는 캐나다식 중국 요리를 만들어 왔거든요. 그래서 생각했죠. 피자라고 안 될 게 뭐야?</p>
+<p>이름은 하와이 섬들과 아무 상관이 없어요. 통조림 파인애플이 '하와이안 파인애플 컴퍼니' 제품이라서 '하와이안'이라고 불렀을 뿐이에요.</p>
+<p>사람들은 지금도 이 피자로 다퉈요. 2017년에 아이슬란드 대통령은 할 수만 있다면 피자에 파인애플을 못 올리게 하겠다고 농담했고, 당시 캐나다 총리 쥐스탱 트뤼도는 "이 맛있는 남서부 온타리오의 발명품"을 지지한다고 트윗했어요. 한편 1999년 호주에서는 이게 <strong>나라에서 가장 인기 있는 피자</strong>였어요. 팔린 피자 7판 중 1판꼴이었죠.</p>
+<p>한마디로, 그리스계 캐나다인 요리사가 통조림 라벨을 보고 피자 이름을 지은 거예요.</p>
+<hr />
+<h2>2. 🇲🇽 멕시코의 몰레 포블라노는 고추와 초콜릿을 섞어요</h2>
+<p><img alt="멕시코에서 고기 위에 얹은 몰레 포블라노 소스" src="../images/02.jpg" /></p>
+<p>몰레 포블라노는 멕시코 푸에블라에서 온 걸쭉하고 진한 색의 소스예요. 칠면조나 닭고기 위에 부어 먹어요. 말린 고추 두 가지 이상에 견과류, 향신료, 말린 과일을 섞고, 가끔은 맨 마지막에 초콜릿을 조금 넣어요.</p>
+<p>보통 레시피에는 <strong>재료가 20가지쯤</strong> 들어가요. 모든 재료를 볶은 다음 갈아서 페이스트로 만드는데, 손으로 하면 적어도 꼬박 하루가 걸려요. 예전에는 할머니, 엄마, 딸이 함께 일을 나눠서 했어요.</p>
+<p>유명한 전설도 있어요. 푸에블라의 한 수녀원 수녀들이 대주교가 온다는 소식에 허둥지둥하다가, 가진 걸 조금씩 모아서(고추, 견과류, 묵은 빵, 초콜릿 조금) 늙은 칠면조 위에 부었대요. 대주교는 그 맛에 반했고요.</p>
+<p>디저트 한 숟가락을 몰래 숨겨 둔 매운 소스라고 생각하면 돼요.</p>
+<hr />
+<h2>3. 🇫🇷 솔티드 캐러멜은 브르타뉴의 한 사탕 장인에게서 시작됐어요</h2>
+<p><img alt="프랑스의 가염 버터 캐러멜, 캐러멜 스프레드, 캐러멜 크레프" src="../images/03.jpg" /></p>
+<p>프랑스 북서쪽에 있는 브르타뉴는 처음부터 소금이 들어간 버터로 유명해요. 그래서 그곳 사람들은 오래전부터 과자와 말랑한 사탕에 소금과 캐러멜을 섞어 왔어요.</p>
+<p>1977년, 바닷가 마을 키브롱의 제과사 앙리 르루가 훨씬 오래 신선하게 유지되는 가염 버터 캐러멜을 만들었어요. 1980년에는 '프랑스 최고의 사탕'으로 뽑혔어요. 1990년대 말에는 파리의 고급 셰프들이 이 아이디어를 따라 했고, 2008년에는 하겐다즈와 스타벅스가 모두에게 선보였어요.</p>
+<p>왜 사람들은 멈추지 못할까요? 2017년의 한 연구에 따르면, 겹겹이 쌓인 맛이 뇌에서 <strong>기분 좋게 해 주는 물질을 더 많이</strong> 내보내게 해서, 한 입 더 먹고 싶어진대요.</p>
+<p>다시 말해, 소금 한 꼬집이 사탕을 '딱 하나만 더' 함정으로 바꿔 놓는 거예요.</p>
+<hr />
+<h2>4. 🇵🇭 필리핀 사람들은 스파게티에 바나나 케첩을 뿌려요</h2>
+<p><img alt="필리핀 바나나 케첩 병들" src="../images/04.jpg" /></p>
+<p>바나나 케첩은 바나나, 설탕, 식초, 향신료로 만들어요. 원래 색은 누런 갈색이라서, 보통 토마토케첩처럼 보이게 빨갛게 물들여요.</p>
+<p>이 케첩은 부족함에서 태어났어요. 제2차 세계 대전 때 필리핀에는 <strong>토마토는 적고 바나나는 아주 많았거든요</strong>. 그래서 식품 과학자 마리아 오로사가 바나나 버전을 발명한 사람으로 꼽혀요. 1942년에는 '마프란'이라는 회사가 대량으로 만들기 시작했어요.</p>
+<p>오늘날 필리핀 가정에서는 거의 모든 음식에 뿌려 먹어요. 핫도그, 햄버거, 감자튀김, 돼지고기 구이, 프라이드치킨, 그리고 필리핀식 스파게티까지요.</p>
+<p>바나나로 변장한 케첩이에요.</p>
+<hr />
+<h2>5. 🇺🇸 엘비스는 땅콩버터, 바나나, 베이컨 샌드위치를 사랑했어요</h2>
+<p><img alt="땅콩버터, 바나나, 베이컨 샌드위치" src="../images/05.jpg" /></p>
+<p>'엘비스 샌드위치'는 구운 빵에 땅콩버터와 바나나 조각, 그리고 자주 바삭한 베이컨을 넣고, 보통 팬에 구워 만들어요. 어떤 책에 따르면 가수 엘비스 프레슬리는 새벽까지 이야기를 하면서 이 샌드위치를 "하나 또 하나" 먹어 치웠대요.</p>
+<p>그는 '풀스 골드 로프'로 한술 더 떴어요. 프랑스빵 한 덩이를 통째로 써서 베이컨, 땅콩버터, 포도잼을 <strong>각각 1파운드(450g)씩</strong> 채운 거예요. 속만 3파운드(약 1.4kg)니까, 큰 탄산음료 한 병만큼 무거운 게 샌드위치 하나에 들어간 셈이에요.</p>
+<p>이 조합이 퍼진 건 바나나 덕분일 수도 있어요. 1967년에 바나나 회사 치키타가 이 샌드위치 레시피 카드를 9만 장이나 나눠 줬거든요.</p>
+<p>아침, 점심, 디저트를 토스트 두 장 사이에 꾹 눌러 담은 거예요.</p>
+<hr />
+<h2>6. 🇧🇷 브라질에서는 구아바 잼과 치즈가 '로미오와 줄리엣'이에요</h2>
+<p><img alt="흰 치즈와 함께 나온 브라질 구아바 페이스트" src="../images/06.jpg" /></p>
+<p>호메우 이 줄리에타(Romeu e Julieta, 포르투갈어로 '로미오와 줄리엣')는 아주 간단한 브라질 디저트예요. 순한 흰 치즈 한 조각 위에 고이아바다(단단하고 달콤한 구아바 페이스트) 한 조각을 올려요. 치즈가 로미오, 구아바가 줄리엣이에요.</p>
+<p>아마 몇백 년 전 미나스제라이스주에서 시작됐을 거예요. 포르투갈 정착민들이 그곳에서 치즈를 만들었고, 고이아바다는 고향에서 먹던 과일 잼 대신 쓰려고 만들어졌어요.</p>
+<p>이 낭만적인 이름은 1960년대에야 붙었어요. 한 구아바 페이스트 브랜드 광고에, 브라질에서 인기 많은 만화 속 아이들 모니카와 세볼리냐가 로미오와 줄리엣 옷을 입고 나왔거든요.</p>
+<p>한마디로, 포크로 먹을 수 있는 사랑 이야기예요.</p>
+<hr />
+<h2>7. 🇯🇵 일본은 킷캣 맛을 400가지 넘게 만들었어요, 간장 맛까지요</h2>
+<p><img alt="녹차, 고추 등 다양한 맛의 일본 킷캣" src="../images/07.jpg" /></p>
+<p>2000년부터 일본에서는 한정판 킷캣 맛이 <strong>400가지 넘게</strong> 나왔어요. 녹차, 자색 고구마, 팥, 사케, 고추 맛도 있어요. 2010년에 가장 많이 팔린 맛은 간장 맛이었어요.</p>
+<p>비결은 이거예요. 어떤 맛은 한 지역에서만 팔아요. 일본에서는 여행을 다녀오면 그 지역 특산품을 선물로 사 오는데, 그래서 희귀한 맛은 완벽한 기념품이 돼요.</p>
+<p>이름도 한몫했어요. '킷캣'은 일본어 '킷토 카츠'(きっと勝つ)와 소리가 비슷한데, '꼭 이길 거야'라는 뜻이에요. 그래서 학생들은 큰 시험 전에 행운의 부적으로 킷캣을 받아요. 2009년에는 우체국 2만 곳에서 킷캣을 우편으로 보낼 수도 있었어요.</p>
+<p>다시 말해, 기념품이자 행운의 부적인 초콜릿이에요.</p>
+<hr />
+<h2>8. 🇺🇸 치킨 앤 와플은 원래 메기와 함께 시작됐어요</h2>
+<p><img alt="와플과 시럽을 곁들인 프라이드치킨" src="../images/08.jpg" /></p>
+<p>프라이드치킨에 와플, 버터, 시럽이라니, 꼭 내기 같죠. 저녁과 아침을 한 접시에 담았으니까요. 그런데 미국 사람들은 닭고기와 와플을 몇백 년 동안 같이 먹어 왔어요.</p>
+<p>1789년에 토머스 제퍼슨이 암스테르담에서 와플 틀 네 개를 산 뒤로 와플이 더 인기를 끌었어요. 1800년대 초에는 필라델피아 근처 호텔들이 와플에 <strong>메기 튀김</strong>을 곁들여 냈어요. 메기는 몇몇 계절에만 구할 수 있어서, 점점 프라이드치킨이 그 자리를 차지했어요.</p>
+<p>펜실베이니아 더치식은 평범한 와플 위에 푹 끓인 닭고기와 그레이비를 얹어요. 달콤하고 짭짤한 프라이드치킨 버전은 1938년 뉴욕 할렘에 웰스 서퍼 클럽이 문을 연 뒤로 유명해졌어요.</p>
+<p>저녁 자리에 왔다가 눌러앉아 버린 아침밥이에요.</p>
+<hr />
+<h2>9. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 요크셔에서는 과일 케이크를 치즈와 함께 먹어요</h2>
+<p><img alt="웬즐리데일 치즈와 과일 케이크 조각" src="../images/09.jpg" /></p>
+<p>잉글랜드 요크셔와 북동부에서는 과일 케이크나 크리스마스 케이크 한 조각에 <strong>웬즐리데일 치즈</strong> 한 조각을 곁들이는 경우가 많아요. 이 치즈 맛은 사과처럼 달콤한 것과 잘 어울려요. 영국 사람들은 1600년대부터 애플파이 위에도 맛이 진한 치즈를 올려 먹었어요.</p>
+<p>웬즐리데일 치즈는 이야기가 길어요. 잉글랜드 북부에 자리 잡은 프랑스 수도사들이 처음 만들었고, 1540년에 수도원이 문을 닫은 뒤에는 그 지역 농부들이 계속 만들었어요.</p>
+<p>그러다 1990년대에 판매가 너무 줄어서 웬즐리데일에서 치즈 만드는 일이 멈출 위기에 처했어요. 무엇이 구해 줬을까요? 바로 「월레스와 그로밋」에 나오는 치즈 좋아하는 만화 발명가 월레스가 계속 이 치즈를 제일 좋아한다고 말한 거예요. 2005년에 영화가 나오자 판매가 23% 늘었어요.</p>
+<p>케이크와 치즈 접시가 냅킨 한 장을 같이 쓰기로 했다고 생각해 보세요.</p>
+<hr />
+<h2>10. 🇲🇽 망고나다는 달고, 시고, 짜고, 맵기까지 해요</h2>
+<p><img alt="차모이와 고춧가루를 뿌린 컵 속 망고나다와 차모이 사탕" src="../images/10.jpg" /></p>
+<p>망고나다는 망고 빙수나 셔벗에 과일 조각, 고춧가루, 그리고 차모이를 넣은 거예요. 차모이는 <strong>짜고, 달고, 시고, 매운맛</strong>이 한꺼번에 나는 멕시코 소스예요. 빨대에는 타마린드 사탕이 발려 있을 때가 많아요.</p>
+<p>차모이는 절임에서 시작해요. 과일을 짠 소금물에 담가요 → 과일은 말려서 간식으로 팔아요 → 남은 짭짤한 과일 즙에 고춧가루를 섞으면, 그게 차모이가 돼요.</p>
+<p>그 뿌리는 중국의 말린 짭짤한 매실 간식까지 거슬러 올라가요. 1565년부터 1815년까지 마닐라와 멕시코를 오간 스페인 갤리온선을 타고, 필리핀 사람들이 멕시코로 가져갔다는 설도 있어요.</p>
+<p>혀가 느낄 수 있는 모든 맛을 컵 하나에 꽉 담았어요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>4번의 마리아 오로사는 케첩만 발명한 사람이 아니었어요. 제2차 세계 대전 때 콩 음료 '소얄락'과, 비타민 B1이 가득한 쌀겨 과자 '다락'도 만들었어요. 그녀가 속한 게릴라 부대는 이 음식을 속이 빈 대나무 안에 숨겨 수용소 안으로 몰래 들여보냈고, 수천 명의 목숨을 구하는 데 힘을 보탰어요. 2022년, 뉴욕 타임스는 예전에 놓쳤던 훌륭한 사람들을 다루는 시리즈에서 드디어 그녀의 부고 기사를 실었어요. 전쟁 중에 먹을 게 부족해서 생겨난 음식들은 다음에 탐험해 볼 맛있는 주제가 될 수 있어요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Hawaiian_pizza_1.jpg">Hawaiian pizza 1.jpg</a> by @joefoodie from USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Hawaiian_pizza_image.jpg">Hawaiian pizza image.jpg</a> by Elsie Hui, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Hawaiian_Pizza_in_Tak.JPG">Hawaiian Pizza in Tak.JPG</a> by PumpkinSky, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Mole_Poblano.jpg">Mole Poblano.jpg</a> by Melissa Doroquez, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Mole_poblano,_M%C3%A9xico.JPG">Mole poblano, México.JPG</a> by Adrián Cerón, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Mole_poblano_de_fiesta.jpg">Mole poblano de fiesta.jpg</a> by Pabliotecario, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Caramels_au_beurre_sal%C3%A9_-_La_M%C3%A8re_Poulard.jpg">Caramels au beurre salé - La Mère Poulard.jpg</a> by Arnaud 25, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Cr%C3%A8me_de_Salidou_(caramel_au_beurre_sal%C3%A9).jpg">Crème de Salidou (caramel au beurre salé).jpg</a> by Ji-Elle, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Lyon_7e_-_Cr%C3%AAperie_Caramel_Sal%C3%A9,_cr%C3%AApe_au_caramel_beurre_sal%C3%A9.jpg">Lyon 7e - Crêperie Caramel Salé, crêpe au caramel beurre salé.jpg</a> by Romainbehar, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Jufran_Banana_Sauce_bottles.JPG">Jufran Banana Sauce bottles.JPG</a> by BrokenSphere, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Banana_ketchup.jpg">Banana ketchup.jpg</a> by John Stephen Dwyer (HouseOfScandal at en.wikipedia), Public domain</li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:0001jfPhilippine_cuisine_dishes_Baliuag_Bulacafvf_16.jpg">0001jfPhilippine cuisine dishes Baliuag Bulacafvf 16.jpg</a> by Judgefloro, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:ElvisSandwich.jpg">ElvisSandwich.jpg</a> by AnticoMu90, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Elvis_Banana_and_Peanut_Butter_Sandwiches.jpg">Elvis Banana and Peanut Butter Sandwiches.jpg</a> by Caballero1967, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:A_B_Sandwich.jpg">A B Sandwich.jpg</a> by Rex Roof from Ann Arbor, MI, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Queijo_minas_e_goiabada.jpg">Queijo minas e goiabada.jpg</a> by Cataleirxs, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Bar_Guanabara_-_goiabada_com_queijo_(4774966171).jpg">Bar Guanabara - goiabada com queijo (4774966171).jpg</a> by Monica Kaneko from Sao Paulo, Brasil, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Romeo_e_julieta.jpg">Romeo e julieta.jpg</a> by إيان, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Japanese_kit_Kat_varieties.jpg">Japanese kit Kat varieties.jpg</a> by Haha169, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:KitKat_Yawatayaisogoro_Ichimi_(Hot_Japanese_Chili_Flavor)_split_(15844779724).jpg">KitKat Yawatayaisogoro Ichimi (Hot Japanese Chili Flavor) split (15844779724).jpg</a> by Bodo, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Green_tea_Kit_Kat_on_wrapper.jpg">Green tea Kit Kat on wrapper.jpg</a> by Hameltion, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Chicken_and_Waffles_201_-_Evan_Swigart.jpg">Chicken and Waffles 201 - Evan Swigart.jpg</a> by Evan Swigart, TheCulinaryGeek from Chicago, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Fried_Chicken_%26_Waffles_-_Ed%27s_Easy_Diner_2023-09-01.jpg">Fried Chicken &amp; Waffles - Ed&#x27;s Easy Diner 2023-09-01.jpg</a> by Andy Li, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Chicken_and_waffles_-_the_fig_rig_-_Sarah_Stierch_-_October_2018.jpg">Chicken and waffles - the fig rig - Sarah Stierch - October 2018.jpg</a> by Missvain, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Slice_of_Christmas_cake_(8368296861).jpg">Slice of Christmas cake (8368296861).jpg</a> by James Petts from London, England, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Wensleydale_cheese.jpg">Wensleydale cheese.jpg</a> by Jon Sullivan, Public domain</li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Wensleydale_with_Cranberries_cheese.jpg">Wensleydale with Cranberries cheese.jpg</a> by Kaly99, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Mangonada.jpg">Mangonada.jpg</a> by LittleT889, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Mangonada_with_mango_ice_cream.jpg">Mangonada with mango ice cream.jpg</a> by merri, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Chamoy_flavored_Mexican_Candy.jpg">Chamoy flavored Mexican Candy.jpg</a> by Thayne Tuason, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li></ol></details>
+</main>
+</body>
+</html>
