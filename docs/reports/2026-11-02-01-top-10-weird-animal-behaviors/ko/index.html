@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 희한한 동물 행동</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 희한한 동물 행동</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 2일</span></p>
+<hr />
+<h2>1. 🇷🇺 바다코끼리는 바닷가 절벽을 오르다가, 내려가려다 떨어져요</h2>
+<p><img alt="해변에 빽빽이 모여 있거나 바다에서 헤엄치는 태평양 바다코끼리" src="../images/01.jpg" /></p>
+<p>바다코끼리는 보통 바다 밑바닥의 조개를 찾으러 잠수하는 사이사이, 바다에 떠 있는 얼음 위에서 쉬어요. 그런데 해안 근처 얼음이 줄어들고 있어서, 대신 해변으로 올라와요(몸을 질질 끌고 뭍으로 나와요). 때로는 수만 마리가 한꺼번에요.</p>
+<p>2017년, 넷플릭스 「우리의 지구」 촬영팀은 러시아 북동쪽 끝 추코트카의 해변 한 곳에 <strong>바다코끼리 10만 마리</strong> 넘게 꽉 들어찬 모습을 찍었어요. 자리가 없자 몇몇은 그 위의 80미터 절벽을 기어올랐어요. 25층 건물쯤 되는 높이예요. 다 큰 수컷은 2,000kg이 넘기도 해요.</p>
+<p>여기서 비극이 시작돼요. 바다코끼리 눈은 물속에서 가까이 보도록 만들어져서, 땅 위에서는 잘 못 봐요. 배가 고파지고 아래에 있던 무리가 바다로 돌아가자, 위에 있던 바다코끼리들도 따라가려 했어요. 촬영팀은 이들이 몇 시간이나 절벽 끝에서 휘청거리는 걸 지켜봤고, <strong>수백 마리가 떨어져</strong> 죽었어요.</p>
+<p>이유를 두고는 의견이 갈려요. 한 비평가는 북극곰이 쫓아서 떨어뜨렸을 거라고 했지만, 제작진은 팀원들이 절벽을 지켜보고 있었고 북극곰이 몰아붙이는 건 못 봤다고 했어요.</p>
+<p>결국 절벽은 목적지가 아니에요. 쉴 얼음이 사라졌을 때, 비좁고 눈 나쁜 바다코끼리가 떠밀려 가는 곳이에요.</p>
+<hr />
+<h2>2. 🦦 해달은 겨드랑이 주머니에 돌을 넣고 다녀요</h2>
+<p><img alt="바다에서 배를 위로 하고 둥둥 떠 있는 해달들" src="../images/02.jpg" /></p>
+<p>해달은 앞다리 밑마다 가슴을 가로지르는 헐렁한 피부 주머니가 있어요. 잠수하는 동안 먹이를 거기에 넣고, 가끔은 돌도 넣어요. 주로 왼쪽 주머니를 써요.</p>
+<p>물 위로 올라오면 해달은 배를 위로 하고 떠서, 가슴 위에 돌을 올려놓고 조개를 두들겨 깨요. 전복(껍데기가 아주 단단한 바다 고둥)을 바위에서 떼어 낼 때는 돌로 망치질을 해요. 어떤 해달은 <strong>15초에 45번</strong>이나 내리쳤어요. 1초에 세 번이에요.</p>
+<p>그래서 해달은 도구를 쓰는 몇 안 되는 포유류 중 하나예요.</p>
+<p>호두까기까지 갖춘 둥둥 떠다니는 피크닉 테이블이에요.</p>
+<hr />
+<h2>3. 🇦🇺 웜뱃은 네모난 똥을 싸요</h2>
+<p><img alt="네모난 웜뱃 똥, 태즈메이니아의 웜뱃, 투명한 레진에 넣은 웜뱃 똥" src="../images/03.jpg" /></p>
+<p>호주의 웜뱃은 작은 주사위 같은 네모난 똥을 남겨요. 웜뱃 한 마리가 <strong>하룻밤에 80~100개</strong>를 싸는데, 하나가 한 변이 2cm쯤이라 주사위만 해요. 한 번에 네 개에서 여덟 개씩 나와요.</p>
+<p>어떻게 그럴까요? 과학자들은 웜뱃의 창자 벽이 빙 둘러 똑같지 않다고 봐요. 두 군데는 잘 늘어나고, 두 군데는 뻣뻣해요. 똥이 그 사이를 지나가면서 모서리가 생기는 거예요.</p>
+<p>웜뱃은 이 네모 똥을 쌓아서 영역을 표시하고 짝을 불러요. 네모라서 굴러가지도 않아요. 2019년, 이걸 밝혀낸 과학자 퍼트리샤 양과 데이비드 후는 이그노벨 물리학상을 받았어요.</p>
+<p>이웃에게 남기는 쪽지를 블록으로 쌓아 둔다고 생각해 보세요.</p>
+<hr />
+<h2>4. 🐠 어떤 비늘돔은 자기 점액 거품 속에서 잠을 자요</h2>
+<p><img alt="밤에 산호초에서 점액 거품에 싸여 잠든 비늘돔들" src="../images/04.jpg" /></p>
+<p>밤이 되면 퀸 패럿피시 같은 몇몇 비늘돔은 산호초에 멈춰서 입으로 끈적한 점액을 뿜어내요. 그게 퍼져서 물고기 몸 전체를 감싸는 투명한 거품이 돼요.</p>
+<p>이 거품은 사냥꾼에게 물고기 냄새를 숨겨 주는 것 같아요. 경보 장치 역할도 할 수 있어요. 곰치가 거품을 건드리면 물고기가 그걸 느끼고 먼저 도망칠 수 있거든요.</p>
+<p>낮에는 비늘돔이 산호 바위를 긁어 먹고, 소화 못 한 건 모래로 싸요. 혹비늘돔 한 마리가 <strong>1년에 모래 90kg</strong>을 만들 수 있어요. 어른 남자 한 명 몸무게쯤이에요.</p>
+<p>한마디로, 도난 경보기가 달린 침낭이에요.</p>
+<hr />
+<h2>5. 🌌 쇠똥구리는 은하수를 보고 길을 찾아요</h2>
+<p><img alt="아프리카에서 똥 경단을 굴리는 쇠똥구리들" src="../images/05.jpg" /></p>
+<p>똥을 굴리는 쇠똥구리는 똥을 공처럼 뭉쳐서, 다른 쇠똥구리가 훔쳐 가기 전에 똥 무더기에서 재빨리 멀어져요. 도망치려면 똑바로 굴려야 해요.</p>
+<p>밤에 일하는 아프리카 쇠똥구리 스카라바이우스 사티루스(Scarabaeus satyrus)는 하늘을 이용해요. <strong>은하수</strong>나 밝은 별 몇 무리만 보여도 방향을 지킬 수 있어요. 그래서 쇠똥구리는 우리 은하를 보고 방향을 잡는다고 알려진 유일한 곤충이에요. 또 다른 아프리카 종은 달빛의 무늬를 보고 길을 찾아요.</p>
+<p>게다가 힘도 장사예요. 어떤 종의 수컷은 자기 몸무게의 1,141배를 끌 수 있어요. 사람으로 치면 사람이 꽉 찬 2층 버스 여섯 대를 끄는 셈이에요.</p>
+<p>다시 말해, 별자리 지도를 가진 똥 굴리기 선수예요.</p>
+<hr />
+<h2>6. 🇯🇵 일본의 눈원숭이는 온천에 몸을 담가요</h2>
+<p><img alt="지고쿠다니에서 김이 나는 온천에 들어가 있는 일본원숭이들" src="../images/06.jpg" /></p>
+<p>나가노현 지고쿠다니 야생원숭이 공원은 해발 850미터에 있고, 1년에 넉 달은 눈이 땅을 덮어요. 겨울이 되면 야생 일본원숭이(흔히 눈원숭이라고 불러요)가 절벽과 숲에서 내려와 온센(온천)의 따뜻한 물에 들어가 앉아요.</p>
+<p>시작은 사람 때문이었어요. 1960년대에 원숭이들이 그곳에 모이도록 했는데, 근처 밭을 털지 못하게 하려는 이유도 있었어요.</p>
+<p>겨울에 온천을 하면 <strong>스트레스가 줄어드는</strong> 것과 관련이 있고, 서열 높은 암컷들이 따뜻한 물을 차지해요. 이 원숭이들은 그냥 재미로 눈덩이를 굴리기도 해요.</p>
+<p>대장들이 제일 좋은 자리를 차지하는 스파 데이예요.</p>
+<hr />
+<h2>7. 🦒 수컷 기린은 목을 망치처럼 휘둘러 싸워요</h2>
+<p><img alt="서로 목을 휘두르며 싸우는 수컷 기린 두 마리" src="../images/07.jpg" /></p>
+<p>아프리카에서 수컷 기린은 '네킹'으로 누가 대장인지 정해요. 목으로 하는 싸움이에요. 순한 버전에서는 두 수컷이 서로 기대고 비비는데, 더 꼿꼿하게 버티는 쪽이 이겨요.</p>
+<p>진지한 버전에서는 앞다리를 벌리고 긴 목을 서로에게 휘둘러, 오시콘(머리 위의 뼈 혹)으로 한 방 먹이려고 해요. 두개골이 무겁고 휘두르는 폭이 클수록 한 방이 세져요. 결투는 <strong>30분 넘게</strong> 이어지기도 해요.</p>
+<p>대부분은 크게 다치지 않고 끝나지만, 턱이 부러지고 목이 부러지고 심지어 죽은 기록도 있어요. 이긴 수컷은 짝짓기 기회가 더 많아져요.</p>
+<p>한마디로, 칼 대신 자기 목으로 하는 칼싸움이에요.</p>
+<hr />
+<h2>8. 🐦 군함조는 날면서 잠을 자요</h2>
+<p><img alt="길고 뾰족한 날개로 활공하는 큰군함조" src="../images/08.jpg" /></p>
+<p>군함조는 바다 위에서 사냥하지만 바다에 내려앉지는 못해요. 발에 물갈퀴가 거의 없고 날개도 완전히 방수가 되지 않거든요. 그래서 바람을 타고 계속 하늘에 떠 있어요. 인도양에서 위성으로 추적한 큰군함조 한 마리는 <strong>두 달</strong> 동안 하늘에 있었어요.</p>
+<p>그럼 잠은 언제 잘까요? 과학자들이 알아낸 바로는, 공중에서 낮잠을 자요. 대개 뇌의 한쪽 절반씩만 자고, 상승 기류를 타고 올라가는 동안 자요. 깨어 있는 쪽 눈은 새가 가는 방향을 봐요.</p>
+<p>그렇게 하늘에서 잔 잠을 다 합쳐도 하룻밤에 한 시간이 안 됐어요.</p>
+<p>한쪽 눈은 길을 보면서 조는 거라고 생각하면 돼요.</p>
+<hr />
+<h2>9. 🏹 물총고기는 물을 쏴서 벌레를 떨어뜨려요</h2>
+<p><img alt="수족관에서 헤엄치는 줄무늬 물총고기들" src="../images/09.jpg" /></p>
+<p>물총고기는 인도와 동남아시아부터 호주 북부까지 강, 연못, 맹그로브 숲에 살아요. 물 위 나뭇잎에 앉은 곤충을 발견하면, 입술을 수면에 대고 아가미 뚜껑을 꽉 조여요. 그러면 물이 입속의 홈을 따라 밀려 나가요.</p>
+<p>물줄기는 뒤쪽이 앞쪽보다 빨리 가도록 만들어져서, 맞기 직전에 한 덩어리로 뭉쳐요. 이 물고기는 물 위 <strong>최대 3m(10ft)</strong> 높이에 있는 먹이도 떨어뜨릴 수 있어요. 농구 골대 높이쯤이에요. 게다가 물이 빛을 꺾는 것까지 계산해서 조준을 고쳐요.</p>
+<p>어린 물총고기는 처음엔 많이 빗나가서 연습으로 배워야 해요. 다른 물고기가 쏘는 걸 보기만 해도 실력이 늘기도 해요.</p>
+<p>조준 보정 기능이 달린 물총이에요.</p>
+<hr />
+<h2>10. 🇲🇿 꿀잡이새는 사람의 부름에 대답하고 꿀이 있는 곳으로 안내해요</h2>
+<p><img alt="아프리카에서 나뭇가지에 앉아 있는 큰꿀잡이새들" src="../images/10.jpg" /></p>
+<p>큰꿀잡이새는 아프리카에 사는 작은 새인데, 야생 벌집이 어디에 있는지 많이 알고 있어요. 모잠비크 북부의 야오족 꿀 사냥꾼들이 <strong>"브르르르-흠"</strong> 하는 특별한 소리로 부르면, 새들이 대답해요.</p>
+<p>그러면 새는 재잘거리며 사람들의 관심을 끈 뒤, 벌집 쪽으로 날아가 바로 근처에 멈춰요. 사냥꾼들은 연기로 벌을 진정시키고, 벌집을 열어 꿀을 꺼내요. 새는 남은 밀랍을 받아서 먹어요.</p>
+<p>효과도 확실해요. 탄자니아에서는 꿀잡이새 덕분에 하드자족 사냥꾼들이 벌집을 560% 더 자주, 그러니까 여섯 배 넘게 찾아냈어요.</p>
+<p>다시 말해, 꿀 가는 길을 알려 주고 밀랍으로 수고비를 받는 새예요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>바다코끼리는 정말로 절벽에서 떨어지지만, 레밍은 뛰어내리지 않아요. 레밍이 떼로 절벽에서 뛰어내려 스스로 목숨을 끊는다는 이야기는 1958년 디즈니 영화 「하얀 광야(White Wilderness)」 이후에 널리 퍼졌어요. 그런데 나중에 캐나다 방송 기자가 그 장면이 연출이었다는 걸 밝혀냈어요. 똑같은 레밍 몇 마리를 앨버타주 캔모어 근처 보강으로 데려가서, 빙빙 도는 회전판 위에서 흔들고 절벽 아래로 몇 번이고 밀어 떨어뜨린 거예요. 북극의 얼음 비탈을 미끄러져 내려오는 아기 북극곰 장면조차 캘거리의 스튜디오에서 찍었어요. 유명한 동물 속설과 그 진짜 출처는 다음에 탐험해 볼 멋진 주제가 될 수 있어요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Pacific_Walrus_at_Cape_Peirce_-_DPLA_-_044088b29b26ec249f1a2e08d51840a3.jpg">Pacific Walrus at Cape Peirce - DPLA - 044088b29b26ec249f1a2e08d51840a3.jpg</a> by Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888, Public domain</li><li>#1: <a href="https://www.inaturalist.org/photos/109784539">Odobenus rosmarus divergens · Providenskiy rayon, RU-CK, RU</a> by (c) garywwilson, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Walrus_(Odobenus_rosmarus)_on_Svalbard.jpg">Walrus (Odobenus rosmarus) on Svalbard.jpg</a> by AWeith, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://www.inaturalist.org/photos/58965959">Enhydra lutris nereis · California, US</a> by (c) benjchristensen, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Northern_sea_otters_(Enhydra_lutris_kenyoni)_Tofino.jpg">Northern sea otters (Enhydra lutris kenyoni) Tofino.jpg</a> by Charles J. Sharp, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://www.inaturalist.org/photos/203599960">Enhydra lutris nereis · California, US</a> by (c) Jonathan Eisen, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Wombat_Faeces.jpg">Wombat Faeces.jpg</a> by SojournerRL, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Common_wombat_(Vombatus_ursinus)_Maria_Island.jpg">Common wombat (Vombatus ursinus) Maria Island.jpg</a> by Charles J. Sharp, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Wombat_(Vombatus_ursinus)_poo.jpg">Wombat (Vombatus ursinus) poo.jpg</a> by PooMuseum, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Scarus_zelindae.jpg">Scarus zelindae.jpg</a> by Igor Cristino Silva Cruz, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Poisson-perroquet_dormant_(Scarus)_(Ifremer_00619-73123_-_29089).jpg">Poisson-perroquet dormant (Scarus) (Ifremer 00619-73123 - 29089).jpg</a> by Jerome Paillet (IFREMER, Laboratoire d&#x27;Océanographie Physique et Spatiale, Centre Bretagne - ZI de la Pointe du Diable - CS 10070 - 29280 Plouzané), <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Scarus_trispinosus_dormindo.tif">Scarus trispinosus dormindo.tif</a> by Igor Cristino Silva Cruz, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Large_Copper_Dung_Beetle_(Kheper_nigroaeneus)_rolling_a_dung_ball_(15823074113).jpg">Large Copper Dung Beetle (Kheper nigroaeneus) rolling a dung ball (15823074113).jpg</a> by Bernard DUPONT from FRANCE, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Dung_Beetle_Tanzania_2025.jpg">Dung Beetle Tanzania 2025.jpg</a> by AmyAbroad, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Plum_Dung_Beetle_(Anachalcos_convexus)_rolling_a_ball_at_night_(12598065815).jpg">Plum Dung Beetle (Anachalcos convexus) rolling a ball at night (12598065815).jpg</a> by Bernard DUPONT from FRANCE, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Japanese_Macaque,_Nagano,_Japan..JPG">Japanese Macaque, Nagano, Japan..JPG</a> by Yblieb, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:JapaneseMacaqueM2216.jpg">JapaneseMacaqueM2216.jpg</a> by No machine-readable author provided. Fg2 assumed (based on copyright claims)., Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Onsen_Macaque.JPG">Onsen Macaque.JPG</a> by Asteiner, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Giraffe-Necking-Etosha.JPG">Giraffe-Necking-Etosha.JPG</a> by Bjørn Christian Tørrissen, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Giraffe_Ithala_KZN_South_Africa_Luca_Galuzzi_2004.JPG">Giraffe Ithala KZN South Africa Luca Galuzzi 2004.JPG</a> by Luca Galuzzi (Lucag), <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Two_male_giraffes_are_necking_in_San_Francisco_Zoo.jpg">Two male giraffes are necking in San Francisco Zoo.jpg</a> by Brocken Inaglory, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Starr_080603-5598_Fregata_minor.jpg">Starr 080603-5598 Fregata minor.jpg</a> by Forest &amp;amp; Kim Starr, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Great_frigatebird_(4113376417).jpg">Great frigatebird (4113376417).jpg</a> by Matt MacGillivray from Toronto, Canada, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Male_greater_frigate_bird_building_nest.jpg">Male greater frigate bird building nest.jpg</a> by Charles J. Sharp, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Toxotes_jaculatrix.jpg">Toxotes jaculatrix.jpg</a> by Chrumps, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Toxotes_jaculatrix_-_9313.jpg">Toxotes jaculatrix - 9313.jpg</a> by Amada44, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Toxotes_jaculatrix_(banded_archerfish)_4_(15533393159).jpg">Toxotes jaculatrix (banded archerfish) 4 (15533393159).jpg</a> by James St. John, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Greater_Honeyguide_(Indicator_indicator)_(45663851145).jpg">Greater Honeyguide (Indicator indicator) (45663851145).jpg</a> by Dominic Sherony, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#10: <a href="https://www.inaturalist.org/photos/117598225">Indicator indicator · Darsalami Highway, Western Division, GM</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#10: <a href="https://www.inaturalist.org/photos/353154595">Indicator indicator · Waterberg District Municipality, South Africa</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li></ol></details>
+</main>
+</body>
+</html>

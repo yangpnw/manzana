@@ -37,3 +37,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-10-30 · World's Priciest Foods · 2026-10-30-01-top-10-world-s-priciest-foods
 - 2026-10-31 · Spooky Bioluminescence · 2026-10-31-01-top-10-spooky-bioluminescence
 - 2026-11-01 · Crazy Food Flavor Combos · 2026-11-01-01-top-10-crazy-food-flavor-combos
+- 2026-11-02 · Weird Animal Behaviors · 2026-11-02-01-top-10-weird-animal-behaviors
