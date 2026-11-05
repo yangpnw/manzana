@@ -40,3 +40,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-02 · Weird Animal Behaviors · 2026-11-02-01-top-10-weird-animal-behaviors
 - 2026-11-03 · Odd Sports of the World · 2026-11-03-01-top-10-odd-sports-of-the-world
 - 2026-11-04 · Funny Phrases from Sports and Hobbies · 2026-11-04-01-top-10-funny-phrases-from-sports-and-hobbies
+- 2026-11-05 · Little-Known Animal Hunting Tricks · 2026-11-05-01-top-10-little-known-animal-hunting-tricks
