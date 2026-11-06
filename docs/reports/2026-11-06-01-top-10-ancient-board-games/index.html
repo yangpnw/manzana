@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Ancient Board Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><span aria-current="page">English</span> · <a href="zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="ko/" hreflang="ko" lang="ko">한국어</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../archive.html">All sheets</a></nav>
+<h1>🌍 Top 10 Ancient Board Games</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>Nov 6, 2026</span></p>
+<hr />
+<h2>1. 🇮🇶 The Royal Game of Ur's rules turned up on a clay tablet</h2>
+<p><img alt="The Royal Game of Ur board with its pieces, the clay tablet with the rules, and the board in the British Museum" src="images/01.jpg" />
+In the 1920s and 1930s, archaeologist Leonard Woolley dug up beautiful game boards in the royal graves of Ur, an ancient city in what is now Iraq. The boards are about <strong>4,500 years old</strong>, among the oldest game boards in the world.</p>
+<p>Nobody knew how to play. Then a clay tablet turned up, written in cuneiform (ancient wedge-shaped writing) by a Babylonian scribe in the second century BC. Using it, Irving Finkel of the British Museum worked out the basic rules.</p>
+<p>The tablet even lists fortunes for landing on certain squares, like "You will find a friend" or "You will become powerful like a lion." And the game never fully died: Jewish families in Kochi, India, kept playing a version of it until the 1950s.</p>
+<p>Think of it as a race game where some squares come with a fortune cookie.</p>
+<hr />
+<h2>2. 🇪🇬 Ancient Egyptians thought senet was played in the afterlife</h2>
+<p><img alt="A senet board in a museum, a tomb painting of Queen Nefertari playing senet, and Tutankhamun's senet box" src="images/02.jpg" />
+Senet is played on <strong>30 squares in three rows of ten</strong>, with each player moving a team of pieces along the board. A tomb painting of the game is about 4,600 years old, and Tutankhamun was buried with the game.</p>
+<p>Over time, the game took on a bigger meaning. Its name means "passing," and Egyptians came to see the trip across the board as a soul's journey through the underworld.</p>
+<p>The Book of the Dead, a guide for the afterlife, even describes a dead person playing senet against an invisible opponent.</p>
+<p>Basically, it was a board game you could take with you, all the way.</p>
+<hr />
+<h2>3. 🌍 Mancala is played by "sowing" seeds into holes</h2>
+<p><img alt="A wooden mancala board in a home, two girls playing mancala in Thailand, and a carved mancala board from West Africa" src="images/03.jpg" />
+Mancala isn't one game but a whole family of them, played with seeds, beans or pebbles in rows of little pits. The pits can be carved in a wooden board, cut into rock or just scooped out of the dirt.</p>
+<p>On your turn, you scoop up all the seeds from one pit and drop them <strong>one by one into the next pits</strong>, like a farmer sowing a field. Where your last seed lands decides whether you capture your opponent's seeds.</p>
+<p>Rock-cut boards in Eritrea and Ethiopia are about 1,400 years old, and some experts think a board in Jordan is far older. Today it's still one of the oldest families of games played around the world.</p>
+<p>It's like playing a board game with a handful of trail mix.</p>
+<hr />
+<h2>4. 🇳🇴 In the Viking game hnefatafl, one side has twice as many pieces</h2>
+<p><img alt="A 1100s hnefatafl board from Trondheim, kids playing a tafl game at a history festival, and hnefatafl game stones" src="images/04.jpg" />
+Vikings in Scandinavia played hnefatafl, which probably means "board game of the fist," with "fist" meaning the king. The king starts in the middle of the board, surrounded by his defenders.</p>
+<p>The teams aren't fair, on purpose. The attackers have <strong>twice as many pieces</strong> as the defenders. The attackers try to trap the king, and the king tries to escape to the edge or the corners of the board.</p>
+<p>No one wrote down the full Viking rules. The best clue comes from a Sámi version called tablut, which the Swedish scientist Carl Linnaeus recorded on a trip to Lapland in 1732.</p>
+<p>In other words, it's hide-and-seek where one kid is trying to sneak past a whole crowd.</p>
+<hr />
+<h2>5. 🇨🇳 Go (围棋, wéiqí) has more possible games than atoms in the universe</h2>
+<p><img alt="Black and white go stones on a wooden board, ancient weiqi stones in a museum, and an old weiqi board with stones" src="images/05.jpg" />
+Go was invented in China more than 2,500 years ago, and it's believed to be the oldest board game that people have <strong>kept playing nonstop</strong> ever since.</p>
+<p>The rules are simple: two players take turns placing black and white stones on a grid of 19 by 19 lines, 361 points in all, trying to surround the most space. But the number of possible board positions is a 1 followed by 170 zeros. The number of atoms in the whole universe is only around a 1 followed by 80 zeros.</p>
+<p>Even so, in 2015, Google DeepMind's program AlphaGo finally beat a European Go champion five games to zero.</p>
+<p>It's a game so big that the universe runs out of atoms before Go runs out of moves.</p>
+<hr />
+<h2>6. 🇮🇳 An emperor played pachisi using his courtyard as the board</h2>
+<p><img alt="The pachisi courtyard at Fatehpur Sikri, an embroidered cloth board with pieces, and a colorful cross-shaped pachisi board" src="images/06.jpg" />
+Pachisi comes from India and is played on a board shaped like a cross. Instead of dice, players throw six or seven cowrie shells and count how many land with their opening facing up. The name comes from the Hindi word for <strong>25</strong>, the highest score you can throw.</p>
+<p>The Mughal emperor Akbar played it in a big way. A courtyard floor, divided into red and white squares, became the board, with a raised stone in the middle, and 16 people dressed in the players' colors stood in as the pieces.</p>
+<p>If the board looks familiar, it should. Ludo, Parcheesi and Sorry! are all versions of pachisi.</p>
+<p>Think of it as ludo, but life-size, with real people as the pieces.</p>
+<hr />
+<h2>7. 🇮🇳 Snakes and ladders started as a lesson about being good</h2>
+<p><img alt="A Jain snakes and ladders board from 19th-century India, a gyan chaupar board on cloth, and a giant snakes and ladders mat" src="images/07.jpg" />
+Snakes and ladders comes from ancient India, where it was called Moksha Patam, meaning "liberation lesson." Moving up the board stood for a person's journey through life.</p>
+<p>The ladders stood for good habits like <strong>generosity, faith and humility</strong>. Land on one and you climb up. The snakes stood for bad habits like anger and stealing. Land on one and you slide back down.</p>
+<p>The game reached the United Kingdom in the 1890s. In the United States, the Milton Bradley Company started selling it as Chutes and Ladders in 1943.</p>
+<p>Basically, every ladder was a reward for being kind, and every snake was a lesson.</p>
+<hr />
+<h2>8. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Some Lewis chessmen are biting their own shields</h2>
+<p><img alt="Lewis chessmen on display in the British Museum, a Lewis chess king and queen, and a close-up of a Lewis chess piece" src="images/08.jpg" />
+In 1831, a stash of tiny carved figures was found on the Isle of Lewis in Scotland. Most were carved from <strong>walrus ivory</strong> about 900 years ago, in the 1100s. Of 94 objects, 78 were chess pieces.</p>
+<p>They're famous for their funny faces, some of which look worried. And four of the rooks are "berserkers," wild-eyed warriors <strong>biting the tops of their shields</strong> with battle rage. They've been called "irresistibly comic."</p>
+<p>The British Museum paid 80 guineas for 82 of the pieces, about £8,000 in today's money, and still has them. Another 11 are in the National Museum of Scotland.</p>
+<p>It's a chess set where the players look more nervous than the people playing.</p>
+<hr />
+<h2>9. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Nine men's morris boards are carved into cathedral benches</h2>
+<p><img alt="A wooden nine men's morris board, a morris board carved into a stone paving block in Italy, and a medieval painting of men playing" src="images/09.jpg" />
+In nine men's morris, each player has nine pieces. Get <strong>three in a row</strong> and you've made a "mill," which lets you take one of your opponent's pieces. Leave your opponent with only two, and you win.</p>
+<p>People loved it so much they carved boards into stone. You can still find them scratched into the stone seats of the cloisters (covered walkways) at Canterbury, Gloucester, Norwich and Salisbury Cathedrals and Westminster Abbey.</p>
+<p>Giant boards were also cut into village greens. Shakespeare even mentions one in the 1500s play <em>A Midsummer Night's Dream</em>: "The nine men's morris is filled up with mud."</p>
+<p>In other words, it was the tic-tac-toe of the Middle Ages, but harder and carved in stone.</p>
+<hr />
+<h2>10. 🇨🇳 Liubo (六博, liùbó) was a hit game whose rules were lost</h2>
+<p><img alt="A Han dynasty liubo board with pieces, a green-glazed pottery figure of two people playing liubo, and liubo players inside a pottery tower" src="images/10.jpg" />
+Liubo means "six sticks." Two players moved six pieces each around a square board, and instead of dice, they threw six sticks to decide their moves.</p>
+<p>It was hugely popular during the Han dynasty, about <strong>2,000 years ago</strong>. Archaeologists have found liubo boards in ancient tombs, along with pottery figures of people playing. Then, after the Han dynasty ended, the game faded fast, possibly because go was getting popular, and it was completely forgotten.</p>
+<p>Its board pattern also shows up on Han bronze mirrors. One mirror says it was "carved with a Liubo board pattern to dispel misfortune."</p>
+<p>It's like a hit video game from 2,000 years ago that nobody remembers how to play.</p>
+<hr />
+<h3>Fun fact</h3>
+<p>In 1964, an antiques dealer in Edinburgh bought a little walrus-ivory "warrior chessman" for £5. After he died, his family kept it in a drawer for decades. In 2019, experts at Sotheby's recognized it as a long-lost piece from the Lewis chessmen, and it sold for £735,000. It's one of many forgotten treasures that turned up in someone's attic, drawer or junk box.</p>
+<details class="credits"><summary>Photo credits (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,_2010-08-03.jpg">Royal game of Ur, 2010-08-03.jpg</a> by Unknown artistUnknown artist, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_Game_of_Ur_rules.jpg">Royal Game of Ur rules.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,at_the_British_Museum.jpg">Royal game of Ur,at the British Museum.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_(47429946982).jpg">Senet (47429946982).jpg</a> by Enoch Leung, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Nefertari_juega_al_Senet,_tumba_de_Nefertari.jpg">Nefertari juega al Senet, tumba de Nefertari.jpg</a> by Jl FilpoC, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_game_pieces_(Tutankhamun).jpg">Senet game pieces (Tutankhamun).jpg</a> by ddenisen (D. Denisenkov), <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_board_at_an_Ezidi_home_in_June_of_2019_in_Wardia_village_near_Shingal_town_01.jpg">Mancala board at an Ezidi home in June of 2019 in Wardia village near Shingal town 01.jpg</a> by Levi Clancy, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg">Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg</a> by Pratyeka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_Board_in_the_National_Ethnographic_Museum,_Warsaw.jpg">Mancala Board in the National Ethnographic Museum, Warsaw.jpg</a> by Ethan Doyle White, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Nefatafl_fra_Trondheim_(19896084560).jpg">Nefatafl fra Trondheim (19896084560).jpg</a> by NTNU Vitenskapsmuseet, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Kolomenskoe2015TAE_07_Players.jpg">Kolomenskoe2015TAE 07 Players.jpg</a> by Лапоть, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:02022_Truso,_hnefatafl_game_stones.jpg">02022 Truso, hnefatafl game stones.jpg</a> by Muzeum Archeologiczno-Historyczne w Elblągu, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Go_--_2021_--_6732.jpg">Go -- 2021 -- 6732.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_weiqi_stones.jpg">Inner Mongolia Museum weiqi stones.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Weiqi_stones_and_Xiangqi_pieces_from_Liao_Shangjing.jpg">Weiqi stones and Xiangqi pieces from Liao Shangjing.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi_Court-1.jpg">Pachisi Court-1.jpg</a> by David Castor (dcastor), Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Embroidered_Gujrati_Chaupar_with_sixteen_painted_ivory_counters_and_dice._Circa_AD_1800-50.jpg">Embroidered Gujrati Chaupar with sixteen painted ivory counters and dice. Circa AD 1800-50.jpg</a> by TradingIdeas, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi-real.jpg">Pachisi-real.jpg</a> by Micha L. Rieser, Attribution</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders.jpg">Snakes and Ladders.jpg</a> by Jain Miniature, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Gyan_Chaupar_National_Museum_India.JPG">Gyan Chaupar National Museum India.JPG</a> by Nomu420, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders_(8353940937).jpg">Snakes and Ladders (8353940937).jpg</a> by Neil Turner from Sowerby Bridge, United Kingdom, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_Chessmen,_British_Museum.jpg">Lewis Chessmen, British Museum.jpg</a> by APK, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:NMSLewisChessmen28.jpg">NMSLewisChessmen28.jpg</a> by National Museums Scotland, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_chessmen_(crop).jpg">Lewis chessmen (crop).jpg</a> by Jessica Spengler, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_(79731239).jpg">Nine Men&#x27;s Morris (79731239).jpg</a> by Andrew Magill from Boulder, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Rocca_San_Silvestro_Nine_Men%27s_Morris_board.JPG">Rocca San Silvestro Nine Men&#x27;s Morris board.JPG</a> by LepoRello, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_with_dice_in_Libro_de_los_juegos.jpg">Nine Men&#x27;s Morris with dice in Libro de los juegos.jpg</a> by Alfonso X of Castile and Leon, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:%E6%BC%A2_%E5%BD%A9%E7%B9%AA%E9%99%B6%E5%85%AD%E5%8D%9A%E5%85%B7%EF%BC%88%E9%99%84%E9%AA%A8%E8%A3%BD%E6%A3%8B%E5%AD%90%EF%BC%89-Liubo_Board_and_Pieces_MET_DP372026.jpg">漢 彩繪陶六博具（附骨製棋子）-Liubo Board and Pieces MET DP372026.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Green-glazed_pottery_figurine_representing_liubo.jpg">Green-glazed pottery figurine representing liubo.jpg</a> by 幽灵巴尼, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Liubo_players_in_pottery_tower.jpg">Liubo players in pottery tower.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>

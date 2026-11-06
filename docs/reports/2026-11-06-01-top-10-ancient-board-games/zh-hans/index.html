@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>十大 古老的棋盘游戏</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <span aria-current="page">简体中文</span> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">全部</a></nav>
+<h1>🌍 十大 古老的棋盘游戏</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026年11月6日</span></p>
+<hr />
+<h2>1. 🇮🇶 乌尔王族局戏的规则写在一块泥板上</h2>
+<p><img alt="乌尔王族局戏的棋盘和棋子、写着规则的泥板，以及大英博物馆里的棋盘" src="../images/01.jpg" />
+上世纪二三十年代，考古学家伦纳德·伍利（Leonard Woolley）在古城乌尔的王族墓地里挖出了漂亮的棋盘。乌尔位于今天的伊拉克。这些棋盘大约有 <strong>4,500 年历史</strong>，是世界上最古老的棋盘之一。</p>
+<p>一开始没人知道怎么玩。后来人们发现了一块泥板，上面用楔形文字（古代一种像小楔子的文字）写着规则，是公元前 2 世纪一位巴比伦抄写员写的。大英博物馆的欧文·芬克尔（Irving Finkel）根据它，推算出了基本玩法。</p>
+<p>泥板上甚至写着落在某些格子上会有什么运气，比如“你会交到一个朋友”或者“你会像狮子一样强大”。这个游戏也从来没有彻底消失：印度科钦（Kochi）的犹太家庭一直玩着它的一个版本，直到 20 世纪 50 年代。</p>
+<p>就当它是一个赛跑游戏，有些格子还附送一张幸运签。</p>
+<hr />
+<h2>2. 🇪🇬 古埃及人认为人死后还会玩塞尼特棋</h2>
+<p><img alt="博物馆里的塞尼特棋盘、奈费尔塔利王后下塞尼特棋的墓室壁画，以及图坦卡蒙的塞尼特棋盒" src="../images/02.jpg" />
+塞尼特棋（senet）的棋盘有 <strong>30 个格子，排成三行，每行十个</strong>，每个玩家带着一队棋子在棋盘上前进。有一幅画着这个游戏的墓室壁画大约有 4,600 年历史，图坦卡蒙下葬时也带着这个游戏。</p>
+<p>后来，这个游戏有了更深的意义。它的名字意思是“经过”，埃及人渐渐把走过棋盘看成灵魂穿越冥界的旅程。</p>
+<p>《亡灵书》是一本指导人们去往来世的书，里面甚至写到一个死去的人和一个看不见的对手下塞尼特棋。</p>
+<p>说白了，这是一个可以一直带到另一个世界去的棋盘游戏。</p>
+<hr />
+<h2>3. 🌍 播棋就是把种子“播”进小坑里</h2>
+<p><img alt="一户人家里的木制播棋盘、在泰国下播棋的两个女孩，以及一块西非的雕花播棋盘" src="../images/03.jpg" />
+播棋（mancala）不是一个游戏，而是一整个游戏家族，用种子、豆子或小石子在一排排小坑里玩。小坑可以刻在木板上、凿在岩石上，或者直接在泥地上挖出来。</p>
+<p>轮到你时，你把一个坑里的种子全抓起来，再 <strong>一颗一颗放进后面的坑里</strong>，就像农民在田里播种。最后一颗种子落在哪里，决定你能不能吃掉对手的种子。</p>
+<p>厄立特里亚和埃塞俄比亚凿在岩石上的棋盘大约有 1,400 年历史，有些专家认为约旦的一块棋盘还要古老得多。今天，它仍然是全世界都在玩的最古老的游戏家族之一。</p>
+<p>这就像拿一把干果杂粮来下棋。</p>
+<hr />
+<h2>4. 🇳🇴 维京人的“国王棋”里，一方的棋子是另一方的两倍</h2>
+<p><img alt="特隆赫姆出土的 12 世纪国王棋棋盘、历史节上下塔夫棋的孩子们，以及国王棋的棋子" src="../images/04.jpg" />
+斯堪的纳维亚的维京人玩一种叫 hnefatafl 的棋，意思大概是“拳头的棋盘游戏”，“拳头”指的就是国王。国王一开始站在棋盘正中间，被他的守卫围着。</p>
+<p>两队故意不公平。进攻方的棋子是防守方的 <strong>两倍</strong>。进攻方想把国王围住，国王则想逃到棋盘的边上或角上。</p>
+<p>没有人把维京人的完整规则写下来。最好的线索来自萨米人的一个版本，叫 tablut，是瑞典科学家林奈（Carl Linnaeus）1732 年去拉普兰旅行时记录下来的。</p>
+<p>换句话说，这就像捉迷藏，一个小孩要从一大群人中间溜出去。</p>
+<hr />
+<h2>5. 🇨🇳 围棋（围棋，wéiqí）可能出现的局面比宇宙里的原子还多</h2>
+<p><img alt="木棋盘上的黑白围棋子、博物馆里的古代围棋子，以及一块摆着棋子的旧围棋盘" src="../images/05.jpg" />
+围棋在 2,500 多年前诞生于中国，被认为是人们 <strong>一直下到今天、从没中断过</strong> 的最古老的棋盘游戏。</p>
+<p>规则很简单：两个人轮流把黑子和白子放在横竖各 19 条线的棋盘上，一共 361 个点，看谁围住的地盘更大。可是棋盘上可能出现的局面数量，是 1 后面跟着 170 个零。整个宇宙里的原子数量，大约只是 1 后面跟着 80 个零。</p>
+<p>即便如此，2015 年，谷歌 DeepMind 的程序 AlphaGo 还是以五比零打败了一位欧洲围棋冠军。</p>
+<p>这个游戏大到宇宙的原子都用完了，围棋的走法还没用完。</p>
+<hr />
+<h2>6. 🇮🇳 一位皇帝把整个庭院当成棋盘来下帕吉斯棋</h2>
+<p><img alt="法塔赫布尔西克里的帕吉斯棋庭院、一块带棋子的刺绣布棋盘，以及一块彩色十字形帕吉斯棋盘" src="../images/06.jpg" />
+帕吉斯棋（pachisi）来自印度，棋盘是十字形的。它不用骰子，而是扔六到七个贝壳，数一数有几个开口朝上。名字来自印地语里的 <strong>“25”</strong>，这是能扔出的最高分。</p>
+<p>莫卧儿皇帝阿克巴下这个棋可气派了。一块分成红白方格的庭院地面就是棋盘，中间有一块垫高的石头，16 个穿着玩家颜色衣服的人站在上面当棋子。</p>
+<p>如果这个棋盘看着眼熟，那就对了。飞行棋（Ludo）、Parcheesi 和 Sorry! 都是帕吉斯棋的不同版本。</p>
+<p>就当它是真人大小的飞行棋，棋子都是真人。</p>
+<hr />
+<h2>7. 🇮🇳 蛇梯棋最早是一堂教人做好人的课</h2>
+<p><img alt="19 世纪印度的耆那教蛇梯棋盘、一块布上的智慧棋盘，以及一张巨大的蛇梯棋地垫" src="../images/07.jpg" />
+蛇梯棋来自古印度，那时叫 Moksha Patam，意思是“解脱的课”。在棋盘上往上走，代表一个人一生的旅程。</p>
+<p>梯子代表好习惯，比如 <strong>慷慨、信念和谦虚</strong>。走到梯子上，你就往上爬。蛇代表坏习惯，比如发脾气和偷东西。走到蛇身上，你就滑下去。</p>
+<p>这个游戏在 19 世纪 90 年代传到了英国。在美国，米尔顿·布拉德利公司从 1943 年开始把它叫作 Chutes and Ladders（滑梯和梯子）来卖。</p>
+<p>说白了，每架梯子都是对善良的奖励，每条蛇都是一堂课。</p>
+<hr />
+<h2>8. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 有些刘易斯棋子在咬自己的盾牌</h2>
+<p><img alt="大英博物馆里展出的刘易斯棋子、一对刘易斯国王和王后棋子，以及一枚刘易斯棋子的特写" src="../images/08.jpg" />
+1831 年，人们在苏格兰的刘易斯岛上发现了一堆小小的雕像。它们大多是用 <strong>海象牙</strong> 雕的，大约有 900 年历史，来自 12 世纪。94 件物品里，有 78 件是棋子。</p>
+<p>它们因为表情好笑而出名，有些看起来忧心忡忡。还有四个“车”是“狂战士”，瞪着眼睛，怒气冲冲地 <strong>咬着自己盾牌的上沿</strong>。有人说它们“让人忍不住发笑”。</p>
+<p>大英博物馆花了 80 几尼买下其中 82 枚，大约相当于今天的 8,000 英镑，现在还收藏着。另外 11 枚在苏格兰国家博物馆。</p>
+<p>这是一副棋子比下棋的人还紧张的棋。</p>
+<hr />
+<h2>9. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 九子棋的棋盘被刻在大教堂的石凳上</h2>
+<p><img alt="一块木制九子棋盘、意大利一块刻在铺路石上的九子棋盘，以及一幅中世纪人们下棋的画" src="../images/09.jpg" />
+九子棋（nine men's morris）里，每个玩家有九枚棋子。<strong>三个连成一排</strong> 就组成一个“磨”，你就可以拿走对手的一枚棋子。让对手只剩两枚，你就赢了。</p>
+<p>人们太爱这个游戏了，连石头上都刻了棋盘。直到今天，你还能在坎特伯雷、格洛斯特、诺里奇和索尔兹伯里大教堂以及威斯敏斯特教堂的回廊（有屋顶的走廊）石凳上找到它们。</p>
+<p>人们还在村子的草地上挖出巨大的棋盘。莎士比亚在 16 世纪的剧作《仲夏夜之梦》里也提到过：“九子棋的棋盘里灌满了泥。”</p>
+<p>换句话说，它就是中世纪的井字棋，只是更难，而且刻在石头上。</p>
+<hr />
+<h2>10. 🇨🇳 六博（六博，liùbó）曾经风靡一时，规则却失传了</h2>
+<p><img alt="一套汉代六博棋盘和棋子、一件两人下六博的绿釉陶俑，以及陶楼里下六博的人" src="../images/10.jpg" />
+六博的意思是“六根签子”。两个玩家各有六枚棋子，在方形棋盘上移动。他们不用骰子，而是扔六根签子来决定怎么走。</p>
+<p>它在汉代非常流行，大约是 <strong>2,000 年前</strong>。考古学家在古墓里发现了六博棋盘，还有人们下六博的陶俑。可是汉代结束后，这个游戏很快就不流行了，可能是因为围棋越来越受欢迎，后来就被彻底遗忘了。</p>
+<p>它的棋盘图案也出现在汉代的铜镜上。有一面铜镜上写着：“刻具博局去不祥”，意思是刻上六博的棋盘图案来驱除厄运。</p>
+<p>这就像一款 2,000 年前的爆款游戏，现在没人记得怎么玩了。</p>
+<hr />
+<h3>趣闻</h3>
+<p>1964 年，爱丁堡的一位古董商花 5 英镑买下了一个小小的海象牙“武士棋子”。他去世后，家人把它放在抽屉里几十年。2019 年，苏富比的专家认出它是刘易斯棋子中失踪已久的一枚，最后以 735,000 英镑卖出。它是许多在阁楼、抽屉或杂物箱里意外冒出来的被遗忘的宝贝之一。</p>
+<details class="credits"><summary>图片来源（Wikimedia Commons）</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,_2010-08-03.jpg">Royal game of Ur, 2010-08-03.jpg</a> by Unknown artistUnknown artist, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_Game_of_Ur_rules.jpg">Royal Game of Ur rules.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,at_the_British_Museum.jpg">Royal game of Ur,at the British Museum.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_(47429946982).jpg">Senet (47429946982).jpg</a> by Enoch Leung, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Nefertari_juega_al_Senet,_tumba_de_Nefertari.jpg">Nefertari juega al Senet, tumba de Nefertari.jpg</a> by Jl FilpoC, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_game_pieces_(Tutankhamun).jpg">Senet game pieces (Tutankhamun).jpg</a> by ddenisen (D. Denisenkov), <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_board_at_an_Ezidi_home_in_June_of_2019_in_Wardia_village_near_Shingal_town_01.jpg">Mancala board at an Ezidi home in June of 2019 in Wardia village near Shingal town 01.jpg</a> by Levi Clancy, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg">Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg</a> by Pratyeka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_Board_in_the_National_Ethnographic_Museum,_Warsaw.jpg">Mancala Board in the National Ethnographic Museum, Warsaw.jpg</a> by Ethan Doyle White, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Nefatafl_fra_Trondheim_(19896084560).jpg">Nefatafl fra Trondheim (19896084560).jpg</a> by NTNU Vitenskapsmuseet, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Kolomenskoe2015TAE_07_Players.jpg">Kolomenskoe2015TAE 07 Players.jpg</a> by Лапоть, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:02022_Truso,_hnefatafl_game_stones.jpg">02022 Truso, hnefatafl game stones.jpg</a> by Muzeum Archeologiczno-Historyczne w Elblągu, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Go_--_2021_--_6732.jpg">Go -- 2021 -- 6732.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_weiqi_stones.jpg">Inner Mongolia Museum weiqi stones.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Weiqi_stones_and_Xiangqi_pieces_from_Liao_Shangjing.jpg">Weiqi stones and Xiangqi pieces from Liao Shangjing.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi_Court-1.jpg">Pachisi Court-1.jpg</a> by David Castor (dcastor), Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Embroidered_Gujrati_Chaupar_with_sixteen_painted_ivory_counters_and_dice._Circa_AD_1800-50.jpg">Embroidered Gujrati Chaupar with sixteen painted ivory counters and dice. Circa AD 1800-50.jpg</a> by TradingIdeas, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi-real.jpg">Pachisi-real.jpg</a> by Micha L. Rieser, Attribution</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders.jpg">Snakes and Ladders.jpg</a> by Jain Miniature, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Gyan_Chaupar_National_Museum_India.JPG">Gyan Chaupar National Museum India.JPG</a> by Nomu420, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders_(8353940937).jpg">Snakes and Ladders (8353940937).jpg</a> by Neil Turner from Sowerby Bridge, United Kingdom, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_Chessmen,_British_Museum.jpg">Lewis Chessmen, British Museum.jpg</a> by APK, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:NMSLewisChessmen28.jpg">NMSLewisChessmen28.jpg</a> by National Museums Scotland, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_chessmen_(crop).jpg">Lewis chessmen (crop).jpg</a> by Jessica Spengler, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_(79731239).jpg">Nine Men&#x27;s Morris (79731239).jpg</a> by Andrew Magill from Boulder, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Rocca_San_Silvestro_Nine_Men%27s_Morris_board.JPG">Rocca San Silvestro Nine Men&#x27;s Morris board.JPG</a> by LepoRello, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_with_dice_in_Libro_de_los_juegos.jpg">Nine Men&#x27;s Morris with dice in Libro de los juegos.jpg</a> by Alfonso X of Castile and Leon, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:%E6%BC%A2_%E5%BD%A9%E7%B9%AA%E9%99%B6%E5%85%AD%E5%8D%9A%E5%85%B7%EF%BC%88%E9%99%84%E9%AA%A8%E8%A3%BD%E6%A3%8B%E5%AD%90%EF%BC%89-Liubo_Board_and_Pieces_MET_DP372026.jpg">漢 彩繪陶六博具（附骨製棋子）-Liubo Board and Pieces MET DP372026.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Green-glazed_pottery_figurine_representing_liubo.jpg">Green-glazed pottery figurine representing liubo.jpg</a> by 幽灵巴尼, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Liubo_players_in_pottery_tower.jpg">Liubo players in pottery tower.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>

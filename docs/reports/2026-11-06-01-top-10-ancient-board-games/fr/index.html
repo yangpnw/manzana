@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Jeux de société antiques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <span aria-current="page">Français</span></span><a href="../../../archive.html">Toutes les fiches</a></nav>
+<h1>🌍 Top 10 Jeux de société antiques</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>6 novembre 2026</span></p>
+<hr />
+<h2>1. 🇮🇶 Les règles du jeu royal d'Ur ont été retrouvées sur une tablette d'argile</h2>
+<p><img alt="Le plateau du jeu royal d'Ur avec ses pions, la tablette d'argile avec les règles, et le plateau au British Museum" src="../images/01.jpg" />
+Dans les années 1920 et 1930, l'archéologue Leonard Woolley a déterré de magnifiques plateaux de jeu dans les tombes royales d'Ur, une cité antique de l'actuel Irak. Ces plateaux ont environ <strong>4 500 ans</strong> : ce sont parmi les plus vieux du monde.</p>
+<p>Personne ne savait comment jouer. Puis une tablette d'argile est apparue, écrite en cunéiforme (une écriture antique faite de petits coins) par un scribe babylonien au IIe siècle av. J.-C. Grâce à elle, Irving Finkel, du British Museum, a reconstitué les règles de base.</p>
+<p>La tablette donne même des prédictions pour certaines cases, comme « Tu trouveras un ami » ou « Tu deviendras puissant comme un lion ». Et le jeu n'a jamais complètement disparu : des familles juives de Kochi, en Inde, ont continué à en jouer une version jusqu'aux années 1950.</p>
+<p>Vois ça comme un jeu de course où certaines cases contiennent un biscuit chinois.</p>
+<hr />
+<h2>2. 🇪🇬 Les Égyptiens pensaient qu'on jouait au senet dans l'au-delà</h2>
+<p><img alt="Un plateau de senet dans un musée, une peinture de la tombe de la reine Néfertari jouant au senet, et la boîte de senet de Toutânkhamon" src="../images/02.jpg" />
+Le senet se joue sur <strong>30 cases en trois rangées de dix</strong>, et chaque joueur fait avancer une équipe de pions sur le plateau. Une peinture de tombe qui montre le jeu a environ 4 600 ans, et Toutânkhamon a été enterré avec le jeu.</p>
+<p>Avec le temps, le jeu a pris un sens plus grand. Son nom veut dire « passage », et les Égyptiens ont fini par voir la traversée du plateau comme le voyage de l'âme à travers le monde souterrain.</p>
+<p>Le Livre des morts, un guide pour l'au-delà, décrit même un mort qui joue au senet contre un adversaire invisible.</p>
+<p>En gros, c'était un jeu de société qu'on pouvait emporter avec soi, jusqu'au bout.</p>
+<hr />
+<h2>3. 🌍 Le mancala se joue en « semant » des graines</h2>
+<p><img alt="Un plateau de mancala en bois dans une maison, deux filles qui jouent au mancala en Thaïlande, et un plateau sculpté d'Afrique de l'Ouest" src="../images/03.jpg" />
+Le mancala n'est pas un seul jeu, mais toute une famille, qu'on joue avec des graines, des haricots ou des cailloux dans des rangées de petits trous. Les trous peuvent être creusés dans du bois, taillés dans la roche ou simplement grattés dans la terre.</p>
+<p>À ton tour, tu prends toutes les graines d'un trou et tu les déposes <strong>une par une dans les trous suivants</strong>, comme un paysan qui sème. L'endroit où tombe ta dernière graine décide si tu captures les graines de ton adversaire.</p>
+<p>Des plateaux taillés dans la roche en Érythrée et en Éthiopie ont environ 1 400 ans, et certains experts pensent qu'un plateau en Jordanie est bien plus ancien. Aujourd'hui, c'est toujours l'une des plus vieilles familles de jeux pratiquées dans le monde.</p>
+<p>C'est comme jouer à un jeu de société avec une poignée de mélange de noix.</p>
+<hr />
+<h2>4. 🇳🇴 Dans le hnefatafl des Vikings, un camp a deux fois plus de pions</h2>
+<p><img alt="Un plateau de hnefatafl du XIIe siècle trouvé à Trondheim, des enfants qui jouent à un jeu de tafl lors d'une fête historique, et des pions de hnefatafl" src="../images/04.jpg" />
+Les Vikings de Scandinavie jouaient au hnefatafl, ce qui veut sans doute dire « jeu de plateau du poing », le « poing » étant le roi. Le roi commence au centre du plateau, entouré de ses défenseurs.</p>
+<p>Les équipes ne sont pas égales, exprès. Les attaquants ont <strong>deux fois plus de pions</strong> que les défenseurs. Les attaquants essaient de piéger le roi, et le roi essaie de s'échapper vers le bord ou les coins du plateau.</p>
+<p>Personne n'a écrit les règles vikings complètes. Le meilleur indice vient d'une version sâme appelée tablut, que le savant suédois Carl von Linné a notée lors d'un voyage en Laponie en 1732.</p>
+<p>Autrement dit, c'est une partie de cache-cache où un enfant doit se faufiler à travers toute une foule.</p>
+<hr />
+<h2>5. 🇨🇳 Le go (围棋, wéiqí) a plus de parties possibles que d'atomes dans l'univers</h2>
+<p><img alt="Des pierres de go noires et blanches sur un plateau en bois, d'anciennes pierres de weiqi dans un musée, et un vieux plateau de weiqi avec des pierres" src="../images/05.jpg" />
+Le go a été inventé en Chine il y a plus de 2 500 ans, et on pense que c'est le plus vieux jeu de plateau auquel on a <strong>continué à jouer sans interruption</strong> jusqu'à aujourd'hui.</p>
+<p>Les règles sont simples : deux joueurs posent à tour de rôle des pierres noires et blanches sur une grille de 19 lignes sur 19, soit 361 points, pour encercler le plus d'espace. Mais le nombre de positions possibles est un 1 suivi de 170 zéros. Le nombre d'atomes dans tout l'univers n'est qu'environ un 1 suivi de 80 zéros.</p>
+<p>Malgré tout, en 2015, le programme AlphaGo de Google DeepMind a battu un champion d'Europe de go cinq parties à zéro.</p>
+<p>C'est un jeu si grand que l'univers manque d'atomes avant que le go ne manque de coups.</p>
+<hr />
+<h2>6. 🇮🇳 Un empereur jouait au pachisi avec sa cour comme plateau</h2>
+<p><img alt="La cour de pachisi à Fatehpur Sikri, un plateau en tissu brodé avec ses pions, et un plateau de pachisi coloré en forme de croix" src="../images/06.jpg" />
+Le pachisi vient d'Inde et se joue sur un plateau en forme de croix. Au lieu de dés, on lance six ou sept coquillages cauris et on compte combien tombent l'ouverture vers le haut. Le nom vient du mot hindi pour <strong>25</strong>, le meilleur score qu'on puisse faire.</p>
+<p>L'empereur moghol Akbar y jouait en grand. Le sol d'une cour, divisé en cases rouges et blanches, servait de plateau, avec une pierre surélevée au milieu, et 16 personnes habillées aux couleurs des joueurs faisaient office de pions.</p>
+<p>Si le plateau te dit quelque chose, c'est normal. Le Ludo, le Parcheesi et le Sorry! sont tous des versions du pachisi.</p>
+<p>Vois ça comme des petits chevaux grandeur nature, avec de vraies personnes comme pions.</p>
+<hr />
+<h2>7. 🇮🇳 Le jeu des serpents et des échelles était d'abord une leçon pour être gentil</h2>
+<p><img alt="Un plateau jaïn de serpents et échelles de l'Inde du XIXe siècle, un plateau de gyan chaupar sur tissu, et un tapis géant de serpents et échelles" src="../images/07.jpg" />
+Le jeu des serpents et des échelles vient de l'Inde ancienne, où il s'appelait Moksha Patam, ce qui veut dire « leçon de libération ». Monter sur le plateau représentait le voyage d'une personne dans la vie.</p>
+<p>Les échelles représentaient de bonnes habitudes comme <strong>la générosité, la foi et l'humilité</strong>. Tu tombes dessus, tu montes. Les serpents représentaient de mauvaises habitudes comme la colère et le vol. Tu tombes dessus, tu redescends en glissant.</p>
+<p>Le jeu est arrivé au Royaume-Uni dans les années 1890. Aux États-Unis, l'entreprise Milton Bradley a commencé à le vendre sous le nom de Chutes and Ladders (Toboggans et échelles) en 1943.</p>
+<p>En gros, chaque échelle récompensait la gentillesse, et chaque serpent était une leçon.</p>
+<hr />
+<h2>8. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Certaines pièces d'échecs de Lewis mordent leur propre bouclier</h2>
+<p><img alt="Des pièces d'échecs de Lewis exposées au British Museum, un roi et une reine de Lewis, et une pièce de Lewis en gros plan" src="../images/08.jpg" />
+En 1831, on a trouvé un trésor de petites figurines sculptées sur l'île de Lewis, en Écosse. La plupart avaient été taillées dans de l'<strong>ivoire de morse</strong> il y a environ 900 ans, au XIIe siècle. Sur 94 objets, 78 étaient des pièces d'échecs.</p>
+<p>Elles sont célèbres pour leurs drôles de têtes, dont certaines ont l'air inquiètes. Et quatre des tours sont des « berserkers », des guerriers aux yeux fous qui <strong>mordent le haut de leur bouclier</strong> de rage. On les a même qualifiées d'« irrésistiblement comiques ».</p>
+<p>Le British Museum a payé 80 guinées pour 82 pièces, environ 8 000 livres d'aujourd'hui, et les a toujours. Onze autres sont au Musée national d'Écosse.</p>
+<p>C'est un jeu d'échecs où les pièces ont l'air plus stressées que les joueurs.</p>
+<hr />
+<h2>9. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Des plateaux de jeu du moulin sont gravés sur des bancs de cathédrales</h2>
+<p><img alt="Un plateau de jeu du moulin en bois, un plateau gravé dans un pavé en Italie, et une peinture médiévale d'hommes en train de jouer" src="../images/09.jpg" />
+Au jeu du moulin (nine men's morris), chaque joueur a neuf pions. Aligne-en <strong>trois à la suite</strong> et tu fais un « moulin », qui te permet de prendre un pion à ton adversaire. Laisse-lui seulement deux pions, et tu gagnes.</p>
+<p>Les gens adoraient tellement ce jeu qu'ils gravaient des plateaux dans la pierre. On en trouve encore sur les bancs de pierre des cloîtres (couloirs couverts) des cathédrales de Canterbury, Gloucester, Norwich et Salisbury, et de l'abbaye de Westminster.</p>
+<p>On découpait aussi des plateaux géants dans l'herbe des places de village. Shakespeare en parle même dans sa pièce des années 1500, <em>Le Songe d'une nuit d'été</em> : « Le jeu de marelle est rempli de boue. »</p>
+<p>Autrement dit, c'était le morpion du Moyen Âge, mais plus dur et gravé dans la pierre.</p>
+<hr />
+<h2>10. 🇨🇳 Le liubo (六博, liùbó) était un jeu à succès dont on a perdu les règles</h2>
+<p><img alt="Un plateau de liubo de la dynastie Han avec ses pions, une figurine en céramique verte de deux joueurs de liubo, et des joueurs de liubo dans une tour en céramique" src="../images/10.jpg" />
+Liubo veut dire « six bâtonnets ». Deux joueurs déplaçaient chacun six pions sur un plateau carré et, au lieu de dés, ils lançaient six bâtonnets pour décider de leurs coups.</p>
+<p>Il était hyper populaire sous la dynastie Han, il y a environ <strong>2 000 ans</strong>. Les archéologues ont trouvé des plateaux de liubo dans des tombes anciennes, avec des figurines en céramique de gens en train de jouer. Mais après la fin des Han, le jeu a vite perdu la cote, peut-être parce que le go devenait populaire, et il a été complètement oublié.</p>
+<p>Le motif de son plateau apparaît aussi sur des miroirs en bronze de l'époque Han. L'un d'eux dit avoir été « gravé d'un motif de plateau de liubo pour chasser le malheur ».</p>
+<p>C'est comme un jeu vidéo à succès d'il y a 2 000 ans dont plus personne ne connaît les règles.</p>
+<hr />
+<h3>Le saviez-vous ?</h3>
+<p>En 1964, un antiquaire d'Édimbourg a acheté pour 5 livres une petite figurine en ivoire de morse notée comme « guerrier d'échecs ». Après sa mort, sa famille l'a gardée dans un tiroir pendant des dizaines d'années. En 2019, des experts de Sotheby's l'ont reconnue comme une pièce disparue des échecs de Lewis, et elle s'est vendue 735 000 livres. C'est l'un de ces nombreux trésors oubliés qui ressortent d'un grenier, d'un tiroir ou d'une boîte de bric-à-brac.</p>
+<details class="credits"><summary>Crédits photo (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,_2010-08-03.jpg">Royal game of Ur, 2010-08-03.jpg</a> by Unknown artistUnknown artist, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_Game_of_Ur_rules.jpg">Royal Game of Ur rules.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,at_the_British_Museum.jpg">Royal game of Ur,at the British Museum.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_(47429946982).jpg">Senet (47429946982).jpg</a> by Enoch Leung, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Nefertari_juega_al_Senet,_tumba_de_Nefertari.jpg">Nefertari juega al Senet, tumba de Nefertari.jpg</a> by Jl FilpoC, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_game_pieces_(Tutankhamun).jpg">Senet game pieces (Tutankhamun).jpg</a> by ddenisen (D. Denisenkov), <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_board_at_an_Ezidi_home_in_June_of_2019_in_Wardia_village_near_Shingal_town_01.jpg">Mancala board at an Ezidi home in June of 2019 in Wardia village near Shingal town 01.jpg</a> by Levi Clancy, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg">Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg</a> by Pratyeka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_Board_in_the_National_Ethnographic_Museum,_Warsaw.jpg">Mancala Board in the National Ethnographic Museum, Warsaw.jpg</a> by Ethan Doyle White, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Nefatafl_fra_Trondheim_(19896084560).jpg">Nefatafl fra Trondheim (19896084560).jpg</a> by NTNU Vitenskapsmuseet, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Kolomenskoe2015TAE_07_Players.jpg">Kolomenskoe2015TAE 07 Players.jpg</a> by Лапоть, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:02022_Truso,_hnefatafl_game_stones.jpg">02022 Truso, hnefatafl game stones.jpg</a> by Muzeum Archeologiczno-Historyczne w Elblągu, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Go_--_2021_--_6732.jpg">Go -- 2021 -- 6732.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_weiqi_stones.jpg">Inner Mongolia Museum weiqi stones.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Weiqi_stones_and_Xiangqi_pieces_from_Liao_Shangjing.jpg">Weiqi stones and Xiangqi pieces from Liao Shangjing.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi_Court-1.jpg">Pachisi Court-1.jpg</a> by David Castor (dcastor), Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Embroidered_Gujrati_Chaupar_with_sixteen_painted_ivory_counters_and_dice._Circa_AD_1800-50.jpg">Embroidered Gujrati Chaupar with sixteen painted ivory counters and dice. Circa AD 1800-50.jpg</a> by TradingIdeas, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi-real.jpg">Pachisi-real.jpg</a> by Micha L. Rieser, Attribution</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders.jpg">Snakes and Ladders.jpg</a> by Jain Miniature, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Gyan_Chaupar_National_Museum_India.JPG">Gyan Chaupar National Museum India.JPG</a> by Nomu420, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders_(8353940937).jpg">Snakes and Ladders (8353940937).jpg</a> by Neil Turner from Sowerby Bridge, United Kingdom, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_Chessmen,_British_Museum.jpg">Lewis Chessmen, British Museum.jpg</a> by APK, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:NMSLewisChessmen28.jpg">NMSLewisChessmen28.jpg</a> by National Museums Scotland, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_chessmen_(crop).jpg">Lewis chessmen (crop).jpg</a> by Jessica Spengler, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_(79731239).jpg">Nine Men&#x27;s Morris (79731239).jpg</a> by Andrew Magill from Boulder, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Rocca_San_Silvestro_Nine_Men%27s_Morris_board.JPG">Rocca San Silvestro Nine Men&#x27;s Morris board.JPG</a> by LepoRello, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_with_dice_in_Libro_de_los_juegos.jpg">Nine Men&#x27;s Morris with dice in Libro de los juegos.jpg</a> by Alfonso X of Castile and Leon, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:%E6%BC%A2_%E5%BD%A9%E7%B9%AA%E9%99%B6%E5%85%AD%E5%8D%9A%E5%85%B7%EF%BC%88%E9%99%84%E9%AA%A8%E8%A3%BD%E6%A3%8B%E5%AD%90%EF%BC%89-Liubo_Board_and_Pieces_MET_DP372026.jpg">漢 彩繪陶六博具（附骨製棋子）-Liubo Board and Pieces MET DP372026.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Green-glazed_pottery_figurine_representing_liubo.jpg">Green-glazed pottery figurine representing liubo.jpg</a> by 幽灵巴尼, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Liubo_players_in_pottery_tower.jpg">Liubo players in pottery tower.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>

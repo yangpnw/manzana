@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 아주 오래된 보드게임</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 아주 오래된 보드게임</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 6일</span></p>
+<hr />
+<h2>1. 🇮🇶 우르 왕실 게임의 규칙은 점토판에서 나왔어요</h2>
+<p><img alt="말이 놓인 우르 왕실 게임판, 규칙이 적힌 점토판, 대영박물관의 게임판" src="../images/01.jpg" />
+1920~1930년대에 고고학자 레너드 울리(Leonard Woolley)가 지금의 이라크에 있던 고대 도시 우르의 왕실 무덤에서 아름다운 게임판을 발굴했어요. 이 게임판들은 <strong>약 4,500년</strong> 된 것으로, 세계에서 가장 오래된 게임판 중 하나예요.</p>
+<p>처음엔 아무도 노는 법을 몰랐어요. 그러다 기원전 2세기에 바빌로니아의 한 서기가 쐐기 문자(쐐기 모양의 고대 글자)로 쓴 점토판이 나타났어요. 대영박물관의 어빙 핑컬(Irving Finkel)이 이 점토판을 바탕으로 기본 규칙을 알아냈어요.</p>
+<p>점토판에는 어떤 칸에 멈추면 어떤 운이 오는지까지 적혀 있어요. "친구를 만나게 될 것이다"나 "사자처럼 강해질 것이다" 같은 거요. 그리고 이 게임은 완전히 사라진 적이 없어요. 인도 코치(Kochi)의 유대인 가족들이 1950년대까지 이 게임의 한 버전을 계속 했거든요.</p>
+<p>몇몇 칸에 포춘 쿠키가 들어 있는 달리기 게임이라고 생각하면 돼요.</p>
+<hr />
+<h2>2. 🇪🇬 고대 이집트인은 죽은 뒤에도 세네트를 한다고 믿었어요</h2>
+<p><img alt="박물관의 세네트 판, 세네트를 하는 네페르타리 왕비의 무덤 벽화, 투탕카멘의 세네트 상자" src="../images/02.jpg" />
+세네트는 <strong>세 줄에 열 칸씩, 모두 30칸</strong>으로 된 판에서 해요. 각자 말 한 팀을 판 위로 움직여요. 이 게임을 그린 무덤 벽화는 약 4,600년 된 것도 있고, 투탕카멘도 이 게임과 함께 묻혔어요.</p>
+<p>시간이 지나면서 이 게임은 더 큰 뜻을 갖게 됐어요. 이름이 '지나감'이라는 뜻인데, 이집트 사람들은 판을 건너가는 걸 영혼이 저승을 지나가는 여행으로 보게 됐어요.</p>
+<p>저승으로 가는 안내서인 『사자의 서』에는 죽은 사람이 보이지 않는 상대와 세네트를 하는 장면까지 나와요.</p>
+<p>한마디로, 끝까지 들고 갈 수 있는 보드게임이었어요.</p>
+<hr />
+<h2>3. 🌍 만칼라는 씨앗을 구멍에 '뿌리면서' 해요</h2>
+<p><img alt="어느 집에 있는 나무 만칼라 판, 태국에서 만칼라를 하는 두 소녀, 서아프리카의 조각된 만칼라 판" src="../images/03.jpg" />
+만칼라는 게임 하나가 아니라 게임 가족 전체예요. 씨앗이나 콩, 조약돌을 줄지어 있는 작은 구멍에 넣으며 해요. 구멍은 나무판에 파거나, 바위에 새기거나, 그냥 흙바닥에 파도 돼요.</p>
+<p>내 차례가 되면 한 구멍의 씨앗을 모두 꺼내서 <strong>다음 구멍들에 하나씩</strong> 넣어요. 농부가 밭에 씨를 뿌리는 것처럼요. 마지막 씨앗이 어디에 떨어지느냐에 따라 상대의 씨앗을 잡을 수 있는지가 정해져요.</p>
+<p>에리트레아와 에티오피아의 바위에 새긴 판은 약 1,400년 됐고, 요르단의 한 판은 훨씬 더 오래됐다고 보는 전문가도 있어요. 오늘날에도 전 세계에서 하는 가장 오래된 게임 가족 중 하나예요.</p>
+<p>견과류 한 줌으로 하는 보드게임 같아요.</p>
+<hr />
+<h2>4. 🇳🇴 바이킹 게임 흐네파타플에서는 한쪽의 말이 두 배예요</h2>
+<p><img alt="트론헤임에서 나온 1100년대 흐네파타플 판, 역사 축제에서 타플 게임을 하는 아이들, 흐네파타플 말" src="../images/04.jpg" />
+스칸디나비아의 바이킹은 흐네파타플(hnefatafl)을 했어요. 아마 '주먹의 판 게임'이라는 뜻이고, '주먹'은 왕을 가리켜요. 왕은 판 한가운데에서 수비수들에게 둘러싸여 시작해요.</p>
+<p>두 팀은 일부러 공평하지 않아요. 공격 팀의 말이 수비 팀의 <strong>두 배</strong>예요. 공격 팀은 왕을 가두려고 하고, 왕은 판의 가장자리나 구석으로 도망치려고 해요.</p>
+<p>바이킹의 규칙을 전부 적어 둔 사람은 없어요. 가장 좋은 단서는 '타블루트'라는 사미족 버전인데, 스웨덴 과학자 칼 린네가 1732년 라플란드 여행 중에 기록했어요.</p>
+<p>다시 말해, 아이 하나가 사람들 무리를 몰래 빠져나가려는 숨바꼭질이에요.</p>
+<hr />
+<h2>5. 🇨🇳 바둑(围棋, wéiqí)은 가능한 판의 수가 우주의 원자보다 많아요</h2>
+<p><img alt="나무판 위의 흑백 바둑돌, 박물관의 옛 바둑돌, 돌이 놓인 오래된 바둑판" src="../images/05.jpg" />
+바둑은 2,500년도 더 전에 중국에서 만들어졌고, 사람들이 오늘날까지 <strong>한 번도 끊기지 않고 계속 둬 온</strong> 가장 오래된 보드게임으로 여겨져요.</p>
+<p>규칙은 간단해요. 두 사람이 번갈아 가며 가로세로 19줄, 모두 361개의 점이 있는 판에 흑돌과 백돌을 놓고, 더 넓은 땅을 둘러싸려고 해요. 그런데 판에 나올 수 있는 모양의 수는 1 뒤에 0이 170개 붙은 수예요. 우주 전체의 원자 수는 1 뒤에 0이 80개쯤 붙은 수밖에 안 돼요.</p>
+<p>그래도 2015년, 구글 딥마인드의 프로그램 알파고가 유럽 바둑 챔피언을 5대 0으로 이겼어요.</p>
+<p>우주의 원자가 다 떨어져도 바둑의 수는 남아 있을 만큼 큰 게임이에요.</p>
+<hr />
+<h2>6. 🇮🇳 한 황제는 마당 전체를 판으로 써서 파치시를 했어요</h2>
+<p><img alt="파테푸르 시크리의 파치시 마당, 말이 놓인 수놓은 천 게임판, 십자 모양의 알록달록한 파치시 판" src="../images/06.jpg" />
+파치시는 인도에서 온 게임으로, 십자 모양 판에서 해요. 주사위 대신 개오지 조개껍데기 여섯이나 일곱 개를 던져서, 입구가 위로 향한 게 몇 개인지 세요. 이름은 힌디어로 <strong>'25'</strong>라는 뜻인데, 던져서 나올 수 있는 가장 높은 점수예요.</p>
+<p>무굴 제국의 아크바르 황제는 이 게임을 아주 크게 했어요. 빨간 칸과 하얀 칸으로 나뉜 마당 바닥이 게임판이었고, 가운데에는 높이 올린 돌이 있었어요. 그리고 플레이어 색깔 옷을 입은 16명이 말 역할을 했어요.</p>
+<p>판이 낯익어 보인다면 당연해요. 루도, 파치지(Parcheesi), 쏘리!(Sorry!)는 모두 파치시의 다른 버전이에요.</p>
+<p>진짜 사람이 말이 되는 실물 크기 루도라고 생각하면 돼요.</p>
+<hr />
+<h2>7. 🇮🇳 뱀과 사다리 게임은 착하게 사는 법을 배우는 수업에서 시작됐어요</h2>
+<p><img alt="19세기 인도의 자이나교 뱀과 사다리 판, 천에 그린 갼 차우파르 판, 커다란 뱀과 사다리 매트" src="../images/07.jpg" />
+뱀과 사다리는 고대 인도에서 왔고, 그때 이름은 '해탈의 가르침'이라는 뜻의 모크샤 파탐(Moksha Patam)이었어요. 판 위로 올라가는 건 한 사람의 인생 여정을 뜻했어요.</p>
+<p>사다리는 <strong>너그러움, 믿음, 겸손</strong> 같은 좋은 습관을 뜻했어요. 사다리 칸에 멈추면 올라가요. 뱀은 화내기나 도둑질 같은 나쁜 습관을 뜻했어요. 뱀 칸에 멈추면 미끄러져 내려가요.</p>
+<p>이 게임은 1890년대에 영국에 들어왔어요. 미국에서는 밀턴 브래들리 회사가 1943년부터 '슈츠 앤 래더스(Chutes and Ladders)'라는 이름으로 팔기 시작했어요.</p>
+<p>한마디로, 사다리는 착하게 산 상이고 뱀은 교훈이었어요.</p>
+<hr />
+<h2>8. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 루이스 체스 말 중에는 자기 방패를 깨무는 것도 있어요</h2>
+<p><img alt="대영박물관에 전시된 루이스 체스 말, 루이스 체스의 왕과 여왕, 루이스 체스 말 클로즈업" src="../images/08.jpg" />
+1831년, 스코틀랜드 루이스섬에서 작게 조각된 인형 무더기가 발견됐어요. 대부분은 약 900년 전인 1100년대에 <strong>바다코끼리 엄니</strong>로 깎은 거예요. 94개 중 78개가 체스 말이었어요.</p>
+<p>이 말들은 웃긴 표정으로 유명한데, 걱정스러워 보이는 것도 있어요. 그리고 룩 중 네 개는 '광전사'인데, 눈을 부릅뜨고 전투의 분노에 차서 <strong>방패 윗부분을 깨물고</strong> 있어요. "웃음을 참을 수 없다"는 말을 들을 정도예요.</p>
+<p>대영박물관은 그중 82개를 80기니에 샀는데, 오늘날 돈으로 약 8,000파운드예요. 지금도 박물관에 있어요. 나머지 11개는 스코틀랜드 국립박물관에 있어요.</p>
+<p>체스를 두는 사람보다 말들이 더 긴장한 체스 세트예요.</p>
+<hr />
+<h2>9. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 나인 멘스 모리스 판은 대성당 돌의자에 새겨져 있어요</h2>
+<p><img alt="나무로 된 나인 멘스 모리스 판, 이탈리아 바닥돌에 새긴 모리스 판, 사람들이 게임하는 중세 그림" src="../images/09.jpg" />
+나인 멘스 모리스(nine men's morris)에서는 각자 말을 아홉 개씩 가져요. <strong>세 개를 한 줄로</strong> 놓으면 '밀'이 되고, 상대 말을 하나 가져갈 수 있어요. 상대 말을 두 개만 남기면 이겨요.</p>
+<p>사람들이 이 게임을 너무 좋아해서 돌에다 판을 새겼어요. 캔터베리, 글로스터, 노리치, 솔즈베리 대성당과 웨스트민스터 사원의 회랑(지붕 있는 복도) 돌의자에서 지금도 긁어서 새긴 판을 찾을 수 있어요.</p>
+<p>마을 풀밭에 커다란 판을 파 놓기도 했어요. 셰익스피어도 1500년대 작품 『한여름 밤의 꿈』에서 "나인 멘스 모리스 판이 진흙으로 가득 찼다"라고 언급해요.</p>
+<p>다시 말해, 중세판 틱택토인데 더 어렵고 돌에 새겨져 있어요.</p>
+<hr />
+<h2>10. 🇨🇳 육박(六博, liùbó)은 큰 인기를 끌었지만 규칙이 사라졌어요</h2>
+<p><img alt="한나라 육박 판과 말, 두 사람이 육박을 하는 녹유 도기 인형, 도기 누각 안에서 육박을 하는 사람들" src="../images/10.jpg" />
+육박은 '막대 여섯 개'라는 뜻이에요. 두 사람이 각자 말 여섯 개를 네모난 판 위로 움직였고, 주사위 대신 막대 여섯 개를 던져서 어떻게 움직일지 정했어요.</p>
+<p>한나라 때, 그러니까 <strong>약 2,000년 전</strong>에 엄청난 인기를 끌었어요. 고고학자들은 옛 무덤에서 육박 판과 함께 사람들이 육박을 하는 도기 인형도 찾아냈어요. 그런데 한나라가 끝나자 빠르게 인기가 식었고, 아마 바둑이 인기를 얻은 탓에 완전히 잊혔어요.</p>
+<p>육박 판의 무늬는 한나라 청동 거울에도 나와요. 어떤 거울에는 "육박 판 무늬를 새겨 불운을 쫓는다"라고 적혀 있어요.</p>
+<p>2,000년 전 인기 게임인데, 이제는 아무도 하는 법을 모르는 셈이에요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>1964년, 에든버러의 한 골동품상이 바다코끼리 엄니로 만든 작은 '전사 체스 말'을 5파운드에 샀어요. 그가 세상을 떠난 뒤, 가족은 그것을 수십 년 동안 서랍에 넣어 두었어요. 2019년, 소더비 전문가들이 그것이 오래전에 사라진 루이스 체스 말이라는 걸 알아봤고, 73만 5천 파운드에 팔렸어요. 다락이나 서랍, 잡동사니 상자에서 뜻밖에 나타난 수많은 잊힌 보물 중 하나예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,_2010-08-03.jpg">Royal game of Ur, 2010-08-03.jpg</a> by Unknown artistUnknown artist, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_Game_of_Ur_rules.jpg">Royal Game of Ur rules.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,at_the_British_Museum.jpg">Royal game of Ur,at the British Museum.jpg</a> by unknown, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_(47429946982).jpg">Senet (47429946982).jpg</a> by Enoch Leung, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Nefertari_juega_al_Senet,_tumba_de_Nefertari.jpg">Nefertari juega al Senet, tumba de Nefertari.jpg</a> by Jl FilpoC, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Senet_game_pieces_(Tutankhamun).jpg">Senet game pieces (Tutankhamun).jpg</a> by ddenisen (D. Denisenkov), <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_board_at_an_Ezidi_home_in_June_of_2019_in_Wardia_village_near_Shingal_town_01.jpg">Mancala board at an Ezidi home in June of 2019 in Wardia village near Shingal town 01.jpg</a> by Levi Clancy, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg">Thai-girls-playing-with-mancala-board-possibly-main-chakot-or-mak-khom.jpg</a> by Pratyeka, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Mancala_Board_in_the_National_Ethnographic_Museum,_Warsaw.jpg">Mancala Board in the National Ethnographic Museum, Warsaw.jpg</a> by Ethan Doyle White, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Nefatafl_fra_Trondheim_(19896084560).jpg">Nefatafl fra Trondheim (19896084560).jpg</a> by NTNU Vitenskapsmuseet, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Kolomenskoe2015TAE_07_Players.jpg">Kolomenskoe2015TAE 07 Players.jpg</a> by Лапоть, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:02022_Truso,_hnefatafl_game_stones.jpg">02022 Truso, hnefatafl game stones.jpg</a> by Muzeum Archeologiczno-Historyczne w Elblągu, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Go_--_2021_--_6732.jpg">Go -- 2021 -- 6732.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_weiqi_stones.jpg">Inner Mongolia Museum weiqi stones.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Weiqi_stones_and_Xiangqi_pieces_from_Liao_Shangjing.jpg">Weiqi stones and Xiangqi pieces from Liao Shangjing.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi_Court-1.jpg">Pachisi Court-1.jpg</a> by David Castor (dcastor), Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Embroidered_Gujrati_Chaupar_with_sixteen_painted_ivory_counters_and_dice._Circa_AD_1800-50.jpg">Embroidered Gujrati Chaupar with sixteen painted ivory counters and dice. Circa AD 1800-50.jpg</a> by TradingIdeas, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pachisi-real.jpg">Pachisi-real.jpg</a> by Micha L. Rieser, Attribution</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders.jpg">Snakes and Ladders.jpg</a> by Jain Miniature, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Gyan_Chaupar_National_Museum_India.JPG">Gyan Chaupar National Museum India.JPG</a> by Nomu420, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Snakes_and_Ladders_(8353940937).jpg">Snakes and Ladders (8353940937).jpg</a> by Neil Turner from Sowerby Bridge, United Kingdom, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_Chessmen,_British_Museum.jpg">Lewis Chessmen, British Museum.jpg</a> by APK, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:NMSLewisChessmen28.jpg">NMSLewisChessmen28.jpg</a> by National Museums Scotland, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Lewis_chessmen_(crop).jpg">Lewis chessmen (crop).jpg</a> by Jessica Spengler, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_(79731239).jpg">Nine Men&#x27;s Morris (79731239).jpg</a> by Andrew Magill from Boulder, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Rocca_San_Silvestro_Nine_Men%27s_Morris_board.JPG">Rocca San Silvestro Nine Men&#x27;s Morris board.JPG</a> by LepoRello, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Nine_Men%27s_Morris_with_dice_in_Libro_de_los_juegos.jpg">Nine Men&#x27;s Morris with dice in Libro de los juegos.jpg</a> by Alfonso X of Castile and Leon, Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:%E6%BC%A2_%E5%BD%A9%E7%B9%AA%E9%99%B6%E5%85%AD%E5%8D%9A%E5%85%B7%EF%BC%88%E9%99%84%E9%AA%A8%E8%A3%BD%E6%A3%8B%E5%AD%90%EF%BC%89-Liubo_Board_and_Pieces_MET_DP372026.jpg">漢 彩繪陶六博具（附骨製棋子）-Liubo Board and Pieces MET DP372026.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Green-glazed_pottery_figurine_representing_liubo.jpg">Green-glazed pottery figurine representing liubo.jpg</a> by 幽灵巴尼, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Liubo_players_in_pottery_tower.jpg">Liubo players in pottery tower.jpg</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>
