@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 우연히 발견된 잊힌 보물</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 우연히 발견된 잊힌 보물</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 7일</span></p>
+<hr />
+<h2>1. 🇨🇳 우물을 파던 농부들이 병마용을 발견했어요</h2>
+<p><img alt="병마용 1호 갱에 줄지어 선 흙 병사들, 병사 얼굴 클로즈업, 나란히 서 있는 병사들" src="../images/01.jpg" />
+1974년 3월, 농부 양즈파(Yang Zhifa)와 그의 형제 다섯 명, 그리고 이웃 한 명이 중국 시안 근처에서 우물을 파다가 흙으로 만든 인형 조각에 부딪혔어요. 우연히 중국 첫 황제의 무덤 일부를 찾아낸 거예요. 약 2,200년 전에 묻힌 무덤이었죠.</p>
+<p>그 뒤 고고학자들이 깊이 약 7 m(23 ft), 그러니까 2층 집 높이만 한 구덩이들을 파냈는데, 그 안에는 실제 사람 크기의 흙 병사들이 가득했어요. 이 구덩이들에는 <strong>병사 8,000명 이상</strong>과 전차 130대, 말 수백 마리가 있는 것으로 추정되고, 대부분은 아직 땅속에 있어요.</p>
+<p>그리고 놀라운 점이 있어요. 똑같은 얼굴이 거의 없다는 거예요. 일꾼들이 틀로 얼굴을 만든 다음 손으로 흙을 덧붙여서, 병사마다 다른 사람처럼 보이게 했거든요.</p>
+<p>물을 찾으려고 땅을 팠는데 군대 하나가 통째로 나온 셈이에요.</p>
+<hr />
+<h2>2. 🇫🇷 로봇이라는 개가 십대들을 라스코 동굴 벽화로 이끌었어요</h2>
+<p><img alt="라스코 동굴 벽에 그려진 들소, 말, 사슴, 줄지어 그려진 동물들, 노란 말 그림" src="../images/02.jpg" />
+1940년 9월 12일, 프랑스 남서부 몽티냐크 근처에서 18살 마르셀 라비다(Marcel Ravidat)의 개 '로봇(Robot)'이 쓰러진 나무가 남긴 구멍 주변을 킁킁거리고 있었어요. 마르셀은 친구 세 명과 다시 와서 15 m(50 ft) 깊이의 구멍을 타고 내려갔어요. 근처 저택으로 이어지는 비밀 통로이길 바라면서요.</p>
+<p>그런데 벽에는 말, 사슴, 커다란 들소를 그린 <strong>600점이 넘는 그림</strong>이 가득했어요. 사람들이 약 17,000~22,000년 전에 그린 그림이었어요.</p>
+<p>나중에 방문객들이 내쉬는 숨 때문에 그림이 상하기 시작해서, 진짜 동굴은 1963년에 문을 닫았어요. 지금은 근처에 똑같이 만든 복제 동굴을 구경해요.</p>
+<p>한마디로, 개의 코 덕분에 17,000년 동안 닫혀 있던 미술관이 다시 문을 연 거예요.</p>
+<hr />
+<h2>3. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 잃어버린 망치 덕분에 혹슨 보물을 찾았어요</h2>
+<p><img alt="발견됐을 때 모습대로 진열장에 놓인 혹슨 보물, 은으로 만든 호랑이 손잡이, 은으로 된 '황후' 후추통" src="../images/03.jpg" />
+1992년 11월, 농부 피터 워틀링(Peter Whatling)이 영국 잉글랜드 서퍽주의 혹슨 마을 근처 밭에서 망치를 잃어버렸어요. 그래서 금속 탐지기가 있는 은퇴한 정원사 친구 에릭 로스(Eric Lawes)에게 같이 찾아 달라고 부탁했어요.</p>
+<p>탐지기가 삐 소리를 냈지만, 망치 때문은 아니었어요. 로스가 찾은 건 땅에 묻힌 로마 시대 상자였는데, 그 안에 <strong>동전 14,865개</strong>와 금은 보물 약 200점이 들어 있었어요. 은 호랑이랑 멋쟁이 귀부인 모양의 후추통도 있었죠. 약 1,600년 전에 묻힌 상자였어요.</p>
+<p>두 친구는 전부 파내지 않고 땅 주인과 경찰에 알렸어요. 그래서 다음 날 고고학자들이 조심스럽게 발굴할 수 있었죠. 두 친구는 보상금 175만 파운드를 나눠 가졌어요. 그리고 네, 망치도 나왔어요. 지금은 영국 박물관에 있어요.</p>
+<p>소파 틈에서 열쇠를 찾다가 해적 보물 상자를 찾은 것 같아요.</p>
+<hr />
+<h2>4. 🇪🇬 로제타석은 요새를 짓는 데 쓰였어요</h2>
+<p><img alt="영국 박물관의 로제타석, 1985년에 로제타석을 보는 관람객들, 상형문자 클로즈업" src="../images/04.jpg" />
+새겨지고 몇백 년이 지난 뒤, 이 오래된 이집트 돌은 로제타(라시드) 마을 근처에 요새를 짓는 건축 재료로 다시 쓰였어요. 1799년 7월, 프랑스가 이집트를 침공했을 때 프랑스 육군 장교 피에르프랑수아 부샤르(Pierre-François Bouchard)가 그곳에서 이 돌을 찾았어요.</p>
+<p>이 돌에는 기원전 196년에 쓴 같은 내용이 <strong>세 가지 글자</strong>로 반복돼 있어요. 이집트 상형문자(그림으로 된 글자), 민중문자라는 또 다른 이집트 글자, 그리고 고대 그리스어예요. 학자들은 이미 그리스어를 읽을 수 있어서, 그걸 정답지처럼 썼어요.</p>
+<p>1822년, 장프랑수아 샹폴리옹(Jean-François Champollion)이 이집트 글자를 풀어냈다고 발표했어요. 이 돌은 무게가 약 760 kg(1,680 lb)으로 소 한 마리쯤 되고, 영국 박물관에서 사람들이 가장 많이 보러 오는 유물이에요.</p>
+<p>다시 말해, 몇백 년 동안 벽 속에 숨어 있던 커닝 페이퍼였던 거예요.</p>
+<hr />
+<h2>5. 🇬🇷 해면 잠수부들이 고대 컴퓨터, 안티키테라 기계를 찾았어요</h2>
+<p><img alt="톱니바퀴가 보이는 안티키테라 기계의 큰 조각, 1901년 난파선 현장의 배 위에 있는 해면 잠수부들, 작동하는 기계의 모형" src="../images/05.jpg" />
+1900년 무렵, 해면 잠수부들(바다에 들어가 해면을 따는 사람들)이 그리스 안티키테라섬 앞바다, 물속 45 m(148 ft) 깊이에서 오래된 난파선을 발견했어요. 15층 건물 높이쯤 되는 깊이예요. 1901년에 그들은 조각상, 도자기와 함께 딱딱한 껍질로 뒤덮인 덩어리 하나를 건져 올렸어요.</p>
+<p>1902년, 아테네 박물관의 누군가가 돌 밖으로 삐져나온 <strong>톱니바퀴</strong>를 발견했어요. 나중에 엑스레이로 찍어 보니 안에 청동 톱니바퀴가 30개쯤 들어 있었고, 2,000여 년 전에 만들어진 것이었어요.</p>
+<p>손잡이를 돌리면 톱니바퀴가 해와 달의 위치를 보여 주고, 일식과 월식을 수십 년 앞서 예측하고, 올림픽 경기가 언제 열리는지까지 알려 줬어요.</p>
+<p>청동으로 만든 달력이자 우주 앱이에요.</p>
+<hr />
+<h2>6. 📜 양치기들이 사막 동굴에서 사해 문서를 찾았어요</h2>
+<p><img alt="쿰란 절벽에 있는 동굴, '책의 전당'에 전시된 이사야 두루마리, 사해 문서 조각" src="../images/06.jpg" />
+1946년 말부터 1947년 초 사이, 베두인 양치기 세 명이 사해 근처 언덕에 있었어요. 그중 무함마드 에드디브(Muhammed edh-Dhib)가 동굴 안으로 굴러떨어졌는데, 거기서 오래된 두루마리가 든 흙 항아리들을 발견했어요.</p>
+<p>양치기들은 두루마리 몇 개를 천막으로 가져가서, 어떻게 할지 고민하는 동안 천막 기둥에 걸어 두었어요. 나중에 그중 세 개를 한 상인에게 7 요르단 파운드에 팔았는데, 그때 돈으로 약 28달러였어요.</p>
+<p>알고 보니 이 두루마리들은 <strong>2,000년도 넘은 것</strong>이었고, 성경의 책들을 통째로 베낀 것 중 가장 오래된 사본도 들어 있었어요. 1956년까지 근처 동굴 11곳에서 서로 다른 글 981편의 조각이 발견됐어요.</p>
+<p>2,000년 된 도서관이 중고 장터 물건처럼 거래된 거예요.</p>
+<hr />
+<h2>7. 🇮🇹 잠수부가 모래 밖으로 튀어나온 리아체 청동상을 봤어요</h2>
+<p><img alt="1972년 막 발견된 리아체 청동상 주위에 모인 사람들, 레조칼라브리아 박물관의 두 조각상, 그림자와 함께 선 조각상" src="../images/07.jpg" />
+1972년 8월 16일, 스테파노 마리오티니(Stefano Mariottini)는 이탈리아 남부 리아체 앞바다에서 물고기를 잡으려고 잠수하고 있었어요. 약 10 m(33 ft) 아래에서 모래 밖으로 삐져나온 검은 어깨를 보고, 그게 청동이라는 걸 알아차렸어요.</p>
+<p>1미터쯤 떨어진 곳에서는 엄지발가락과 무릎이 보였어요. 그곳에는 그리스 예술가들이 약 2,500년 전에 만든 <strong>실제 사람 크기의 청동 전사상 두 개</strong>가 있었어요.</p>
+<p>그는 부표 줄을 한 조각상의 팔에 묶고, 두 조각상을 모래로 덮어 숨긴 다음 발견 사실을 알렸어요. 커다란 그리스 청동상 원본은 남아 있는 게 아주 적어서, 이 둘은 더욱 귀해요.</p>
+<p>저녁거리를 잡으러 잠수했다가 고대 거인 두 명을 만난 셈이에요.</p>
+<hr />
+<h2>8. 🇩🇰 소녀가 찾은 황금 뿔, 도둑이 녹여 버렸어요</h2>
+<p><img alt="덴마크 국립 박물관의 황금 뿔 복제품, 키르스텐 스벤스다테르가 첫 번째 뿔을 발견하는 그림, 황금 뿔 두 개" src="../images/08.jpg" />
+1639년, 키르스텐 스벤스다테르(Kirsten Svendsdatter)라는 시골 소녀가 덴마크 남부 갈레후스 마을 근처에서 금으로 된 긴 뿔을 발견했어요. 1734년에는 20 m(65 ft)도 안 떨어진 곳에서 두 번째 황금 뿔이 나왔어요.</p>
+<p>두 뿔은 약 1,600년 된 것이었어요. 긴 뿔은 무게가 3.2 kg(7 lb)이었고 작은 인형들로 뒤덮여 있었어요. 짧은 뿔에는 만든 사람의 이름 '흘레와가스트(Hlewagast)'가 룬 문자(옛 북유럽 글자)로 한 줄 새겨져 있었어요.</p>
+<p>그런데 1802년, 닐스 하이덴라이히(Niels Heidenreich)라는 금세공사가 가짜 열쇠로 뿔이 있는 곳에 들어가 두 뿔을 훔쳐서 <strong>녹여 버렸어요</strong>. 오늘날 박물관에서 볼 수 있는 뿔은 옛날 그림을 보고 만든 복제품이에요.</p>
+<p>다시 말해, 두 번 발견되고 영영 사라진 보물이에요.</p>
+<hr />
+<h2>9. 🇺🇸 개를 산책시키던 부부가 금화가 든 깡통을 찾았어요</h2>
+<p><img alt="보호 케이스에 든 새들 리지 보물 금화, 녹슨 깡통 뚜껑과 금화, 줄지어 전시된 금화들" src="../images/09.jpg" />
+2013년 2월, 미국 캘리포니아 북부에 사는 부부가 자기 땅에서 개를 산책시키고 있었어요. 이름은 존과 메리라고만 알려져 있어요. 그때 메리가 흙 밖으로 삐져나온 녹슨 깡통을 발견했어요.</p>
+<p>깡통이 너무 무거워서 둘은 오래된 페인트가 들었나 보다 했어요. 집에 오는 길에 뚜껑이 깨지면서 금화 가장자리가 보였어요. 계속 파 보니 <strong>금화 1,427개가 든 깡통 여덟 개</strong>가 나왔어요. 1847년부터 1894년까지 만들어진 금화였어요.</p>
+<p>금화에 적힌 금액을 다 더하면 27,980달러였지만, 전문가들은 약 1,000만 달러의 가치가 있다고 했어요. 미국에서 땅에 묻힌 금화가 발견된 것 중 가장 큰 규모예요.</p>
+<p>한마디로, 역사상 최고의 개 산책이었어요.</p>
+<hr />
+<h2>10. 🇨🇳 농부의 도랑이 싼싱두이(三星堆, Sānxīngduī)로 이끌었어요</h2>
+<p><img alt="귀가 크고 눈이 튀어나온 싼싱두이 청동 가면, 청동 나무에 앉은 청동 새, 금박 가면을 쓴 청동 머리" src="../images/10.jpg" />
+1927년, 중국 쓰촨성 광한 근처의 한 농부가 논밭에 물을 대는 도랑(관개 수로)을 치우다가 옥 유물을 한가득 파냈어요. 그리고 1986년, 그 지역 일꾼들이 우연히 구덩이 두 개를 찾았는데, 그 안에는 금, 청동, 옥으로 된 유물이 수천 점이나 가득했어요.</p>
+<p>이 유물들은 약 3,000년 된 것이고, 그 모양은 그때까지 중국 미술에서 본 것과 <strong>완전히 달랐어요</strong>. 귀가 커다랗고 눈이 툭 튀어나온 청동 얼굴, 새가 앉은 청동 나무, 금 가면을 쓴 머리들이 있었거든요.</p>
+<p>2020년부터 2022년까지 새로 발굴하면서 구덩이 여섯 개가 더 나왔고, 그중에는 금이 84%인 금 가면도 있었어요.</p>
+<p>도랑 밑바닥에서 사라진 세계 하나를 통째로 찾은 것 같아요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>2005년에 과학자들이 안티키테라 기계를 엑스레이로 찍었더니, 딱딱한 덩어리 속에 숨어 있던 희미한 글자를 읽을 수 있었어요. 원래 기계의 겉 상자를 덮고 있던 글자들이었죠. 전문가들은 이렇게 복잡한 톱니바퀴 기계가 그 뒤 약 1,500년 동안 다시 나타나지 않았다고 말해요. 1300년대 유럽의 천문 시계가 나올 때까지요. 안티키테라 기계는 시대를 훨씬 앞서간 많은 고대 발명품 중 하나예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Army,_Pit_1_09.jpg">Qin Terracotta Army, Pit 1 09.jpg</a> by Gary Lee Todd, Ph.D., <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#1: <a href="https://www.flickr.com/photos/26736723@N00/11523401424">Terracotta Warrior Face (flickr)</a> by akasped, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Warrior_06.jpg">Qin Terracotta Warrior 06.jpg</a> by Gary Lee Todd, Ph.D., <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg">Lascaux painting.jpg</a> by EU, Public domain</li><li>#2: <a href="https://www.flickr.com/photos/31856336@N03/35992500056">left wall of the hall of bulls (flickr)</a> by subarcticmike, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Lascaux,_horse.JPG">Lascaux, horse.JPG</a> by HTO, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Hoxne_Hoard_1.jpg">Hoxne Hoard 1.jpg</a> by Photograph by Mike Peel (www.mikepeel.net)., <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://www.flickr.com/photos/10380815@N05/1659246689">10 Silver Tigress Hoxne Hoard (flickr)</a> by lindasomed45@gmail.com, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:British_Museum_Hoxne_Hoard_Empress_Pepper_Pot.jpg">British Museum Hoxne Hoard Empress Pepper Pot.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG">Rosetta Stone.JPG</a> by Hans Hillewaert, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Rosetta-stone-display-in-1985.jpg">Rosetta-stone-display-in-1985.jpg</a> by RickDikeman, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://www.flickr.com/photos/47757737@N00/4054644737">la pierre de Rosette / Rosetta stone (flickr)</a> by OliBac, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:NAMA_Machine_d%27Anticyth%C3%A8re_1.jpg">NAMA Machine d&#x27;Anticythère 1.jpg</a> by No machine-readable author provided. Marsyas assumed (based on copyright claims)., <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Antikes_Wrack_von_Antikythera_02.jpg">Antikes Wrack von Antikythera 02.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Antikythera_mechanism_frontview,_1st-2nd_century_BC,_Greece_(model).jpg">Antikythera mechanism frontview, 1st-2nd century BC, Greece (model).jpg</a> by Gts-tg, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://www.flickr.com/photos/22490717@N02/34036642784">Israel-06009 - Most Famous Cave (flickr)</a> by archer10 (Dennis), <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Isaiah_scroll_at_the_Shrine_of_the_Book.jpg">Isaiah scroll at the Shrine of the Book.jpg</a> by Dennis G. Jarvis, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Dead_Sea_Scroll_28a_from_Qumran_Cave_1,_the_Jordan_Museum_in_Amman.jpg">Dead Sea Scroll 28a from Qumran Cave 1, the Jordan Museum in Amman.jpg</a> by Osama Shukir Muhammed Amin FRCP(Glasg), <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Bronzi_di_riace_ritrovamento.jpg">Bronzi di riace ritrovamento.jpg</a> by Ernesto Franco (from Bivongi, Reggio Calabria province), Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Reggio_Calabria_-_Museo_archeologico_nazionale_-_Bronzi_di_Riace_-_11.jpg">Reggio Calabria - Museo archeologico nazionale - Bronzi di Riace - 11.jpg</a> by Benjamin Smith, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://www.flickr.com/photos/14529688@N08/3640575205">Riace Bronze and his shadow (flickr)</a> by Ken_Mayer, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Copenhagen_-_Nationalmuseet_-_Golden_horns_of_Gallehus.JPG">Copenhagen - Nationalmuseet - Golden horns of Gallehus.JPG</a> by Lestat (Jan Mehlich), <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#8: <a href="https://www.rawpixel.com/image/8924888/image-face-art-vintage">Kirstine Svends finds golden horn (rawpixel)</a> by unknown, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Guldhornene_DO-10765_original_cropped.jpg">Guldhornene DO-10765 original cropped.jpg</a> by Nationalmuseet, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Saddle_Ridge_Hoard_(14870547812).jpg">Saddle Ridge Hoard (14870547812).jpg</a> by Michel Curi, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:1866-S_$20_-_Saddle_Ridge_Hoard_(14847894786).jpg">1866-S $20 - Saddle Ridge Hoard (14847894786).jpg</a> by Michel Curi, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Saddle_Ridge_Hoard_coins_and_dirt.jpg">Saddle Ridge Hoard coins and dirt.jpg</a> by Kagin&#x27;s Inc., <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Shang_Bronze_Mask,_Sanxingdui.jpg">Shang Bronze Mask, Sanxingdui.jpg</a> by Gary Todd, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Bronze_Tree,_Sanxingdui_2c.jpg">Bronze Tree, Sanxingdui 2c.jpg</a> by Gary Todd, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_gold_mask.jpg">Sanxingdui gold mask.jpg</a> by momo, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>

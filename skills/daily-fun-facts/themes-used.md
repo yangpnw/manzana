@@ -42,3 +42,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-04 · Funny Phrases from Sports and Hobbies · 2026-11-04-01-top-10-funny-phrases-from-sports-and-hobbies
 - 2026-11-05 · Little-Known Animal Hunting Tricks · 2026-11-05-01-top-10-little-known-animal-hunting-tricks
 - 2026-11-06 · Ancient Board Games · 2026-11-06-01-top-10-ancient-board-games
+- 2026-11-07 · Forgotten Treasures Found by Chance · 2026-11-07-01-top-10-forgotten-treasures-found-by-chance

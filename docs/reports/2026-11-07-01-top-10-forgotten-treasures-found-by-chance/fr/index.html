@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Trésors oubliés trouvés par hasard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <span aria-current="page">Français</span></span><a href="../../../archive.html">Toutes les fiches</a></nav>
+<h1>🌍 Top 10 Trésors oubliés trouvés par hasard</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>7 novembre 2026</span></p>
+<hr />
+<h2>1. 🇨🇳 Des paysans qui creusaient un puits ont trouvé l'armée de terre cuite</h2>
+<p><img alt="Des rangées de soldats en argile dans la fosse 1 de l'armée de terre cuite, le visage d'un guerrier en gros plan, et des guerriers côte à côte" src="../images/01.jpg" />
+En mars 1974, le paysan Yang Zhifa, cinq de ses frères et un voisin creusaient un puits près de Xi'an, en Chine, quand ils sont tombés sur des morceaux de statues en argile. Sans le savoir, ils venaient de trouver une partie du tombeau du premier empereur de Chine, enterré il y a environ 2 200 ans.</p>
+<p>Les archéologues ont ensuite dégagé des fosses d'environ 7 m (23 ft) de profondeur, aussi profondes qu'une maison de deux étages est haute, remplies de soldats en argile grandeur nature. On estime que les fosses contiennent <strong>plus de 8 000 soldats</strong>, plus 130 chars et des centaines de chevaux, et la plupart sont encore sous terre.</p>
+<p>Et voilà le plus fou : on ne trouve presque pas deux visages pareils. Les ouvriers faisaient les visages dans des moules, puis ajoutaient de l'argile à la main pour que chaque soldat ait l'air d'une personne différente.</p>
+<p>Vois ça comme creuser pour trouver de l'eau et tomber sur une armée entière.</p>
+<hr />
+<h2>2. 🇫🇷 Un chien nommé Robot a mené des ados aux peintures de Lascaux</h2>
+<p><img alt="Des aurochs, des chevaux et des cerfs peints sur une paroi de la grotte de Lascaux, une rangée d'animaux peints, et un cheval jaune peint" src="../images/02.jpg" />
+Le 12 septembre 1940, près de Montignac, dans le sud-ouest de la France, Robot, le chien de Marcel Ravidat, 18 ans, reniflait autour d'un trou laissé par un arbre tombé. Marcel est revenu avec trois copains, et ils sont descendus dans un puits de 15 m (50 ft), en espérant que c'était un passage secret vers un manoir voisin.</p>
+<p>À la place, les parois étaient couvertes de <strong>plus de 600 peintures</strong> de chevaux, de cerfs et d'énormes bœufs sauvages. Elles ont été peintes il y a environ 17 000 à 22 000 ans.</p>
+<p>Plus tard, le souffle des visiteurs a commencé à abîmer les peintures, alors la vraie grotte a fermé en 1963. Aujourd'hui, on visite des copies exactes construites tout près.</p>
+<p>En gros, le flair d'un chien a rouvert une galerie d'art fermée depuis 17 000 ans.</p>
+<hr />
+<h2>3. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Un marteau perdu a mené au trésor de Hoxne</h2>
+<p><img alt="Le trésor de Hoxne disposé dans une vitrine comme au moment de sa découverte, une anse en argent en forme de tigresse, et le poivrier en argent de « l'Impératrice »" src="../images/03.jpg" />
+En novembre 1992, l'agriculteur Peter Whatling a perdu son marteau dans un champ près de Hoxne, un village du Suffolk, en Angleterre. Il a demandé à son ami Eric Lawes, un jardinier à la retraite qui avait un détecteur de métaux, de l'aider à le chercher.</p>
+<p>Le détecteur a sonné, mais pas pour le marteau. Lawes avait trouvé un coffre romain enterré contenant <strong>14 865 pièces de monnaie</strong> et environ 200 trésors en or et en argent, dont un tigre en argent et un poivrier en forme de dame élégante. Il avait été enterré il y a environ 1 600 ans.</p>
+<p>Au lieu de tout déterrer, les deux amis ont prévenu le propriétaire du terrain et la police, pour que les archéologues puissent le sortir avec soin le lendemain. Les amis se sont partagé une récompense de 1,75 million de livres. Et oui, le marteau a été retrouvé aussi. Il est maintenant au British Museum.</p>
+<p>C'est comme chercher tes clés entre les coussins du canapé et trouver un coffre de pirate.</p>
+<hr />
+<h2>4. 🇪🇬 La pierre de Rosette a servi à construire un fort</h2>
+<p><img alt="La pierre de Rosette au British Museum, des visiteurs qui la regardent en 1985, et ses hiéroglyphes en gros plan" src="../images/04.jpg" />
+Des siècles après avoir été gravée, une vieille pierre égyptienne a été réutilisée comme matériau pour construire un fort près de la ville de Rosette (Rachid). En juillet 1799, pendant l'invasion de l'Égypte par la France, l'officier de l'armée française Pierre-François Bouchard l'a trouvée là.</p>
+<p>La pierre répète le même message, de 196 av. J.-C., dans <strong>trois sortes d'écriture</strong> : les hiéroglyphes égyptiens (une écriture en petits dessins), une autre écriture égyptienne appelée démotique, et le grec ancien. Les savants savaient déjà lire le grec, alors ils s'en sont servis comme d'un corrigé.</p>
+<p>En 1822, Jean-François Champollion a annoncé qu'il avait déchiffré l'écriture égyptienne. La pierre pèse environ 760 kg (1 680 lb), à peu près autant qu'une vache, et c'est l'objet le plus visité du British Museum.</p>
+<p>Autrement dit, c'était une antisèche cachée dans un mur pendant des siècles.</p>
+<hr />
+<h2>5. 🇬🇷 Des pêcheurs d'éponges ont trouvé la machine d'Anticythère, un ordinateur antique</h2>
+<p><img alt="Le fragment principal de la machine d'Anticythère avec ses engrenages, des pêcheurs d'éponges sur des bateaux au-dessus de l'épave en 1901, et une maquette de la machine en état de marche" src="../images/05.jpg" />
+Vers 1900, des pêcheurs d'éponges (des plongeurs qui ramassent des éponges de mer) ont trouvé une épave antique à 45 m (148 ft) sous l'eau, au large de l'île grecque d'Anticythère. C'est à peu près la hauteur d'un immeuble de 15 étages. En 1901, ils ont remonté un bloc couvert de croûtes, avec des statues et des poteries.</p>
+<p>En 1902, quelqu'un au musée d'Athènes a remarqué une <strong>roue dentée</strong> qui dépassait de la pierre. Plus tard, des radios aux rayons X ont montré environ 30 engrenages en bronze à l'intérieur, fabriqués il y a plus de 2 000 ans.</p>
+<p>Quand on tournait sa manivelle, les engrenages montraient où étaient le Soleil et la Lune, prédisaient les éclipses des dizaines d'années à l'avance, et indiquaient même quand revenaient les Jeux olympiques.</p>
+<p>C'est un calendrier et une appli de l'espace, en bronze.</p>
+<hr />
+<h2>6. 📜 Des bergers ont trouvé les manuscrits de la mer Morte dans une grotte du désert</h2>
+<p><img alt="Une grotte dans les falaises de Qumrân, le rouleau d'Isaïe exposé au Sanctuaire du Livre, et un fragment des manuscrits de la mer Morte" src="../images/06.jpg" />
+Entre fin 1946 et début 1947, trois bergers bédouins se trouvaient dans les collines près de la mer Morte. L'un d'eux, Muhammed edh-Dhib, est tombé dans une grotte et y a trouvé des jarres en terre cuite remplies de vieux rouleaux.</p>
+<p>Les bergers ont rapporté quelques rouleaux au campement et les ont accrochés à un poteau de leur tente, le temps de décider quoi en faire. Plus tard, ils en ont vendu trois à un marchand pour sept livres jordaniennes, environ 28 dollars à l'époque.</p>
+<p>Ces rouleaux avaient en fait <strong>plus de 2 000 ans</strong>, et ils comprennent les plus vieilles copies connues de livres entiers de la Bible. En 1956, on avait trouvé des morceaux de 981 textes différents dans 11 grottes voisines.</p>
+<p>Une bibliothèque de 2 000 ans, échangée comme un objet de vide-grenier.</p>
+<hr />
+<h2>7. 🇮🇹 Un plongeur a vu les bronzes de Riace dépasser du sable</h2>
+<p><img alt="La foule autour d'un des bronzes de Riace juste après sa découverte en 1972, les deux statues au musée de Reggio de Calabre, et une statue avec son ombre" src="../images/07.jpg" />
+Le 16 août 1972, Stefano Mariottini plongeait pour pêcher au large de Riace, dans le sud de l'Italie. À environ 10 m (33 ft) de profondeur, il a vu une épaule sombre qui sortait du sable et a compris que c'était du bronze.</p>
+<p>À environ un mètre de là, il a aperçu un gros orteil et un genou. C'étaient <strong>deux guerriers en bronze grandeur nature</strong>, faits par des artistes grecs il y a environ 2 500 ans.</p>
+<p>Il a attaché la corde d'une bouée au bras d'une des statues, les a recouvertes de sable pour les cacher, puis a signalé sa découverte. Très peu de grandes statues grecques originales en bronze ont survécu, alors ces deux-là sont encore plus rares.</p>
+<p>Vois ça comme plonger pour pêcher ton dîner et tomber sur deux géants antiques.</p>
+<hr />
+<h2>8. 🇩🇰 Une fille a trouvé une corne en or, et un voleur l'a fondue</h2>
+<p><img alt="Les copies des cornes en or au Musée national du Danemark, un tableau de Kirsten Svendsdatter qui trouve la première corne, et les deux cornes en or" src="../images/08.jpg" />
+En 1639, une jeune paysanne nommée Kirsten Svendsdatter a trouvé une longue corne en or près du village de Gallehus, dans le sud du Danemark. En 1734, une deuxième corne en or est apparue à moins de 20 m (65 ft) de là.</p>
+<p>Les cornes avaient environ 1 600 ans. La plus longue pesait 3,2 kg (7 lb) et était couverte de petites figurines. La plus courte portait une ligne de runes (des lettres nordiques anciennes) avec le nom de son fabricant, Hlewagast.</p>
+<p>Puis, en 1802, un orfèvre nommé Niels Heidenreich a utilisé de fausses clés pour atteindre les cornes, les a volées et <strong>les a fondues</strong>. Les cornes qu'on voit aujourd'hui dans les musées sont des copies, faites à partir de vieux dessins.</p>
+<p>Autrement dit, un trésor trouvé deux fois et perdu pour toujours.</p>
+<hr />
+<h2>9. 🇺🇸 Un couple qui promenait son chien a trouvé des boîtes de pièces d'or</h2>
+<p><img alt="Des pièces d'or du trésor de Saddle Ridge dans des boîtiers de protection, un couvercle de boîte rouillé à côté d'une pièce d'or, et des rangées de pièces exposées" src="../images/09.jpg" />
+En février 2013, dans le nord de la Californie, un couple connu seulement sous les noms de John et Mary promenait son chien sur son propre terrain quand Mary a repéré une boîte rouillée qui dépassait de la terre.</p>
+<p>Elle était si lourde qu'ils ont pensé qu'elle contenait de la vieille peinture. Sur le chemin du retour, le couvercle s'est fendu et ils ont vu le bord d'une pièce d'or. Ils ont continué à creuser et ont trouvé <strong>huit boîtes contenant 1 427 pièces d'or</strong>, datées de 1847 à 1894.</p>
+<p>Les pièces valaient 27 980 dollars en valeur faciale, mais des experts ont dit qu'elles valaient environ 10 millions de dollars. C'est la plus grande découverte de pièces d'or enterrées de toute l'histoire des États-Unis.</p>
+<p>En gros, la meilleure promenade de chien de l'histoire.</p>
+<hr />
+<h2>10. 🇨🇳 Le fossé d'un paysan a mené à Sanxingdui (三星堆, Sānxīngduī)</h2>
+<p><img alt="Un masque en bronze de Sanxingdui avec d'immenses oreilles et des yeux qui sortent, un oiseau en bronze d'un arbre en bronze, et une tête en bronze avec un masque en feuille d'or" src="../images/10.jpg" />
+En 1927, un paysan près de Guanghan, dans le Sichuan, en Chine, nettoyait un fossé d'irrigation (un canal qui arrose les champs) quand il a déterré un tas d'objets en jade. Puis en 1986, des ouvriers du coin ont trouvé par hasard deux fosses remplies de milliers d'objets en or, en bronze et en jade.</p>
+<p>Ces objets ont environ 3 000 ans, et leur style ne ressemblait <strong>à rien de connu</strong> dans l'art chinois : des visages en bronze avec d'immenses oreilles et des yeux qui sortent, un arbre en bronze avec des oiseaux, et des têtes couvertes de masques en or.</p>
+<p>De nouvelles fouilles, de 2020 à 2022, ont trouvé six autres fosses, dont un masque fait à 84 % d'or.</p>
+<p>C'est comme trouver tout un monde perdu au fond d'un fossé.</p>
+<hr />
+<h3>Le saviez-vous ?</h3>
+<p>Quand des scientifiques ont passé la machine d'Anticythère aux rayons X en 2005, ils ont pu lire des inscriptions pâles cachées dans les blocs couverts de croûtes, des mots qui couvraient autrefois le boîtier de la machine. Les experts disent qu'aucune machine avec des engrenages aussi compliqués n'est réapparue pendant environ 1 500 ans, jusqu'aux horloges astronomiques de l'Europe des années 1300. C'est l'une des nombreuses inventions antiques qui avaient une longueur d'avance énorme sur leur époque.</p>
+<details class="credits"><summary>Crédits photo (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Army,_Pit_1_09.jpg">Qin Terracotta Army, Pit 1 09.jpg</a> by Gary Lee Todd, Ph.D., <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#1: <a href="https://www.flickr.com/photos/26736723@N00/11523401424">Terracotta Warrior Face (flickr)</a> by akasped, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Warrior_06.jpg">Qin Terracotta Warrior 06.jpg</a> by Gary Lee Todd, Ph.D., <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg">Lascaux painting.jpg</a> by EU, Public domain</li><li>#2: <a href="https://www.flickr.com/photos/31856336@N03/35992500056">left wall of the hall of bulls (flickr)</a> by subarcticmike, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Lascaux,_horse.JPG">Lascaux, horse.JPG</a> by HTO, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Hoxne_Hoard_1.jpg">Hoxne Hoard 1.jpg</a> by Photograph by Mike Peel (www.mikepeel.net)., <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://www.flickr.com/photos/10380815@N05/1659246689">10 Silver Tigress Hoxne Hoard (flickr)</a> by lindasomed45@gmail.com, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:British_Museum_Hoxne_Hoard_Empress_Pepper_Pot.jpg">British Museum Hoxne Hoard Empress Pepper Pot.jpg</a> by unknown, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG">Rosetta Stone.JPG</a> by Hans Hillewaert, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Rosetta-stone-display-in-1985.jpg">Rosetta-stone-display-in-1985.jpg</a> by RickDikeman, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://www.flickr.com/photos/47757737@N00/4054644737">la pierre de Rosette / Rosetta stone (flickr)</a> by OliBac, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:NAMA_Machine_d%27Anticyth%C3%A8re_1.jpg">NAMA Machine d&#x27;Anticythère 1.jpg</a> by No machine-readable author provided. Marsyas assumed (based on copyright claims)., <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Antikes_Wrack_von_Antikythera_02.jpg">Antikes Wrack von Antikythera 02.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Antikythera_mechanism_frontview,_1st-2nd_century_BC,_Greece_(model).jpg">Antikythera mechanism frontview, 1st-2nd century BC, Greece (model).jpg</a> by Gts-tg, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://www.flickr.com/photos/22490717@N02/34036642784">Israel-06009 - Most Famous Cave (flickr)</a> by archer10 (Dennis), <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Isaiah_scroll_at_the_Shrine_of_the_Book.jpg">Isaiah scroll at the Shrine of the Book.jpg</a> by Dennis G. Jarvis, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Dead_Sea_Scroll_28a_from_Qumran_Cave_1,_the_Jordan_Museum_in_Amman.jpg">Dead Sea Scroll 28a from Qumran Cave 1, the Jordan Museum in Amman.jpg</a> by Osama Shukir Muhammed Amin FRCP(Glasg), <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Bronzi_di_riace_ritrovamento.jpg">Bronzi di riace ritrovamento.jpg</a> by Ernesto Franco (from Bivongi, Reggio Calabria province), Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Reggio_Calabria_-_Museo_archeologico_nazionale_-_Bronzi_di_Riace_-_11.jpg">Reggio Calabria - Museo archeologico nazionale - Bronzi di Riace - 11.jpg</a> by Benjamin Smith, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://www.flickr.com/photos/14529688@N08/3640575205">Riace Bronze and his shadow (flickr)</a> by Ken_Mayer, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Copenhagen_-_Nationalmuseet_-_Golden_horns_of_Gallehus.JPG">Copenhagen - Nationalmuseet - Golden horns of Gallehus.JPG</a> by Lestat (Jan Mehlich), <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#8: <a href="https://www.rawpixel.com/image/8924888/image-face-art-vintage">Kirstine Svends finds golden horn (rawpixel)</a> by unknown, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Guldhornene_DO-10765_original_cropped.jpg">Guldhornene DO-10765 original cropped.jpg</a> by Nationalmuseet, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Saddle_Ridge_Hoard_(14870547812).jpg">Saddle Ridge Hoard (14870547812).jpg</a> by Michel Curi, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:1866-S_$20_-_Saddle_Ridge_Hoard_(14847894786).jpg">1866-S $20 - Saddle Ridge Hoard (14847894786).jpg</a> by Michel Curi, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Saddle_Ridge_Hoard_coins_and_dirt.jpg">Saddle Ridge Hoard coins and dirt.jpg</a> by Kagin&#x27;s Inc., <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Shang_Bronze_Mask,_Sanxingdui.jpg">Shang Bronze Mask, Sanxingdui.jpg</a> by Gary Todd, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Bronze_Tree,_Sanxingdui_2c.jpg">Bronze Tree, Sanxingdui 2c.jpg</a> by Gary Todd, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_gold_mask.jpg">Sanxingdui gold mask.jpg</a> by momo, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>
