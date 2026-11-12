@@ -48,3 +48,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-09 · Surprising Smells That Freshwater Fish Love · 2026-11-09-02-top-10-surprising-smells-that-freshwater-fish-love
 - 2026-11-10 · Obscure Costco Facts · 2026-11-10-01-top-10-obscure-costco-facts
 - 2026-11-11 · Soup Dumplings and Small Bites Around the World · 2026-11-11-01-top-10-soup-dumplings-and-small-bites-around-the-world
+- 2026-11-12 · Famous Buildings That Dramatically Changed Purpose · 2026-11-12-01-top-10-famous-buildings-that-dramatically-changed-purpose
