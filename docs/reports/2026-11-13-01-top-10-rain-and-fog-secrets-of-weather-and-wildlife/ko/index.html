@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 비와 안개에 숨은 날씨와 동물의 비밀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 비와 안개에 숨은 날씨와 동물의 비밀</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 13일</span></p>
+<hr />
+<h2>1. 🇳🇦 나미브 안개딱정벌레는 물구나무서서 안개를 마셔요</h2>
+<p><img alt="나미브 사막의 안개딱정벌레가 물구나무 자세를 한 모습과 모래 위의 모습" src="../images/01.jpg" />
+나미비아 나미브 사막의 서쪽 절반에는 비가 1년에 0~12mm밖에 안 와요. 0.5인치도 안 되죠. 이곳 물은 대부분 바다에서 불어오는 안개로 들어와요.</p>
+<p>이 딱정벌레는 보통 밤이 되면 모래 속에 숨어요. 그런데 안개 낀 밤에는 모래 언덕에 올라가 바람을 마주 보고 <strong>물구나무</strong>를 서요. 몸을 23도쯤 기울이는 거예요. 안개가 등에 맺힘 → 물방울이 아래로 굴러감 → 곧장 입으로 쏙 들어가요.</p>
+<p>이렇게 해서 자기 몸무게의 34%만큼 물을 마신 딱정벌레도 기록됐어요. 몸무게 30kg(66파운드)인 아이가 하룻밤에 물을 10리터쯤 마신 셈이에요.</p>
+<p>물구나무서면 저절로 채워지는 물병이에요.</p>
+<hr />
+<h2>2. 🇺🇸 캘리포니아 해안 레드우드는 잎으로 안개를 마셔요</h2>
+<p><img alt="북캘리포니아의 안개에 싸인 해안 레드우드 숲" src="../images/02.jpg" />
+해안 레드우드는 캘리포니아부터 오리건주 남서쪽 끝까지, 태평양 바닷가의 좁은 띠를 따라 자라요. 여름은 건조하지만, 바다에서 안개가 몇 번이고 밀려와요.</p>
+<p>이 나무들은 안개를 세 가지 방법으로 써요. 잎은 공기 중의 안개를 바로 빨아들이고, 나무껍질도 빨아들이고, 바늘잎에 맺힌 안개는 땅으로 떨어져 뿌리가 마셔요. 이 <strong>안개 물방울</strong>이 나무 한 그루가 1년 동안 쓰는 물의 30%나 될 수 있어요.</p>
+<p>안개가 키의 한계까지 정할지도 몰라요. 과학자들은 레드우드가 약 122~130미터(400~427피트), 대략 40층 건물 높이를 넘지 못하고, 그만큼 크려면 안개가 꼭 있어야 한다고 봐요.</p>
+<p>공기에서 물을 홀짝이는 나무라고 생각하면 돼요.</p>
+<hr />
+<h2>3. 🇨🇱 칠레의 한 마을은 안개 그물로 수돗물을 받았어요</h2>
+<p><img alt="칠레 아타카마 사막의 안개 그물과 젖은 그물망을 가까이서 본 모습" src="../images/03.jpg" />
+칠레 북부 해안은 지구에서 가장 건조한 곳 중 하나예요. 그런데 바다에서 카만차카라는 짙은 안개가 밀려와요. 과학자들은 엘토포산에 높은 그물을 세워 안개를 잡았어요. 안개 방울이 그물에 달라붙음 → 아래로 흘러내림 → 밑에 있는 물받이에 물이 모여요.</p>
+<p>산 아래 충군고 마을은 산에서 물을 내려 줄 관을 놓아 달라고 했어요. 그래서 이곳은 <strong>그물 94개</strong>로 늘어나 마을 사람 300명에게 물을 댔어요. 하지만 2002년의 한 보고서를 보면, 그때 서 있는 그물은 아홉 개뿐이었어요.</p>
+<p>그래도 이 아이디어는 사라지지 않았어요. 같은 칠레의 우아스코 근처에서는 안개 잡는 탑들이 지금 하루에 1만~5만 리터의 물을 만들어 농장에 보내요. 뒷마당 작은 수영장 하나를 채울 만한 양이에요.</p>
+<p>구름을 잡는 거대한 머리망을 떠올려 보세요.</p>
+<hr />
+<h2>4. 🌫️ 안개무지개는 색을 잃어버린 무지개예요</h2>
+<p><img alt="들판 위, 북극 바다 얼음 위, 코펜하겐 바다 위에 뜬 하얀 안개무지개" src="../images/04.jpg" />
+안개무지개는 무지개처럼 해를 등지고 볼 때 생기지만, 비가 아니라 안개 속에 떠요. 안개 물방울은 0.05mm보다 작아서 머리카락보다도 가늘어요.</p>
+<p>물방울이 이렇게 작으면 빛이 퍼지면서 색이 뭉개져요. 그래서 안개무지개는 바깥쪽이 희미하게 빨갛고 안쪽이 살짝 파랄 뿐이고, <strong>완전히 하얗게</strong> 보일 때도 많아요. 그래서 하얀 무지개라고도 불러요.</p>
+<p>뱃사람들은 따로 "바다 개"(sea-dog)라고 불러요. 밤에 달빛 아래 뜨는 건 달 안개무지개예요.</p>
+<p>흑백으로 인쇄한 무지개라고 생각하면 돼요.</p>
+<hr />
+<h2>5. 🌧️ 비 냄새의 이름은 "신들의 피"에서 왔어요</h2>
+<p><img alt="마른 쑥 평원에 내리는 비, 흙을 튀기는 빗방울, 비 온 뒤의 밭" src="../images/05.jpg" />
+1964년, 오스트레일리아 과학자 이저벨 조이 베어와 리처드 토머스가 마른 땅에 비가 내릴 때 나는 냄새에 "페트리코"라는 이름을 붙였어요. 그리스어에서 온 말로, 페트라는 "돌", 이코르는 그리스 신들의 핏줄에 흐르던 금빛 액체예요.</p>
+<p>원리는 이래요. 날이 가무는 동안 흙과 바위에 기름이 차곡차곡 쌓여요. 빗방울이 땅에 떨어지면 작은 공기 방울을 가둠 → 공기 방울이 올라와 톡 터짐 → 냄새가 공기 중으로 튀어 나가요.</p>
+<p>그 냄새의 일부는 흙 속 세균이 만드는 지오스민이에요. 우리 코는 이걸 <strong>1조분의 5</strong> 농도에서도 맡을 수 있어요. 올림픽 수영장에 한 방울도 안 되게 넣은 정도예요. 비트에서 흙 맛이 나는 것도 이것 때문이에요.</p>
+<p>쉽게 말해, 빗방울 하나하나가 "흙 향수" 거품을 터뜨리는 거예요.</p>
+<hr />
+<h2>6. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 지렁이 부르기 선수들은 지렁이를 속여 땅 밖으로 불러내요</h2>
+<p><img alt="플로리다에서 지렁이를 부르는 사람, 지렁이 한 마리, 잉글랜드 윌러스턴의 세계 지렁이 부르기 대회" src="../images/06.jpg" />
+지렁이는 영어로 "레인웜"(비 벌레)이라는 옛 별명이 있고, 마른 흙을 피해요. 진동에도 아주 예민해서, 땅이 흔들리면 땅 위로 기어 나와요. 2008년에 과학자들이 그 이유를 내놓았어요. 그 진동이 지렁이를 잡아먹는 두더지가 땅 파는 느낌과 비슷하다는 거예요.</p>
+<p>사람들은 이걸 이용해 낚시 미끼를 모아요. 땅에 꽂은 정원용 쇠스랑을 흔들거나, 박아 둔 나무 말뚝을 문질러요. 새들도 이렇게 해요. 갈매기는 발을 동동 구르며 "갈매기 춤"을 춰요.</p>
+<p>잉글랜드 윌러스턴에서는 1980년부터 세계 지렁이 부르기 대회까지 열려요. 기록은 <strong>지렁이 567마리</strong>로, 2009년에 열 살 여자아이가 가로세로 겨우 3미터(10피트)인 땅에서 불러냈어요. 물은 쓰면 안 되고, 새들이 잠자리에 들고 나면 지렁이를 모두 땅으로 돌려보내요.</p>
+<p>두더지인 척하면서 지렁이네 현관문을 두드리는 거예요.</p>
+<hr />
+<h2>7. 🇺🇸 점박이도롱뇽은 비 오는 밤을 기다렸다가 연못으로 행진해요</h2>
+<p><img alt="가을 낙엽 위와 밤길 위의 노란 점박이도롱뇽" src="../images/07.jpg" />
+점박이도롱뇽은 미국 동부와 캐나다의 숲속 땅 밑에서 살아요. 봄에 비가 한 번 오고 기온이 40°F(4°C)를 넘으면, 밖으로 나와 봄 웅덩이로 걸어가요. 봄 웅덩이는 자주 말라 버려서 물고기가 살지 않는 연못이에요.</p>
+<p>하룻밤에 수백에서 수천 마리가 이동할 수 있는데, 이 밤을 <strong>빅 나이트</strong>라고 불러요. 매사추세츠주 노스 애머스트에서는 도롱뇽들이 헨리 스트리트를 건너야 해서, 마을이 도로 밑에 도롱뇽 전용 터널을 만들었어요.</p>
+<p>알에도 또 다른 비밀이 있어요. 알을 감싼 젤리 속에 초록색 조류가 살면서, 새끼가 자라는 동안 산소를 만들어 줘요.</p>
+<p>다시 말해, 전용 지하도까지 갖춘 비 오는 밤의 퍼레이드예요.</p>
+<hr />
+<h2>8. 🇺🇸 쿠치삽발두꺼비는 알에서 두꺼비까지 9일이면 돼요</h2>
+<p><img alt="애리조나와 텍사스 사막의 쿠치삽발두꺼비" src="../images/08.jpg" />
+쿠치삽발두꺼비는 미국 남서부와 멕시코 북부의 사막에 살아요. 건기에는 뒷발마다 달린 딱딱한 "삽"으로 땅을 파고 들어가, 물이 새지 않는 고치 속에 몸을 꽁꽁 감싸고 지내요.</p>
+<p>여름 뇌우가 쏟아지면 수컷들이 땅을 파고 나와 빗물 웅덩이를 찾아요. 수컷이 울면 암컷이 오고, 비가 오기 시작한 바로 첫날 밤에 짝짓기를 해요.</p>
+<p>웅덩이는 금방 마르니까 새끼들은 서둘러야 해요. 알 → 올챙이 → 두꺼비가 되기까지 빠르면 <strong>9일</strong>이에요. 대부분의 올챙이와 달리, 얘네는 작은 새우나 다른 올챙이까지 먹어요.</p>
+<p>쉽게 말해, 말라 가는 웅덩이와의 달리기 시합이에요.</p>
+<hr />
+<h2>9. 🇺🇸 황금날개솔새는 토네이도 폭풍이 오기 전에 도망쳤어요</h2>
+<p><img alt="머리와 날개에 노란 무늬가 있는 황금날개솔새" src="../images/09.jpg" />
+황금날개솔새는 노란 정수리와 날개에 노란 무늬가 있는 작은 노래하는 새예요. 2014년 4월, 테네시주의 과학자들이 이 새 다섯 마리에게 추적 장치를 달아 두었어요.</p>
+<p>그런데 추적 장치에 이상한 게 찍혔어요. 다섯 마리가 모두 <strong>남쪽으로 수백 마일</strong>을 날아갔는데, 토네이도가 가득한 폭풍이 오기 전에 떠난 거예요.</p>
+<p>어떻게 알았을까요? 과학자들은 새들이 초저주파를 들었을지도 모른다고 봐요. 큰 폭풍이 내는, 사람 귀로는 못 듣는 아주 낮은 우르릉 소리예요.</p>
+<p>다시 말해, 아무도 보기 전에 폭풍이 오는 소리를 들은 거예요.</p>
+<hr />
+<h2>10. 🇮🇳 인도 모신람에는 하루에 비가 1미터 내린 적이 있어요</h2>
+<p><img alt="모신람 주변의 초록 절벽과 폭포, 카시 언덕의 강과 동굴" src="../images/10.jpg" />
+인도 메갈라야주의 마을 모신람에는 1년에 평균 약 11,872mm(467인치)의 비가 와요. 쌓아 올리면 거의 12미터로, 3층 집보다 높아요.</p>
+<p>이유는 이래요. 벵골만에서 불어오는 축축한 몬순 바람이 카시 언덕으로 몰려듦 → 언덕이 공기를 위로 밀어 올림 → 공기가 식으면서 거의 쉬지 않고 비를 쏟아요. 2022년 6월 17일에는 <strong>24시간 동안 1,003.2mm</strong>가 내렸어요. 어른 허리쯤까지 오는 양이에요.</p>
+<p>흔히 지구에서 가장 비가 많이 오는 곳이라고 불리지만, 콜롬비아의 두 마을 요로와 로페스데미카이는 비가 더 많이 온다고 기록했어요.</p>
+<p>몇 달 동안 켜져 있는 샤워기 밑에 사는 것과 같아요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>1987년 10월, 잉글랜드 글로스터셔의 세 마을(스트라우드, 사이런세스터, 첼트넘) 사람들은 큰비와 함께 작은 분홍색 개구리 수십 마리가 떨어졌다고 했어요. 어떤 사람들은 강한 바람이나 물기둥 회오리가 개구리 알을 아프리카에서 북쪽까지 실어 왔다고 짐작했어요. 이런 "동물 비"에 대한 유력한 생각 중 하나는 물 위의 토네이도가 작은 동물을 빨아올렸다가 몇 마일 떨어진 곳에 떨어뜨린다는 건데, 아직 그 장면을 직접 본 과학자는 없어요. 물고기, 개구리, 그리고 하늘에서 떨어진 다른 이상한 것들은 다음에 탐험해 볼 만한 새로운 주제예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Onymacris_unguicularis_MHNT_(cropped).jpg">Onymacris unguicularis MHNT (cropped).jpg</a> by Didier Descouens, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Onymacris_unguicularis_in_Namib_Desert.jpg">Onymacris unguicularis in Namib Desert.jpg</a> by Schnobby, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://www.inaturalist.org/photos/522206366">Onymacris unguicularis · Erongo Region, Namibia</a> by (c) Tom Field, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:FogShroudedRedwoodsAboveSwordFerns.png">FogShroudedRedwoodsAboveSwordFerns.png</a> by Thewellman, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Redwood_National_Park,_fog_in_the_forest.jpg">Redwood National Park, fog in the forest.jpg</a> by Michael Schweppe, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Redwood_Trees_in_the_Fog.jpg">Redwood Trees in the Fog.jpg</a> by Peter J. Caprio, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Atrapanieblas_en_Alto_Patache.jpg">Atrapanieblas en Alto Patache.jpg</a> by Pontificia Universidad Católica de Chile, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Atrapaniebla_en_parque_Pan_de_Az%C3%BAcar.jpg">Atrapaniebla en parque Pan de Azúcar.jpg</a> by Celinea33, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Malla_del_atrapaniebla_del_parque_Pan_de_Az%C3%BAcar.jpg">Malla del atrapaniebla del parque Pan de Azúcar.jpg</a> by Celinea33, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_bow_over_a_field.jpg">Fog bow over a field.jpg</a> by Juris Seņņikovs, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_Bow_(19440644248).jpg">Fog Bow (19440644248).jpg</a> by Christopher Michel, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_bow_at_the_coast_in_Copenhagen,_Denmark.jpg">Fog bow at the coast in Copenhagen, Denmark.jpg</a> by 25Amager, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Rain_in_the_sage_steppe_at_Seedskadee_National_Wildlife_Refuge_Wyoming_(52161024724).jpg">Rain in the sage steppe at Seedskadee National Wildlife Refuge Wyoming (52161024724).jpg</a> by USFWS Mountain Prairie, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Water_and_soil_splashed_by_the_impact_of_a_single_raindrop.jpg">Water and soil splashed by the impact of a single raindrop.jpg</a> by US Department of Agriculture, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Plowed_field_drying_after_rain.jpg">Plowed field drying after rain.jpg</a> by W.carter, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Worm_Gruntin%27.jpg">Worm Gruntin&#x27;.jpg</a> by FolklifeDom, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lumbricus_terrestris_(26559560801).jpg">Lumbricus terrestris (26559560801).jpg</a> by Donald Hobern from Copenhagen, Denmark, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Willaston_-_Worm_Charming.jpg">Willaston - Worm Charming.jpg</a> by Graham Shaw, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/54560512">Ambystoma maculatum · Woodstock, VT, US</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/627783848">Ambystoma maculatum · Pennsylvania, US</a> by (c) Farren Dell Rossman, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#7: <a href="https://www.inaturalist.org/photos/171429261">Ambystoma maculatum · </a> by (c) evangrimes, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#8: <a href="https://www.inaturalist.org/photos/220065511">Scaphiopus couchii · Pima County, US-AZ, US</a> by (c) Nick Tobler (Cowturtle), some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Scaphiopus_couchii,_Couch%E2%80%99s_Spadefoot,_Cameron_County,_Texas.jpg">Scaphiopus couchii, Couch’s Spadefoot, Cameron County, Texas.jpg</a> by William L. Farr, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://www.inaturalist.org/photos/2625982">Scaphiopus couchii · Hidalgo County, TX, USA</a> by (c) Ken-ichi Ueda, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Golden-Winged_Warbler_(Vermivora_chrysoptera)_(14229915863).jpg">Golden-Winged Warbler (Vermivora chrysoptera) (14229915863).jpg</a> by Andrew C, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://www.inaturalist.org/photos/228919025">Vermivora chrysoptera · Tower Grove Park, St. Louis, MO, USA</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Golden-winged_Warbler_(male)_Sabine_Woods_TX_2018-04-26_08-11-39_(27221201027).jpg">Golden-winged Warbler (male) Sabine Woods TX 2018-04-26 08-11-39 (27221201027).jpg</a> by Bettina Arrigoni, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Mawsynram.jpg">Mawsynram.jpg</a> by Vikas Talwar, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Pung_Shutung.jpg">Pung Shutung.jpg</a> by Spukjania_Langpen, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Nature_made_Shivalinga_in_Mawjymbuin_Cave_Mawsynram_Meghalaya_India.jpg">Nature made Shivalinga in Mawjymbuin Cave Mawsynram Meghalaya India.jpg</a> by Sharada Prasad CS, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>

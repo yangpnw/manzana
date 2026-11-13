@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>十大 雨和雾里的天气与动物秘密</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <span aria-current="page">简体中文</span> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">全部</a></nav>
+<h1>🌍 十大 雨和雾里的天气与动物秘密</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026年11月13日</span></p>
+<hr />
+<h2>1. 🇳🇦 纳米布“晒雾甲虫”靠“倒立”喝雾水</h2>
+<p><img alt="纳米布沙漠的晒雾甲虫，做倒立姿势和在沙子上" src="../images/01.jpg" />
+纳米比亚纳米布沙漠的西半边，一年只下 0 到 12 毫米的雨，还不到半英寸。这里大部分的水，是从海上吹来的雾带来的。</p>
+<p>这种甲虫平时一到晚上就钻进沙子里。可是一到起雾的夜晚，它就爬上沙丘，迎着风 <strong>倒立</strong>，把身体翘起大约 23 度。雾凝在它背上 → 水珠顺着往下流 → 正好滚进它嘴里。</p>
+<p>有记录显示，有的甲虫这样喝下的水，能达到自己体重的 34%。这就好比一个 30 公斤（66 磅）的小朋友，一晚上喝掉大约 10 升水。</p>
+<p>它就是一个靠倒立自己灌满的水壶。</p>
+<hr />
+<h2>2. 🇺🇸 加州海岸红杉用叶子“喝”雾</h2>
+<p><img alt="北加州被雾笼罩的海岸红杉林" src="../images/02.jpg" />
+海岸红杉长在太平洋沿岸窄窄的一条地带上，从加州一直到俄勒冈州西南角。这里的夏天很干，可海上的雾一次又一次地飘进来。</p>
+<p>这些树用三种办法利用雾。叶子直接从空气里吸雾，树皮也吸，雾在针叶上聚成水滴，再滴到地上给树根喝。这种 <strong>雾滴</strong> 能占一棵树一年用水的 30%。</p>
+<p>雾甚至可能决定了它们最高能长多高。科学家认为，红杉最高长不过大约 122 到 130 米（400 到 427 英尺），差不多 40 层楼，而要长到这么高，得有雾才行。</p>
+<p>你可以把它想成：一棵会从空气里“吸水”的树。</p>
+<hr />
+<h2>3. 🇨🇱 智利有个村子，自来水是用“捕雾网”接来的</h2>
+<p><img alt="智利阿塔卡马沙漠里的捕雾网，以及湿漉漉的网面特写" src="../images/03.jpg" />
+智利北部海岸是地球上最干的地方之一，可是海上会飘来一种叫 camanchaca 的浓雾。科学家在埃尔托福山上立起高高的网来接雾：雾珠粘在网上 → 往下流 → 下面的水槽把水接住。</p>
+<p>山下的琼贡戈村想要一根管子把水引下山。后来这里扩建到 <strong>94 张网</strong>，给村里 300 个人供水。可到了 2002 年，一份报告发现只剩下九张网还立着。</p>
+<p>这个点子并没有消失。同样在智利，瓦斯科附近的捕雾塔现在每天能产 1 万到 5 万升水，供给农场用，足够灌满一个后院小泳池。</p>
+<p>想象一下：一张给云朵戴的大发网。</p>
+<hr />
+<h2>4. 🌫️ 雾虹是一道“掉了颜色”的彩虹</h2>
+<p><img alt="田野上空、北极海冰上空和哥本哈根海面上的白色雾虹" src="../images/04.jpg" />
+雾虹的形成方式跟彩虹一样，太阳在你背后，只不过它出现在雾里，而不是雨里。雾里的水珠非常小，不到 0.05 毫米，比一根头发还细。</p>
+<p>这么小的水珠会把光散开，把颜色糊在一起。所以雾虹只有淡淡的红色外边和偏蓝的里边，很多时候看起来 <strong>完全是白的</strong>。所以它也叫“白虹”。</p>
+<p>水手们给它起了自己的名字，叫“海狗”（sea-dog）。晚上在月光下出现的，叫月光雾虹。</p>
+<p>你可以把它想成：一道印成黑白照片的彩虹。</p>
+<hr />
+<h2>5. 🌧️ 雨的味道，名字来自“众神的血”</h2>
+<p><img alt="雨落在干燥的鼠尾草平原上、一滴雨溅起泥土，以及雨后的田地" src="../images/05.jpg" />
+1964 年，两位澳大利亚科学家伊莎贝尔·乔伊·贝尔和理查德·托马斯，给雨落在干地上的味道起名叫“petrichor”（潮土油）。这个词来自希腊语：petra 是“石头”，ichor 是希腊神话里众神血管里流的金色液体。</p>
+<p>它是这样产生的：天干的时候，油脂会在泥土和石头里慢慢积起来。雨滴打到地上时，会困住很多小气泡 → 气泡往上冒、破掉 → 把味道甩到空气里。</p>
+<p>这股味道里有一部分是土臭素，是土里的细菌造出来的。你的鼻子能闻出 <strong>万亿分之五</strong> 浓度的它，比一个奥运会泳池里滴一滴还少。甜菜吃起来有股泥土味，也是因为它。</p>
+<p>说白了，每一滴雨都会弹破一个装着“泥土香水”的小泡泡。</p>
+<hr />
+<h2>6. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 “唤虫人”能骗蚯蚓自己爬出地面</h2>
+<p><img alt="佛罗里达的一位唤虫人、一条蚯蚓，以及英格兰威拉斯顿的世界唤虫锦标赛" src="../images/06.jpg" />
+蚯蚓在英语里有个老外号，叫“雨虫”（rainworm），它们会躲开干土。它们对震动也特别敏感：地面一震，它们就爬到地面上来。2008 年，科学家提出了一个原因：这种震动感觉就像鼹鼠在挖土，而鼹鼠是吃蚯蚓的。</p>
+<p>人们就用这招来抓钓鱼的饵。唤虫人会晃一把插在地里的园艺叉，或者去摩擦一根钉进地里的木桩。鸟也会这一招：海鸥会用脚踩地，跳一种“海鸥舞”。</p>
+<p>英格兰的威拉斯顿甚至从 1980 年起就有一个世界唤虫锦标赛。纪录是 <strong>567 条蚯蚓</strong>，是 2009 年一个 10 岁女孩在只有 3 米乘 3 米（10 英尺乘 10 英尺）的小块地里“唤”出来的。比赛不许用水，等鸟儿都回巢睡觉了，每一条蚯蚓都要放回土里。</p>
+<p>这就像去敲蚯蚓家的门，还假装自己是鼹鼠。</p>
+<hr />
+<h2>7. 🇺🇸 斑点钝口螈要等一个下雨的夜晚，才集体去池塘</h2>
+<p><img alt="落叶上和夜晚马路上带黄色斑点的斑点钝口螈" src="../images/07.jpg" />
+斑点钝口螈生活在美国东部和加拿大的森林里，平时躲在地下。到了春天，下过一场雨、气温又高过 40 °F（4 °C）以后，它们就爬出来，走向“春季池塘”。这种池塘经常干掉，所以里面没有鱼。</p>
+<p>一个晚上就有成百上千只一起出发，这一晚叫 <strong>“大夜”</strong>（Big Night）。在马萨诸塞州的北阿默斯特，它们得穿过亨利街，所以镇上专门在马路下面给它们修了隧道。</p>
+<p>它们的卵还藏着另一个秘密：包着卵的果冻里住着绿藻，在宝宝长大的时候给它们制造氧气。</p>
+<p>换句话说，这是一场雨夜大游行，还配了专用地下通道。</p>
+<hr />
+<h2>8. 🇺🇸 库氏锄足蟾从卵到小蟾蜍只要 9 天</h2>
+<p><img alt="亚利桑那州和得克萨斯州沙漠里的库氏锄足蟾" src="../images/08.jpg" />
+库氏锄足蟾生活在美国西南部和墨西哥北部的沙漠里。旱季时，它用后脚上一块硬硬的“小铲子”挖进地下，把自己封在一个不透水的茧里。</p>
+<p>夏天一场雷雨打下来，雄蟾就挖出地面，去找雨水积成的水坑。它们一叫，雌蟾就来了，雨开始下的第一个晚上就交配。</p>
+<p>水坑干得很快，所以宝宝们得赶时间：卵 → 蝌蚪 → 小蟾蜍，最快只要 <strong>9 天</strong>。跟大多数蝌蚪不一样，它们连小虾和别的蝌蚪都吃。</p>
+<p>说白了，这是一场跟“快干的水坑”赛跑的比赛。</p>
+<hr />
+<h2>9. 🇺🇸 金翅虫森莺在龙卷风暴到来前就逃走了</h2>
+<p><img alt="头顶和翅膀上带黄斑的金翅虫森莺" src="../images/09.jpg" />
+金翅虫森莺是一种小鸣禽，头顶是黄的，翅膀上也有黄色的斑块。2014 年 4 月，田纳西州的科学家给其中五只装上了追踪器。</p>
+<p>接着，追踪器显示了一件怪事：这五只鸟全都 <strong>往南飞了好几百英里</strong>，在一场满是龙卷风的风暴到来之前就离开了。</p>
+<p>它们是怎么知道的？科学家认为，它们可能听到了次声波，也就是大风暴发出的一种人耳听不到的低沉轰鸣。</p>
+<p>换句话说，在谁都还看不见的时候，它们已经“听见”风暴要来了。</p>
+<hr />
+<h2>10. 🇮🇳 印度的毛辛拉姆一天下过一米的雨</h2>
+<p><img alt="毛辛拉姆周围的绿色悬崖和瀑布、卡西丘陵里的河流和山洞" src="../images/10.jpg" />
+毛辛拉姆是印度梅加拉亚邦的一个小镇，平均一年下大约 11872 毫米（467 英寸）的雨。叠起来差不多有 12 米，比三层楼的房子还高。</p>
+<p>原因是这样的：从孟加拉湾吹来的湿润季风，被挤进卡西丘陵 → 山把空气往上推 → 空气变冷，几乎不停地下雨。2022 年 6 月 17 日，它在 24 小时里下了 <strong>1003.2 毫米</strong>，差不多到一个大人的腰。</p>
+<p>它常被叫作“地球上最湿的地方”，不过哥伦比亚的两个小镇，略罗和洛佩斯德米凯，报告的雨量还要更多。</p>
+<p>就像住在一个连开好几个月的淋浴头底下。</p>
+<hr />
+<h3>趣闻</h3>
+<p>1987 年 10 月，英格兰格洛斯特郡的三个小镇（斯特劳德、赛伦塞斯特和切尔滕纳姆）的居民说，一场大雨带下来几十只粉红色的小青蛙。有人猜，是强风或水龙卷把青蛙卵从非洲一路带到了北边。关于这种“动物雨”，一个主流的说法是：水面上的龙卷风把小动物吸上天，再扔到好几英里以外，不过还没有哪个科学家亲眼见过。鱼、青蛙和其他从天上掉下来的怪东西，可以成为下一个值得探索的新主题。</p>
+<details class="credits"><summary>图片来源（Wikimedia Commons）</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Onymacris_unguicularis_MHNT_(cropped).jpg">Onymacris unguicularis MHNT (cropped).jpg</a> by Didier Descouens, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Onymacris_unguicularis_in_Namib_Desert.jpg">Onymacris unguicularis in Namib Desert.jpg</a> by Schnobby, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://www.inaturalist.org/photos/522206366">Onymacris unguicularis · Erongo Region, Namibia</a> by (c) Tom Field, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:FogShroudedRedwoodsAboveSwordFerns.png">FogShroudedRedwoodsAboveSwordFerns.png</a> by Thewellman, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Redwood_National_Park,_fog_in_the_forest.jpg">Redwood National Park, fog in the forest.jpg</a> by Michael Schweppe, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Redwood_Trees_in_the_Fog.jpg">Redwood Trees in the Fog.jpg</a> by Peter J. Caprio, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Atrapanieblas_en_Alto_Patache.jpg">Atrapanieblas en Alto Patache.jpg</a> by Pontificia Universidad Católica de Chile, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Atrapaniebla_en_parque_Pan_de_Az%C3%BAcar.jpg">Atrapaniebla en parque Pan de Azúcar.jpg</a> by Celinea33, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Malla_del_atrapaniebla_del_parque_Pan_de_Az%C3%BAcar.jpg">Malla del atrapaniebla del parque Pan de Azúcar.jpg</a> by Celinea33, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_bow_over_a_field.jpg">Fog bow over a field.jpg</a> by Juris Seņņikovs, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_Bow_(19440644248).jpg">Fog Bow (19440644248).jpg</a> by Christopher Michel, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Fog_bow_at_the_coast_in_Copenhagen,_Denmark.jpg">Fog bow at the coast in Copenhagen, Denmark.jpg</a> by 25Amager, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Rain_in_the_sage_steppe_at_Seedskadee_National_Wildlife_Refuge_Wyoming_(52161024724).jpg">Rain in the sage steppe at Seedskadee National Wildlife Refuge Wyoming (52161024724).jpg</a> by USFWS Mountain Prairie, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Water_and_soil_splashed_by_the_impact_of_a_single_raindrop.jpg">Water and soil splashed by the impact of a single raindrop.jpg</a> by US Department of Agriculture, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Plowed_field_drying_after_rain.jpg">Plowed field drying after rain.jpg</a> by W.carter, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Worm_Gruntin%27.jpg">Worm Gruntin&#x27;.jpg</a> by FolklifeDom, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lumbricus_terrestris_(26559560801).jpg">Lumbricus terrestris (26559560801).jpg</a> by Donald Hobern from Copenhagen, Denmark, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Willaston_-_Worm_Charming.jpg">Willaston - Worm Charming.jpg</a> by Graham Shaw, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/54560512">Ambystoma maculatum · Woodstock, VT, US</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#7: <a href="https://www.inaturalist.org/photos/627783848">Ambystoma maculatum · Pennsylvania, US</a> by (c) Farren Dell Rossman, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#7: <a href="https://www.inaturalist.org/photos/171429261">Ambystoma maculatum · </a> by (c) evangrimes, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#8: <a href="https://www.inaturalist.org/photos/220065511">Scaphiopus couchii · Pima County, US-AZ, US</a> by (c) Nick Tobler (Cowturtle), some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Scaphiopus_couchii,_Couch%E2%80%99s_Spadefoot,_Cameron_County,_Texas.jpg">Scaphiopus couchii, Couch’s Spadefoot, Cameron County, Texas.jpg</a> by William L. Farr, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://www.inaturalist.org/photos/2625982">Scaphiopus couchii · Hidalgo County, TX, USA</a> by (c) Ken-ichi Ueda, some rights reserved (CC BY), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Golden-Winged_Warbler_(Vermivora_chrysoptera)_(14229915863).jpg">Golden-Winged Warbler (Vermivora chrysoptera) (14229915863).jpg</a> by Andrew C, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://www.inaturalist.org/photos/228919025">Vermivora chrysoptera · Tower Grove Park, St. Louis, MO, USA</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Golden-winged_Warbler_(male)_Sabine_Woods_TX_2018-04-26_08-11-39_(27221201027).jpg">Golden-winged Warbler (male) Sabine Woods TX 2018-04-26 08-11-39 (27221201027).jpg</a> by Bettina Arrigoni, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Mawsynram.jpg">Mawsynram.jpg</a> by Vikas Talwar, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Pung_Shutung.jpg">Pung Shutung.jpg</a> by Spukjania_Langpen, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Nature_made_Shivalinga_in_Mawjymbuin_Cave_Mawsynram_Meghalaya_India.jpg">Nature made Shivalinga in Mawjymbuin Cave Mawsynram Meghalaya India.jpg</a> by Sharada Prasad CS, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>
