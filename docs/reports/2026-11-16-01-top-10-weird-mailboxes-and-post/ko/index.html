@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 이상한 우체통과 우편</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 이상한 우체통과 우편</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 16일</span></p>
+<hr />
+<h2>1. 🇳🇴 노르웨이에는 바닷속에 우체국이 있어요</h2>
+<p><img alt="물속에서 보이는 리쇠르 수중 우체국 표지, 우편물에 도장을 찍는 잠수부, 우체국을 바다에 내리는 잠수부들" src="../images/01.jpg" />
+노르웨이 남쪽 바닷가의 작은 마을 리쇠르에서, 지역 스쿠버다이빙 동호회가 2004년 6월 4일에 <strong>물속 4미터</strong>에 우체국을 열었어요. 큰 수영장의 가장 깊은 쪽과 비슷한 깊이예요.</p>
+<p>이 우체국은 공기를 가득 채운 유리섬유 잠수종이라서, 안은 물에 젖지 않아요. 코끼리 한 마리만큼 무거운 5톤짜리 추가 바닥에 붙잡아 둬요.</p>
+<p>엽서는 이렇게 도착해요. 부두에 있는 우체통에 넣어요 → 일주일에 몇 번, 잠수하는 우체국장이 방수 가방에 우편물을 넣고 내려가요 → 공기 방울 안에서 도장을 찍어요 → 다시 물 위로 올라와 보통 우편으로 보내져요.</p>
+<p>물갈퀴를 신어야 비울 수 있는 우체통인 셈이에요.</p>
+<hr />
+<h2>2. 🇫🇷 파리는 118년 동안 길 밑의 공기 관으로 편지를 보냈어요</h2>
+<p><img alt="파리 중앙 우체국의 오래된 기송관 기계, 1899년 기송 우편 카드, 기송관 기계를 그린 옛날 그림" src="../images/02.jpg" />
+1866년부터 1984년까지 파리에는 <strong>기송 우편</strong>이 있었어요. 편지를 작은 통에 넣으면 공기가 그 통을 금속 관 속으로 밀어 보냈어요. 관은 도시의 하수도를 따라 깔려 있어서, 새로 땅을 팔 필요도 없었고 위쪽 도로의 교통 체증도 피할 수 있었어요.</p>
+<p>'프티 블뢰'(작은 파랑이)라는 종이에 짧은 쪽지를 써요. 공기 압력이 그걸 친구 집에서 가장 가까운 우체국까지 쏘아 보내요 → 배달원이 집 앞까지 달려가 전해 줘요. 통은 시속 약 24킬로미터로 움직였는데, 자전거 타는 속도쯤이에요.</p>
+<p>가장 컸던 1934년에는 관의 길이가 427킬로미터나 됐어요. 파리에서 런던까지쯤 되는 거리예요. 1945년에는 메시지를 3천만 개나 날랐어요.</p>
+<p>문자 메시지인데, 문자가 종이이고 인터넷이 하수도라고 생각해 보세요.</p>
+<hr />
+<h2>3. 🇺🇸 미국 우체국은 한 번 순항 미사일로 편지를 배달했어요</h2>
+<p><img alt="1959년 플로리다에 착륙한 뒤 우편물을 실은 레귤러스 미사일, 미사일이 나른 봉투, 미사일에 실린 우편물 상자" src="../images/03.jpg" />
+1959년 6월 8일, 미국 잠수함 바베로호가 플로리다주 메이포트의 해군 비행장을 향해 레귤러스 순항 미사일을 쐈어요. 핵탄두 대신 편지 약 3,000통이 든 <strong>우편물 상자 두 개</strong>가 실려 있었어요.</p>
+<p>22분 뒤, 미사일은 무사히 착륙했어요. 편지는 잭슨빌 우체국으로 보내져서 평소처럼 배달됐어요.</p>
+<p>당시 우정장관은 사람이 달에 가기 전에, 미사일이 뉴욕에서 캘리포니아, 영국, 인도, 호주까지 몇 시간 만에 편지를 나를 거라고 말했어요. 하지만 '미사일 우편'은 이때 딱 한 번뿐이었어요.</p>
+<p>불꽃놀이로 엽서를 부친 건데, 딱 한 번 성공한 거예요.</p>
+<hr />
+<h2>4. 🇪🇨 갈라파고스에서는 나무통 하나가 200년 동안 우체국이에요</h2>
+<p><img alt="갈라파고스 플로레아나섬 포스트오피스만의 우편 통과 방문객들이 남긴 나무 표지판들" src="../images/04.jpg" />
+옛날에 고래잡이배들은 갈라파고스의 플로레아나섬에 들러 물과 먹을거리를 채웠어요. 1800년대부터 선원들은 지금 '포스트오피스만'이라고 부르는 곳에 <strong>나무통</strong>을 하나 두었어요.</p>
+<p>바다로 떠나는 선원들은 그 통에 편지를 넣었어요. 집으로 돌아가는 배는 통을 뒤져서 자기가 가는 쪽 편지를 챙겨 갔어요. 대부분 유럽과 미국으로 가는 편지였어요.</p>
+<p>요즘 방문객들도 똑같이 해요. 우표는 하나도 필요 없어요. 엽서를 남기고, 쌓인 엽서 중에서 우리 집 근처로 가는 걸 찾아 직접 배달해 줘요.</p>
+<p>다시 말해, 다음에 들르는 사람이 곧 집배원이에요.</p>
+<hr />
+<h2>5. 🇺🇸 그랜드캐니언에서는 지금도 노새가 우편물을 날라요</h2>
+<p><img alt="수파이에서 미국 우편 상자를 실은 노새들, 마을 가게 앞에서 짐을 싣는 노새들, 수파이의 가게 겸 우체국" src="../images/05.jpg" />
+하바수파이족이 사는 수파이 마을은 애리조나주 그랜드캐니언 바닥에 있어요. 가장 가까운 도로에서 8마일(13킬로미터)이나 떨어져 있고 자동차가 없어서, 미국에서 유일하게 <strong>노새가 아직도 우편물을 나르는</strong> 곳이에요.</p>
+<p>운전기사가 한 시간을 달려 우편물을 산길 입구까지 가져와요. 그다음 노새 등에 싣는데, 노새 한 마리가 최대 200파운드(90킬로그램), 어른 한 명 몸무게쯤을 지고 협곡 아래로 내려가요.</p>
+<p>그 우편물은 대부분 먹을거리예요. 신선한 식품은 피치스프링스 우체국의 대형 냉동실에서 기다려요. 미국에서 그런 냉동실이 있는 우체국은 거기 하나뿐이에요.</p>
+<p>한마디로, 택배 트럭에 다리 네 개와 긴 귀가 달린 거예요.</p>
+<hr />
+<h2>6. 🇹🇴 통가의 한 섬은 배에서 던진 깡통으로 우편물을 받았어요</h2>
+<p><img alt="1976년 '틴캔 아일랜드' 봉투, 카누 우편 도장, 니우아포우섬 위성 사진" src="../images/06.jpg" />
+니우아포우는 통가의 화산섬인데, 깊은 항구가 없어서 큰 배가 멈출 수 없었어요. 1912년쯤 사람들은 <strong>'깡통 우편'</strong>을 생각해 냈어요. 지나가는 배가 편지를 비스킷 통이나 등유 통에 넣어 봉한 다음 바다에 던지는 거예요.</p>
+<p>수영하는 사람들이 헤엄쳐 나가서 통을 건져 왔어요. '파우'라는 물에 뜨는 막대를 붙잡고 갔는데, 한 번 다녀오는 데 몇 시간이 걸리기도 했어요.</p>
+<p>1931년에 상어가 수영하던 사람 한 명을 죽이자, 헤엄치는 건 금지되고 카누가 대신 나갔어요. 우표 수집가들이 특별한 도장이 찍힌 봉투를 너무 좋아해서, 이 섬은 '틴캔 아일랜드(깡통 섬)'로 유명해졌어요.</p>
+<p>집 앞까지 배달해 주는 건데, 그 집이 바다 한가운데 있는 거예요.</p>
+<hr />
+<h2>7. 🇺🇸 1914년, 부모가 다섯 살 딸을 할머니에게 우편으로 보냈어요</h2>
+<p><img alt="우편 가방에 아이를 넣고 사진을 찍은 집배원, 소포 우편 마차, 소포를 건네는 여성" src="../images/07.jpg" />
+1913년에 미국 우체국이 소포 배달을 시작했어요. 1914년 2월 19일, 아이다호주 그레인지빌에 사는 다섯 살 샬럿 메이 피어스토프의 부모는 딸을 이 방법으로 루이스턴의 할머니 댁에 보냈어요. <strong>기차표보다 싸서</strong>였어요.</p>
+<p>메이의 몸무게는 48.5파운드(22킬로그램)였어요. 메이는 기차의 우편 칸에 탔고, 코트에는 32센트어치 우표가 붙어 있었어요. 지금 돈으로 약 10달러예요.</p>
+<p>엄마의 사촌인 철도 우편 직원이 내내 메이를 지켜보다가 할머니 집 앞에 내려 줬어요. 메이의 이 여행은 우체국이 사람을 우편으로 보내는 걸 금지하는 데 한몫했어요.</p>
+<p>메이는 말할 줄 아는 소포였던 거예요.</p>
+<hr />
+<h2>8. 🇦🇶 남극의 우체국은 펭귄에게 둘러싸여 있어요</h2>
+<p><img alt="남극 포트록로이 기지와 오두막 주변에 둥지를 튼 젠투펭귄들" src="../images/08.jpg" />
+남극반도 앞의 작은 섬에 있는 포트록로이에는 세계에서 <strong>가장 남쪽에 있는, 지금도 운영하는 우체국</strong>이 있어요. 사람들은 '펭귄 우체국'이라고 불러요.</p>
+<p>섬의 절반은 방문객에게 열려 있고, 나머지 절반은 펭귄을 위해 남겨 둬요. 직원들은 관광객이 펭귄에게 어떤 영향을 주는지 알아보려고 펭귄 수를 세요.</p>
+<p>다섯 달 동안의 크루즈 시즌에 약 18,000명이 찾아와 우편물을 약 70,000개나 보내요. 그걸 직원 딱 네 명이 다 처리해요.</p>
+<p>명절에 붐비는 우체국인데, 밖에 줄 선 게 펭귄이라고 생각해 보세요.</p>
+<hr />
+<h2>9. 🇳🇿 뉴질랜드의 한 섬은 비둘기로 우편물을 보냈어요</h2>
+<p><img alt="삼각형 모양의 그레이트배리어 비둘기 우편 우표, 전서구, 쪽지를 달고 날아갈 준비를 하는 비둘기" src="../images/09.jpg" />
+그레이트배리어섬은 오클랜드에서 약 90킬로미터 떨어져 있어요. 1894년 그곳에서 배가 난파해 121명이 숨졌는데, 이 소식이 본토에 닿기까지 며칠이나 걸렸어요. 일주일에 증기선이 딱 한 번 왔거든요.</p>
+<p>그래서 1897년에 <strong>비둘기 우편</strong>이 시작됐어요. 비둘기들이 매주 오는 증기선을 타고 섬에 가요 → 사람들이 비둘기 다리에 쪽지를 최대 다섯 장 묶어요 → 비둘기가 오클랜드의 집으로 날아가요. 비둘기 우편만의 우표도 있었는데, 지금은 수집가들이 찾아다녀요.</p>
+<p>처음에는 비둘기가 오클랜드 쪽으로, 한 방향으로만 날았어요. 이 서비스는 1908년에 섬까지 전신 케이블이 놓이면서 끝났어요.</p>
+<p>다시 말해, 이 섬의 인터넷에는 깃털이 달려 있었던 거예요.</p>
+<hr />
+<h2>10. 🇺🇸 디트로이트의 한 배는 자기만의 우편번호가 있어요</h2>
+<p><img alt="거대한 화물선 옆에 붙은 J. W. 웨스트콧 2호 우편선, 부두에 선 모습, 앰배서더 다리 근처 디트로이트강 위의 모습" src="../images/10.jpg" />
+J. W. 웨스트콧 2호는 디트로이트강의 우편선이에요. 정식 우체국이라서, 미국에서 유일한 <strong>물 위에 떠 있는 우편번호</strong> 48222를 가지고 있어요.</p>
+<p>디트로이트를 지나는 큰 화물선의 선원들은 자기 배 이름과 이 우편번호가 적힌 우편물을 받아요. 큰 배가 계속 움직이는 동안 작은 배가 옆에 바짝 붙고, 우편물은 밧줄에 매단 양동이에 담겨 올라가요.</p>
+<p>이 회사는 1874년에 존 워드 웨스트콧 선장이 노 젓는 배로 지나가는 배들에 물건을 실어다 주면서 시작됐어요. 1895년부터는 우편물도 날랐어요.</p>
+<p>드라이브스루 창구인데, 오는 차가 거대한 배인 셈이에요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>틴캔 아일랜드의 봉투 덕분에 통가는 우표 수집가들 사이에서 유명해졌고, 통가는 거기서 멈추지 않았어요. 1963년에는 세계 최초의 스티커 우표를 찍었어요. 동전과 똑같이 생긴 동그란 금박 우표였어요. 나중에는 하트, 새, 과일 모양 우표도 나왔는데, 어떤 건 너무 커서 보통 봉투에 붙일 수도 없었대요. 세계 여러 나라가 또 어떤 이상한 우표를 찍어 왔을지 궁금해지지 않나요?</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:20040809_UVP_H_undervann_3.jpg">20040809 UVP H undervann 3.jpg</a> by Kristen Thorsen, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:20040605_UVP_Haakon_sandvik_stempler.jpg">20040605 UVP Haakon sandvik stempler.jpg</a> by Kristen Thorsen, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:20040531_UVP_Sjosetting_1.jpg">20040531 UVP Sjosetting 1.jpg</a> by Kristen Thorsen, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Appareil_pneumatique_postal_Fortin-Hermann_%C3%A0_Paris-Central_en_1987.jpg">Appareil pneumatique postal Fortin-Hermann à Paris-Central en 1987.jpg</a> by Jérome Ferri, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Carte_pneumatqique_de_1899.jpg">Carte pneumatqique de 1899.jpg</a> by Renhour48, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Posta_pneumatica_ufficio_centrale_di_Parigi.jpg">Posta pneumatica ufficio centrale di Parigi.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Regulus_Missile_Mail_at_Naval_Air_Station_Mayport,_Florida_(USA),_8_June_1959_(L55-16.2.30).jpg">Regulus Missile Mail at Naval Air Station Mayport, Florida (USA), 8 June 1959 (L55-16.2.30).jpg</a> by unknown, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Missilemail.jpg">Missilemail.jpg</a> by USPS, Public domain</li><li>#3: <a href="https://postalmuseum.si.edu/object/npm_0.234863.9">Regulus I Missile Mail container (smithsonian_postal_museum)</a> by unknown, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Post_office-Floreana.jpg">Post office-Floreana.jpg</a> by ProfessorX, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#4: <a href="https://www.flickr.com/photos/33143388@N04/5154584439">The barrel at Post Office Bay, Floreana Island (flickr)</a> by NH53, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#4: <a href="https://www.flickr.com/photos/8593553@N05/4924259602">The barrel at Post Office Bay (flickr)</a> by NAParish, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:SupaiUSMailMules.jpg">SupaiUSMailMules.jpg</a> by Elf, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:SupaiMarket.jpg">SupaiMarket.jpg</a> by Elf, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#5: <a href="https://www.flickr.com/photos/8695401@N08/3639001735">Store / Post Office, Supai Village (flickr)</a> by runnr_az, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Pacific_Far_East_Line_envelope_for_Tin_Can_Island_mail.jpg">Pacific Far East Line envelope for Tin Can Island mail.jpg</a> by FAHansson, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Canoe_Mail.jpg">Canoe Mail.jpg</a> by FAHansson, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Satellite_view_of_Niuafo%27ou,_2005-03-19.jpg">Satellite view of Niuafo&#x27;ou, 2005-03-19.jpg</a> by International Space Station crew, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Uniformed_Letter_Carrier_with_Child_in_Mailbag.jpg">Uniformed Letter Carrier with Child in Mailbag.jpg</a> by Unidentified Photographer, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Parcel_Post_Wagon_in_New_Bedford,_Massachusetts_(2551250356).jpg">Parcel Post Wagon in New Bedford, Massachusetts (2551250356).jpg</a> by Smithsonian Institution from United States, <a href="https://www.flickr.com/commons/usage/">No restrictions</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Mrs._Wm._Sulzer_%26_parcel_post_LCCN2014691323.jpg">Mrs. Wm. Sulzer &amp; parcel post LCCN2014691323.jpg</a> by Bain News Service, publisher, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Port_Lockroy_Antarctic_Peninsula_2.jpg">Port Lockroy Antarctic Peninsula 2.jpg</a> by Butterfly voyages - Serge Ouachée, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Port_Lockroy,_Antarctica.jpg">Port Lockroy, Antarctica.jpg</a> by Liam Quinn, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Port_Lockroy_20120128_144236.jpg">Port Lockroy 20120128 144236.jpg</a> by Rob Oo from NL, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:MA_I149530_TePapa_Great-Barrier-Pigeongram_full.jpg">MA I149530 TePapa Great-Barrier-Pigeongram full.jpg</a> by Harry Wrigg, Public domain</li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Postduif.jpg">Postduif.jpg</a> by Patrick Edwin Moran, Public domain</li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Franco-British_carrier_ready_to_be_released_to_carry_a_long_distance_message_-_Flickr_-_National_Library_of_Scotland.jpg">Franco-British carrier ready to be released to carry a long distance message - Flickr - National Library of Scotland.jpg</a> by National Library of Scotland from Scotland, <a href="https://www.flickr.com/commons/usage/">No restrictions</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:J.W._Westcott_II_approaching_freighter.jpg">J.W. Westcott II approaching freighter.jpg</a> by Notorious4life (talk) (Uploads), <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:J.W._Westcott_II_with_48222_post_office.jpg">J.W. Westcott II with 48222 post office.jpg</a> by Notorious4life (talk) (Uploads), <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:J.W._Westcott_II.jpg">J.W. Westcott II.jpg</a> by Sara Hattie, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>
