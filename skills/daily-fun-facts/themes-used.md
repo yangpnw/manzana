@@ -53,3 +53,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-14 · Daring US Construction Feats · 2026-11-14-01-top-10-daring-us-construction-feats
 - 2026-11-15 · Ridiculous Food Served on Trains and Planes · 2026-11-15-01-top-10-ridiculous-food-served-on-trains-and-planes
 - 2026-11-16 · Weird Mailboxes and Post · 2026-11-16-01-top-10-weird-mailboxes-and-post
+- 2026-11-17 · Tooth Structure, Cavities and Dental Oddities · 2026-11-17-01-top-10-tooth-structure-cavities-and-dental-oddities
