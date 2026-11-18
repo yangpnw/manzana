@@ -21,41 +21,24 @@
              credits.json              author, license and source page per photo; paths are
                                        relative to <out_dir>
              sheet.jpg                 all strips, for a visual check (not part of the report)
-           Downloads are cached in <out_dir>/.cache, so rerunning after swapping a few photos
-           only fetches the new ones. A photo that can't be downloaded leaves a grey gap and is
-           listed at the end (exit code 2) only when an entry has fewer than 3 usable photos.
+           Each entry's candidates are tried in order and only until 3 have loaded, so spare
+           candidates are never downloaded. Downloads are kept in a cache shared by every sheet
+           (<skill>/.photo-cache, or $FUNFACTS_PHOTO_CACHE), so reruns and repeat photos cost
+           nothing. A photo that can't be downloaded leaves a grey gap and is listed at the end
+           (exit code 2) only when an entry has fewer than 3 usable photos.
 
-Never waits long: a failed request is retried once after ~1s, then skipped. Searches query all
-chosen sources in parallel; downloads run in parallel, one at a time per Wikimedia host.
+Network rules live in net.py: a User-Agent with a contact URL, Wikimedia requests one at a time
+and 1-1.5 s apart, Retry-After honoured on 429, and after 2 consecutive Wikimedia 429s the run
+stops calling Wikimedia and falls back to non-Wikimedia candidates.
 """
-import concurrent.futures, hashlib, json, os, random, re, sys, threading, time, urllib.request, urllib.parse
+import concurrent.futures, hashlib, json, os, re, sys, threading, time
 
-UA = {"User-Agent": "DailyFunFactsSkill/1.0 (personal printable sheet)"}
+from net import FetchError, get, getjson, wikimedia_blocked
+
 COMMONS = "https://commons.wikimedia.org/w/api.php?"
-PAUSE = 0.5  # polite gap between consecutive requests, in seconds
-STEPS = [250, 330, 500, 960, 1280]  # Wikimedia standard thumbnail widths
 CANDIDATES = "candidates.json"
-
-
-class FetchError(Exception):
-    pass
-
-
-def get(url, parse=None, tries=2):
-    """Fetch url; on failure retry once after ~1s, then give up (callers skip and move on).
-    parse (e.g. json.loads) runs inside the retry, so a garbled reply is retried too."""
-    for i in range(tries):
-        try:
-            data = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
-            return parse(data) if parse else data
-        except Exception as e:
-            if getattr(e, "code", None) in (400, 401, 403, 404) or i == tries - 1:
-                raise FetchError(f"{url}\n  last error: {e}")
-            time.sleep(1 + random.uniform(0, 0.5))
-
-
-def getjson(base, **params):
-    return get(base + urllib.parse.urlencode(params), parse=json.loads)
+CACHE = os.environ.get("FUNFACTS_PHOTO_CACHE") or os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".photo-cache")
 
 
 def strip_html(s):
@@ -143,8 +126,9 @@ def inat_search(q):
     return out
 
 
-SOURCES = {"commons": commons_search, "openverse": openverse_search, "met": met_search,
-           "aic": aic_search, "inat": inat_search}
+# Commons last: the other sources don't rate-limit us, so their results are listed first
+SOURCES = {"openverse": openverse_search, "inat": inat_search, "met": met_search,
+           "aic": aic_search, "commons": commons_search}
 
 
 def save_candidates(path, new):
@@ -177,6 +161,9 @@ def search(sources, queries):
             if not r["id"].startswith("File:"):
                 new[r["id"]] = r
     save_candidates(CANDIDATES, new)
+    if wikimedia_blocked():
+        print("\nNote: Wikimedia throttled this run, so some Commons searches were skipped. "
+              "Prefer the other sources' results, or search Commons again later.")
 
 
 # --- build ---
@@ -196,14 +183,14 @@ def commons_lookup(titles):
                 print(f"not found on Commons: {title}", file=sys.stderr)
                 continue
             ii = page["imageinfo"][0]
-            url = ii["thumburl"]
-            if ii.get("thumbwidth", 0) >= ii["width"]:
-                # smaller than 1280px: the API hands back the original, which is throttled hard;
-                # ask for the largest standard thumbnail below the original width instead
-                step = max([s for s in STEPS if s < ii["width"]] or [STEPS[0]])
-                path = ii["url"].split("?", 1)[0].split("/wikipedia/commons/", 1)[1]
-                url = (f"https://upload.wikimedia.org/wikipedia/commons/thumb/{path}/"
-                       f"{step}px-{path.rsplit('/', 1)[1]}")
+            # Use only URLs the API hands out: hand-built thumbnail sizes get 400/429 from the
+            # image servers. Files wider than 1280px come as the API's 1280px thumbnail; smaller
+            # files come as the original (already small, and never re-fetched thanks to the cache).
+            if ii.get("thumburl") and ii.get("thumbwidth", 0) < ii["width"]:
+                url = ii["thumburl"]
+            else:
+                url = ii["url"]
+            url = url.split("?", 1)[0]
             m = ii.get("extmetadata", {})
             info[title] = {"url": url, "author": strip_html(m.get("Artist", {}).get("value")),
                            "license": strip_html(m.get("LicenseShortName", {}).get("value")),
@@ -212,27 +199,30 @@ def commons_lookup(titles):
     return info
 
 
-HOST_LIMITS = {"upload.wikimedia.org": 1, "thumb.wikimedia.org": 1}  # Wikimedia throttles parallel fetches
-_host_locks, _host_guard = {}, threading.Lock()
+_pid_locks, _pid_guard = {}, threading.Lock()
 
 
-def host_slot(url):
-    host = urllib.parse.urlparse(url).netloc
-    with _host_guard:
-        if host not in _host_locks:
-            _host_locks[host] = threading.BoundedSemaphore(HOST_LIMITS.get(host, 3))
-        return _host_locks[host]
+def cache_path(pid, cache=CACHE):
+    return os.path.join(cache, hashlib.sha1(pid.encode()).hexdigest() + ".img")
 
 
-def fetch_cached(pid, meta, cache):
-    """Return the cached file path for pid, downloading it first if needed; raises on failure."""
-    if meta is None:
-        raise FetchError("unknown id (search for it first so it lands in candidates.json)")
-    cached = os.path.join(cache, hashlib.sha1(pid.encode()).hexdigest() + ".img")
-    if not os.path.exists(cached) or os.path.getsize(cached) == 0:
-        with host_slot(meta["url"]):
-            data = get(meta["url"])  # fetch fully first, so a failed download never leaves a cache file
-            time.sleep(PAUSE / 2)
+def is_cached(pid, cache=CACHE):
+    p = cache_path(pid, cache)
+    return os.path.exists(p) and os.path.getsize(p) > 0
+
+
+def fetch_cached(pid, meta, cache=CACHE):
+    """Return the cached file path for pid, downloading it first if needed; raises on failure.
+    Network pacing, Retry-After and the Wikimedia cut-off are handled by net.get."""
+    cached = cache_path(pid, cache)
+    with _pid_guard:
+        lock = _pid_locks.setdefault(pid, threading.Lock())
+    with lock:  # two entries sharing a photo download it once
+        if is_cached(pid, cache):
+            return cached
+        if meta is None:
+            raise FetchError("unknown id (search for it first so it lands in candidates.json)")
+        data = get(meta["url"])  # fetch fully first, so a failed download never leaves a cache file
         open(cached + ".part", "wb").write(data)
         os.replace(cached + ".part", cached)
     return cached
@@ -242,11 +232,13 @@ def build(out_dir, plan_path):
     from PIL import Image, ImageDraw, ImageOps
     img_dir = os.path.join(out_dir, "images")
     orig_dir = os.path.join(img_dir, "originals")
-    cache = os.path.join(out_dir, ".cache")
+    cache = CACHE
     for d in (orig_dir, cache):
         os.makedirs(d, exist_ok=True)
     plan = json.load(open(plan_path))
     ids = sorted({t for key in plan for t in plan[key]})
+    # credits for Commons files come from the API; a cached photo still needs them, so look up
+    # every Commons id (one request per 50 titles), but nothing is downloaded here
     try:
         info = commons_lookup([t for t in ids if t.startswith("File:")])
     except FetchError as e:
@@ -256,15 +248,26 @@ def build(out_dir, plan_path):
     cands = json.load(open(cand_path)) if os.path.exists(cand_path) else {}
     info.update({t: cands[t] for t in ids if t in cands})
 
-    # download every candidate in parallel; each strip then takes the first 3 that worked
+    # per entry, try candidates in plan order and stop once 3 have loaded, so spare candidates
+    # are never downloaded; entries run side by side and net.get paces each host
     def load(pid):
         try:
             path = fetch_cached(pid, info.get(pid), cache)
-            return pid, ImageOps.exif_transpose(Image.open(path)).convert("RGB"), None
+            return ImageOps.exif_transpose(Image.open(path)).convert("RGB"), None
         except Exception as e:
-            return pid, None, str(e).splitlines()[-1].strip()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        loaded = {pid: (im, err) for pid, im, err in pool.map(load, ids)}
+            return None, str(e).splitlines()[-1].strip()
+
+    def load_entry(key):
+        got = {}
+        for pid in plan[key]:
+            if sum(1 for im, _ in got.values() if im is not None) >= 3:
+                break
+            got[pid] = load(pid)
+        return got
+    loaded = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        for got in pool.map(load_entry, sorted(plan, key=int)):
+            loaded.update(got)
 
     H, W, GAP, R = 420, 560, 16, 22
     mask = Image.new("L", (W, H), 0)
@@ -276,6 +279,8 @@ def build(out_dir, plan_path):
         credits[nn] = []
         picked = []
         for pid in plan[key]:
+            if pid not in loaded:
+                break  # not tried: the entry already had 3 photos
             im, err = loaded[pid]
             if im is None:
                 skipped.append(f"#{key} {pid}: {err}")
@@ -309,6 +314,9 @@ def build(out_dir, plan_path):
     print("wrote", os.path.join(out_dir, "sheet.jpg"))
     if skipped:
         print("\nskipped (used the next candidate instead):\n  " + "\n  ".join(skipped))
+    if wikimedia_blocked():
+        print("\nWikimedia throttled this run. Rerun later to fetch the skipped Commons photos "
+              "(cached ones are reused), or add non-Commons candidates (ov:, inat:, met:, aic:).")
     if short:
         print("\nNEEDS MORE PHOTOS (grey gaps; add candidates to these entries and rerun):\n  " + "\n  ".join(short))
         sys.exit(2)

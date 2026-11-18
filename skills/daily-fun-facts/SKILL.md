@@ -38,7 +38,7 @@ YYYY-MM-DD                            (date alone on its line; the HTML shows it
 
 Must NOT include: a "photos are real" disclaimer line, photo credits, a sources list, a "strangest ones" recap, the author mention, label lines like "Where:" or "Odd detail:", or any other extra section. Use flag emojis for country-tied items; for regions with emoji flags (England, Scotland, Wales) use those. When the place matters and the heading doesn't say it, mention it in the first sentence.
 
-Content rules: every fact must be verifiable. Pull the Wikipedia extract for each item (the MediaWiki API with `prop=extracts&explaintext=1` via curl), and state only what the sources support. If curl can't reach Wikipedia, use web search or web fetch on the item's Wikipedia page instead.
+Content rules: every fact must be verifiable. Pull the Wikipedia extract for each item with `python3 <skill>/scripts/wiki.py extract <scratchpad>/ex "Title" ...` (find titles first with `wiki.py search "query" ...`), and state only what the sources support. Don't use curl loops for Wikipedia: `wiki.py` paces requests and backs off on rate limits. If it reports Wikipedia is throttling, use web search or web fetch on the item's Wikipedia page instead.
 
 Voice: explain it like a friend who just learned something wild and wants you to get it.
 
@@ -104,17 +104,18 @@ Everything is local: no Claude Docs or online artifacts. Let `O` = `<home>/outpu
 
 1. **Facts**: pull each item's Wikipedia extract (see *Content rules*) and note the numbers and details you'll use.
 2. **Photos** (work in the session scratchpad dir; run every `photos.py` command from there so `candidates.json` stays next to `plan.json`):
-   - `python3 <skill>/scripts/photos.py search --source all "<query>" "<query>" ...` searches all 10 items across every source at once, in parallel:
-     - `commons` (Wikimedia Commons, ids `File:…`)
+   - `python3 <skill>/scripts/photos.py search --source all "<query>" "<query>" ...` searches all 10 items across every source at once:
      - `openverse` (Creative Commons photos from Flickr, museums and more, `ov:…`)
-     - `met` and `aic` (public-domain museum objects, `met:…`, `aic:…`)
      - `inat` (research-grade CC photos of species, `inat:…`; query by species name)
-     Use specific queries (species or object + place); if results are thin, try local-language names. Use `--source commons,openverse` and so on to narrow it.
+     - `met` and `aic` (public-domain museum objects, `met:…`, `aic:…`)
+     - `commons` (Wikimedia Commons, ids `File:…`)
+     Use specific queries (species or object + place); if results are thin, try local-language names. Use `--source commons,openverse` and so on to narrow it. Run searches in one or two batched calls, not one call per query.
+   - **Go easy on Wikimedia**: it rate-limits hard (HTTP 429). The scripts already pace requests, honour Retry-After and stop calling Wikimedia for the rest of a run after repeated 429s (they print a note when that happens). Don't add your own curl or retry loops around them, and don't rerun right away after a throttle note: wait several minutes, or fill the gap from the other sources. When a non-Commons photo is as good, list it before the Commons one.
    - **Only freely licensed photos**: the site is public, so use only what these sources return. Never use Getty, stock sites, or images found through general web search: they're copyrighted.
-   - Choose photos that show the thing itself (not a logo, map, diagram or unrelated file). Write `plan.json` as `{"1": ["File:…", "ov:…", "met:…", "inat:…", "File:…"], …}` with **4–5 candidates per entry**, best first. Each strip uses the first 3 that download, so a blocked photo is skipped automatically.
-   - `python3 <skill>/scripts/photos.py build <builddir> plan.json` writes `images/`, `credits.json` and `sheet.jpg`. It never waits long: a failed download is skipped and the next candidate used. Downloads are cached in `<builddir>/.cache`, so reruns take seconds. Exit code 2 means an entry ran out of candidates: add more and rerun.
+   - Choose photos that show the thing itself (not a logo, map, diagram or unrelated file). Write `plan.json` as `{"1": ["File:…", "ov:…", "met:…", "inat:…", "File:…"], …}` with **4–5 candidates per entry**, best first. Each strip tries them in order and stops once 3 have loaded, so a blocked photo is skipped automatically and spares are never downloaded. Mix in at least one non-Commons candidate per entry when one fits, so a Wikimedia throttle doesn't leave grey gaps.
+   - `python3 <skill>/scripts/photos.py build <builddir> plan.json` writes `images/`, `credits.json` and `sheet.jpg`. A failed download is skipped and the next candidate used. Downloads go to a cache shared by every sheet (`<home>/.photo-cache`, gitignored), so reruns and repeat photos are never fetched twice. Exit code 2 means an entry ran out of candidates: add more and rerun.
    - **Read `sheet.jpg` and look at it.** Reorder or replace dark, blurry, badly cropped, off-topic or inappropriate photos, then rerun.
-3. **Write the report**: create `O`, copy `<builddir>/images/` and `<builddir>/credits.json` into it (not `.cache` or `sheet.jpg`), and write `O/<base>.md` in the frozen format. Reread it against the voice rules and the sources before moving on.
+3. **Write the report**: create `O`, copy `<builddir>/images/` and `<builddir>/credits.json` into it (not `sheet.jpg`), and write `O/<base>.md` in the frozen format. Reread it against the voice rules and the sources before moving on.
 4. **Translate**: for each non-main language in `languages.json`, write `O/<base>.<code>.md` following *Languages* above. Reread each one against the English, entry by entry, so nothing is missing or changed.
 5. **Render**: `python3 <skill>/scripts/render.py O --credits` writes `O/<base>.html` and one `O/<base>.<code>.html` per translation. Leave out `--credits` only if the user says the page won't be public.
 6. **PDF** (if Google Chrome is installed), once per language: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=5000 --print-to-pdf=O/<base>.pdf "file://O/<base>.html"`, and the same with `<base>.<code>` for each translation. Without Chrome, skip it and tell the user to print the HTML from a browser.

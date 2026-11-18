@@ -8,7 +8,7 @@ A static, printable "Top 10" fun-facts sheet, published daily at https://dailyfu
   - `docs/index.html`: the latest sheet (the home page)
   - `docs/archive.html`: every sheet, newest first
   - `docs/reports/<base>/`: one folder per sheet (`index.html` plus web-sized `images/`), with one subfolder per translation (`zh-hans/`, `es-419/`, `ko/`, `fr/`) that shares those images
-- **Generator**: the Claude Code skill in [skills/daily-fun-facts/](skills/daily-fun-facts/). It picks a theme, checks facts against Wikipedia, builds photo strips from Wikimedia Commons, writes the sheet as Markdown, renders it to HTML, publishes it into `docs/`, then commits and pushes.
+- **Generator**: the Claude Code skill in [skills/daily-fun-facts/](skills/daily-fun-facts/). It picks a theme, checks facts against Wikipedia, builds photo strips from freely licensed photos (Openverse, iNaturalist, museum collections and Wikimedia Commons), writes the sheet as Markdown, renders it to HTML, publishes it into `docs/`, then commits and pushes.
 
 `<base>` is `YYYY-MM-DD-NN-top-10-<theme-slug>`, so folders sort by date.
 
@@ -27,11 +27,13 @@ The skill does the rest, including `git push`. The site updates about a minute l
 
 | Script | What it does |
 | --- | --- |
-| `photos.py` | Search Commons; build 3-photo strips, originals and `credits.json` (downloads are cached) |
+| `photos.py` | Search Openverse, iNaturalist, museums and Commons; build 3-photo strips, originals and `credits.json` (downloads go to a shared cache, so no photo is fetched twice) |
+| `wiki.py` | Fetch Wikipedia article text (and search titles) for fact-checking |
+| `net.py` | Shared polite HTTP for `photos.py` and `wiki.py`: contact User-Agent, one Wikimedia request at a time, Retry-After on HTTP 429, and a stop after repeated 429s instead of hammering |
 | `render.py` | Markdown → styled, printable HTML for every language in the folder (Claude Docs look; light/dark; `--credits` adds photo credits) |
 | `publish.py` | Copy a rendered sheet and its translations into `docs/`, resize images to 1280px, refresh the home page and archive. Refuses to run from a branch other than `main` or with unfinished edits (`--force` overrides) |
 | `langs.py` | Shared helper that reads `languages.json` |
 
-Full-size working files (original photos, PDF, cache) stay in `skills/daily-fun-facts/output/`, which is gitignored.
+Full-size working files (original photos, PDF) stay in `skills/daily-fun-facts/output/`, and downloaded photos in `skills/daily-fun-facts/.photo-cache/`; both are gitignored.
 
 Requires Python 3 with `Pillow` and `markdown` (`pip install pillow markdown`).
