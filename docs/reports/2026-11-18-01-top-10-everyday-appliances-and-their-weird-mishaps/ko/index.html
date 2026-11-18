@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 생활 가전과 황당한 사고들</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 생활 가전과 황당한 사고들</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 18일</span></p>
+<hr />
+<h2>1. 🇺🇸 전자레인지는 녹아 버린 초코바 덕분에 발견됐어요</h2>
+<p><img alt="화물선 NS 서배너호에 실린 초기 레이시온 레이더레인지, 아마나 레이더레인지 탁상형 전자레인지, 초기 태판 전자레인지" src="../images/01.jpg" />
+1945년, 레이시온이라는 회사에서 일하던 독학 엔지니어 퍼시 스펜서는 작동 중인 레이더 장치 옆에서 일하고 있었어요. 그러다 <strong>주머니 속 초코바가 녹은</strong> 걸 알아챘어요.</p>
+<p>왜 그런지 궁금해서 일부러 음식에 마이크로파를 쏴 봤어요. 처음 요리한 건 팝콘이었어요. 두 번째는 달걀이었는데, 실험하던 사람 얼굴 앞에서 펑 터졌어요.</p>
+<p>처음 판매된 전자레인지인 1947년 레이더레인지는 키가 약 1.8미터(5피트 11인치), 무게가 340킬로그램(750파운드)으로 그랜드피아노만큼 무거웠어요. 레이시온이 계속 개선하고 있어서, 처음에는 팔지 않고 호텔과 식당에 하루 5달러에 빌려줬어요.</p>
+<p>망친 간식에서 시작된 부엌 가전인 셈이에요.</p>
+<hr />
+<h2>2. 🇦🇺 전자레인지 하나가 천문학자들을 '우주 신호'로 속였어요</h2>
+<p><img alt="파란 하늘 아래 호주 파크스 전파 망원경, 해 질 녘의 거대한 안테나, 공개 행사 날의 망원경" src="../images/02.jpg" />
+호주의 파크스 천문대에서는 거대한 전파 망원경이 계속 짧은 신호를 잡았어요. 깊은 우주에서 오는 신비한 섬광인 <strong>고속 전파 폭발</strong>과 아주 비슷해 보였죠. 옛 기록을 보니 1998년부터 2015년까지 이런 가짜 신호가 46번이나 있었어요.</p>
+<p>천문학자들은 이 신호에 '페리톤'이라는 별명을 붙였어요. 사람 그림자를 드리우는 상상 속 날개 달린 사슴 이름인데, 신호가 사람이 만든 것처럼 보였거든요. 2015년, 드디어 범인을 잡았어요. 천문대에서 누군가 타이머가 끝나기 전에 전자레인지 문을 연 거였어요.</p>
+<p>문을 일찍 열면 전자레인지가 꺼지면서 짧은 전파 '삑' 소리를 내요. 범인인 전자레인지 두 대는 27년도 넘은 것이었고, 문을 일찍 열 때 두 번에 한 번꼴로 가짜 신호를 만들었어요.</p>
+<p>한마디로, 우주의 수수께끼는 점심을 못 기다린 누군가였어요.</p>
+<hr />
+<h2>3. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 세계 최초의 웹캠은 커피포트를 비췄어요</h2>
+<p><img alt="트로이 룸 커피포트를 찍은 최초의 웹캠의 흐릿한 흑백 화면, 커피포트와 사람 손이 보여요" src="../images/03.jpg" />
+1991년, 케임브리지 대학교 컴퓨터 연구소 사람들은 트로이 룸까지 걸어갔다가 <strong>커피포트가 비어 있는</strong> 걸 보는 게 지긋지긋했어요. 그래서 두 사람이 카메라로 커피포트를 비추고, 그 화면을 모두의 컴퓨터로 보냈어요.</p>
+<p>화면은 128×128개의 회색 점밖에 안 되는 아주 작은 크기였어요. 요즘 화면에서는 우표보다도 작아요. 1993년에는 월드와이드웹에 올라가서, 전 세계 사람들이 영국의 커피포트를 들여다보기 시작했어요.</p>
+<p>카메라는 2001년에 꺼졌고, 워싱턴포스트 같은 신문들도 이 소식을 다뤘어요. 나중에 커피 머신 하나는 이베이에서 3,350파운드에 팔렸어요.</p>
+<p>다시 말해, 최초의 웹캠이 맡은 큰일은 헛걸음을 막아 주는 거였어요.</p>
+<hr />
+<h2>4. 🇬🇧 영국 TV 광고 시간이 되면 전기 주전자 때문에 전력망이 긴장해요</h2>
+<p><img alt="하얀 전기 주전자, 웨일스의 호수가 있는 골짜기에 자리한 디노르윅 발전소, 반짝이는 크롬 주전자" src="../images/04.jpg" />
+영국에서는 인기 TV 프로그램이 광고로 넘어가면, 수백만 명이 동시에 일어나 차를 마시려고 전기 주전자를 켜요. 이걸 <strong>TV 픽업</strong>이라고 하는데, 영국 주전자는 힘이 세서 하나에 2.5~3킬로와트나 써요.</p>
+<p>보통의 TV 픽업은 순식간에 200~400메가와트의 전력 수요를 더해요. 역대 최대는 1990년 7월 4일, 잉글랜드가 월드컵 승부차기에서 서독에 진 직후였어요. 무려 2,800메가와트였어요.</p>
+<p>전력망은 미리 대비해요. 웨일스의 디노르윅 발전소는 산 위 호수에 물로 에너지를 저장해 두었다가, 그 물을 아래로 쏟아 내려서 단 12초 만에 1,320메가와트를 보낼 수 있어요.</p>
+<p>온 나라가 동시에 변기 물을 내리는 건데, 그게 차라고 생각해 보세요.</p>
+<hr />
+<h2>5. 🇬🇧 진공청소기 발명가는 은가루를 빨아들였다가 체포됐어요</h2>
+<p><img alt="런던 거리에서 호스를 건물 안으로 넣은 부스의 말이 끄는 진공청소기 그림, 과학 박물관의 빨간 진공청소기 수레, 옛날 진공청소기" src="../images/05.jpg" />
+1901년, 영국 엔지니어 허버트 세실 부스는 의자 위 먼지를 바람으로 날려 버리는 기계를 보고 생각했어요. '거꾸로 빨아들이면 어떨까?' 그는 식당 의자 위에 손수건을 올려놓고 <strong>입으로 손수건 너머의 먼지를 빨아들여</strong> 아이디어를 시험했어요.</p>
+<p>'퍼핑 빌리'라는 별명이 붙은 그의 기계는 너무 커서 말이 끄는 수레에 실려 다녔어요. 일꾼들이 건물 밖에 수레를 세워 두고, 긴 호스를 창문으로 넣어서 안을 청소했어요.</p>
+<p>말썽도 좀 있었어요. 소음 때문에 항의를 받았고, 말을 놀라게 했다고 벌금까지 냈어요. 동전을 만드는 왕립 조폐국을 청소하고 나오다가 체포되기도 했어요. 기계 안에 은가루가 가득 찼는데 비우는 걸 깜빡했거든요. 그는 금방 풀려났어요.</p>
+<p>한마디로, 진공청소기로 저지른 실수투성이 '도둑질'이었어요.</p>
+<hr />
+<h2>6. 🇺🇸 식기세척기는 누군가의 고급 그릇이 자꾸 깨져서 발명됐어요</h2>
+<p><img alt="조지핀 코크런을 기리는 루마니아 우표, 1921년 초기 식기세척기 시연, 1864년의 고급 도자기 접시와 설탕 그릇" src="../images/06.jpg" />
+조지핀 코크런은 시카고 상류 사회의 일원이었어요. 어느 날 저녁 파티가 끝나고 설거지를 하다가, <strong>집안 대대로 내려온 그릇 몇 개가 이가 빠졌어요</strong>. 그녀는 기계가 더 잘할 수 있다고 생각했어요.</p>
+<p>그녀는 그릇 크기를 재서 접시, 컵, 받침 접시에 딱 맞는 철사 선반을 만들었어요. 선반을 구리 통 안의 바퀴 위에 올려요 → 모터가 바퀴를 돌려요 → 뜨거운 비눗물이 아래에서 위로 뿜어져 그릇 위로 비처럼 쏟아져요. 솔 대신 물의 압력으로 씻은 최초의 식기세척기였어요.</p>
+<p>그녀는 1886년 12월 28일에 특허를 받았어요. 1893년 시카고 세계 박람회에서는 그녀의 기계 아홉 대가 식당에서 설거지를 했고, 그녀의 회사는 나중에 키친에이드의 일부가 됐어요.</p>
+<p>접시 몇 개를 지키려고 만든 완전히 새로운 기계인 셈이에요.</p>
+<hr />
+<h2>7. 🇩🇪 알베르트 아인슈타인은 냉장고를 발명했어요</h2>
+<p><img alt="아인슈타인 냉장고 특허의 컬러 도면, 1921년 알베르트 아인슈타인 초상, 레오 실라르드 초상" src="../images/07.jpg" />
+1920년대, 베를린 신문들은 냉장고 밀봉 부품이 망가져 <strong>독가스가 집 안으로 새는</strong> 바람에 한 가족이 목숨을 잃었다고 보도했어요. 알베르트 아인슈타인과 그의 옛 제자 레오 실라르드는 이 문제를 해결해 보기로 했어요.</p>
+<p>두 사람의 아이디어는 <strong>움직이는 부품이 없는</strong> 냉장고였어요. 그러면 닳아 없어질 밀봉 부품도 없으니까요. 열만 있으면 돌아가고, 물, 암모니아, 부탄이라는 세 가지 액체를 썼어요. 1926년부터 1934년까지 여섯 나라에서 특허를 45개나 받았어요.</p>
+<p>하지만 다른 냉장고보다 효율이 떨어졌고, 나중에 더 안전한 냉매 가스가 나왔어요. 두 사람이 판 특허로 번 돈은 고작 750달러, 지금 돈으로 약 1만 달러였어요.</p>
+<p>다시 말해, 역사상 가장 위대한 과학자 중 한 명도 부엌 냉장고를 고쳐 보려고 했던 거예요.</p>
+<hr />
+<h2>8. 🇺🇸 한 블렌더 회사는 휴대폰을 갈아서 유명해졌어요</h2>
+<p><img alt="블렌드텍 블렌더, 흰 가운을 입고 무대에 선 블렌드텍 창업자 톰 딕슨, 'Will It Blend?' 촬영장의 톰 딕슨" src="../images/08.jpg" />
+블렌더 회사 블렌드텍을 세운 톰 딕슨은 실험 삼아 성냥 한 상자를 갈아 본 적이 있어요. 그게 계기가 되어 영상 시리즈가 생겼고, 그는 매회 <strong>"갈릴까요? 그것이 문제로다."</strong>라는 말로 시작했어요.</p>
+<p>그는 아이패드, 아이폰 4, 그리고 '코치킨'을 갈았어요. 익힌 닭 반 마리를 코카콜라 한 캔과 뼈째 간 거예요(먹으면 안 돼요).</p>
+<p>2007년에는 캠코더를 갈았어요. 그 뒤 영상 팀이 남은 조각을 전자제품 매장 베스트바이에 반품하려고 했는데, 안 받아 줬대요.</p>
+<p>요리 프로그램인데, 재료가 휴대폰인 셈이에요.</p>
+<hr />
+<h2>9. 🍞 토스터는 대부분의 사람보다 먼저 인터넷에 접속했어요</h2>
+<p><img alt="옛날 컴퓨터와 노란 장난감 크레인과 함께 전시된 '인터넷 토스터', 같은 전시를 다른 각도에서 본 모습, 토스터 페이스트리가 놓인 반짝이는 크롬 토스터" src="../images/09.jpg" />
+1990년, 컴퓨터 과학자 존 롬키와 사이먼 해킷은 토스터를 인터넷에 연결했어요. 온라인으로 조종할 수 있는 <strong>최초의 가전</strong>이 된 거예요. 그때는 대부분의 집에 인터넷도 없었어요.</p>
+<p>토스터 아이디어는 점점 더 엉뚱해졌어요. 2001년, 영국 브루넬 대학교의 한 디자이너는 날씨 서비스에 전화를 걸어 '맑음'이나 '흐림' 예보를 빵 위에 구워 주는 토스터를 만들었어요.</p>
+<p>나중에는 트위터를 쓰는 토스터가 '사물 인터넷', 그러니까 일상 물건이 인터넷과 대화한다는 아이디어의 초기 예로 꼽혔어요.</p>
+<p>이메일을 확인하는 아침밥이라고 생각해 보세요.</p>
+<hr />
+<h2>10. 🇬🇧 차 끓이는 자명종은 강 때문에 이름을 거절당했어요</h2>
+<p><img alt="런던 과학 박물관의 초기 차 끓이는 기계, 고블린 티즈메이드, 시계와 찻주전자가 달린 티즈메이드" src="../images/10.jpg" />
+<strong>티즈메이드</strong>는 침대 옆에 두는 자명종인데 차도 끓여 줘서, 눈뜨자마자 따뜻한 차를 마실 수 있어요. 1902년, 버밍엄의 총기 장인 프랭크 클라크가 이걸 특허 내고 "차를 끓이는 시계!"라는 이름으로 팔았어요.</p>
+<p>1932년, 조지 앱솔롬은 전기로 작동하는 걸 발명하고 '티스메이드(Teesmade)'라는 이름을 등록하려 했어요. 그런데 특허청이 거절했어요. <strong>티스강 근처에서 만든 게 아니라서</strong>, 그 이름이 사람들을 헷갈리게 할 수 있다는 이유였어요.</p>
+<p>나중에 고블린 티즈메이드가 큰 인기를 끌었는데, 이걸 판 회사는 바로 부스의 진공청소기 사업에서 커진 회사였어요. 티즈메이드는 1960~70년대에 가장 인기였고, 퀸의 'I Want to Break Free' 뮤직비디오에서는 브라이언 메이를 깨우기도 해요.</p>
+<p>차로 꼬드겨서 침대 밖으로 끌어내는 자명종인 셈이에요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>트로이 룸 커피포트는 지금도 인터넷 속에 숨어 있는 농담 하나를 낳았어요. 1998년 만우절, 인터넷 표준을 정하는 진지한 단체가 온라인으로 커피포트를 조종하는 규칙을 발표했는데, 거기에 오류 코드 418, "나는 찻주전자예요"가 들어 있었어요. 2017년에 관계자들이 유명 소프트웨어에서 이걸 지우려고 하자, 열다섯 살 소년이 '418 살리기' 운동을 벌여서 결국 이겼어요. 또 어떤 만우절 농담이 진짜가 됐을지 궁금해지지 않나요?</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Raytheon_RadaRange_NS_Savannah_MD1.jpg">Raytheon RadaRange NS Savannah MD1.jpg</a> by Acroterion, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Amana_Radarange_Microwave_Oven.jpg">Amana Radarange Microwave Oven.jpg</a> by TaurusEmerald, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://n2t.net/ark:/65665/ng49ca746a9-3a4c-704b-e053-15f76fa0b4fa">Tappan Model RL-1 Microwave Oven (smithsonian_american_history_museum)</a> by Raytheon Manufacturing Co. and Tappan, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3447750033">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4350_CSIROs_Parkes_Radio_Telescope_with_moon_in_the_background.jpg">CSIRO ScienceImage 4350 CSIROs Parkes Radio Telescope with moon in the background.jpg</a> by division, CSIRO, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3448685200">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_Coffee_Pot_(x1.jpg).jpg">Trojan Room Coffee Pot (x1.jpg).jpg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xcoffee.png">Trojan Room coffee pot xcoffee.png</a> by Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xvcoffee.jpeg">Trojan Room coffee pot xvcoffee.jpeg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Electric_kettle_phillips_white.JPG">Electric kettle phillips white.JPG</a> by Rafa, Public domain</li><li>#4: <a href="https://www.flickr.com/photos/81043308@N00/21260711794">Dinorwig pumped hydro Power Station at Slate Quarry near Llanberis (flickr)</a> by John Englart (Takver), <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:General_electric_-_electric_water_kettle.jpg">General electric - electric water kettle.jpg</a> by Cantons-de-l&#x27;Est, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Hubert_Cecil_Booth_Stra%C3%9Fenstaubsauger_von_1901.jpg">Hubert Cecil Booth Straßenstaubsauger von 1901.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Booth%27s_vacuum_cleaner,_Science_Museum,_London.jpg">Booth&#x27;s vacuum cleaner, Science Museum, London.jpg</a> by Matt Brown, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://www.flickr.com/photos/91994044@N00/44787677642">Antique vacuum cleaner and woodstove (flickr)</a> by quinet, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Stamps_of_Romania,_2013-34.jpg">Stamps of Romania, 2013-34.jpg</a> by Post of Romania, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Dishwasher_demonstration_1921.jpg">Dishwasher demonstration 1921.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lincoln_buff_set_-_1864.jpg">Lincoln buff set - 1864.jpg</a> by Detweiler, Susan G. (1975). American Presidential China. Washington, D.C.: Smithsonian Institution, p. 46., Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Einstein_Refrigerator_pat1781541_clarified.jpg">Einstein Refrigerator pat1781541 clarified.jpg</a> by Einstein/Szilard with annotations by P. Brandon Malloy, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_(cropped).jpg">Albert Einstein 1921 (cropped).jpg</a> by Harris &amp;amp; Ewing Studio, active 1905 - 1977, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Leo_Szilard.jpg">Leo Szilard.jpg</a> by U.S. Department of Energy, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Blendtec_Total_Blender.jpg">Blendtec Total Blender.jpg</a> by Trebz, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Tom_Dickson.jpg">Tom Dickson.jpg</a> by Andrew Baron from NYC, United States, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://www.flickr.com/photos/35034363287@N01/5550496555">Will Scoble Blend? No! (flickr)</a> by Robert Scoble, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2380922224">The Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2252206171">Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8563910@N08/50137712356">20200721-FlickrFriday Polished Vintage Toaster (flickr)</a> by C E Andersen, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://www.flickr.com/photos/54549113@N00/52691443462">Early Teasmade - Science Museum London (flickr)</a> by Haydn Blackey, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:GoblinTeasmade.jpg">GoblinTeasmade.jpg</a> by MortimerCat, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#10: <a href="https://www.flickr.com/photos/50996541@N00/5472951845">Teasmade (flickr)</a> by Simon Harriyott, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>

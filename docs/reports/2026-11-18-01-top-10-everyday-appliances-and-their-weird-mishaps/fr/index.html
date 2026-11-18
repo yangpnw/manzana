@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Appareils du quotidien et leurs mésaventures bizarres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <span aria-current="page">Français</span></span><a href="../../../archive.html">Toutes les fiches</a></nav>
+<h1>🌍 Top 10 Appareils du quotidien et leurs mésaventures bizarres</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>18 novembre 2026</span></p>
+<hr />
+<h2>1. 🇺🇸 Le four à micro-ondes a été découvert grâce à une barre chocolatée fondue</h2>
+<p><img alt="Un ancien Radarange de Raytheon à bord du navire NS Savannah, un micro-ondes de comptoir Amana Radarange et un ancien four à micro-ondes Tappan" src="../images/01.jpg" />
+En 1945, Percy Spencer, un ingénieur autodidacte de l'entreprise Raytheon, travaillait à côté d'un radar en marche. Il a remarqué que <strong>la barre chocolatée dans sa poche avait fondu</strong>.</p>
+<p>Il a voulu comprendre pourquoi, alors il a dirigé exprès des micro-ondes sur de la nourriture. La première chose qu'il a cuite, c'était du pop-corn. La deuxième, un œuf, qui a explosé au visage d'une des personnes qui faisaient l'essai.</p>
+<p>Le premier micro-ondes vendu, le Radarange de 1947, mesurait environ 1,8 m (5 pieds 11 pouces) de haut et pesait 340 kg (750 livres), à peu près autant qu'un piano à queue. Raytheon continuait de l'améliorer, donc au début il était loué aux hôtels et aux restaurants pour 5 dollars par jour au lieu d'être vendu.</p>
+<p>C'est un appareil de cuisine qui est né d'un goûter gâché.</p>
+<hr />
+<h2>2. 🇦🇺 Un micro-ondes a fait croire à des astronomes qu'ils captaient des « signaux de l'espace »</h2>
+<p><img alt="Le radiotélescope de Parkes en Australie sous un ciel bleu, son immense antenne au crépuscule et le télescope pendant une journée portes ouvertes" src="../images/02.jpg" />
+À l'observatoire de Parkes, en Australie, un radiotélescope géant captait sans arrêt de courtes impulsions qui ressemblaient beaucoup à des <strong>sursauts radio rapides</strong>, de mystérieux éclairs venus de l'espace lointain. Les anciennes archives en montraient 46 faux entre 1998 et 2015.</p>
+<p>Les astronomes les ont surnommés « pérytons », d'après un cerf ailé imaginaire qui projette l'ombre d'un homme, parce qu'ils semblaient fabriqués par des humains. En 2015, ils ont enfin trouvé le coupable : quelqu'un à l'observatoire qui ouvrait la porte d'un micro-ondes avant la fin du minuteur.</p>
+<p>Quand on ouvre la porte trop tôt, le micro-ondes lâche un petit « bip » radio en s'éteignant. Les deux micro-ondes en cause avaient plus de 27 ans, et ils fabriquaient un faux signal environ une fois sur deux quand on ouvrait la porte trop tôt.</p>
+<p>En gros, le mystère de l'espace, c'était quelqu'un de pressé de manger.</p>
+<hr />
+<h2>3. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 La première webcam du monde filmait une cafetière</h2>
+<p><img alt="Des images en noir et blanc très floues de la webcam d'origine de la cafetière de la Trojan Room, où l'on voit la cafetière et des mains" src="../images/03.jpg" />
+En 1991, au laboratoire d'informatique de l'université de Cambridge, les chercheurs en avaient assez de marcher jusqu'à la Trojan Room pour trouver <strong>la cafetière vide</strong>. Alors deux d'entre eux ont pointé une caméra dessus et envoyé l'image sur l'ordinateur de tout le monde.</p>
+<p>L'image était minuscule, seulement 128 sur 128 points gris, plus petite qu'un timbre sur un écran d'aujourd'hui. En 1993, elle a été mise sur le Web, et des gens du monde entier se sont mis à surveiller une cafetière en Angleterre.</p>
+<p>La caméra a été éteinte en 2001, et des journaux comme le Washington Post en ont parlé. Une des machines à café s'est ensuite vendue 3 350 livres sur eBay.</p>
+<p>Autrement dit, la grande mission de la première webcam, c'était d'éviter aux gens un trajet pour rien.</p>
+<hr />
+<h2>4. 🇬🇧 Les pubs à la télé britannique affolent le réseau électrique à cause des bouilloires</h2>
+<p><img alt="Une bouilloire électrique blanche, la centrale de Dinorwig dans une vallée avec un lac au pays de Galles et une bouilloire chromée brillante" src="../images/04.jpg" />
+Au Royaume-Uni, quand une émission populaire passe à la pub, des millions de gens se lèvent en même temps pour allumer la bouilloire et se faire un thé. On appelle ça le <strong>TV pickup</strong>, et les bouilloires britanniques sont puissantes : chacune consomme de 2,5 à 3 kilowatts.</p>
+<p>Un pic habituel ajoute d'un coup 200 à 400 mégawatts de demande. Le plus grand de l'histoire a eu lieu le 4 juillet 1990, juste après la défaite de l'Angleterre contre l'Allemagne de l'Ouest aux tirs au but, en Coupe du monde : 2 800 mégawatts.</p>
+<p>Le réseau s'y prépare à l'avance. Dinorwig, une centrale du pays de Galles qui stocke l'énergie sous forme d'eau dans un lac en haut d'une montagne, peut envoyer 1 320 mégawatts en seulement 12 secondes en laissant cette eau dévaler la pente.</p>
+<p>Vois ça comme un pays entier qui tire la chasse d'eau en même temps, mais avec du thé.</p>
+<hr />
+<h2>5. 🇬🇧 L'inventeur de l'aspirateur a été arrêté pour avoir aspiré de l'argent</h2>
+<p><img alt="Un dessin de l'aspirateur à cheval de Booth dans une rue de Londres avec des tuyaux qui entrent dans un bâtiment, son chariot d'aspirateur rouge au Science Museum et un aspirateur ancien" src="../images/05.jpg" />
+En 1901, l'ingénieur anglais Hubert Cecil Booth a vu une machine qui soufflait la poussière des chaises et s'est dit : pourquoi ne pas l'aspirer plutôt ? Il a testé l'idée en posant un mouchoir sur une chaise de restaurant et en <strong>aspirant la poussière à travers avec sa bouche</strong>.</p>
+<p>Sa machine, surnommée « Puffing Billy », était si grosse qu'elle roulait sur une charrette tirée par des chevaux. Les ouvriers la garaient devant un bâtiment et passaient de longs tuyaux par les fenêtres pour nettoyer l'intérieur.</p>
+<p>Ça a causé quelques ennuis. Booth recevait des plaintes à cause du bruit et a même eu une amende pour avoir effrayé des chevaux. Après avoir nettoyé la Royal Mint, où l'on fabrique les pièces de monnaie, il a été arrêté en sortant, parce qu'il avait oublié de vider une machine pleine de poussière d'argent. Il a vite été relâché.</p>
+<p>En gros, c'était un vol par accident, à l'aspirateur.</p>
+<hr />
+<h2>6. 🇺🇸 Le lave-vaisselle a été inventé parce que de la belle vaisselle s'ébréchait</h2>
+<p><img alt="Un timbre roumain en l'honneur de Josephine Cochrane, un ancien lave-vaisselle présenté en 1921, et une assiette et un sucrier en porcelaine fine de 1864" src="../images/06.jpg" />
+Josephine Cochrane faisait partie de la haute société de Chicago, et après un de ses dîners, quelques <strong>assiettes de famille se sont ébréchées</strong> pendant la vaisselle. Elle s'est dit qu'une machine ferait mieux.</p>
+<p>Elle a mesuré sa vaisselle et fabriqué des paniers en fil de fer pile à la taille des assiettes, des tasses et des soucoupes. Les paniers étaient posés sur une roue dans une cuve en cuivre → un moteur faisait tourner la roue → de l'eau chaude savonneuse jaillissait du fond et retombait en pluie sur la vaisselle. C'était le premier lave-vaisselle qui lavait grâce à la pression de l'eau plutôt qu'avec des brosses.</p>
+<p>Elle a obtenu son brevet le 28 décembre 1886. À l'Exposition universelle de Chicago en 1893, neuf de ses machines lavaient la vaisselle dans les restaurants, et son entreprise est plus tard devenue une partie de KitchenAid.</p>
+<p>C'est toute une nouvelle machine, juste pour sauver quelques assiettes.</p>
+<hr />
+<h2>7. 🇩🇪 Albert Einstein a inventé un frigo</h2>
+<p><img alt="Un dessin en couleur du brevet du réfrigérateur d'Einstein, un portrait d'Albert Einstein en 1921 et un portrait de Leó Szilárd" src="../images/07.jpg" />
+Dans les années 1920, des journaux berlinois ont raconté qu'une famille était morte quand un joint de son réfrigérateur avait lâché et que <strong>du gaz toxique s'était répandu dans la maison</strong>. Albert Einstein et son ancien élève Leó Szilárd ont décidé de régler ça.</p>
+<p>Leur idée : un frigo <strong>sans pièces mobiles</strong>, pour qu'il n'y ait aucun joint à user. Il fonctionnait juste avec une source de chaleur et trois liquides : de l'eau, de l'ammoniac et du butane. Entre 1926 et 1934, ils ont obtenu 45 brevets dans six pays.</p>
+<p>Mais il consommait plus que les autres frigos, et des gaz réfrigérants plus sûrs sont arrivés. Les deux n'ont gagné que 750 dollars pour les brevets qu'ils ont vendus, environ 10 000 dollars d'aujourd'hui.</p>
+<p>Autrement dit, l'un des plus grands scientifiques de l'histoire a aussi essayé de réparer le frigo de la cuisine.</p>
+<hr />
+<h2>8. 🇺🇸 Une marque de blenders est devenue célèbre en mixant des téléphones</h2>
+<p><img alt="Un blender Blendtec, le fondateur de Blendtec Tom Dickson en blouse sur scène, et Tom Dickson sur le plateau de Will It Blend?" src="../images/08.jpg" />
+Tom Dickson, le fondateur de l'entreprise de blenders Blendtec, a un jour mixé une boîte d'allumettes pour voir. Ça a donné une série de vidéos où il commençait chaque épisode par <strong>« Will it blend? That is the question. »</strong> (« Est-ce que ça se mixe ? Telle est la question. »)</p>
+<p>Il a mixé un iPad, un iPhone 4 et un « cochicken » : un demi-poulet cuit avec une canette de Coca-Cola, os compris (à ne pas manger).</p>
+<p>En 2007, il a mixé un caméscope. Ensuite, l'équipe vidéo a essayé de rapporter ce qui en restait au magasin d'électronique Best Buy. Ça n'a pas marché.</p>
+<p>C'est une émission de cuisine où la recette, c'est ton téléphone.</p>
+<hr />
+<h2>9. 🍞 Les grille-pain sont allés sur Internet avant la plupart des gens</h2>
+<p><img alt="L'« Internet Toaster » exposé avec de vieux ordinateurs et une grue jouet jaune, une autre vue du même stand et un grille-pain chromé brillant avec des pâtisseries à griller" src="../images/09.jpg" />
+En 1990, les informaticiens John Romkey et Simon Hackett ont connecté un grille-pain à Internet : c'était le <strong>premier appareil</strong> qu'on pouvait contrôler en ligne. La plupart des maisons n'avaient pas encore Internet.</p>
+<p>Les idées de grille-pain sont devenues encore plus folles. En 2001, un designer de l'université Brunel, en Angleterre, a fabriqué un grille-pain qui appelait un service météo et grillait la prévision, soleil ou nuages, sur ta tartine.</p>
+<p>Plus tard, un grille-pain qui utilisait Twitter est devenu un des premiers exemples de « l'Internet des objets », l'idée que les objets du quotidien discutent avec Internet.</p>
+<p>Vois ça comme un petit-déjeuner qui consulte ses mails.</p>
+<hr />
+<h2>10. 🇬🇧 Le nom d'un réveil qui fait le thé a été refusé à cause d'une rivière</h2>
+<p><img alt="Une ancienne machine à thé au Science Museum de Londres, un Goblin Teasmade et un Teasmade avec son horloge et sa théière" src="../images/10.jpg" />
+Un <strong>teasmade</strong>, c'est un réveil de chevet qui prépare aussi le thé, pour qu'une tasse chaude t'attende dès le réveil. En 1902, un armurier de Birmingham, Frank Clarke, en a breveté un et l'a vendu comme « Une horloge qui fait le thé ! ».</p>
+<p>En 1932, George Absolom en a inventé un électrique et a voulu déposer le nom « Teesmade ». L'office des brevets a refusé, parce qu'il <strong>n'était pas fabriqué au bord de la rivière Tees</strong>, et que le nom risquait de tromper les gens.</p>
+<p>Plus tard, le Goblin Teasmade, vendu par la même entreprise que celle née de l'affaire d'aspirateurs de Booth, a cartonné. Les teasmades ont eu leur heure de gloire dans les années 1960 et 1970, et l'un d'eux réveille même Brian May dans le clip « I Want to Break Free » de Queen.</p>
+<p>C'est un réveil qui te soudoie avec du thé pour te sortir du lit.</p>
+<hr />
+<h3>Le saviez-vous ?</h3>
+<p>La cafetière de la Trojan Room a inspiré une blague qui se cache encore aujourd'hui dans Internet. Le 1er avril 1998, un organisme très sérieux qui fixe les règles d'Internet a publié des règles pour contrôler des cafetières en ligne, avec un code d'erreur 418 : « Je suis une théière ». Quand des responsables ont voulu le retirer de logiciels très utilisés en 2017, un ado de 15 ans a lancé la campagne « Save 418 » et a gagné. De quoi se demander quels autres poissons d'avril ont fini par devenir réels.</p>
+<details class="credits"><summary>Crédits photo (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Raytheon_RadaRange_NS_Savannah_MD1.jpg">Raytheon RadaRange NS Savannah MD1.jpg</a> by Acroterion, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Amana_Radarange_Microwave_Oven.jpg">Amana Radarange Microwave Oven.jpg</a> by TaurusEmerald, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://n2t.net/ark:/65665/ng49ca746a9-3a4c-704b-e053-15f76fa0b4fa">Tappan Model RL-1 Microwave Oven (smithsonian_american_history_museum)</a> by Raytheon Manufacturing Co. and Tappan, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3447750033">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4350_CSIROs_Parkes_Radio_Telescope_with_moon_in_the_background.jpg">CSIRO ScienceImage 4350 CSIROs Parkes Radio Telescope with moon in the background.jpg</a> by division, CSIRO, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3448685200">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_Coffee_Pot_(x1.jpg).jpg">Trojan Room Coffee Pot (x1.jpg).jpg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xcoffee.png">Trojan Room coffee pot xcoffee.png</a> by Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xvcoffee.jpeg">Trojan Room coffee pot xvcoffee.jpeg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Electric_kettle_phillips_white.JPG">Electric kettle phillips white.JPG</a> by Rafa, Public domain</li><li>#4: <a href="https://www.flickr.com/photos/81043308@N00/21260711794">Dinorwig pumped hydro Power Station at Slate Quarry near Llanberis (flickr)</a> by John Englart (Takver), <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:General_electric_-_electric_water_kettle.jpg">General electric - electric water kettle.jpg</a> by Cantons-de-l&#x27;Est, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Hubert_Cecil_Booth_Stra%C3%9Fenstaubsauger_von_1901.jpg">Hubert Cecil Booth Straßenstaubsauger von 1901.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Booth%27s_vacuum_cleaner,_Science_Museum,_London.jpg">Booth&#x27;s vacuum cleaner, Science Museum, London.jpg</a> by Matt Brown, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://www.flickr.com/photos/91994044@N00/44787677642">Antique vacuum cleaner and woodstove (flickr)</a> by quinet, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Stamps_of_Romania,_2013-34.jpg">Stamps of Romania, 2013-34.jpg</a> by Post of Romania, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Dishwasher_demonstration_1921.jpg">Dishwasher demonstration 1921.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lincoln_buff_set_-_1864.jpg">Lincoln buff set - 1864.jpg</a> by Detweiler, Susan G. (1975). American Presidential China. Washington, D.C.: Smithsonian Institution, p. 46., Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Einstein_Refrigerator_pat1781541_clarified.jpg">Einstein Refrigerator pat1781541 clarified.jpg</a> by Einstein/Szilard with annotations by P. Brandon Malloy, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_(cropped).jpg">Albert Einstein 1921 (cropped).jpg</a> by Harris &amp;amp; Ewing Studio, active 1905 - 1977, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Leo_Szilard.jpg">Leo Szilard.jpg</a> by U.S. Department of Energy, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Blendtec_Total_Blender.jpg">Blendtec Total Blender.jpg</a> by Trebz, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Tom_Dickson.jpg">Tom Dickson.jpg</a> by Andrew Baron from NYC, United States, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://www.flickr.com/photos/35034363287@N01/5550496555">Will Scoble Blend? No! (flickr)</a> by Robert Scoble, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2380922224">The Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2252206171">Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8563910@N08/50137712356">20200721-FlickrFriday Polished Vintage Toaster (flickr)</a> by C E Andersen, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://www.flickr.com/photos/54549113@N00/52691443462">Early Teasmade - Science Museum London (flickr)</a> by Haydn Blackey, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:GoblinTeasmade.jpg">GoblinTeasmade.jpg</a> by MortimerCat, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#10: <a href="https://www.flickr.com/photos/50996541@N00/5472951845">Teasmade (flickr)</a> by Simon Harriyott, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>

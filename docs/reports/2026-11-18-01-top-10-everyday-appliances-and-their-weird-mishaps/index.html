@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Everyday Appliances and Their Weird Mishaps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><span aria-current="page">English</span> · <a href="zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="ko/" hreflang="ko" lang="ko">한국어</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../archive.html">All sheets</a></nav>
+<h1>🌍 Top 10 Everyday Appliances and Their Weird Mishaps</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>Nov 18, 2026</span></p>
+<hr />
+<h2>1. 🇺🇸 The microwave oven was discovered by a melted candy bar</h2>
+<p><img alt="An early Raytheon Radarange aboard the ship NS Savannah, an Amana Radarange countertop microwave, and an early Tappan microwave oven" src="images/01.jpg" />
+In 1945, Percy Spencer, a self-taught engineer at the company Raytheon, was working next to a running radar set. He noticed the <strong>candy bar in his pocket had melted</strong>.</p>
+<p>He wanted to know why, so he pointed microwaves at food on purpose. The first thing he cooked was popcorn. The second was an egg, and it exploded in the face of one of the people testing it.</p>
+<p>The first microwave oven for sale, the 1947 Radarange, was about 1.8 m (5 ft 11 in) tall and weighed 340 kg (750 lb), about as much as a grand piano. Raytheon kept improving it, so at first it was rented to hotels and restaurants for $5 a day instead of sold.</p>
+<p>It's a kitchen gadget that started as a ruined snack.</p>
+<hr />
+<h2>2. 🇦🇺 A microwave fooled astronomers into chasing "space signals"</h2>
+<p><img alt="The Parkes radio telescope in Australia under a blue sky, its huge dish at dusk, and the telescope during an open day" src="images/02.jpg" />
+At the Parkes Observatory in Australia, a giant radio telescope kept picking up short bursts that looked a lot like <strong>fast radio bursts</strong>, mysterious flashes from deep space. Old records showed 46 of these fake bursts between 1998 and 2015.</p>
+<p>Astronomers nicknamed them "perytons," after a made-up winged deer that casts the shadow of a man, because they seemed to be made by people. In 2015 they finally caught the culprit: someone at the observatory opening a microwave door before the timer ran out.</p>
+<p>When the door opens early, the microwave lets out a quick radio chirp as it shuts off. The two microwaves to blame were more than 27 years old, and they made a fake burst about half the times the door was opened too soon.</p>
+<p>Basically, the space mystery was somebody's impatient lunch.</p>
+<hr />
+<h2>3. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 The world's first webcam was pointed at a coffee pot</h2>
+<p><img alt="Grainy black-and-white frames from the original Trojan Room coffee pot webcam, showing the pot and people's hands" src="images/03.jpg" />
+In 1991, researchers at the University of Cambridge's computer lab were tired of walking to the Trojan Room only to find <strong>the coffee pot empty</strong>. So two of them aimed a camera at it and sent the picture to everyone's computer.</p>
+<p>The image was tiny, just 128 by 128 grey dots, smaller than a postage stamp on today's screens. In 1993 it went on the World Wide Web, and people around the world started checking a coffee pot in England.</p>
+<p>The camera was switched off in 2001, and newspapers like The Washington Post covered it. One of the coffee machines later sold on eBay for £3,350.</p>
+<p>In other words, the first webcam's big job was saving people a wasted walk.</p>
+<hr />
+<h2>4. 🇬🇧 British TV breaks make the power grid panic over kettles</h2>
+<p><img alt="A white electric kettle, the Dinorwig power station in a mountain lake valley in Wales, and a shiny chrome kettle" src="images/04.jpg" />
+In Britain, when a popular TV show goes to an ad break, millions of people get up and switch on the kettle for tea at the same moment. This is called <strong>TV pickup</strong>, and British kettles are strong, using 2.5 to 3 kilowatts each.</p>
+<p>A normal pickup adds 200 to 400 megawatts of demand in an instant. The biggest ever came on July 4, 1990, right after England lost a World Cup penalty shootout to West Germany: 2,800 megawatts.</p>
+<p>The grid plans for it ahead of time. Dinorwig, a power station in Wales that stores energy as water in a lake up a mountain, can send out 1,320 megawatts in just 12 seconds by letting that water rush down.</p>
+<p>Think of it as a whole country flushing the toilet at once, but with tea.</p>
+<hr />
+<h2>5. 🇬🇧 The vacuum cleaner's inventor was arrested for sucking up silver</h2>
+<p><img alt="A drawing of Booth's horse-drawn vacuum cleaner on a London street with hoses running into a building, his red vacuum cart at the Science Museum, and an antique vacuum cleaner" src="images/05.jpg" />
+In 1901, English engineer Hubert Cecil Booth watched a machine that blew dust off chairs and thought: why not suck it up instead? He tested the idea by putting a handkerchief on a restaurant chair and <strong>sucking the dust through it with his mouth</strong>.</p>
+<p>His machine, nicknamed "Puffing Billy," was so big it rode on a horse-drawn cart. Workers parked it outside a building and ran long hoses through the windows to clean inside.</p>
+<p>It caused some trouble. Booth got complaints about the noise and was even fined for frightening horses. After cleaning the Royal Mint, where coins are made, he was arrested on the way out, because he'd forgotten to empty a machine full of silver dust. He was let go quickly.</p>
+<p>Basically, it was a robbery by accident, with a vacuum cleaner.</p>
+<hr />
+<h2>6. 🇺🇸 The dishwasher was invented because someone's fancy dishes kept chipping</h2>
+<p><img alt="A Romanian stamp honoring Josephine Cochrane, an early dishwasher being shown off in 1921, and a fine china dinner plate and sugar bowl from 1864" src="images/06.jpg" />
+Josephine Cochrane was part of Chicago high society, and after one of her dinner parties some of her <strong>family heirloom dishes got chipped</strong> while being washed. She decided a machine could do it better.</p>
+<p>She measured her dishes and built wire racks shaped to fit plates, cups and saucers. The racks sat on a wheel inside a copper tub → a motor turned the wheel → hot soapy water sprayed up and rained down on the dishes. It was the first dishwasher to clean with water pressure instead of scrubbers.</p>
+<p>She got her patent on December 28, 1886. At the 1893 World's Fair in Chicago, nine of her machines washed dishes in the restaurants, and her company later became part of KitchenAid.</p>
+<p>It's a whole new machine, all to save a few plates.</p>
+<hr />
+<h2>7. 🇩🇪 Albert Einstein invented a fridge</h2>
+<p><img alt="A colored drawing from the Einstein refrigerator patent, a portrait of Albert Einstein in 1921, and a portrait of Leó Szilárd" src="images/07.jpg" />
+In the 1920s, newspapers in Berlin reported that a family had died when a seal in their refrigerator broke and <strong>toxic gas leaked into their home</strong>. Albert Einstein and his former student Leó Szilárd decided to fix that.</p>
+<p>Their idea: a fridge with <strong>no moving parts</strong>, so there was no seal to wear out. It ran on just a source of heat and three liquids, water, ammonia and butane. Between 1926 and 1934 they got 45 patents in six countries.</p>
+<p>But it was less efficient than other fridges, and safer cooling gases came along. The two earned only $750 for the patents they sold, about $10,000 in today's money.</p>
+<p>In other words, one of history's greatest scientists also tried to fix the kitchen fridge.</p>
+<hr />
+<h2>8. 🇺🇸 A blender company got famous by blending phones</h2>
+<p><img alt="A Blendtec blender, Blendtec founder Tom Dickson in his lab coat on stage, and Tom Dickson on the Will It Blend? set" src="images/08.jpg" />
+Tom Dickson, who started the blender company Blendtec, once blended a box of matches as an experiment. That led to a video series where he opened each episode with <strong>"Will it blend? That is the question."</strong></p>
+<p>He blended an iPad, an iPhone 4 and a "cochicken": half a cooked chicken with a can of Coca-Cola, bones and all (not safe to eat).</p>
+<p>In 2007 he blended a video camera. Afterward, the video team tried to return what was left of it to the electronics store Best Buy. It didn't work.</p>
+<p>It's a cooking show where the recipe is your phone.</p>
+<hr />
+<h2>9. 🍞 Toasters went online before most people did</h2>
+<p><img alt="The Internet Toaster on display with old computers and a yellow toy crane, another view of the same display, and a shiny chrome toaster with toaster pastries" src="images/09.jpg" />
+In 1990, computer scientists John Romkey and Simon Hackett connected a toaster to the internet, making it the <strong>first appliance</strong> you could control online. Most homes didn't have internet yet.</p>
+<p>The toaster ideas got weirder. In 2001 a designer at Brunel University in England made a toaster that phoned a weather service and burned the forecast, sunny or cloudy, onto your bread.</p>
+<p>Later, a toaster that used Twitter became an early example of the "Internet of Things," the idea of everyday objects talking to the internet.</p>
+<p>Think of it as breakfast that can check its email.</p>
+<hr />
+<h2>10. 🇬🇧 A tea-making alarm clock had its name rejected over a river</h2>
+<p><img alt="An early tea-making machine at the Science Museum in London, a Goblin Teasmade, and a Teasmade with its clock and teapot" src="images/10.jpg" />
+A <strong>teasmade</strong> is a bedside alarm clock that also makes tea, so a hot cup is ready the moment you wake up. In 1902, a Birmingham gunsmith named Frank Clarke patented one and sold it as "A Clock That Makes Tea!"</p>
+<p>In 1932 George Absolom invented an electric one and wanted to register the name "Teesmade." The Patent Office said no, because it <strong>wasn't made on the River Tees</strong>, and the name might confuse people.</p>
+<p>Later the Goblin Teasmade, sold by the same company that grew out of Booth's vacuum cleaner business, became a hit. Teasmades peaked in the 1960s and 1970s, and one even wakes up Brian May in Queen's "I Want to Break Free" music video.</p>
+<p>It's an alarm clock that bribes you out of bed with tea.</p>
+<hr />
+<h3>Fun fact</h3>
+<p>The Trojan Room coffee pot inspired a joke that's still hiding inside the internet. On April Fools' Day 1998, a serious internet standards group published rules for controlling coffee pots online, including error code 418: "I'm a teapot." When officials tried to remove it from popular software in 2017, a 15-year-old started a "Save 418" campaign and won. Which makes you wonder what other April Fools' jokes ended up becoming real.</p>
+<details class="credits"><summary>Photo credits (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Raytheon_RadaRange_NS_Savannah_MD1.jpg">Raytheon RadaRange NS Savannah MD1.jpg</a> by Acroterion, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Amana_Radarange_Microwave_Oven.jpg">Amana Radarange Microwave Oven.jpg</a> by TaurusEmerald, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://n2t.net/ark:/65665/ng49ca746a9-3a4c-704b-e053-15f76fa0b4fa">Tappan Model RL-1 Microwave Oven (smithsonian_american_history_museum)</a> by Raytheon Manufacturing Co. and Tappan, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3447750033">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4350_CSIROs_Parkes_Radio_Telescope_with_moon_in_the_background.jpg">CSIRO ScienceImage 4350 CSIROs Parkes Radio Telescope with moon in the background.jpg</a> by division, CSIRO, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#2: <a href="https://www.flickr.com/photos/15181848@N02/3448685200">CSIRO Parkes Radio Telescope (flickr)</a> by amandabhslater, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_Coffee_Pot_(x1.jpg).jpg">Trojan Room Coffee Pot (x1.jpg).jpg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xcoffee.png">Trojan Room coffee pot xcoffee.png</a> by Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Trojan_Room_coffee_pot_xvcoffee.jpeg">Trojan Room coffee pot xvcoffee.jpeg</a> by Daniel Gordon, Martyn Johnson and Quentin Stafford-Fraser, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Electric_kettle_phillips_white.JPG">Electric kettle phillips white.JPG</a> by Rafa, Public domain</li><li>#4: <a href="https://www.flickr.com/photos/81043308@N00/21260711794">Dinorwig pumped hydro Power Station at Slate Quarry near Llanberis (flickr)</a> by John Englart (Takver), <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:General_electric_-_electric_water_kettle.jpg">General electric - electric water kettle.jpg</a> by Cantons-de-l&#x27;Est, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Hubert_Cecil_Booth_Stra%C3%9Fenstaubsauger_von_1901.jpg">Hubert Cecil Booth Straßenstaubsauger von 1901.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Booth%27s_vacuum_cleaner,_Science_Museum,_London.jpg">Booth&#x27;s vacuum cleaner, Science Museum, London.jpg</a> by Matt Brown, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://www.flickr.com/photos/91994044@N00/44787677642">Antique vacuum cleaner and woodstove (flickr)</a> by quinet, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Stamps_of_Romania,_2013-34.jpg">Stamps of Romania, 2013-34.jpg</a> by Post of Romania, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Dishwasher_demonstration_1921.jpg">Dishwasher demonstration 1921.jpg</a> by Unknown authorUnknown author, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lincoln_buff_set_-_1864.jpg">Lincoln buff set - 1864.jpg</a> by Detweiler, Susan G. (1975). American Presidential China. Washington, D.C.: Smithsonian Institution, p. 46., Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Einstein_Refrigerator_pat1781541_clarified.jpg">Einstein Refrigerator pat1781541 clarified.jpg</a> by Einstein/Szilard with annotations by P. Brandon Malloy, Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_(cropped).jpg">Albert Einstein 1921 (cropped).jpg</a> by Harris &amp;amp; Ewing Studio, active 1905 - 1977, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Leo_Szilard.jpg">Leo Szilard.jpg</a> by U.S. Department of Energy, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Blendtec_Total_Blender.jpg">Blendtec Total Blender.jpg</a> by Trebz, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Tom_Dickson.jpg">Tom Dickson.jpg</a> by Andrew Baron from NYC, United States, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#8: <a href="https://www.flickr.com/photos/35034363287@N01/5550496555">Will Scoble Blend? No! (flickr)</a> by Robert Scoble, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2380922224">The Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/8212496@N06/2252206171">Internet Toaster (flickr)</a> by public.resource.org, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/8563910@N08/50137712356">20200721-FlickrFriday Polished Vintage Toaster (flickr)</a> by C E Andersen, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://www.flickr.com/photos/54549113@N00/52691443462">Early Teasmade - Science Museum London (flickr)</a> by Haydn Blackey, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:GoblinTeasmade.jpg">GoblinTeasmade.jpg</a> by MortimerCat, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#10: <a href="https://www.flickr.com/photos/50996541@N00/5472951845">Teasmade (flickr)</a> by Simon Harriyott, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>
