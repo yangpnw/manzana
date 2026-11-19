@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 발톱, 동물 발톱, 그리고 발굽</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 발톱, 동물 발톱, 그리고 발굽</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 19일</span></p>
+<hr />
+<h2>1. 💅 발톱은 손톱보다 절반 속도로 자라요</h2>
+<p><img alt="매니큐어를 칠한 맨발, 그리고 사람 발가락과 발톱을 가까이에서 찍은 사진" src="../images/01.jpg" />
+손톱은 한 달에 약 3.5밀리미터 자라지만, <strong>발톱은 겨우 약 1.6밀리미터</strong> 자라요. 동전 하나 두께쯤이에요. 발톱이 통째로 새로 자라는 데는 12~18개월이 걸리는데, 손톱은 3~6개월이면 돼요.</p>
+<p>손발톱은 케라틴으로 만들어져요. 동물 발톱, 발굽, 뿔과 같은 질긴 물질이에요. 살아 있는 부분은 뿌리 쪽 피부 아래에 숨어 있는 곳뿐이에요. 눈에 보이는 발톱은 죽은 세포가 층층이 꽉 눌린 거라서, 깎아도 아프지 않아요.</p>
+<p>그리고 잘못 알려진 이야기 하나. 사람이 죽은 뒤에 손발톱이 계속 자라는 건 아니에요. 피부가 마르면서 오그라들어서 길어진 것처럼 보일 뿐이에요.</p>
+<p>발가락마다 아주 얇은 발굽을 하나씩 달고 있다고 생각해 보세요.</p>
+<hr />
+<h2>2. 〰️ 발톱에 가로로 팬 홈을 보면 몇 달 전에 아팠던 걸 알 수 있어요</h2>
+<p><img alt="가로로 홈이 팬 엄지발톱, 그리고 보 선이 가로질러 난 손톱들" src="../images/02.jpg" />
+가끔 손발톱에 옆으로 가로지르는 깊은 홈이 생겨요. 이걸 <strong>보 선(Beau's line)</strong>이라고 하는데, 1846년에 처음 설명한 프랑스 의사 조제프 보의 이름을 땄어요.</p>
+<p>이렇게 생겨요. 심한 열, 병, 부상 때문에 피부 아래에서 손발톱을 만드는 곳이 잠깐 멈춰요 → 그 부분이 얇게 자라 나와요 → 움푹한 홈이 생겨요 → 손발톱이 자라면서 홈이 끝 쪽으로 천천히 밀려 나가요.</p>
+<p>가와사키병을 앓은 아이들은 열이 나기 시작하고 한두 달 뒤에 이 선이 보이기도 해요. 발톱은 다 자라는 데 1년도 넘게 걸리니까, 그 홈이 오랫동안 남아 있어요.</p>
+<p>나무 나이테 같은 건데, 아팠던 날들을 기록한 거예요.</p>
+<hr />
+<h2>3. 🐎 말발굽은 하나의 거대한 발톱이에요</h2>
+<p><img alt="다듬은 말발굽의 바닥, 안쪽 발가락뼈가 보이도록 자른 말발굽, 편자를 박는 장제사" src="../images/03.jpg" />
+발굽은 두껍고 단단한 <strong>케라틴</strong> 껍데기로 덮인 발가락 끝이에요. 여러분의 손발톱과 같은 물질이죠. 말은 발마다 발굽이 딱 하나라서, 사실 발가락 네 개로 걸어 다니는 셈이에요.</p>
+<p>손발톱처럼 발굽도 계속 자라요. 야생마는 거친 땅을 걸으면서 자라는 만큼 닳게 해요.</p>
+<p>사람과 사는 말은 단단하고 거친 땅을 충분히 걷지 못하거나, 길 위에서 무거운 짐을 나르는 경우가 많아요. 그래서 장제사(발굽 전문가)가 발굽을 다듬고, 보호하려고 편자를 박아 줘요.</p>
+<p>한마디로, 편자는 발톱에 씌우는 휴대폰 케이스예요.</p>
+<hr />
+<h2>4. 🐈 고양이는 발톱을 날카롭게 지키려고 숨겨요</h2>
+<p><img alt="발톱 끝이 살짝 나온 고양이 발, 발톱을 쭉 뻗은 검은 고양이, 발톱을 드러내고 하품하는 고양이" src="../images/04.jpg" />
+고양이과 동물은 거의 다 쓰지 않을 때 발톱을 <strong>발 속으로 쏙 집어넣을</strong> 수 있어요. 집어넣어 두면 땅에 긁히지 않아서 계속 날카로워요.</p>
+<p>고양이 발톱은 층층이 자라기도 해요. 가끔 바깥쪽 오래된 층이 자라기를 멈추고 떨어질 준비를 해요 → 고양이가 나무나 스크래처를 긁어요 → 오래된 층이 벗겨지고 아래에서 날카로운 새 발톱이 나와요.</p>
+<p>고양이는 앞발 안쪽 위쪽에 며느리발톱도 있어요. 땅에 전혀 닿지 않아서 덜 닳고, 다른 발톱보다 더 날카롭고 긴 경우가 많아요.</p>
+<p>다시 말해, 스크래처는 고양이가 연필을 깎는 곳이에요.</p>
+<hr />
+<h2>5. 🐸 털개구리는 자기 발가락뼈를 부러뜨려 발톱을 만들어요</h2>
+<p><img alt="중앙아프리카 야생의 털개구리, 살아 있는 털개구리 두 마리, 옆구리가 '털로 덮인' 수컷 털개구리 박제" src="../images/05.jpg" />
+털개구리는 카메룬 같은 중앙아프리카 나라에 살아요. <strong>공포 개구리</strong>라는 별명도 있는데, 다 이유가 있어요.</p>
+<p>뭔가에 잡히면, 이 개구리는 발가락뼈의 뾰족한 끝을 붙잡고 있던 작은 뼈 혹에서 떼어 내요 → 그 날카로운 뼈를 자기 피부 밖으로 밀어내요 → 그러면 발톱이 생겨요. 케라틴이 아니라 뼈로 된 거라서 진짜 발톱은 아니에요.</p>
+<p>과학자들은 찢어진 피부가 아물면서 발톱이 다시 들어간다고 생각해요. 번식기 수컷의 '털'도 진짜 털이 아니에요. 산소를 더 흡수하도록 도와줄지도 모르는 가느다란 피부 가닥이에요.</p>
+<p>자기 손가락을 접이식 칼로 바꾼다고 상상해 보세요.</p>
+<hr />
+<h2>6. 🐒 여우원숭이는 긁는 용도로만 쓰는 '화장실 발톱'이 있어요</h2>
+<p><img alt="평평한 발톱 옆에 그루밍 발톱이 난 알락꼬리여우원숭이의 둘째 발가락, 화장실 발톱이 보이는 목도리여우원숭이 발, 갈라고의 발" src="../images/06.jpg" />
+여우원숭이, 갈라고, 로리스는 우리처럼 발가락 대부분에 평평한 발톱이 있어요. 그런데 발마다 둘째 발가락에는 휘어진 <strong>그루밍 발톱</strong>이 나 있어요. 화장실 발톱이라고도 불러요.</p>
+<p>이걸로 털을 빗고 긁는데, 주로 손이 잘 안 닿는 머리와 목 주변을 긁어요.</p>
+<p>안경원숭이는 발마다 둘째와 셋째 발가락, 두 개에 그루밍 발톱이 있어요. 발이 거의 손 같아서, 엄지발가락으로 엄지손가락처럼 물건을 잡을 수 있어요.</p>
+<p>발가락 하나에 빗이 달려 있다고 생각해 보세요.</p>
+<hr />
+<h2>7. 🪶 어떤 새는 가운데 발가락에 빗이 달려 있어요</h2>
+<p><img alt="왜가리 가운데 발가락의 빗처럼 톱니가 난 발톱, 원숭이올빼미의 빗살 발톱, 해오라기의 빗살 발가락" src="../images/07.jpg" />
+새들은 깃털을 잘 유지하려고 기름을 발라요. 그런데 부리로는 자기 머리에 닿지 않아요. 그래서 많은 새가 발을 써요. 부리에 묻은 기름을 발에 옮긴 다음, <strong>발로 머리 깃털에 문질러 발라요</strong>.</p>
+<p>왜가리, 쏙독새, 올빼미, 군함조는 가운데 발가락 발톱 한쪽에 빗처럼 작은 톱니가 있어요. 빗살 발톱이라고 하는데, 머리를 빗고 기름 바르는 걸 도와주는 것 같아요.</p>
+<p>어떤 새는 내린 날개 위로 다리를 올려서 긁고, 어떤 새는 날개 아래로 다리를 넣어서 긁어요. 어떤 방법을 쓰는지는 그 새가 어떻게 사느냐와 관련이 있을 수 있어요.</p>
+<p>한마디로, 발톱으로 머리 손질을 하는 거예요.</p>
+<hr />
+<h2>8. 🐦 호아친 새끼는 날개에 발톱이 있어요</h2>
+<p><img alt="날개 발톱으로 기어오르는 호아친 새끼의 옛날 사진, 나뭇가지에 앉은 어른 호아친 무리, 나무 위의 호아친" src="../images/08.jpg" />
+호아친은 머리에 뾰족한 볏이 있는 남아메리카의 별난 새이고, 가이아나의 나라 새예요. 새끼는 태어날 때부터 <strong>날개마다 발톱이 두 개씩</strong> 있어요.</p>
+<p>이 발톱으로 나무를 타요. 매가 공격하면 어른 새들이 시끄럽게 날아다니며 매의 정신을 빼놓아요 → 새끼들은 둥지에서 슬금슬금 빠져나가요 → 들키면 아래 물로 뛰어들어 물속으로 헤엄쳐 도망쳤다가, 날개 발톱과 큰 발로 다시 기어 올라가요.</p>
+<p>예전에는 사람들이 날개에 발톱이 있던 옛날 새인 시조새와 비교하기도 했어요. 하지만 지금 과학자들은 호아친의 발톱이 날기 전에 나무를 타려고 새로 생긴 재주라고 봐요.</p>
+<p>다시 말해, 아기 새들이 팔로 나무를 사다리처럼 오르는 거예요.</p>
+<hr />
+<h2>9. 🐜 큰개미핥기는 발톱을 아끼려고 주먹 관절로 걸어요</h2>
+<p><img alt="앞발 발톱을 안으로 말고 걷는 큰개미핥기, 새끼를 등에 업은 엄마 개미핥기, 풀밭에서 냄새를 맡는 큰개미핥기" src="../images/09.jpg" />
+중앙아메리카와 남아메리카의 큰개미핥기는 앞발에 커다란 발톱이 있는데, 가운데 발톱이 제일 커요. 이 발톱으로 개미집과 흰개미집을 부수고, 길고 끈적한 혀로 벌레를 핥아 먹어요.</p>
+<p>발톱이 닳지 않게 하려고, 큰개미핥기는 <strong>앞발의 주먹 관절로 걸어요</strong>. 고릴라나 침팬지랑 좀 비슷해요. 발톱은 말린 채로 땅에 닿지 않아요.</p>
+<p>뒷발은 달라요. 발톱이 짧고, 발바닥을 평평하게 대고 걸어요.</p>
+<p>연장이 상하지 않게 주먹을 쥐고 걷는 것과 같아요.</p>
+<hr />
+<h2>10. 🦖 어떤 공룡은 지금까지 육지 동물 중 가장 긴 발톱을 가졌어요</h2>
+<p><img alt="거대한 테리지노사우루스 발톱 복제품, 전시된 테리지노사우루스 팔과 발톱뼈, 테리지노사우루스 복원도" src="../images/10.jpg" />
+테리지노사우루스('낫 도마뱀')는 약 6,900만~6,600만 년 전 지금의 몽골에 살았어요. 풀을 먹는 공룡으로 몸길이가 최대 10미터(33피트)였고, 손 발톱뼈는 <strong>50센티미터(20인치)가 넘었어요</strong>. 어른의 팔뚝과 손을 합친 것보다 길어요.</p>
+<p>1948년 고비 사막에서 처음 발톱이 발견됐을 때, 이름을 붙인 과학자는 거북이처럼 생긴 거대한 파충류가 이 발톱으로 해초를 거둬들였다고 생각했어요.</p>
+<p>지금 전문가들은 이 발톱을 주로 나뭇가지를 입 쪽으로 끌어당기는 데 썼다고 봐요. 물론 튼튼한 팔로 자기를 지키는 데도 쓸 수 있었을 거예요.</p>
+<p>여러분 팔만큼 긴 정원 가위를 떠올려 보세요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>화식조는 호주와 뉴기니에 사는 날지 못하는 커다란 새인데, 발마다 안쪽 발가락에 단검 같은 발톱이 있고 길이가 12.5센티미터(5인치)나 돼요. 힘센 다리로 발차기를 해서 '세계에서 가장 위험한 새'로 자주 불리고, 제2차 세계대전 때 뉴기니에 있던 군인들은 가까이 가지 말라는 경고를 받았어요. 그런데 기록을 보면 타조가 사람을 더 많이 다치게 해요. 남아프리카에서 해마다 두세 명이 타조 때문에 목숨을 잃거든요. 진짜로 가장 위험한 동물은 누구고, 그냥 무서운 소문만 난 동물은 누구일지 궁금해지지 않나요?</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://www.flickr.com/photos/184513163@N07/50448795536">Wrinkled Soles &amp; Painted Toenails (flickr)</a> by wrinkledgal, <a href="https://creativecommons.org/publicdomain/mark/1.0/">Public domain</a></li><li>#1: <a href="https://www.flickr.com/photos/40837632@N05/5756574962">Purple Toenails - May 2011 - Well I Never (flickr)</a> by Gareth1953 All Right Now, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Toes.jpg">Toes.jpg</a> by unknown, Attribution</li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Big-toe-nail.jpg">Big-toe-nail.jpg</a> by 些細な日常, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Beau%27s_lines.JPG">Beau&#x27;s lines.JPG</a> by LynnMcCleary, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Beau%27s_line_on_left,_middle_fingernail.jpg">Beau&#x27;s line on left, middle fingernail.jpg</a> by Elipongo, Public domain</li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Hoof_bottom_view.jpg">Hoof bottom view.jpg</a> by Alex brollo, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Equine_hoof_hc_biovision.jpg">Equine hoof hc biovision.jpg</a> by Dr. Christoph von Horst, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Farrier_Winthrop_Washington.jpg">Farrier Winthrop Washington.jpg</a> by Guywelch2000, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Cat_paws_and_claws_1_2015-01-16.JPG">Cat paws and claws 1 2015-01-16.JPG</a> by FASTILY, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Black_cat_in_repose.jpg">Black cat in repose.jpg</a> by SMPL Reference, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Cat_yawn_with_exposed_teeth_and_claws.jpg">Cat yawn with exposed teeth and claws.jpg</a> by DecafPotato, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://www.inaturalist.org/photos/81360533">Astylosternus robustus · Mayoko, CG-NI, CG</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Hairy_frog_(Trichobatrachus_robustus)_1.jpg">Hairy frog (Trichobatrachus robustus) 1.jpg</a> by Melvin TOULLEC, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Trichobatrachus_robustus.JPG">Trichobatrachus robustus.JPG</a> by Gustavocarra, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Lemur_catta_toilet_claw.jpg">Lemur catta toilet claw.jpg</a> by Alex Dunkel (Maky), <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Varecia_variegata_foot_with_toilet-claw.jpg">Varecia variegata foot with toilet-claw.jpg</a> by Maky (Alex Dunkel), <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Galago_moholi_276577285.jpg">Galago moholi 276577285.jpg</a> by i_c_riddell, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Ardea_cinerea_Putzkralle.jpg">Ardea cinerea Putzkralle.jpg</a> by Donkey shot (Christof Bobzin), <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Barn_Owl_Pectinate_Claw.jpg">Barn Owl Pectinate Claw.jpg</a> by Daniel Polin, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Night_Heron_pectinate_toe_by_Vedant_Kasambe.jpg">Night Heron pectinate toe by Vedant Kasambe.jpg</a> by Vedant Raju Kasambe, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Hoatzin_chick.jpg">Hoatzin chick.jpg</a> by J. Arthur Thomson., Public domain</li><li>#8: <a href="https://www.inaturalist.org/photos/335722262">Opisthocomus hoazin · Careiro - Amazonas, Brasilien</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#8: <a href="https://www.flickr.com/photos/40595948@N00/4980238311">Hoatzin (flickr)</a> by A.Davey, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Giant_Anteaters_-_Brevard_Zoo_-_Flickr_-_Rusty_Clark_(5).jpg">Giant Anteaters - Brevard Zoo - Flickr - Rusty Clark (5).jpg</a> by Rusty Clark from merritt usland FLA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://www.inaturalist.org/photos/326724154">Myrmecophaga tridactyla · Minas Gerais, BR</a> by no rights reserved, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/11493299@N00/11851618593">IMG_6346/Brazil/Mato Grosso Do Sul/Pantanal/Giant Antéater/Grand Fourmilier/Tamanoir (flickr)</a> by dany13, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Therizinosaurus_claw.jpg">Therizinosaurus claw.jpg</a> by Woudloper, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Therizinosaurus_claws_lateral.jpg">Therizinosaurus claws lateral.jpg</a> by Frank Black Noir, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Therizinosaurus_TD.png">Therizinosaurus TD.png</a> by TotalDino, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li></ol></details>
+</main>
+</body>
+</html>

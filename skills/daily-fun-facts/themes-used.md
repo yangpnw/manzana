@@ -55,3 +55,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-16 · Weird Mailboxes and Post · 2026-11-16-01-top-10-weird-mailboxes-and-post
 - 2026-11-17 · Tooth Structure, Cavities and Dental Oddities · 2026-11-17-01-top-10-tooth-structure-cavities-and-dental-oddities
 - 2026-11-18 · Everyday Appliances and Their Weird Mishaps · 2026-11-18-01-top-10-everyday-appliances-and-their-weird-mishaps
+- 2026-11-19 · Toenails, Claws and Hooves · 2026-11-19-01-top-10-toenails-claws-and-hooves
