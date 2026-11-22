@@ -58,3 +58,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-19 · Toenails, Claws and Hooves · 2026-11-19-01-top-10-toenails-claws-and-hooves
 - 2026-11-20 · Home Workouts and Quick Exercises for Kids · 2026-11-20-01-top-10-home-workouts-and-quick-exercises-for-kids
 - 2026-11-21 · LEGO Minecraft Sets, Mobs and Figures · 2026-11-21-01-top-10-lego-minecraft-sets-mobs-and-figures
+- 2026-11-22 · Cricket Fighting and Old-Time Chinese Kids' Games · 2026-11-22-01-top-10-cricket-fighting-and-old-time-chinese-kids-games
