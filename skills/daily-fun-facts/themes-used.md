@@ -60,3 +60,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-21 · LEGO Minecraft Sets, Mobs and Figures · 2026-11-21-01-top-10-lego-minecraft-sets-mobs-and-figures
 - 2026-11-22 · Cricket Fighting and Old-Time Chinese Kids' Games · 2026-11-22-01-top-10-cricket-fighting-and-old-time-chinese-kids-games
 - 2026-11-23 · Hidden History of Thanksgiving and Holiday Shopping · 2026-11-23-01-top-10-hidden-history-of-thanksgiving-and-holiday-shopping
+- 2026-11-24 · Rock Candy · 2026-11-24-01-top-10-rock-candy

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Rock Candy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><span aria-current="page">English</span> · <a href="zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="ko/" hreflang="ko" lang="ko">한국어</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../archive.html">All sheets</a></nav>
+<h1>🌍 Top 10 Rock Candy</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>Nov 24, 2026</span></p>
+<hr />
+<h2>1. 🍬 The word "candy" started as a name for rock sugar</h2>
+<p><img alt="Rock candy crystals and sticks" src="images/01.jpg" />
+Rock candy is just sugar grown into big crystals. You dissolve lots of sugar in hot water, more than cool water could ever hold. As it cools, the extra sugar has nowhere to go, so it sticks to a string or stick and builds crystals. It takes about <strong>six to seven days</strong>.</p>
+<p>People have done this for a very long time. Writers in the Muslim world described growing sugar crystals this way in the first half of the 800s, more than 1,100 years ago.</p>
+<p>And here's the twist: the English word "sugar candy" came from Old French, which got it from Arabic qandi, from Persian qand ("cane sugar"), probably from the Sanskrit khanda ("piece of sugar"). Only later did "candy" grow to mean any sweet at all.</p>
+<p>Basically, every candy is named after the crystal one.</p>
+<hr />
+<h2>2. 🇯🇵 Japan's army packs konpeitō in its ration tins</h2>
+<p><img alt="Konpeitō star candies" src="images/02.jpg" />
+Konpeitō are tiny bumpy sugar stars from Japan, about 5 to 10 mm across, the size of a pea. Each one starts as a single grain of coarse sugar. Workers spin the grains in a big heated tub shaped like a gong and keep ladling syrup on, so they grow a little bigger every day.</p>
+<p>It's slow: one batch takes <strong>7 to 13 days</strong>. That's why artisans still make them by hand today.</p>
+<p>Japan's military emergency rations include them, packed with hard, dry bread. The rules even list the colors: 8 white, 3 red, 2 yellow and 2 green. The candy makes your mouth water, which helps you chew the dry bread.</p>
+<p>Think of it as candy with a job.</p>
+<hr />
+<h2>3. 🇮🇷 In Iran, tea comes with a saffron rock candy stick</h2>
+<p><img alt="Iranian saffron nabat" src="images/03.jpg" />
+In Iran, the most common way to sweeten tea is nabat, rock candy grown on sticks or strings. The favorite flavor is saffron, which turns the crystals golden and a bit bitter. It's nibbled with tea or dropped in to sweeten it.</p>
+<p>Iran makes a lot of it. Most comes from Razavi Khorasan province, which in the 2020s made <strong>over 210,000 tons a year</strong>, as heavy as about 20 Eiffel Towers.</p>
+<p>Next door in Central Asia, the same candy is called novvot. In Uzbekistan it's sometimes made with grape juice instead of water, and its crystals grow over three days. UNESCO has listed it as part of Uzbekistan's cultural heritage.</p>
+<p>A sugar spoon you never have to wash.</p>
+<hr />
+<h2>4. 🇨🇳 A Chinese legend says rock sugar cured an emperor's sick consort</h2>
+<p><img alt="Tanghulu and Chinese rock sugar" src="images/04.jpg" />
+Tanghulu are shiny candied hawthorn berries on a bamboo stick, a classic street snack in northern China. Their other name is bīngtáng húlu (冰糖葫芦). Bīngtáng is rock sugar, and húlu means gourd, for the lumpy gourd-like shape of the stick.</p>
+<p>The legend goes back to the Song dynasty, about 800 years ago. An emperor's favorite consort got sick and wouldn't eat. A doctor told the cooks to cook hawthorn with <strong>rock sugar</strong> and have her eat five to ten before each meal. In a few days she got better, and people started selling the berries on sticks in the street.</p>
+<p>In old China, rock sugar was a luxury only rich families could afford. Today it's a normal kitchen item there, used in tea, sweet soups and cooking.</p>
+<p>In other words, a royal medicine became a street snack.</p>
+<hr />
+<h2>5. 🇩🇪 In East Frisia, you never stir your tea</h2>
+<p><img alt="East Frisian tea with a cream cloud and rock sugar" src="images/05.jpg" />
+East Frisia, a coastal region in northwest Germany, is crazy about tea: it drinks <strong>nearly 75%</strong> of all the tea brought into Germany. And it has strict rules for how to drink it.</p>
+<p>First, a lump of white rock sugar called a Kluntje goes into the empty cup. Then hot, strong tea is poured over it. Then a spoon of thick cream goes on top and blooms into a "cloud" called a Wölkje. The cream is the cloud, the tea is the water, and the sugar is the land.</p>
+<p>Then you drink it without stirring, so you get three layers: cream first, then tea, then sweetness at the bottom. Stirring would mix them into one, which is the wrong way to do it. The Kluntje melts so slowly that it can sweeten more than one cup.</p>
+<p>Basically, it's a three-course meal in a teacup.</p>
+<hr />
+<h2>6. 🇬🇧 The letters in Blackpool rock aren't made in order</h2>
+<p><img alt="Sticks of Blackpool and Brighton rock" src="images/06.jpg" />
+British seaside rock is a different sweet from rock candy. It's a hard stick of boiled sugar, usually peppermint, with the town's name running all the way through it, so you can still read it after every bite. In the 1830s, Morecambe became the first town to make rock with letters inside.</p>
+<p>Each letter starts out about the size of a thumbprint, made from strips of colored and white sugar. They aren't made in spelling order. "Square" letters like B, L and K go first because they keep their shape. Round letters like O and C are made last so they don't sag.</p>
+<p>The letters are lined up around a white center and wrapped into one huge warm bar, too thick to get your hands around. A worker then stretches it out into a long, thin rope, and the letters shrink to their tiny final size. All lettered rock is still made by hand.</p>
+<p>Think of it as writing a word and then stretching it into a candy.</p>
+<hr />
+<h2>7. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh rock was supposedly discovered by forgetting it</h2>
+<p><img alt="Edinburgh rock and the Sweetie Lane plaque" src="images/07.jpg" />
+Edinburgh rock isn't hard at all. It's soft and crumbly, made from sugar, water and cream of tartar, and comes in pastel sticks in flavors like ginger and lemon.</p>
+<p>It was first made in the 1800s by Alexander Ferguson, known as <strong>"Sweetie Sandy."</strong> A popular story says he found a tray of sweets that had been forgotten for months. They had dried out, he tasted one, and it was delicious. Nobody knows if that's true.</p>
+<p>What is true: it sold so well that he went home to his small town of Doune a very rich man. A plaque there says he bought up most of the street where he was born, and it became known as Sweetie Lane.</p>
+<p>A happy accident you can eat.</p>
+<hr />
+<h2>8. 🇮🇳 A Delhi sweet shop has sold rock-sugar sweets since 1790</h2>
+<p><img alt="Mishri with fennel seeds, mishri crystals and kalakand" src="images/08.jpg" />
+In India, rock sugar is called mishri. People eat it like candy or use it to sweeten milk and tea. It's also cooked into milk sweets with khoya (milk boiled down until it's thick), like mishri-mawa, also called kalakand.</p>
+<p>One sweet shop in Delhi, Ghantewala Halwai, started out selling mishri-mawa in <strong>1790</strong>, more than 230 years ago. Today it sells 40 different kinds of sweets made with mishri.</p>
+<p>These milk sweets are most popular in northern and western India, in places like Delhi, Rajasthan, Punjab and Gujarat.</p>
+<p>In other words, one shop has been selling the same sweet for over 230 years.</p>
+<hr />
+<h2>9. 🇺🇸 America's first factory-made candy came from a shipwreck</h2>
+<p><img alt="Gibralters candy and Ye Olde Pepper Companie in Salem" src="images/09.jpg" />
+In 1806, the Spencer family moved from England to Salem, Massachusetts, but a shipwreck left them with almost nothing. Their new neighbors chipped in with supplies, including <strong>a barrel of sugar</strong>, because Mrs. Spencer was known as a good candy maker.</p>
+<p>She made lemon and peppermint hard candies called Gibraltars and sold them on the steps of the town's First Church. They sold so well that she bought a horse and wagon to sell them in nearby towns. Gibraltar rock is called the first candy made commercially (for sale as a business) in the United States.</p>
+<p>Hard candy keeps forever if it stays dry, so ship captains carried Gibraltars to ports around the world. Salem's Ye Olde Pepper Companie still sells them today.</p>
+<p>So America's candy business started with a gift from the neighbors.</p>
+<hr />
+<h2>10. 🎵 "Big Rock Candy Mountain" was first a song about running away</h2>
+<p><img alt="Big Rock Candy Mountain in Utah" src="images/10.jpg" />
+"The Big Rock Candy Mountains" is a folk song about a hobo's dream world, a wandering worker who rode freight trains. Harry McClintock said he wrote it in 1895, and he recorded it in <strong>1928</strong>.</p>
+<p>The version he first sang on the street in the 1890s was darker. It told of a child being talked into the hobo life with tales of the rock candy mountain. He cleaned it up before recording it.</p>
+<p>Then it got cleaned up again for kids. In children's versions, the "cigarette trees" became peppermint trees, the streams of alcohol became lemonade, and the lake of whiskey became soda pop. A kids' version by Burl Ives in 1949 made it famous.</p>
+<p>A grown-up song that got turned into a candy-land lullaby.</p>
+<hr />
+<h3>Fun fact</h3>
+<p>Konpeitō once helped open doors in Japan. In 1569, a Portuguese missionary named Luís Fróis gave the warlord Oda Nobunaga a glass flask of konpeitō to win permission to spread Christianity. Centuries later, the candy was so beloved that in Japanese, the Sugar Plum Fairy from Tchaikovsky's ballet The Nutcracker became Konpeitō no Sei (金平糖の精), "the Fairy of Konpeitō." The sweets hidden in The Nutcracker, from sugar plums to marzipan, are a whole world to explore next.</p>
+<details class="credits"><summary>Photo credits (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Kandiszucker_--_2018_--_3588.jpg">Kandiszucker -- 2018 -- 3588.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Rock-Candy-Sticks.jpg">Rock-Candy-Sticks.jpg</a> by Evan-Amos, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://www.flickr.com/photos/69223375@N00/6863586157">Rock candy (flickr)</a> by Biker Jun, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Konpeito_Candy.jpg">Konpeito Candy.jpg</a> by Islandsislands, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://www.flickr.com/photos/28081633@N00/3191802814">#012 Konpeito taken by EX-Z40 (flickr)</a> by aki.sato, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Konpeito,_Nishiki_Market.jpg">Konpeito, Nishiki Market.jpg</a> by Owleksandra, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Iranian_nabat.jpg">Iranian nabat.jpg</a> by Teardrops777, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Saffron_rock_candy.jpg">Saffron rock candy.jpg</a> by Rye-96, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Tea_time_at_historic_Chah-e_Haji_Mirza_Caf%C3%A9_in_Isfahan._Persian_tea_served_with_goshe_fil_and_nabat.jpg">Tea time at historic Chah-e Haji Mirza Café in Isfahan. Persian tea served with goshe fil and nabat.jpg</a> by EiersalatmitGurken, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:TangHuLu.JPG">TangHuLu.JPG</a> by Popo le Chien, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Guangxi_old_rock_candy.jpg">Guangxi old rock candy.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Tanghulu-shanghai.jpg">Tanghulu-shanghai.jpg</a> by Zhu Jian / Flickr user: zhu4905jian ( https://www.flickr.com/photos/7672101@N06/ ), <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Tee_mit_sahnewolke.JPG">Tee mit sahnewolke.JPG</a> by Ke.We., <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Ostfriesentee.jpg">Ostfriesentee.jpg</a> by Frank van Anken, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Kandiszucker_--_2018_--_3590.jpg">Kandiszucker -- 2018 -- 3590.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Blackpool_Rock_(15107520364).jpg">Blackpool Rock (15107520364).jpg</a> by Hazel Scott from Sheffield, UK, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://www.flickr.com/photos/54151899@N00/4753569311">Blackpool Rock (flickr)</a> by Kate C Hopkins, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Brighton_Rock_(6950629923).jpg">Brighton Rock (6950629923).jpg</a> by Paul Hudson from United Kingdom, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Edinburgh_Rock.jpg">Edinburgh Rock.jpg</a> by The original uploader was Mebanana at English Wikipedia., Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Ferguson%27s_Edinburgh_Rock_advertisement_(1982).JPG">Ferguson&#x27;s Edinburgh Rock advertisement (1982).JPG</a> by Kim Traynor, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Sweetie_Lane_heritage_plaque.jpg">Sweetie Lane heritage plaque.jpg</a> by LocalMapEditor, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Fennel_seeds_and_rock_sugar,_Indian_aftermint.jpg">Fennel seeds and rock sugar, Indian aftermint.jpg</a> by Connie Ma from Chicago, United States of America, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Misri.JPG">Misri.JPG</a> by Miansari66, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Kalakand2.JPG">Kalakand2.JPG</a> by Pradeep717, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Gibralters_Candy_Wrapper.jpg">Gibralters Candy Wrapper.jpg</a> by Eanalla, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/92487715@N03/11363001784">Ye Olde Pepper Company, 122 Derby St, Salem (493760) (flickr)</a> by Bob Linsdell, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/54151899@N00/5424958531">Ye Olde Pepper Companie (flickr)</a> by Kate C Hopkins, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountain_Marysvale_Utah_19970724.jpg">Big Rock Candy Mountain Marysvale Utah 19970724.jpg</a> by Jstuby, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountain_(19546490).jpg">Big Rock Candy Mountain (19546490).jpg</a> by Liji Jinaraj from San Francisco, USA, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountian_-_panoramio.jpg">Big Rock Candy Mountian - panoramio.jpg</a> by hakkun, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>

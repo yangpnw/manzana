@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Sucre candi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <span aria-current="page">Français</span></span><a href="../../../archive.html">Toutes les fiches</a></nav>
+<h1>🌍 Top 10 Sucre candi</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>24 novembre 2026</span></p>
+<hr />
+<h2>1. 🍬 Le mot « candy » désignait d'abord le sucre candi</h2>
+<p><img alt="Cristaux et bâtonnets de sucre candi" src="../images/01.jpg" />
+Le sucre candi, c'est juste du sucre qu'on fait pousser en gros cristaux. On dissout énormément de sucre dans de l'eau chaude, bien plus que de l'eau froide ne pourrait en contenir. En refroidissant, le sucre en trop ne sait plus où aller, alors il s'accroche à une ficelle ou à un bâtonnet et forme des cristaux. Il faut environ <strong>six à sept jours</strong>.</p>
+<p>On fait ça depuis très, très longtemps. Dans la première moitié des années 800, il y a plus de 1 100 ans, des auteurs du monde musulman décrivaient déjà comment faire pousser des cristaux de sucre de cette façon.</p>
+<p>Et voilà le plus drôle : l'anglais « sugar candy » vient du vieux français « çucre candi », qui vient de l'arabe qandi, du persan qand (« sucre de canne »), et sans doute du sanskrit khanda (« morceau de sucre »). Ce n'est que plus tard que « candy » a voulu dire n'importe quelle friandise.</p>
+<p>En gros, tous les bonbons portent le nom de celui en cristal.</p>
+<hr />
+<h2>2. 🇯🇵 L'armée japonaise met des konpeitō dans ses boîtes de rations</h2>
+<p><img alt="Petites étoiles de konpeitō" src="../images/02.jpg" />
+Les konpeitō sont de minuscules étoiles de sucre toutes bosselées, venues du Japon, de 5 à 10 mm, la taille d'un petit pois. Chacune commence par un seul grain de gros sucre. Des artisans font tourner les grains dans une grande cuve chauffée en forme de gong et y versent du sirop sans arrêt, alors ils grossissent un peu chaque jour.</p>
+<p>C'est lent : une fournée prend <strong>de 7 à 13 jours</strong>. C'est pour ça que des artisans les fabriquent encore à la main aujourd'hui.</p>
+<p>Les rations de secours de l'armée japonaise en contiennent, avec du pain dur et sec. Le règlement précise même les couleurs : 8 blancs, 3 rouges, 2 jaunes et 2 verts. Le bonbon fait saliver, et ça aide à mâcher le pain sec.</p>
+<p>Imagine un bonbon qui a un vrai travail.</p>
+<hr />
+<h2>3. 🇮🇷 En Iran, le thé s'accompagne d'un bâtonnet de sucre candi au safran</h2>
+<p><img alt="Nabat iranien au safran" src="../images/03.jpg" />
+En Iran, la façon la plus courante de sucrer le thé, c'est le nabat, du sucre candi qu'on fait pousser sur des bâtonnets ou des ficelles. Le parfum préféré est le safran, qui rend les cristaux dorés et un peu amers. On le grignote avec le thé ou on le met dedans pour le sucrer.</p>
+<p>L'Iran en produit énormément. La plupart vient de la province du Khorassan-e Razavi, qui en a fabriqué <strong>plus de 210 000 tonnes par an</strong> dans les années 2020, le poids d'environ 20 tours Eiffel.</p>
+<p>Juste à côté, en Asie centrale, la même friandise s'appelle novvot. En Ouzbékistan, on le fait parfois avec du jus de raisin au lieu de l'eau, et ses cristaux poussent pendant trois jours. L'UNESCO l'a inscrit au patrimoine culturel de l'Ouzbékistan.</p>
+<p>Une cuillère à sucre que tu n'as jamais besoin de laver.</p>
+<hr />
+<h2>4. 🇨🇳 Une légende chinoise dit que le sucre candi a guéri la favorite d'un empereur</h2>
+<p><img alt="Tanghulu et sucre candi chinois" src="../images/04.jpg" />
+Les tanghulu sont des baies d'aubépine enrobées de sucre brillant sur une brochette en bambou, un grand classique de la rue dans le nord de la Chine. Leur autre nom est bīngtáng húlu (冰糖葫芦). Bīngtáng, c'est le sucre candi, et húlu veut dire gourde, à cause de la forme bosselée de la brochette.</p>
+<p>La légende remonte à la dynastie Song, il y a environ 800 ans. La concubine préférée d'un empereur était malade et refusait de manger. Un médecin a demandé aux cuisiniers de cuire des baies d'aubépine avec du <strong>sucre candi</strong> et de lui en faire manger cinq à dix avant chaque repas. En quelques jours, elle allait mieux, et les gens ont commencé à vendre ces baies en brochettes dans la rue.</p>
+<p>Dans la Chine d'autrefois, le sucre candi était un luxe réservé aux familles riches. Aujourd'hui, là-bas, c'est un produit de cuisine tout à fait normal, qu'on met dans le thé, les soupes sucrées et les plats.</p>
+<p>Autrement dit, un remède royal est devenu un snack de rue.</p>
+<hr />
+<h2>5. 🇩🇪 En Frise orientale, on ne remue jamais son thé</h2>
+<p><img alt="Thé de Frise orientale avec un nuage de crème et du sucre candi" src="../images/05.jpg" />
+La Frise orientale, une région côtière du nord-ouest de l'Allemagne, est folle de thé : elle boit <strong>presque 75 %</strong> de tout le thé importé en Allemagne. Et elle a des règles strictes pour le boire.</p>
+<p>D'abord, un morceau de sucre candi blanc appelé Kluntje va dans la tasse vide. Ensuite, on verse dessus un thé chaud et fort. Puis on ajoute une cuillerée de crème épaisse, qui s'étale comme un « nuage » appelé Wölkje. La crème, c'est le nuage, le thé, c'est l'eau, et le sucre, c'est la terre.</p>
+<p>Ensuite, on boit sans remuer, pour goûter trois couches : d'abord la crème, puis le thé, et enfin le sucré au fond. Remuer mélangerait tout en un seul goût, et ça ne se fait pas. Le Kluntje fond si lentement qu'il peut sucrer plus d'une tasse.</p>
+<p>En gros, c'est un menu en trois services dans une tasse de thé.</p>
+<hr />
+<h2>6. 🇬🇧 Les lettres du « rock » de Blackpool ne sont pas faites dans l'ordre</h2>
+<p><img alt="Bâtons de rock de Blackpool et de Brighton" src="../images/06.jpg" />
+Le « rock » des stations balnéaires britanniques n'est pas du sucre candi. C'est un bâton dur de sucre cuit, souvent à la menthe, avec le nom de la ville qui le traverse de bout en bout, alors on peut encore le lire après chaque bouchée. Dans les années 1830, Morecambe a été la première ville à fabriquer du rock avec des lettres à l'intérieur.</p>
+<p>Chaque lettre commence à peu près de la taille d'une empreinte de pouce, faite de bandes de sucre colorées et blanches. On ne les fabrique pas dans l'ordre de l'orthographe. Les lettres « carrées » comme B, L et K passent en premier, car elles gardent leur forme. Les rondes comme O et C sont faites en dernier pour ne pas s'affaisser.</p>
+<p>On place les lettres autour d'un cœur blanc, puis on enroule le tout en une énorme barre encore tiède, si épaisse qu'on ne peut pas en faire le tour avec les mains. Un ouvrier l'étire ensuite en une longue corde fine, et les lettres rétrécissent jusqu'à leur toute petite taille finale. Tout le rock à lettres est encore fait à la main.</p>
+<p>Imagine écrire un mot, puis l'étirer jusqu'à en faire un bonbon.</p>
+<hr />
+<h2>7. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Le rock d'Édimbourg aurait été découvert par oubli</h2>
+<p><img alt="Rock d'Édimbourg et la plaque de Sweetie Lane" src="../images/07.jpg" />
+Le rock d'Édimbourg n'est pas dur du tout. Il est tendre et friable, fait de sucre, d'eau et de crème de tartre, et se présente en bâtonnets pastel, parfumés au gingembre ou au citron par exemple.</p>
+<p>Il a été fabriqué pour la première fois au XIXe siècle par Alexander Ferguson, surnommé <strong>« Sweetie Sandy »</strong> (« Sandy les bonbons »). Une histoire célèbre raconte qu'il a trouvé un plateau de bonbons oublié depuis des mois. Ils avaient séché, il en a goûté un, et c'était délicieux. Personne ne sait si c'est vrai.</p>
+<p>Ce qui est sûr : ça s'est si bien vendu qu'il est rentré dans sa petite ville de Doune très riche. Une plaque là-bas dit qu'il a racheté presque toute la rue où il était né, qui a pris le nom de Sweetie Lane (« la ruelle des bonbons »).</p>
+<p>Un heureux accident qui se mange.</p>
+<hr />
+<h2>8. 🇮🇳 Une confiserie de Delhi vend des douceurs au sucre candi depuis 1790</h2>
+<p><img alt="Mishri avec des graines de fenouil, cristaux de mishri et kalakand" src="../images/08.jpg" />
+En Inde, le sucre candi s'appelle mishri. On le mange comme un bonbon ou on s'en sert pour sucrer le lait et le thé. On le cuisine aussi en douceurs lactées avec du khoya (du lait cuit jusqu'à devenir épais), comme le mishri-mawa, qu'on appelle aussi kalakand.</p>
+<p>Une confiserie de Delhi, Ghantewala Halwai, a commencé en vendant du mishri-mawa en <strong>1790</strong>, il y a plus de 230 ans. Aujourd'hui, elle vend 40 sortes de douceurs faites avec du mishri.</p>
+<p>Ces douceurs au lait sont surtout populaires dans le nord et l'ouest de l'Inde, dans des endroits comme Delhi, le Rajasthan, le Pendjab et le Gujarat.</p>
+<p>Autrement dit, une boutique vend la même douceur depuis plus de 230 ans.</p>
+<hr />
+<h2>9. 🇺🇸 Le premier bonbon vendu comme un vrai commerce aux États-Unis est né d'un naufrage</h2>
+<p><img alt="Bonbons Gibralters et la boutique Ye Olde Pepper Companie à Salem" src="../images/09.jpg" />
+En 1806, la famille Spencer a quitté l'Angleterre pour Salem, dans le Massachusetts, mais un naufrage l'a laissée presque sans rien. Les nouveaux voisins se sont cotisés pour leur donner des provisions, dont <strong>un tonneau de sucre</strong>, parce que Mme Spencer était connue pour faire de bons bonbons.</p>
+<p>Elle a fabriqué des bonbons durs au citron et à la menthe, appelés Gibraltars, et les vendait sur les marches de la Première Église de la ville. Ils se sont si bien vendus qu'elle s'est acheté un cheval et une charrette pour aller les vendre dans les villes voisines. Le Gibraltar est considéré comme le premier bonbon fabriqué commercialement (pour être vendu, comme une vraie entreprise) aux États-Unis.</p>
+<p>Les bonbons durs se gardent très longtemps s'ils restent au sec, alors des capitaines de navire emportaient des Gibraltars dans des ports du monde entier. À Salem, Ye Olde Pepper Companie en vend encore aujourd'hui.</p>
+<p>Bref, le commerce des bonbons en Amérique a commencé par un cadeau des voisins.</p>
+<hr />
+<h2>10. 🎵 « Big Rock Candy Mountain » parlait d'abord de fugue</h2>
+<p><img alt="La Big Rock Candy Mountain dans l'Utah" src="../images/10.jpg" />
+« The Big Rock Candy Mountains » (« Les grandes montagnes de sucre candi ») est une chanson folk sur le monde rêvé d'un hobo, un travailleur vagabond qui voyageait dans les trains de marchandises. Harry McClintock disait l'avoir écrite en 1895, et il l'a enregistrée en <strong>1928</strong>.</p>
+<p>La version qu'il chantait dans la rue dans les années 1890 était plus sombre. Elle racontait comment on entraînait un enfant dans la vie de vagabond avec des histoires de montagne en sucre candi. Il l'a nettoyée avant de l'enregistrer.</p>
+<p>Puis on l'a encore nettoyée pour les enfants. Dans les versions pour enfants, les « arbres à cigarettes » sont devenus des arbres à menthe, les ruisseaux d'alcool sont devenus de la limonade et le lac de whisky est devenu un lac de soda. Une version pour enfants de Burl Ives, en 1949, l'a rendue célèbre.</p>
+<p>Une chanson d'adultes devenue berceuse du pays des bonbons.</p>
+<hr />
+<h3>Le saviez-vous ?</h3>
+<p>Le konpeitō a déjà aidé à ouvrir des portes au Japon. En 1569, un missionnaire portugais, Luís Fróis, a offert au seigneur de guerre Oda Nobunaga un flacon en verre rempli de konpeitō pour obtenir la permission de prêcher le christianisme. Des siècles plus tard, ce bonbon était si aimé qu'en japonais, la Fée Dragée du ballet Casse-Noisette de Tchaïkovski est devenue Konpeitō no Sei (金平糖の精), « la fée du konpeitō ». Les douceurs cachées dans Casse-Noisette, des dragées à la pâte d'amande, sont tout un monde à explorer la prochaine fois.</p>
+<details class="credits"><summary>Crédits photo (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Kandiszucker_--_2018_--_3588.jpg">Kandiszucker -- 2018 -- 3588.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Rock-Candy-Sticks.jpg">Rock-Candy-Sticks.jpg</a> by Evan-Amos, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#1: <a href="https://www.flickr.com/photos/69223375@N00/6863586157">Rock candy (flickr)</a> by Biker Jun, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Konpeito_Candy.jpg">Konpeito Candy.jpg</a> by Islandsislands, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#2: <a href="https://www.flickr.com/photos/28081633@N00/3191802814">#012 Konpeito taken by EX-Z40 (flickr)</a> by aki.sato, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:Konpeito,_Nishiki_Market.jpg">Konpeito, Nishiki Market.jpg</a> by Owleksandra, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Iranian_nabat.jpg">Iranian nabat.jpg</a> by Teardrops777, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Saffron_rock_candy.jpg">Saffron rock candy.jpg</a> by Rye-96, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Tea_time_at_historic_Chah-e_Haji_Mirza_Caf%C3%A9_in_Isfahan._Persian_tea_served_with_goshe_fil_and_nabat.jpg">Tea time at historic Chah-e Haji Mirza Café in Isfahan. Persian tea served with goshe fil and nabat.jpg</a> by EiersalatmitGurken, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:TangHuLu.JPG">TangHuLu.JPG</a> by Popo le Chien, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Guangxi_old_rock_candy.jpg">Guangxi old rock candy.jpg</a> by Fumikas Sagisavas, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Tanghulu-shanghai.jpg">Tanghulu-shanghai.jpg</a> by Zhu Jian / Flickr user: zhu4905jian ( https://www.flickr.com/photos/7672101@N06/ ), <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Tee_mit_sahnewolke.JPG">Tee mit sahnewolke.JPG</a> by Ke.We., <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Ostfriesentee.jpg">Ostfriesentee.jpg</a> by Frank van Anken, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Kandiszucker_--_2018_--_3590.jpg">Kandiszucker -- 2018 -- 3590.jpg</a> by Dietmar Rabich, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Blackpool_Rock_(15107520364).jpg">Blackpool Rock (15107520364).jpg</a> by Hazel Scott from Sheffield, UK, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#6: <a href="https://www.flickr.com/photos/54151899@N00/4753569311">Blackpool Rock (flickr)</a> by Kate C Hopkins, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Brighton_Rock_(6950629923).jpg">Brighton Rock (6950629923).jpg</a> by Paul Hudson from United Kingdom, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Edinburgh_Rock.jpg">Edinburgh Rock.jpg</a> by The original uploader was Mebanana at English Wikipedia., Public domain</li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Ferguson%27s_Edinburgh_Rock_advertisement_(1982).JPG">Ferguson&#x27;s Edinburgh Rock advertisement (1982).JPG</a> by Kim Traynor, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Sweetie_Lane_heritage_plaque.jpg">Sweetie Lane heritage plaque.jpg</a> by LocalMapEditor, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Fennel_seeds_and_rock_sugar,_Indian_aftermint.jpg">Fennel seeds and rock sugar, Indian aftermint.jpg</a> by Connie Ma from Chicago, United States of America, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Misri.JPG">Misri.JPG</a> by Miansari66, Public domain</li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Kalakand2.JPG">Kalakand2.JPG</a> by Pradeep717, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Gibralters_Candy_Wrapper.jpg">Gibralters Candy Wrapper.jpg</a> by Eanalla, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#9: <a href="https://www.flickr.com/photos/92487715@N03/11363001784">Ye Olde Pepper Company, 122 Derby St, Salem (493760) (flickr)</a> by Bob Linsdell, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#9: <a href="https://www.flickr.com/photos/54151899@N00/5424958531">Ye Olde Pepper Companie (flickr)</a> by Kate C Hopkins, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountain_Marysvale_Utah_19970724.jpg">Big Rock Candy Mountain Marysvale Utah 19970724.jpg</a> by Jstuby, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountain_(19546490).jpg">Big Rock Candy Mountain (19546490).jpg</a> by Liji Jinaraj from San Francisco, USA, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Big_Rock_Candy_Mountian_-_panoramio.jpg">Big Rock Candy Mountian - panoramio.jpg</a> by hakkun, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li></ol></details>
+</main>
+</body>
+</html>
