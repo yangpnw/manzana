@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>톱 10 미국 쇼핑몰, 가장 큰 곳부터 가장 작은 곳까지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f5; --page: #ffffff; --text: #1f1e1d; --muted: #6b6a66; --rule: #e8e6dc;
+  --chip-bg: #f0eee6; --chip-text: #3d3929; --accent: #c96442; --shadow: 0 1px 3px rgba(31,30,29,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+    --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1f1e1d; --page: #262624; --text: #f5f4ef; --muted: #a3a29c; --rule: #3a3936;
+  --chip-bg: #34332f; --chip-text: #e8e6dc; --accent: #d97757; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 760px; margin: 40px auto; padding: 56px 64px 64px;
+  background: var(--page); border: 1px solid var(--rule); border-radius: 16px; box-shadow: var(--shadow);
+}
+h1, h2, h3 { font-family: "Source Serif 4", "Tiempos Text", Georgia, serif; font-weight: 600; line-height: 1.25; }
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(ko) body, :lang(ko) h1, :lang(ko) h2, :lang(ko) h3 {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
+}
+:lang(zh) body, :lang(ko) body { line-height: 1.8; }
+h1 { font-size: 2.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 0 0 16px; }
+h3 { font-size: 1.2rem; margin: 0 0 10px; }
+p { margin: 0 0 14px; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+img { display: block; width: 100%; height: auto; border-radius: 12px; margin: 4px 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--chip-bg); color: var(--chip-text); font-size: 0.85rem; font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; }
+.site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 16px; margin: -24px 0 16px; font-size: 0.85rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); }
+.lang-switch [aria-current] { color: var(--text); font-weight: 500; }
+ul.archive { list-style: none; padding: 0; margin: 24px 0 0; }
+ul.archive li { border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 16px; }
+ul.archive a.sheet { display: flex; gap: 16px; padding: 14px 0; color: var(--text); text-decoration: none; flex: 1 1 320px; }
+ul.archive a.sheet:hover { color: var(--accent); }
+ul.archive .date { color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+ul.archive .langs { display: flex; gap: 10px; font-size: 0.8rem; padding-bottom: 12px; }
+ul.archive .langs a { color: var(--muted); text-decoration: none; }
+ul.archive .langs a:hover { color: var(--accent); }
+details.credits { margin-top: 40px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+details.credits summary { cursor: pointer; font-weight: 500; }
+details.credits ol { padding-left: 1.4em; }
+details.credits a { color: inherit; }
+@media (max-width: 720px) {
+  main { margin: 0; padding: 32px 16px 40px; border: 0; border-radius: 0; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  main { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; }
+  hr { margin: 20px 0; }
+  h2, img { break-after: avoid; }
+  details.credits, .site-nav, ul.archive .langs { display: none; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+<main>
+<nav class="site-nav"><span class="lang-switch"><a href="../" hreflang="en" lang="en">English</a> · <a href="../zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../es-419/" hreflang="es-419" lang="es-419">Español</a> · <span aria-current="page">한국어</span> · <a href="../fr/" hreflang="fr" lang="fr">Français</a></span><a href="../../../archive.html">전체 보기</a></nav>
+<h1>🌍 톱 10 미국 쇼핑몰, 가장 큰 곳부터 가장 작은 곳까지</h1>
+<p><span class="chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>2026년 11월 25일</span></p>
+<hr />
+<h2>1. 🥶 몰 오브 아메리카의 복도에는 난방기가 없어요</h2>
+<p><img alt="몰 오브 아메리카의 실내 놀이공원, 킬러브루의 빨간 좌석, 원형 홀" src="../images/01.jpg" />
+미네소타주 블루밍턴에 있는 몰 오브 아메리카(Mall of America)는 미국에서 가장 큰 쇼핑몰이에요. 넓이가 약 <strong>570만 제곱피트</strong>나 돼요. 한 신문은 그 안에 양키 스타디움이 일곱 개나 들어간다고 했어요.</p>
+<p>미네소타의 겨울은 꽁꽁 얼 만큼 추운데, 쇼핑몰 통로에는 난방기가 없어요. 난방이 되는 곳은 출입구와 일부 지하 공간뿐이에요. 햇빛은 천장 창문으로 들어오고, 나머지 열은 조명과 각종 기계, 그리고 돌아다니는 사람들에게서 나와요.</p>
+<p>이 쇼핑몰은 예전 야구장 자리에 지어졌어요. 실내 놀이공원 바닥에는 옛날 홈 플레이트 자리를 알려 주는 명판이 있어요. 벽 높은 곳에는 빨간 경기장 의자 하나가 박혀 있는데, 1967년에 하몬 킬러브루가 친 520피트짜리 홈런이 떨어진 바로 그 자리예요. 미식축구장 거의 한 개 반 거리예요.</p>
+<p>한마디로, 쇼핑하는 사람들이 난방기인 셈이에요.</p>
+<hr />
+<h2>2. 🎢 뉴저지의 아메리칸 드림은 문을 여는 데 15년이 걸렸어요</h2>
+<p><img alt="하늘에서 본 아메리칸 드림, 예전의 알록달록한 외벽, 실내 아이스링크" src="../images/02.jpg" />
+뉴저지주 이스트러더퍼드에 있는 아메리칸 드림(American Dream)은 미국에서 두 번째로 큰 쇼핑몰로, 약 300만 제곱피트예요. 2004년에 공사를 시작해서 <strong>2019년</strong>에야 겨우 문을 열었어요. 그사이 주인이 여러 번 바뀌었고, 공사는 멈췄다가 다시 시작하기를 되풀이했어요.</p>
+<p>반쯤 지어진 건물은 고속도로에서도 보일 만큼 요란한 색으로 칠해져 있었어요. 2011년에 뉴저지 주지사 크리스 크리스티는 이 건물을 "눈에 대한 모욕"이라고 부르고, 뉴저지에서 가장 못생긴 건물, "어쩌면 미국에서도"라고 했어요. 2019년에 드디어 하얀색으로 다시 칠해졌어요.</p>
+<p>그보다 앞선 2011년 2월에는 기록적인 한 달 치 눈이 내렸어요. 일꾼들이 쇼핑몰의 실내 스키장 지붕에 쌓인 눈을 녹이려다가, 쌓인 얼음 때문에 벽 일부가 무너졌어요. 바깥 눈이 실내 눈을 위해 만든 건물을 망가뜨린 거예요.</p>
+<p>다시 말해, 미국에서 가장 늦게 문을 연 쇼핑몰은 날씨 운도 가장 나빴어요.</p>
+<hr />
+<h2>3. 🫘 캘리포니아에서 가장 큰 쇼핑몰은 리마콩 밭에서 자랐어요</h2>
+<p><img alt="사우스 코스트 플라자의 입구, 내부, 1980년대 주차장" src="../images/03.jpg" />
+코스타메사에 있는 사우스 코스트 플라자(South Coast Plaza)는 캘리포니아에서 가장 큰 쇼핑몰이에요. 세거스트롬 가족이 빠르게 커 가던 오렌지 카운티에 있는 자기네 리마콩 밭 하나에 이 쇼핑몰을 지었고, <strong>1967년</strong>에 문을 열었어요.</p>
+<p>대부분의 큰 쇼핑몰과 달리, 이곳은 한 번도 큰 투자 회사에 팔린 적이 없어요. 지금도 같은 가족이 주인이에요.</p>
+<p>게다가 엄청 많이 팔아요. 가게들의 수입이 1년에 약 25억 달러, 매일 약 700만 달러나 돼서, 미국에서 돈을 가장 많이 버는 쇼핑센터예요.</p>
+<p>결국 콩밭이 돈밭이 된 거예요.</p>
+<hr />
+<h2>4. 🛝 플로리다에서 가장 큰 쇼핑몰에는 예술 작품인 미끄럼틀이 있어요</h2>
+<p><img alt="아벤투라 슬라이드 타워, 쇼핑몰 외관, 명절 장식" src="../images/04.jpg" />
+마이애미 근처의 아벤투라 몰(Aventura Mall)은 플로리다에서 가장 크고, 미국에서는 다섯 번째로 큰 쇼핑몰이에요. 곳곳에 큰 예술 작품이 25점 넘게 있어요.</p>
+<p>가장 유명한 건 <strong>아벤투라 슬라이드 타워</strong>예요. 예술가 카르스텐 횔러가 만든 93피트 높이의 나선형 미끄럼틀로, 9층 건물만큼 높아요. 놀아도 되는 예술 작품이에요.</p>
+<p>쇼핑몰에는 예술 작품으로 만든 놀이터와 3층짜리 애플 스토어도 있어요. USA 투데이 독자들은 2025년과 2026년 두 번 모두 이곳을 미국 최고의 쇼핑몰로 뽑았어요.</p>
+<p>조각상을 타고 미끄러져 내려올 수 있는 미술관이라고 생각해 보세요.</p>
+<hr />
+<h2>5. 🎠 뉴욕주에서 가장 큰 쇼핑몰은 고철장 위에 지어졌어요</h2>
+<p><img alt="하늘에서 본 데스티니 USA, 간판, 예전의 캐러셀 센터" src="../images/05.jpg" />
+시러큐스에 있는 데스티니 USA(Destiny USA)는 뉴욕주에서 가장 큰 쇼핑몰이에요. 짓기 전에 이 땅은 말리 스크랩 야드라는 고철장이었고, 그 둘레에는 석유 탱크가 몇 블록이나 늘어서 있어서 사람들이 "오일 시티"라고 불렀어요.</p>
+<p>더러운 땅을 먼저 깨끗이 치워야 해서 공사가 늦어졌어요. 1990년에 문을 열었을 때 이름은 캐러셀 센터였는데, <strong>1908년</strong>에 만든 진짜 회전목마에서 따온 이름이에요. 그 회전목마는 지금도 쇼핑몰 안에서 돌고 있어요.</p>
+<p>나중에 주인들이 이름을 데스티니 USA로 바꾸고 거대하게 키웠어요. 2021년에는 1년에 2,600만 명이 넘게 찾아왔어요.</p>
+<p>그러니까 고철 더미가 미국에서 손님이 가장 많은 쇼핑몰 중 하나가 된 거예요.</p>
+<hr />
+<h2>6. 🌡️ 최초의 완전 실내 쇼핑몰은 미네소타의 추위 때문에 생겼어요</h2>
+<p><img alt="오늘날의 사우스데일 센터와 1950년대의 가든 코트" src="../images/06.jpg" />
+미네소타주 에디나에 있는 사우스데일 센터(Southdale Center)는 <strong>1956년</strong>에 문을 열었어요. 미국 최초로 완전히 지붕으로 덮이고 온도까지 조절되는 쇼핑몰이었어요. 지붕과 공조 시스템 덕분에 1년 내내 75°F를 유지해서, 밖에 눈보라가 쳐도 안은 봄날 같았어요.</p>
+<p>건축가 빅터 그루엔은 빈에서 자랐는데, 사람들이 커피를 마시며 수다를 떠는 마을 광장을 만들고 싶어 했어요. 언젠가는 학교와 병원, 집까지 들어설 거라고 상상하기도 했어요.</p>
+<p>모두가 좋아한 건 아니었어요. 유명한 건축가 프랭크 로이드 라이트는 이곳에 와 보고 그루엔이 "도심은 도심에 그냥 두었어야 했다"고 말했어요.</p>
+<p>말하자면, 최초의 실내 쇼핑몰은 태어나자마자 혹평을 받았어요.</p>
+<hr />
+<h2>7. 🛶 라스베이거스의 한 쇼핑몰에서는 2층에서 곤돌라를 탈 수 있어요</h2>
+<p><img alt="그랜드 커낼 숍스 안의 곤돌라, 운하, 그림으로 그린 하늘" src="../images/07.jpg" />
+그랜드 커낼 숍스(Grand Canal Shoppes)는 라스베이거스의 베네치안 리조트 안에 있어요. 쇼핑몰 전체가 카지노 위인 2층에 있어요.</p>
+<p>그런데도 운하가 있어요. 이탈리아 베네치아의 길쭉한 배인 곤돌라가 사람들을 태우고 가게들 앞을 지나가요. 천장은 하늘처럼 그려져 있고, 중앙 광장은 베네치아의 산마르코 광장을 본떠 만들었어요.</p>
+<p><strong>1999년</strong>에 문을 열었지만, 첫날 준비가 끝난 곳은 가게와 식당 72곳 중 16곳뿐이었어요.</p>
+<p>밖에 한 번도 안 나가고 하는 뱃놀이라고 생각해 보세요.</p>
+<hr />
+<h2>8. 🗿 라스베이거스 쇼핑몰에서 로봇 로마 신들이 공연을 해요</h2>
+<p><img alt="포럼 숍스의 '아틀란티스의 몰락' 공연과 조각상" src="../images/08.jpg" />
+라스베이거스 시저스 팰리스의 포럼 숍스(Forum Shops)는 예전에 자동차 경주장이었던 땅에 지어졌어요. 1992년에 문을 열었을 때는 매시간 무료 공연이 있었어요. 400만 달러짜리 분수 안에서 바쿠스, 비너스 같은 로마 신들의 말하는 로봇 조각상이 나오는 공연이었어요.</p>
+<p>그 공연이 2011년에 끝날 무렵에는 로봇이 자주 고장 났고, 무슨 말을 하는지 못 알아듣는 사람들도 있었어요.</p>
+<p>1997년에 추가된 또 다른 로봇 공연은 2013년에 새 단장을 했어요. '아틀란티스의 몰락'에서는 한 왕의 자식들이 아틀란티스 도시를 두고 다투다가 결국 도시가 가라앉는데, 진짜 불과 물이 나와요. 그 옆에는 열대어 500마리가 사는 <strong>5만 갤런</strong>짜리 수조가 있고, 아래에는 기술자들이 로봇이 계속 움직이도록 관리하는 작업실이 있어요.</p>
+<p>조각상이 말대꾸하는 쇼핑몰이에요.</p>
+<hr />
+<h2>9. 🏛️ 미국 최초의 실내 쇼핑몰에는 이제 아주 작은 집들이 있어요</h2>
+<p><img alt="웨스트민스터 아케이드의 내부, 길에서 본 모습, 1850년의 모습" src="../images/09.jpg" />
+로드아일랜드주 프로비던스의 웨스트민스터 아케이드(Westminster Arcade)는 <strong>1828년</strong>, 거의 200년 전에 문을 열었어요. 미국 최초의 지붕 덮인 쇼핑몰로 불려요. 길쭉한 천장 창문 아래에 작은 가게들이 3층으로 들어서 있어요.</p>
+<p>처음에는 다른 가게들과 멀리 떨어져 있어서 손님이 잘 오지 않았어요. 사람들은 지은 사람 사이러스 버틀러의 이름을 따서 "버틀러의 바보짓"이라는 별명을 붙였어요. 옆에 멋진 모자 가게가 문을 열어 부자 손님들을 끌어들이고 나서야 상황이 바뀌었어요.</p>
+<p>앞쪽 기둥은 높이가 45피트인데, 황소들이 흙길로 8마일이나 끌고 왔어요. 2013년부터는 가게들과 아주 작은 아파트인 마이크로 로프트가 섞여 있어요.</p>
+<p>미국에서 가장 오래된 쇼핑몰이 사람 사는 곳이 됐어요.</p>
+<hr />
+<h2>10. ⛽ LA의 작은 미니몰은 문 닫은 주유소 자리에서 생겨났어요</h2>
+<p><img alt="로스앤젤레스 길모퉁이의 미니몰들" src="../images/10.jpg" />
+가장 작은 쇼핑몰은 스트립몰이에요. 가게 몇 개가 짧게 한 줄로 서 있고 앞에 주차장이 있는 곳이죠. 가장 작은 건 약 5,000제곱피트부터 시작하는데, 농구장 하나 정도 크기예요. 미국에는 6만 8천 개가 넘어요.</p>
+<p>로스앤젤레스에서는 이런 곳을 미니몰이라고 불러요. <strong>1973년</strong>에 석유 파동으로 많은 주유소가 망하면서, 도시 곳곳에 빈 모퉁이 땅이 생겼어요. 건축업자들은 그 자리에 가게 몇 개와 작은 주차장을 지었어요.</p>
+<p>그해 파노라마 시티에 처음으로 현대식 미니몰이 생겼고, 그 뒤로 600개가 넘게 생겼어요. 너무 많아지자 1988년에 로스앤젤레스는 미니몰을 제한하는 규칙까지 만들었어요.</p>
+<p>예전에 주유기 하나가 있던 자리에 쇼핑몰이 통째로 들어간 거예요.</p>
+<hr />
+<h3>재미있는 사실</h3>
+<p>몰 오브 아메리카를 짓기 전, 개발자들은 같은 자리에 거대한 실내 호수를 먼저 꿈꿨어요. 실내에서 서핑을 할 수 있는 6피트 높이의 파도와, 방문객에게 바다 생물을 보여 줄 잠수함까지 있는 계획이었죠. 이 계획은 없던 일이 됐어요. 수십 년 뒤, 같은 회사는 아메리칸 드림의 워터파크를 세계에서 가장 큰 실내 파도 풀이 될 곳을 중심으로 계획했어요. 넓이 약 1.5에이커에 물 150만 갤런이 들어가는 풀이에요. 가짜 바다, 사람이 만든 파도, 세계의 실내 해변은 다음에 탐험할 신기한 세계예요.</p>
+<details class="credits"><summary>사진 출처 (Wikimedia Commons)</summary><ol><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Mall_of_America_Nickelodeon_Universe_Second_Floor_Wide.jpg">Mall of America Nickelodeon Universe Second Floor Wide.jpg</a> by AdaLovelaceHackermode, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:MOA_Killebrew_chair1.JPG">MOA Killebrew chair1.JPG</a> by Wahkeenah at English Wikipedia, Public domain</li><li>#1: <a href="https://commons.wikimedia.org/wiki/File:Mall_of_America_Floors_%26_Escalators.jpg">Mall of America Floors &amp; Escalators.jpg</a> by Tyler Vigen, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:American_Dream_Mall,_Drone_Aerial_at_NJ-3_(May_2026).jpg">American Dream Mall, Drone Aerial at NJ-3 (May 2026).jpg</a> by MiracleMiles, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></li><li>#2: <a href="https://www.flickr.com/photos/34132829@N07/3366494674">Meadowlands Xanadu Exterior (flickr)</a> by LancerE, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#2: <a href="https://commons.wikimedia.org/wiki/File:The_Rink_in_the_American_Dream_Meadowlands_during_ice_hockey_practicing.jpg">The Rink in the American Dream Meadowlands during ice hockey practicing.jpg</a> by ArielR20130725, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:South_Coast_Plaza_entrance.jpg">South Coast Plaza entrance.jpg</a> by Coolcaesar at English Wikipedia, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#3: <a href="https://commons.wikimedia.org/wiki/File:Southcoastplaza-int.jpg">Southcoastplaza-int.jpg</a> by Arnold C, Attribution</li><li>#3: <a href="https://www.flickr.com/photos/30346812@N07/2990065544">South Coast Plaza, Costa Mesa, 1980s (flickr)</a> by Orange County Archives, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#4: <a href="https://www.flickr.com/photos/25955895@N03/39975807062">New Slide Sculpture Aventura Mall (flickr)</a> by Phillip Pessar, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Aventura_Mall_exterior_2020.jpg">Aventura Mall exterior 2020.jpg</a> by Chris6d, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#4: <a href="https://commons.wikimedia.org/wiki/File:Christmas_Aventura_Mall_-_23_December_2023_-_8.jpg">Christmas Aventura Mall - 23 December 2023 - 8.jpg</a> by Phillip Pessar, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Destiny_USA.png">Destiny USA.png</a> by US Embassy Canada, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Destiny_of_the_USA_(14647939567).jpg">Destiny of the USA (14647939567).jpg</a> by Michael Scialdone, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#5: <a href="https://commons.wikimedia.org/wiki/File:Carouselmallsyr.jpg">Carouselmallsyr.jpg</a> by Joegrimes at English Wikipedia, Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:2009-0611-003-Southdale.jpg">2009-0611-003-Southdale.jpg</a> by Bobak Ha&#x27;Eri, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:Garden_Court,_Southdale_Shopping_Center_-_DPLA_-_7efdd551273e827e867985d63d37d009.jpg">Garden Court, Southdale Shopping Center - DPLA - 7efdd551273e827e867985d63d37d009.jpg</a> by Colourpicture Publishers, Inc. (Boston, Mass.), Public domain</li><li>#6: <a href="https://commons.wikimedia.org/wiki/File:2009-0611-004-Southdale.jpg">2009-0611-004-Southdale.jpg</a> by Bobak Ha&#x27;Eri, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li><li>#7: <a href="https://www.flickr.com/photos/93283041@N00/28808150413">Las Vegas - The Venetian - Grand Canal Shoppes - Gondolas (flickr)</a> by jared422_80, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:Grand_Canal_Shoppes_in_Las_Vegas.jpg">Grand Canal Shoppes in Las Vegas.jpg</a> by David Shane, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#7: <a href="https://commons.wikimedia.org/wiki/File:St._Mark%27s_Square_at_the_Grand_Canal_Shoppes.jpg">St. Mark&#x27;s Square at the Grand Canal Shoppes.jpg</a> by Paulgokin, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Fall_of_Atlantis_(3).jpg">Fall of Atlantis (3).jpg</a> by Tristan Surtel, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#8: <a href="https://www.flickr.com/photos/93283041@N00/35942157625">Las Vegas - The Forum Shops at Caesars - Fall of Atlantis Statue (flickr)</a> by jared422_80, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li><li>#8: <a href="https://commons.wikimedia.org/wiki/File:Interior_of_The_Forum_Shops_(Las_Vegas).jpg">Interior of The Forum Shops (Las Vegas).jpg</a> by Tristan Surtel, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Westminster_Arcade_(62464).jpg">Westminster Arcade (62464).jpg</a> by Rhododendrites, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Westminster_Arcade_-_1828.jpg">Westminster Arcade - 1828.jpg</a> by Timothy Burling, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li><li>#9: <a href="https://commons.wikimedia.org/wiki/File:Westminster_Arcade_in_Providence_Rhode_Island_in_1850.jpg">Westminster Arcade in Providence Rhode Island in 1850.jpg</a> by Artist not credited., Public domain</li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Mini-mall,_Los_Angeles,_California.jpg">Mini-mall, Los Angeles, California.jpg</a> by Downtowngal, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://commons.wikimedia.org/wiki/File:Cosmos_Village.jpg">Cosmos Village.jpg</a> by Downtowngal, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></li><li>#10: <a href="https://www.flickr.com/photos/52072212@N04/4793872085">Multi-Cultural Corner Mini-mall (flickr)</a> by feculent_fugue, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li></ol></details>
+</main>
+</body>
+</html>
