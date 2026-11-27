@@ -62,3 +62,4 @@ One line per sheet: date · theme · base (older lines may end with a doc link).
 - 2026-11-23 · Hidden History of Thanksgiving and Holiday Shopping · 2026-11-23-01-top-10-hidden-history-of-thanksgiving-and-holiday-shopping
 - 2026-11-24 · Rock Candy · 2026-11-24-01-top-10-rock-candy
 - 2026-11-25 · US Shopping Malls, from Biggest to Tiniest · 2026-11-25-01-top-10-us-shopping-malls-from-biggest-to-tiniest
+- 2026-11-26 · Weirdest Hotel Breakfasts · 2026-11-26-01-top-10-weirdest-hotel-breakfasts
